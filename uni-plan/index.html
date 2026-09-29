@@ -92,6 +92,9 @@ ol.steps li::marker{font-family:var(--display);font-weight:600;color:var(--accen
 .checks li{display:grid;grid-template-columns:18px 1fr;gap:10px;align-items:start}
 .checks li::before{content:"";width:16px;height:16px;border:1px solid var(--muted);margin-top:4px;background:var(--paper)}
 .checks li.on::before{background:var(--accent-fill);border-color:var(--accent-fill);box-shadow:inset 0 0 0 3px var(--paper)}
+.checks li.maybe::before{border:1px dashed var(--accent-fill);background:linear-gradient(135deg,var(--accent-fill) 0 50%,var(--paper) 50%);box-shadow:inset 0 0 0 3px var(--paper)}
+.checks li.maybe{color:var(--muted)}
+.maybe-tag{font-style:normal;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--muted);border-radius:3px;padding:0 5px;margin-left:6px;white-space:nowrap;vertical-align:1px}
 .score{display:flex;align-items:baseline;gap:10px}
 .score b{font-family:var(--display);font-size:3rem;font-weight:500;line-height:1;font-variant-numeric:tabular-nums}
 .score span{color:var(--muted)}
@@ -427,8 +430,9 @@ svg .tgtl{font-weight:700;font-size:13px}
     <div class="grp">
       <div class="grp-h"><span class="l-en">Field of study</span><span class="l-vi">Lĩnh vực</span></div>
       <ul class="checks">
-        <li class="on"><span class="l-en">Economics</span><span class="l-vi">Kinh tế học</span></li>
         <li class="on"><span class="l-en">Business / Commerce</span><span class="l-vi">Kinh doanh / Thương mại</span></li>
+        <li class="on"><span class="l-en">Economics</span><span class="l-vi">Kinh tế học</span></li>
+        <li class="maybe"><span class="l-en">Environmental economics, sustainability <em class="maybe-tag">maybe</em></span><span class="l-vi">Kinh tế môi trường, phát triển bền vững <em class="maybe-tag">có thể</em></span></li>
       </ul>
     </div>
     <div class="grp">
