@@ -8,20 +8,20 @@
 /* Layout: an admissions-office course finder. Navy utility strip, plain white page, profile panel on the left, course cards on the right, tabs for each university. */
 /* Layout: an admissions-office course finder on black. Navy utility strip, profile panel on the left, course cards on the right, forest green for everything interactive. */
 :root{
-  /* white page, black text, greys for structure; forest green kept only as the accent */
-  --paper:#FFFFFF; --panel:#F4F4F4; --panel-2:#E8E8E8; --ink:#141414; --muted:#555555; --rule:#D9D9D9;
-  --accent:#1F6B3A; --accent-fill:#2F6B45; --accent-soft:#E2EFE5; --cream:#FFFFFF;
-  --strip:#1F4A2E; --on-strip:#FFFFFF; --navy:#2E4466; --on-navy:#FFFFFF;
-  --tag-dream:#7B2D3A; --tag-reach:#2E4466; --tag-target:#6B5F1E; --tag-likely:#2F6B45;
-  --good:#256A3A; --good-soft:#E2EFE5; --warn:#7A5700; --warn-soft:#F5ECD2; --bad:#A3302A; --bad-soft:#F7E2DF;
+  /* charcoal grey page with soft white text; forest green kept as the accent */
+  --paper:#15171B; --panel:#1D2026; --panel-2:#272B32; --ink:#E6E7E9; --muted:#A4A8AF; --rule:#343941;
+  --accent:#7CC48F; --accent-fill:#3E8E55; --accent-soft:#1E3326; --cream:#E6E7E9;
+  --strip:#2D4A37; --on-strip:#FFFFFF; --navy:#3A4D72; --on-navy:#FFFFFF;
+  --tag-dream:#7B2D3A; --tag-reach:#3A4D72; --tag-target:#6B5F1E; --tag-likely:#2F7446;
+  --good:#6FBF7E; --good-soft:#1C3021; --warn:#E0B062; --warn-soft:#382B14; --bad:#EE8577; --bad-soft:#3B201C;
   --display:"Jost","Futura","Century Gothic","Trebuchet MS",sans-serif;
   --body:"Source Sans 3","Segoe UI",system-ui,-apple-system,sans-serif;
   --bg:var(--paper); --surface:var(--paper); --surface-2:var(--panel); --rule-2:var(--rule);
-  --sand:#2F6B45; --sand-soft:#E2EFE5; --jade:#3F5F8A; --jade-soft:#E3E9F2; --jac:#3E4F70; --jac-soft:#E6EAF1; --jac-text:#3E4F70;
-  --econ:#2A5C86; --econ-soft:#DEE8F2; --biz:#8E3050; --biz-soft:#F3E0E7;
+  --sand:#3E8E55; --sand-soft:#1E3326; --jade:#4F77AA; --jade-soft:#1B2636; --jac:#4F6384; --jac-soft:#222C3C; --jac-text:#9DB2D6;
+  --econ:#7FB0DA; --econ-soft:#1A2A39; --biz:#E391A8; --biz-soft:#3A1F29;
   --good-bg:var(--good-soft); --warn-bg:var(--warn-soft); --bad-bg:var(--bad-soft);
   --on-strong:#FFFFFF; --mono:var(--body);
-  color-scheme:light;
+  color-scheme:dark;
 }
 :root[lang="vi"]{--display:"Lexend","Source Sans 3","Segoe UI",sans-serif}
 :root:not([lang="vi"]) .l-vi,:root[lang="vi"] .l-en{display:none!important}
