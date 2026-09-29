@@ -1,0 +1,2040 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>Kế hoạch Đại học của Peter</title>
+<meta name="description" content="Peter's undergraduate plan for 2028 entry: aim, predicted IB score, and a researched shortlist of UChicago, NYU Shanghai, UNSW, UC Santa Cruz and the University of Sydney.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: an admissions-office course finder. Navy utility strip, plain white page, profile panel on the left, course cards on the right, tabs for each university. */
+:root{
+  --paper:#FFFFFF; --panel:#F4F4F1; --panel-2:#E9E9E5; --ink:#1B1C1E; --muted:#5B5D61; --rule:#D8D8D3;
+  --accent:#B3442B; --accent-soft:#F5E4DF; --navy:#1D2A3E; --on-navy:#FFFFFF;
+  --tag-reach:#B3442B; --tag-target:#8A5C0E; --tag-likely:#2D6A3A;
+  --good:#2D6A3A; --good-soft:#E2EEE3; --warn:#8A5C0E; --warn-soft:#F4EAD4; --bad:#A0382C; --bad-soft:#F5E0DC;
+  --display:"Jost","Futura","Century Gothic","Trebuchet MS",sans-serif;
+  --body:"Source Sans 3","Segoe UI",system-ui,-apple-system,sans-serif;
+  /* tokens used by the Sydney brief */
+  --bg:var(--paper); --surface:var(--paper); --surface-2:var(--panel); --rule-2:var(--rule);
+  --sand:#B3442B; --sand-soft:#F5E4DF; --jade:#2D6A55; --jade-soft:#DFECE7; --jac:#1D2A3E; --jac-soft:#E4E8EF;
+  --econ:#2B5E86; --econ-soft:#DEE8F1; --biz:#8E3B52; --biz-soft:#F2E0E5;
+  --good-bg:var(--good-soft); --warn-bg:var(--warn-soft); --bad-bg:var(--bad-soft);
+  --on-strong:#FFFFFF; --mono:var(--body);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#15171B; --panel:#1D2026; --panel-2:#272B32; --ink:#E6E7E9; --muted:#A4A8AF; --rule:#343941;
+    --accent:#E27A5F; --accent-soft:#3A241E; --navy:#2A3A55; --on-navy:#FFFFFF;
+    --tag-reach:#B4533A; --tag-target:#8F6418; --tag-likely:#2E6E3C;
+  --good:#6FBF7E; --good-soft:#1C3021; --warn:#E0B062; --warn-soft:#382B14; --bad:#EE8577; --bad-soft:#3B201C;
+    --sand:#E27A5F; --sand-soft:#3A241E; --jade:#5DB598; --jade-soft:#17302A; --jac:#9DB2D6; --jac-soft:#222C3C;
+    --econ:#7FB0DA; --econ-soft:#1A2A39; --biz:#E391A8; --biz-soft:#3A1F29; --on-strong:#111317;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15171B; --panel:#1D2026; --panel-2:#272B32; --ink:#E6E7E9; --muted:#A4A8AF; --rule:#343941;
+  --accent:#E27A5F; --accent-soft:#3A241E; --navy:#2A3A55; --on-navy:#FFFFFF;
+  --tag-reach:#B4533A; --tag-target:#8F6418; --tag-likely:#2E6E3C;
+  --good:#6FBF7E; --good-soft:#1C3021; --warn:#E0B062; --warn-soft:#382B14; --bad:#EE8577; --bad-soft:#3B201C;
+  --sand:#E27A5F; --sand-soft:#3A241E; --jade:#5DB598; --jade-soft:#17302A; --jac:#9DB2D6; --jac-soft:#222C3C;
+  --econ:#7FB0DA; --econ-soft:#1A2A39; --biz:#E391A8; --biz-soft:#3A1F29; --on-strong:#111317;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
+a{color:var(--accent);text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.2;margin:0;text-wrap:balance;letter-spacing:.005em}
+h1{font-size:clamp(2rem,4.4vw,2.9rem)}
+h2{font-size:clamp(1.55rem,3vw,2rem)}
+h3{font-size:1.22rem}
+p{margin:0}
+.muted{color:var(--muted)}
+.small{font-size:.9rem}
+.num{font-variant-numeric:tabular-nums}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:24px}
+
+/* utility strip + header */
+.strip{background:var(--navy);color:var(--on-navy);font-size:.88rem}
+.strip .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 18px;padding-block:9px}
+.masthead-top{border-bottom:1px solid var(--rule)}
+.masthead-top .wrap{padding-block:34px 0;display:grid;gap:10px}
+.kicker{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.lead{font-size:1.12rem;color:var(--muted);max-width:760px}
+.tabs{display:flex;gap:0;overflow-x:auto;margin-top:22px;scrollbar-width:thin}
+.tabs button{font-family:var(--display);font-size:1rem;font-weight:500;background:none;border:0;border-bottom:3px solid transparent;color:var(--muted);padding:12px 16px 11px;cursor:pointer;white-space:nowrap}
+.tabs button:first-child{padding-left:0}
+.tabs button:hover{color:var(--ink)}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+main{padding-block:36px 72px}
+
+/* shared blocks */
+.panel-body{display:grid;gap:44px}
+.block{display:grid;gap:16px}
+.block-head{display:grid;gap:6px;border-top:1px solid var(--rule);padding-top:20px}
+.label{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.tag{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px 5px;color:var(--on-navy);background:var(--navy);line-height:1}
+.tag.reach{background:var(--tag-reach)}
+.tag.target{background:var(--tag-target)}
+.tag.likely{background:var(--tag-likely)}
+.pill{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;white-space:nowrap;border-radius:2px}
+.pill.good{background:var(--good-soft);color:var(--good)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.pill.bad{background:var(--bad-soft);color:var(--bad)}
+.pill.jade{background:var(--jade-soft);color:var(--jade)}
+.pill.sand{background:var(--sand-soft);color:var(--sand)}
+.pill.jac{background:var(--jac-soft);color:var(--jac)}
+.pill.biz{background:var(--biz-soft);color:var(--biz)}
+.pill.econ{background:var(--econ-soft);color:var(--econ)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--body);font-size:.98rem;font-weight:600;color:var(--ink);background:var(--paper);border:1px solid var(--rule);padding:9px 16px;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
+ul.list{margin:0;padding-left:20px;display:grid;gap:8px}
+ol.steps{margin:0;padding-left:22px;display:grid;gap:12px}
+ol.steps li::marker{font-family:var(--display);font-weight:600;color:var(--accent)}
+
+/* overview: profile sidebar + main */
+.overview{display:grid;grid-template-columns:300px minmax(0,1fr);gap:48px;align-items:start}
+.profile{display:grid;gap:0;border-top:2px solid var(--ink)}
+.profile .grp{padding-block:18px;border-bottom:1px solid var(--rule);display:grid;gap:10px}
+.profile .grp-h{display:flex;justify-content:space-between;align-items:center;font-family:var(--display);font-size:1.12rem;font-weight:500}
+.profile .grp-h::after{content:"";width:18px;height:2px;background:var(--ink)}
+.profile dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:.96rem}
+.profile dt{color:var(--muted)}
+.profile dd{margin:0}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:.98rem}
+.checks li{display:grid;grid-template-columns:18px 1fr;gap:10px;align-items:start}
+.checks li::before{content:"";width:16px;height:16px;border:1px solid var(--muted);margin-top:4px;background:var(--paper)}
+.checks li.on::before{background:var(--accent);border-color:var(--accent);box-shadow:inset 0 0 0 3px var(--paper)}
+.score{display:flex;align-items:baseline;gap:10px}
+.score b{font-family:var(--display);font-size:3rem;font-weight:500;line-height:1;font-variant-numeric:tabular-nums}
+.score span{color:var(--muted)}
+.aim{border-left:3px solid var(--accent);padding:4px 0 4px 20px;display:grid;gap:8px;max-width:780px}
+.aim p{font-family:var(--display);font-size:clamp(1.25rem,2.3vw,1.55rem);line-height:1.35;font-weight:400}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--rule)}
+.facts div{padding:16px 20px;display:grid;gap:2px;align-content:start}
+.facts div+div{border-left:1px solid var(--rule)}
+.facts b{font-family:var(--display);font-size:1.7rem;font-weight:500;line-height:1.1;font-variant-numeric:tabular-nums}
+.facts span{font-size:.92rem;color:var(--muted)}
+
+/* results bar and course cards */
+.results{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 16px}
+.cards{display:grid;gap:26px}
+.course{position:relative;border:1px solid var(--rule);background:var(--paper);padding:34px 32px 26px;display:grid;gap:18px}
+.course .tag{position:absolute;top:-1px;left:32px}
+.course-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:12px 20px;padding-top:12px}
+.course-head h3{font-size:clamp(1.35rem,2.4vw,1.7rem)}
+.course-meta{display:grid;grid-template-columns:1.2fr 1.3fr 1fr;gap:0}
+.course-meta>div{padding-inline:20px;display:grid;gap:4px;align-content:start;min-width:0}
+.course-meta>div:first-child{padding-left:0}
+.course-meta>div+div{border-left:1px solid var(--rule)}
+.course-meta .loc{display:grid;grid-template-columns:18px 1fr;gap:8px}
+.course-meta .loc svg{width:16px;height:20px;fill:var(--accent);margin-top:3px}
+.course-meta .k{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+
+/* chart */
+figure.chart{margin:0;border:1px solid var(--rule);padding:18px 18px 14px;display:grid;gap:10px}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+figure.chart svg{display:block;width:100%;height:auto;min-width:700px}
+figcaption{font-size:.92rem;color:var(--muted);max-width:820px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:.88rem;color:var(--muted)}
+.legend i{display:inline-block;width:12px;height:12px;margin-right:6px;vertical-align:-1px}
+svg text{fill:var(--ink);font-family:var(--body);font-size:13px}
+svg .t-muted{fill:var(--muted)}
+svg .t-small{font-size:12px}
+svg .t-bold{font-weight:700}
+svg .grid{stroke:var(--rule);stroke-width:1}
+svg .band{fill:var(--accent-soft)}
+svg .band-edge{stroke:var(--accent);stroke-width:1;stroke-dasharray:3 3}
+svg .t-accent{fill:var(--accent);font-weight:700}
+svg .target{stroke:var(--ink);stroke-width:1.2;stroke-dasharray:5 4}
+svg .d-good{fill:var(--good)} svg .d-warn{fill:var(--warn)} svg .d-bad{fill:var(--bad)}
+svg .r-good{fill:var(--paper);stroke:var(--good);stroke-width:2} svg .r-warn{fill:var(--paper);stroke:var(--warn);stroke-width:2} svg .r-bad{fill:var(--paper);stroke:var(--bad);stroke-width:2}
+svg .l-good{stroke:var(--good);stroke-width:2} svg .l-warn{stroke:var(--warn);stroke-width:2} svg .l-bad{stroke:var(--bad);stroke-width:2}
+
+/* tables */
+.tbl{overflow-x:auto;border:1px solid var(--rule)}
+table{border-collapse:collapse;width:100%;font-size:.95rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;vertical-align:top;padding:11px 14px;border-bottom:1px solid var(--rule)}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:none}
+thead th{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;background:var(--panel)}
+tbody th{font-weight:600}
+.wide{min-width:980px}
+.wide tbody th{white-space:nowrap}
+
+/* university tab */
+.uni-head{display:grid;gap:14px}
+.crumb{font-size:.9rem;color:var(--muted)}
+.crumb button{font:inherit;color:var(--accent);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.uni-meta{border:1px solid var(--rule);display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.uni-meta>div{padding:16px 20px;display:grid;gap:4px;align-content:start;min-width:0}
+.uni-meta>div+div{border-left:1px solid var(--rule)}
+.uni-meta .k{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.two>div{min-width:0;display:grid;gap:12px;align-content:start}
+dl.kv{margin:0;display:grid;grid-template-columns:minmax(150px,auto) 1fr;border-top:1px solid var(--rule)}
+dl.kv dt,dl.kv dd{padding:10px 0;border-bottom:1px solid var(--rule);margin:0}
+dl.kv dt{color:var(--muted);padding-right:16px}
+.verdict-box{background:var(--panel);padding:22px 24px;display:grid;gap:10px}
+.verdict-box h3{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.sources{margin:0;padding-left:20px;font-size:.9rem;color:var(--muted);display:grid;gap:4px}
+
+/* schedule */
+.sched{border-top:2px solid var(--ink)}
+.sched .row{display:grid;grid-template-columns:170px minmax(0,1fr) auto;gap:18px;padding-block:16px;border-bottom:1px solid var(--rule);align-items:start}
+.sched .when{font-family:var(--display);font-weight:500;font-variant-numeric:tabular-nums}
+.sched .what{display:grid;gap:4px}
+.sched .row.now{background:linear-gradient(90deg,var(--accent-soft),transparent 70%)}
+.sched .who{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
+.sched .phase{padding:22px 0 8px;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--accent);border-bottom:1px solid var(--rule)}
+
+/* Sydney brief, restyled */
+.syd section{margin-top:56px;display:grid;gap:18px}
+.syd .masthead{display:grid;gap:12px}
+.syd .syd-h{font-size:clamp(1.6rem,3.4vw,2.2rem)}
+.syd .eyebrow{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.syd .lede{font-size:1.08rem;color:var(--muted);max-width:760px}
+.syd .sec-head{display:grid;gap:8px;border-top:1px solid var(--rule);padding-top:20px}
+.syd .prose{max-width:760px}
+.syd .mono{font-variant-numeric:tabular-nums;font-weight:600}
+.syd .hero{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.syd .hero figure{margin:0;position:relative;overflow:hidden;aspect-ratio:16/10;max-width:100%;background:var(--panel)}
+.syd .hero img{width:100%;height:100%;object-fit:cover;display:block}
+.syd .hero .tag{position:absolute;left:0;bottom:0;right:0;display:grid;gap:4px;padding:14px 16px;background:linear-gradient(0deg,rgba(10,14,22,.78),rgba(10,14,22,0));color:#fff;letter-spacing:0;text-transform:none;font-size:inherit;font-weight:400}
+.syd .hero .tag b{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;width:max-content;padding:5px 9px 4px;color:#fff}
+.syd .hero .stay b{background:#2D6A55}
+.syd .hero .go b{background:#B3442B}
+.syd .hero .tag span{font-family:var(--display);font-size:clamp(1.02rem,2.2vw,1.35rem);font-weight:500;line-height:1.25}
+.syd .verdict{margin-top:22px;border:1px solid var(--rule);border-top:3px solid var(--jade);padding:22px 24px;display:grid;gap:14px}
+.syd .verdict .call{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px}
+.syd .verdict .call h2{font-size:clamp(1.4rem,3vw,1.9rem)}
+.syd .reasons{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 26px}
+.syd .reasons li{display:grid;grid-template-columns:28px 1fr;gap:8px;align-items:start}
+.syd .reasons .n{font-family:var(--display);font-weight:600;color:var(--accent);font-size:1.1rem;line-height:1.5}
+.syd .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--rule);margin-top:14px}
+.syd .stat{padding:14px 18px;display:grid;gap:4px;align-content:start}
+.syd .stat+.stat{border-left:1px solid var(--rule)}
+.syd .stat .v{font-family:var(--display);font-size:1.9rem;font-weight:500;line-height:1;font-variant-numeric:tabular-nums}
+.syd .stat .k{font-size:.88rem;color:var(--muted);line-height:1.35}
+.syd .stat.econ .v{color:var(--econ)} .syd .stat.biz .v{color:var(--biz)} .syd .stat.sand .v{color:var(--sand)} .syd .stat.jac .v{color:var(--jac)}
+.syd .toc{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:18px;font-size:.95rem}
+.syd .toc a{color:var(--accent)}
+.syd figure.diagram{margin:0;border:1px solid var(--rule);padding:16px 16px 12px;display:grid;gap:10px}
+.syd figure.diagram svg{display:block;width:100%;height:auto}
+.syd .scroll svg{min-width:720px}
+.syd .scroll svg.tl{min-width:980px}
+.syd figure.diagram svg.venn{max-width:640px;margin-inline:auto}
+.syd figure.diagram svg.org{max-width:760px;margin-inline:auto}
+.syd svg text{font-size:12px}
+.syd svg .t-on{fill:var(--on-strong);font-weight:600}
+.syd svg .t-disp{font-family:var(--display);font-size:17px;font-weight:500}
+.syd svg .f-jade{fill:var(--jade)} .syd svg .f-sand{fill:var(--sand)} .syd svg .f-jac{fill:var(--jac)}
+.syd svg .f-jac-soft{fill:var(--jac-soft);stroke:var(--jac);stroke-width:1.2;stroke-dasharray:5 4}
+.syd svg .t-jac{fill:var(--jac);font-weight:600}
+.syd svg .line-jac{stroke:var(--jac);stroke-width:1.5;stroke-dasharray:4 4}
+.syd svg .c-econ{fill:var(--econ);fill-opacity:.13;stroke:var(--econ);stroke-width:1.5}
+.syd svg .c-biz{fill:var(--biz);fill-opacity:.13;stroke:var(--biz);stroke-width:1.5}
+.syd svg .t-econ{fill:var(--econ);font-weight:700}
+.syd svg .t-biz{fill:var(--biz);font-weight:700}
+.syd svg .box-econ{fill:var(--paper);stroke:var(--econ);stroke-width:1.5}
+.syd svg .box-biz{fill:var(--paper);stroke:var(--biz);stroke-width:1.5}
+.syd svg .in-econ{fill:var(--econ-soft);stroke:var(--econ);stroke-width:1}
+.syd svg .in-biz{fill:var(--biz-soft);stroke:var(--biz);stroke-width:1}
+.syd svg .arrow{stroke:var(--ink);stroke-width:1.5;fill:none}
+.syd svg .ah{fill:var(--ink)}
+.syd svg .bar-a{fill:var(--sand)} .syd svg .bar-a2{fill:var(--sand-soft);stroke:var(--sand);stroke-width:1}
+.syd svg .bar-b{fill:var(--jade)}
+.syd .cmp td.a{background:color-mix(in srgb,var(--sand-soft) 55%,transparent)}
+.syd .cmp td.b{background:color-mix(in srgb,var(--jade-soft) 55%,transparent)}
+.syd .cmp thead th.a{color:var(--sand)} .syd .cmp thead th.b{color:var(--jade)}
+.syd .win{font-weight:600}
+.syd .w-uni{min-width:1000px}
+.syd tbody th{white-space:nowrap}
+.syd .qa{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--rule)}
+.syd .qa div{padding:16px 18px 16px 0;border-bottom:1px solid var(--rule);display:grid;gap:6px;align-content:start}
+.syd .qa div:nth-child(even){padding-left:18px;border-left:1px solid var(--rule)}
+.syd .qa h3{font-family:var(--body);font-size:1.02rem;font-weight:700}
+.syd .qa .ans{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.syd .defs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.syd .defs div{border-top:2px solid var(--ink);padding-top:8px;display:grid;gap:2px;align-content:start}
+.syd .defs b{font-family:var(--display);font-size:1.3rem;font-weight:500}
+.syd .defs span{font-size:.9rem;color:var(--muted);line-height:1.4}
+.syd .plans{display:grid;gap:14px}
+.syd .plan{border:1px solid var(--rule);padding:16px;display:grid;gap:10px}
+.syd .plan-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;align-items:baseline}
+.syd .plan-head h3{font-size:1.12rem}
+.syd .cells{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:4px}
+.syd .cell{min-height:50px;padding:5px 5px 4px;font-size:11px;line-height:1.25;display:flex;align-items:flex-end;overflow-wrap:anywhere;border:1px solid transparent;font-variant-numeric:tabular-nums}
+.syd .cell.core{background:var(--panel-2);color:var(--ink)}
+.syd .cell.econ{background:var(--econ-soft);color:var(--econ);border-color:color-mix(in srgb,var(--econ) 35%,transparent)}
+.syd .cell.biz{background:var(--biz-soft);color:var(--biz);border-color:color-mix(in srgb,var(--biz) 35%,transparent)}
+.syd .cell.free{background:transparent;color:var(--muted);border:1px dashed var(--rule)}
+.syd .plan p{font-size:.92rem;color:var(--muted)}
+.syd .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--rule)}
+.syd .card{padding:18px 20px 18px 0;border-bottom:1px solid var(--rule);display:grid;gap:8px;align-content:start}
+.syd .card:nth-child(even){padding-left:20px;border-left:1px solid var(--rule)}
+.syd .card .who{font-family:var(--display);font-size:1.2rem;font-weight:500}
+.syd .card .path{font-size:.92rem;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:0}
+.syd .card .path dt{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;padding-top:3px}
+.syd .card .path dd{margin:0}
+.syd .card .lesson{font-size:.94rem;border-top:1px solid var(--rule);padding-top:8px}
+.syd .photos{display:grid;grid-template-columns:2.2fr 1fr;gap:10px}
+.syd .photos figure{margin:0;display:grid;gap:6px}
+.syd .photos img{width:100%;height:100%;max-height:340px;object-fit:cover;display:block}
+.syd .photos figcaption{font-size:.86rem}
+.syd .figs{display:grid;gap:12px}
+.syd .two{gap:0;border-top:1px solid var(--rule)}
+.syd .box{padding:18px 20px 18px 0;display:grid;gap:8px;align-content:start}
+.syd .box+.box{padding-left:20px;border-left:1px solid var(--rule)}
+.syd .box ul{margin:0;padding-left:18px;display:grid;gap:6px}
+.syd .next{background:var(--panel);padding:20px 24px;display:grid;gap:10px}
+.syd .next ol{margin:0;padding-left:20px;display:grid;gap:8px}
+.syd .sources{columns:2;column-gap:28px;display:block}
+.syd .sources li{break-inside:avoid;margin-bottom:6px}
+.syd .syd-foot{margin-top:36px;font-size:.84rem;color:var(--muted);border-top:1px solid var(--rule);padding-top:14px;display:grid;gap:6px}
+.syd .gloss{margin-top:14px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px;background:var(--panel);padding:16px 18px}
+.syd .gloss .gloss-title{grid-column:1/-1}
+.syd .gloss div{display:grid;gap:2px;align-content:start}
+.syd .gloss span{font-size:.94rem;color:var(--muted);line-height:1.45}
+.syd-bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 16px;background:var(--panel);padding:14px 18px}
+.seg{display:inline-flex;border:1px solid var(--rule);background:var(--paper)}
+.seg button{font-family:var(--body);font-size:.92rem;font-weight:600;border:0;background:transparent;color:var(--muted);padding:8px 14px;cursor:pointer;white-space:nowrap}
+.seg button[aria-pressed="true"]{background:var(--navy);color:var(--on-navy)}
+section[id],[id^="when"]{scroll-margin-top:24px}
+
+footer.site{border-top:1px solid var(--rule);font-size:.86rem;color:var(--muted)}
+footer.site .wrap{padding-block:20px 36px;display:grid;gap:6px}
+
+@media (max-width:900px){
+  .overview{grid-template-columns:1fr;gap:32px}
+  .uni-meta{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .uni-meta>div:nth-child(3){border-left:none}
+  .uni-meta>div:nth-child(n+3){border-top:1px solid var(--rule)}
+}
+@media (max-width:720px){
+  .wrap{padding-inline:16px}
+  body{font-size:16px}
+  .course{padding:30px 18px 20px}
+  .course .tag{left:18px}
+  .course-meta{grid-template-columns:1fr;gap:12px}
+  .course-meta>div{padding-inline:0}
+  .course-meta>div+div{border-left:none;border-top:1px solid var(--rule);padding-top:12px}
+  .facts{grid-template-columns:1fr}
+  .facts div+div{border-left:none;border-top:1px solid var(--rule)}
+  .two{grid-template-columns:1fr}
+  .sched .row{grid-template-columns:1fr;gap:6px}
+  .sched .who{justify-content:flex-start}
+  dl.kv{grid-template-columns:1fr}
+  dl.kv dt{border-bottom:none;padding-bottom:0}
+  .syd .hero,.syd .reasons,.syd .qa,.syd .cards,.syd .two,.syd .photos,.syd .gloss{grid-template-columns:1fr}
+  .syd .qa div:nth-child(even),.syd .card:nth-child(even),.syd .box+.box{padding-left:0;border-left:none}
+  .syd .stats,.syd .defs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .syd .stat:nth-child(3){border-left:none}
+  .syd .stat:nth-child(n+3){border-top:1px solid var(--rule)}
+  .syd .cells{grid-template-columns:repeat(6,minmax(0,1fr))}
+  .syd .sources{columns:1}
+}
+@media (max-width:480px){
+  .uni-meta{grid-template-columns:1fr}
+  .uni-meta>div+div{border-left:none;border-top:1px solid var(--rule)}
+}
+@media (prefers-reduced-motion:no-preference){
+  .btn,.tabs button{transition:color .15s,border-color .15s}
+}
+</style>
+
+<div class="strip">
+  <div class="wrap">
+    <span>Peter · ISHCMC, Ho Chi Minh City · IB Diploma, Class of 2028</span>
+    <span>Undergraduate plan · updated 29 Sep 2026</span>
+  </div>
+</div>
+
+<header class="masthead-top">
+  <div class="wrap">
+    <p class="kicker">Undergraduate entry 2028</p>
+    <h1>Where I'm going after the IB</h1>
+    <p class="lead">Economics and business, five universities on three continents, and one predicted score to raise.</p>
+    <nav class="tabs" role="tablist" aria-label="Plan sections">
+      <button type="button" role="tab" id="tab-overview" aria-controls="overview" aria-selected="true">Overview</button>
+      <button type="button" role="tab" id="tab-table" aria-controls="table" aria-selected="false">Compare</button>
+      <button type="button" role="tab" id="tab-schedule" aria-controls="schedule" aria-selected="false">Timeline</button>
+      <button type="button" role="tab" id="tab-uchicago" aria-controls="uchicago" aria-selected="false">UChicago</button>
+      <button type="button" role="tab" id="tab-nyush" aria-controls="nyush" aria-selected="false">NYU Shanghai</button>
+      <button type="button" role="tab" id="tab-unsw" aria-controls="unsw" aria-selected="false">UNSW Sydney</button>
+      <button type="button" role="tab" id="tab-usyd" aria-controls="usyd" aria-selected="false">University of Sydney</button>
+      <button type="button" role="tab" id="tab-ucsc" aria-controls="ucsc" aria-selected="false">UC Santa Cruz</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<!-- OVERVIEW -->
+<div class="tabpanel" role="tabpanel" id="overview" aria-labelledby="tab-overview">
+<div class="overview">
+
+  <aside class="profile" aria-label="Student profile">
+    <div class="grp">
+      <div class="grp-h">Predicted score</div>
+      <div class="score"><b>35–37</b><span>/ 45</span></div>
+      <p class="small muted">Current IB prediction. Target by DP2 predictions: <strong>38</strong>.</p>
+    </div>
+    <div class="grp">
+      <div class="grp-h">Student</div>
+      <dl>
+        <dt>Type</dt><dd>International (Vietnam)</dd>
+        <dt>School</dt><dd>ISHCMC</dd>
+        <dt>Now</dt><dd>DP1, Grade 11</dd>
+        <dt>Finishes</dt><dd>IB exams, May 2028</dd>
+        <dt>Starts uni</dt><dd>Aug to Sep 2028, or Feb 2029</dd>
+      </dl>
+    </div>
+    <div class="grp">
+      <div class="grp-h">Subjects</div>
+      <ul class="checks">
+        <li class="on">Economics HL</li>
+        <li class="on">Business Management HL</li>
+        <li class="on">English B HL</li>
+        <li class="on">Environmental Systems and Societies SL</li>
+        <li class="on">Mathematics: Analysis and Approaches SL</li>
+      </ul>
+    </div>
+    <div class="grp">
+      <div class="grp-h">Field of study</div>
+      <ul class="checks">
+        <li class="on">Economics</li>
+        <li class="on">Business / Commerce</li>
+        <li class="on">Environmental economics, sustainability</li>
+      </ul>
+    </div>
+    <div class="grp">
+      <div class="grp-h">Beyond the classroom</div>
+      <ul class="checks">
+        <li class="on">Chạm (student nonprofit)</li>
+        <li class="on">Action for Earth</li>
+        <li class="on">Student Ambassador</li>
+        <li class="on">CAS</li>
+      </ul>
+    </div>
+  </aside>
+
+  <div class="panel-body">
+    <div class="block">
+      <p class="label">My aim</p>
+      <div class="aim">
+        <p>Major in economics and business at a university that lets me combine the two, with room for environmental economics and social impact. Start in the second half of 2028.</p>
+      </div>
+      <div class="facts">
+        <div><b>38</b><span>The number that unlocks the most. See the chart below.</span></div>
+        <div><b>IELTS 7.0</b><span>No band under 6.0. Covers every school on this list.</span></div>
+        <div><b class="num">1 Nov 2027</b><span>First deadline: NYU Shanghai Early Decision I.</span></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block-head">
+        <p class="label">Score against entry points</p>
+        <h2>Where 35 to 37 gets me in Australia</h2>
+        <p class="muted">Australian universities publish a fixed IB score. Your predicted band already clears both Economics degrees. Commerce sits right on the edge, and 38 clears all of it.</p>
+      </div>
+      <figure class="chart">
+        <div class="scroll">
+        <svg viewBox="0 0 760 300" role="img" aria-label="Chart of IB entry scores on a scale from 28 to 45. Your predicted band of 35 to 37 is shaded. University of Sydney Economics needs 31. UNSW Economics needs 33, or a predicted 35 for an early offer. UNSW Commerce needs 36, or a predicted 38 for an early offer. University of Sydney Commerce needs 38, with the HAPP bridge open from 35. UNSW Commerce International needs 38, or a predicted 40 for an early offer.">
+          <rect x="410" y="36" width="60" height="206" class="band"/>
+          <line x1="410" y1="36" x2="410" y2="242" class="band-edge"/>
+          <line x1="470" y1="36" x2="470" y2="242" class="band-edge"/>
+          <text x="440" y="24" text-anchor="middle" class="t-accent">Predicted 35–37</text>
+          <line x1="500" y1="36" x2="500" y2="242" class="target"/>
+          <g>
+            <line x1="200" y1="250" x2="710" y2="250" class="grid"/>
+            <line x1="200" y1="246" x2="200" y2="254" class="grid"/><text x="200" y="270" text-anchor="middle" class="t-muted t-small">28</text>
+            <line x1="260" y1="246" x2="260" y2="254" class="grid"/><text x="260" y="270" text-anchor="middle" class="t-muted t-small">30</text>
+            <line x1="320" y1="246" x2="320" y2="254" class="grid"/><text x="320" y="270" text-anchor="middle" class="t-muted t-small">32</text>
+            <line x1="380" y1="246" x2="380" y2="254" class="grid"/><text x="380" y="270" text-anchor="middle" class="t-muted t-small">34</text>
+            <line x1="440" y1="246" x2="440" y2="254" class="grid"/><text x="440" y="270" text-anchor="middle" class="t-muted t-small">36</text>
+            <line x1="500" y1="246" x2="500" y2="254" class="grid"/><text x="500" y="270" text-anchor="middle" class="t-muted t-small">38</text>
+            <line x1="560" y1="246" x2="560" y2="254" class="grid"/><text x="560" y="270" text-anchor="middle" class="t-muted t-small">40</text>
+            <line x1="620" y1="246" x2="620" y2="254" class="grid"/><text x="620" y="270" text-anchor="middle" class="t-muted t-small">42</text>
+            <line x1="680" y1="246" x2="680" y2="254" class="grid"/><text x="680" y="270" text-anchor="middle" class="t-muted t-small">44</text>
+            <text x="710" y="270" text-anchor="middle" class="t-muted t-small">45</text>
+            <text x="500" y="290" text-anchor="middle" class="t-bold t-small">Target 38</text>
+          </g>
+          <!-- rows: x = 200 + 30 * (score - 28) -->
+          <text x="10" y="62" class="t-bold">USyd Economics</text>
+          <line x1="200" y1="58" x2="710" y2="58" class="grid" stroke-dasharray="2 4"/>
+          <circle cx="290" cy="58" r="6" class="d-good"/>
+          <text x="290" y="46" text-anchor="middle" class="t-small t-bold">31</text>
+
+          <text x="10" y="102" class="t-bold">UNSW Economics</text>
+          <line x1="200" y1="98" x2="710" y2="98" class="grid" stroke-dasharray="2 4"/>
+          <line x1="350" y1="98" x2="410" y2="98" class="l-good"/>
+          <circle cx="350" cy="98" r="6" class="d-good"/>
+          <circle cx="410" cy="98" r="6" class="r-good"/>
+          <text x="350" y="86" text-anchor="middle" class="t-small t-bold">33</text>
+          <text x="410" y="86" text-anchor="middle" class="t-small t-muted">35</text>
+          <text x="420" y="113" class="t-small t-muted">early offer</text>
+
+          <text x="10" y="142" class="t-bold">UNSW Commerce</text>
+          <line x1="200" y1="138" x2="710" y2="138" class="grid" stroke-dasharray="2 4"/>
+          <line x1="440" y1="138" x2="500" y2="138" class="l-warn"/>
+          <circle cx="440" cy="138" r="6" class="d-warn"/>
+          <circle cx="500" cy="138" r="6" class="r-warn"/>
+          <text x="440" y="126" text-anchor="middle" class="t-small t-bold">36</text>
+          <text x="500" y="126" text-anchor="middle" class="t-small t-muted">38</text>
+          <text x="512" y="142" class="t-small t-muted">early offer</text>
+
+          <text x="10" y="182" class="t-bold">USyd Commerce</text>
+          <line x1="200" y1="178" x2="710" y2="178" class="grid" stroke-dasharray="2 4"/>
+          <line x1="410" y1="178" x2="500" y2="178" class="l-bad" stroke-dasharray="4 3"/>
+          <circle cx="500" cy="178" r="6" class="d-bad"/>
+          <text x="500" y="166" text-anchor="middle" class="t-small t-bold">38</text>
+          <text x="512" y="182" class="t-small t-muted">HAPP bridge from 35</text>
+
+          <text x="10" y="222" class="t-bold">UNSW Commerce (Intl)</text>
+          <line x1="200" y1="218" x2="710" y2="218" class="grid" stroke-dasharray="2 4"/>
+          <line x1="500" y1="218" x2="560" y2="218" class="l-bad"/>
+          <circle cx="500" cy="218" r="6" class="d-bad"/>
+          <circle cx="560" cy="218" r="6" class="r-bad"/>
+          <text x="500" y="206" text-anchor="middle" class="t-small t-bold">38</text>
+          <text x="560" y="206" text-anchor="middle" class="t-small t-muted">40</text>
+          <text x="572" y="222" class="t-small t-muted">early offer</text>
+        </svg>
+        </div>
+        <div class="legend">
+          <span><i style="background:var(--good);border-radius:50%"></i>Final IB needed, inside reach now</span>
+          <span><i style="background:var(--warn);border-radius:50%"></i>On the edge of your band</span>
+          <span><i style="background:var(--bad);border-radius:50%"></i>Above your band</span>
+          <span><i style="border:2px solid var(--muted);border-radius:50%"></i>Predicted total UNSW wants for an offer before results (final + 2)</span>
+        </div>
+        <figcaption>Scores are for 2027 entry, the latest published. UNSW's table says a forecast IB total must be two points above the final requirement to earn an offer before results come out. Below that, you can still get in once your final score arrives in July 2028.</figcaption>
+      </figure>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>United States and Shanghai</th><th>How they decide</th><th>Latest selectivity</th><th>What decides it for you</th></tr></thead>
+          <tbody>
+            <tr><th>UChicago</th><td>Holistic, no score cut-off, tests optional</td><td>4.5% admitted (Class of 2029)</td><td>Grades near the top of the class, and the essays</td></tr>
+            <tr><th>NYU Shanghai</th><td>Holistic, Common App</td><td>About 24,000 applications for about 500 places (Class of 2029)</td><td>Why Shanghai, why NYU, and a global story</td></tr>
+            <tr><th>UC Santa Cruz</th><td>UC application, test-free, 3.4 GPA minimum for international students</td><td>71.9% of international applicants admitted (Fall 2025)</td><td>Personal insight answers, and whether the family can cover the cost</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block-head">
+        <p class="label">Shortlist</p>
+        <div class="results">
+          <h2>Five universities</h2>
+          <span class="muted">Sorted from dream to likely</span>
+        </div>
+      </div>
+      <div class="cards">
+        <article class="course">
+          <span class="tag">Dream</span>
+          <div class="course-head"><h3>University of Chicago</h3><button type="button" class="btn" data-go="uchicago">View plan <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+          <div class="course-meta">
+            <div class="loc"><svg viewBox="0 0 16 20" aria-hidden="true"><path d="M8 0a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg><span>Chicago, Illinois, USA</span></div>
+            <div><span class="k">Programme</span><span>BA Economics, Business Economics specialisation</span></div>
+            <div><span class="k">Entry</span><span>Holistic · 4.5% admitted</span></div>
+          </div>
+        </article>
+        <article class="course">
+          <span class="tag reach">Reach</span>
+          <div class="course-head"><h3>NYU Shanghai</h3><button type="button" class="btn" data-go="nyush">View plan <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+          <div class="course-meta">
+            <div class="loc"><svg viewBox="0 0 16 20" aria-hidden="true"><path d="M8 0a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg><span>Shanghai, China, with study away at NYU sites</span></div>
+            <div><span class="k">Programme</span><span>Business and Finance, Business and Marketing, or Economics</span></div>
+            <div><span class="k">Entry</span><span>Holistic · ~500 places</span></div>
+          </div>
+        </article>
+        <article class="course">
+          <span class="tag target">Target</span>
+          <div class="course-head"><h3>UNSW Sydney</h3><button type="button" class="btn" data-go="unsw">View plan <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+          <div class="course-meta">
+            <div class="loc"><svg viewBox="0 0 16 20" aria-hidden="true"><path d="M8 0a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg><span>Kensington campus, Sydney, Australia</span></div>
+            <div><span class="k">Programme</span><span>Bachelor of Commerce or Bachelor of Economics</span></div>
+            <div><span class="k">Entry score</span><span class="num">IB 36 · IB 33</span></div>
+          </div>
+        </article>
+        <article class="course">
+          <span class="tag target">Target</span>
+          <div class="course-head"><h3>The University of Sydney</h3><button type="button" class="btn" data-go="usyd">View plan <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+          <div class="course-meta">
+            <div class="loc"><svg viewBox="0 0 16 20" aria-hidden="true"><path d="M8 0a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg><span>Camperdown/Darlington campus, Sydney, Australia</span></div>
+            <div><span class="k">Programme</span><span>Bachelor of Commerce or Bachelor of Economics</span></div>
+            <div><span class="k">Entry score</span><span class="num">IB 38 · IB 31</span></div>
+          </div>
+        </article>
+        <article class="course">
+          <span class="tag likely">Likely</span>
+          <div class="course-head"><h3>UC Santa Cruz</h3><button type="button" class="btn" data-go="ucsc">View plan <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+          <div class="course-meta">
+            <div class="loc"><svg viewBox="0 0 16 20" aria-hidden="true"><path d="M8 0a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg><span>Santa Cruz, California, USA</span></div>
+            <div><span class="k">Programme</span><span>BA Business Management Economics</span></div>
+            <div><span class="k">Entry</span><span>GPA 3.4+ · 71.9% of internationals admitted</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block-head">
+        <p class="label">Priorities</p>
+        <h2>What moves the plan most, in order</h2>
+      </div>
+      <ol class="steps">
+        <li><strong>Lift the prediction from 35–37 to 38.</strong> At 38 you clear USyd Commerce directly, UNSW Commerce (International), and UNSW's early-offer line for Commerce. It also makes UChicago and NYU Shanghai less of a long shot.</li>
+        <li><strong>Sit IELTS Academic by late 2027 and aim for 7.0 with no band under 6.0.</strong> That covers USyd and UNSW (7.0) and UC Santa Cruz (6.5). USyd maps English B HL to IELTS 6.5 at best, so you need the test.</li>
+        <li><strong>Use at most one binding Early Decision, and only with the family's budget agreed.</strong> UChicago also has non-binding Early Action on the same November date.</li>
+        <li><strong>Write your story once, then adapt it.</strong> Chạm, Action for Earth, and why economics plus business. It feeds the UChicago supplement, the NYU Shanghai questions and the four UC personal insight answers.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- COMPARE -->
+<div class="tabpanel" role="tabpanel" id="table" aria-labelledby="tab-table" hidden>
+<div class="panel-body">
+  <div class="block">
+    <div class="block-head" style="border-top:none;padding-top:0">
+      <p class="label">Side by side</p>
+      <h2>The five options on one table</h2>
+      <p class="muted">Latest published figures, checked 29 Sep 2026. Fees are per year in each university's own currency.</p>
+    </div>
+    <div class="tbl">
+      <table class="wide">
+        <thead><tr><th></th><th>UChicago</th><th>NYU Shanghai</th><th>UNSW Sydney</th><th>University of Sydney</th><th>UC Santa Cruz</th></tr></thead>
+        <tbody>
+          <tr><th>Fit</th><td><span class="tag">Dream</span></td><td><span class="tag reach">Reach</span></td><td><span class="tag target">Target</span></td><td><span class="tag target">Target</span></td><td><span class="tag likely">Likely</span></td></tr>
+          <tr><th>Degree</th><td>BA Economics, Business Economics specialisation</td><td>BS Business and Finance, BS Business and Marketing, Economics</td><td>Bachelor of Commerce, Bachelor of Economics</td><td>Bachelor of Commerce, Bachelor of Economics</td><td>BA Business Management Economics, BA Economics, BA Global Economics</td></tr>
+          <tr><th>Length</th><td>4 years</td><td>4 years</td><td>3 years</td><td>3 years</td><td>4 years</td></tr>
+          <tr><th>Entry</th><td>Holistic, no cut-off</td><td>Holistic, no cut-off</td><td>IB 36 Commerce, 33 Economics, 38 Commerce (International)</td><td>IB 38 Commerce, 31 Economics</td><td>GPA 3.4 minimum, IB converted</td></tr>
+          <tr><th>You at 35–37</th><td><span class="pill bad">Long shot</span></td><td><span class="pill bad">Long shot</span></td><td><span class="pill good">Economics met</span> <span class="pill warn">Commerce on the line</span></td><td><span class="pill good">Economics met</span> <span class="pill warn">Commerce via HAPP</span></td><td><span class="pill good">Likely met</span></td></tr>
+          <tr><th>Selectivity</th><td>4.5% (Class of 2029)</td><td>~24,000 applied for ~500 places</td><td>Score-based</td><td>Score-based</td><td>71.9% of internationals (Fall 2025)</td></tr>
+          <tr><th>Tests</th><td>Optional, "no harm" policy</td><td>Check current policy</td><td>None</td><td>None</td><td>Test-free: SAT not used</td></tr>
+          <tr><th>English</th><td>Check requirement for English B students</td><td>TOEFL or IELTS if English isn't your first language</td><td>IELTS 7.0, 6.0 in each band</td><td>IELTS 7.0, 6.0 in each band</td><td>IELTS 6.5, TOEFL iBT 80, or Duolingo 115</td></tr>
+          <tr><th>Apply through</th><td>Common App or Coalition, plus UChicago supplement</td><td>Common App</td><td>UNSW direct or UAC</td><td>USyd direct</td><td>UC Application</td></tr>
+          <tr><th>Deadlines</th><td>EA / ED I: early Nov · ED II / RD: early Jan</td><td>ED I: 1 Nov · ED II: 1 Jan · RD: 5 Jan</td><td>Rolling, apply in DP2</td><td>Rolling, apply in DP2</td><td>1 Oct to 30 Nov 2027</td></tr>
+          <tr><th>Start</th><td>Late Sep 2028</td><td>Late Aug 2028</td><td>Sep 2028 (Term 3) or Feb 2029</td><td>Aug 2028 or Feb 2029</td><td>Late Sep 2028</td></tr>
+          <tr><th>Tuition / year</th><td class="num">US$77,955 (2026–27)</td><td class="num">US$68,576 (2026–27)</td><td class="num">A$56,500 (2026)</td><td class="num">A$59,100 (2027)</td><td class="num">US$54,848 (2026–27)</td></tr>
+          <tr><th>All-in / year</th><td class="num">Over US$100,000</td><td class="num">≈ US$91,700</td><td class="num">≈ A$86,500 with ~A$30k living</td><td class="num">≈ A$89,100 with ~A$30k living</td><td class="num">≈ US$76,400 + books, insurance</td></tr>
+          <tr><th>Aid</th><td>Need and merit aid for internationals; meets full need with no loans; apply at admission</td><td>CSS Profile; need-aware for internationals; grants, loans and work</td><td>Scholarships only</td><td>20% Sydney International Student Award</td><td>Very little for internationals; plan to self-fund</td></tr>
+          <tr><th>Binding?</th><td>ED I and ED II are binding; EA is not</td><td>ED I and ED II are binding</td><td>No</td><td>No</td><td>No</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small muted">Living costs for Australia use the ~A$30,000 a year estimate from Taylors College Sydney. US deadlines shown are the 2026–27 cycle; your cycle (2027–28) usually lands on the same or next day.</p>
+  </div>
+</div>
+</div>
+
+<!-- TIMELINE -->
+<div class="tabpanel" role="tabpanel" id="schedule" aria-labelledby="tab-schedule" hidden>
+<div class="panel-body">
+  <div class="block">
+    <div class="block-head" style="border-top:none;padding-top:0">
+      <p class="label">Timeline</p>
+      <h2>From DP1 to the first lecture</h2>
+      <p class="muted">Every date that matters across the five universities. US dates follow the 2026–27 pattern and should be re-checked in August 2027.</p>
+    </div>
+    <div class="sched">
+      <div class="phase">DP1 · 2026 to 2027</div>
+      <div class="row now"><span class="when">Sep–Dec 2026</span><div class="what"><strong>You are here.</strong><span class="muted">Build the list, keep records of Chạm and Action for Earth work, and start Internal Assessment planning.</span></div><div class="who"><span class="pill jac">All</span></div></div>
+      <div class="row"><span class="when">Jan–Jun 2027</span><div class="what"><strong>End-of-DP1 results shape your predicted grades.</strong><span class="muted">Tell your IB coordinator the target is 38. Draft your activity list.</span></div><div class="who"><span class="pill jac">All</span></div></div>
+      <div class="row"><span class="when">Jun–Aug 2027</span><div class="what"><strong>Sit IELTS Academic.</strong><span class="muted">Target 7.0 with no band under 6.0. Draft the personal essay, UC insight answers, and the UChicago and NYU Shanghai supplements.</span></div><div class="who"><span class="pill jac">All</span></div></div>
+      <div class="row"><span class="when">Aug 2027</span><div class="what"><strong>Common App and UC Application open.</strong><span class="muted">Decide on Early Decision, together with the family budget.</span></div><div class="who"><span class="pill jac">US</span><span class="pill jac">NYUSH</span></div></div>
+      <div class="phase">Applications · DP2, 2027 to 2028</div>
+      <div class="row"><span class="when">1 Oct 2027</span><div class="what"><strong>UC filing period opens.</strong><span class="muted">Submit any time until 30 November.</span></div><div class="who"><span class="pill jac">UCSC</span></div></div>
+      <div class="row"><span class="when">Oct–Nov 2027</span><div class="what"><strong>Apply to UNSW and USyd with predicted grades.</strong><span class="muted">Rolling admission: earlier gives earlier conditional offers.</span></div><div class="who"><span class="pill jac">UNSW</span><span class="pill jac">USyd</span></div></div>
+      <div class="row"><span class="when">1 Nov 2027</span><div class="what"><strong>NYU Shanghai Early Decision I (binding).</strong></div><div class="who"><span class="pill jac">NYUSH</span></div></div>
+      <div class="row"><span class="when">~2 Nov 2027</span><div class="what"><strong>UChicago Early Action (non-binding) or Early Decision I (binding).</strong><span class="muted">Financial aid forms are due shortly after.</span></div><div class="who"><span class="pill jac">UChicago</span></div></div>
+      <div class="row"><span class="when">30 Nov 2027</span><div class="what"><strong>UC Application deadline.</strong><span class="muted">Hard deadline, 11:59 pm Pacific time.</span></div><div class="who"><span class="pill jac">UCSC</span></div></div>
+      <div class="row"><span class="when">Mid-Dec 2027</span><div class="what"><strong>Early decisions arrive.</strong><span class="muted">If an ED school admits you with enough aid, you must withdraw the others.</span></div><div class="who"><span class="pill jac">UChicago</span><span class="pill jac">NYUSH</span></div></div>
+      <div class="row"><span class="when">1–5 Jan 2028</span><div class="what"><strong>NYU Shanghai ED II (1 Jan) and Regular Decision (5 Jan). UChicago ED II and Regular Decision (~4 Jan).</strong></div><div class="who"><span class="pill jac">UChicago</span><span class="pill jac">NYUSH</span></div></div>
+      <div class="row"><span class="when">Mar–Apr 2028</span><div class="what"><strong>Regular decisions and UC decisions.</strong></div><div class="who"><span class="pill jac">US</span><span class="pill jac">NYUSH</span></div></div>
+      <div class="row"><span class="when">1 May 2028</span><div class="what"><strong>Usual reply date for US universities.</strong><span class="muted">Pay the deposit at one school only.</span></div><div class="who"><span class="pill jac">US</span></div></div>
+      <div class="phase">Results and start · 2028</div>
+      <div class="row"><span class="when">May 2028</span><div class="what"><strong>IB final exams.</strong></div><div class="who"><span class="pill jac">All</span></div></div>
+      <div class="row"><span class="when">~5 Jul 2028</span><div class="what"><strong>IB results.</strong><span class="muted">Australian offers become final. At 35 to 37, HAPP is the bridge into USyd Commerce.</span></div><div class="who"><span class="pill jac">UNSW</span><span class="pill jac">USyd</span></div></div>
+      <div class="row"><span class="when">Aug–Sep 2028</span><div class="what"><strong>First semester.</strong><span class="muted">NYU Shanghai late August, USyd August, UNSW Term 3 in September, UChicago and UC Santa Cruz late September.</span></div><div class="who"><span class="pill jac">All</span></div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- UCHICAGO -->
+<div class="tabpanel" role="tabpanel" id="uchicago" aria-labelledby="tab-uchicago" hidden>
+<div class="panel-body">
+  <div class="uni-head">
+    <p class="crumb"><button type="button" data-go="overview">Shortlist</button> / University of Chicago</p>
+    <div><span class="tag">Dream</span></div>
+    <h2>University of Chicago</h2>
+    <p class="muted">Economics with a business track that takes classes at the Booth School of Business.</p>
+    <div class="uni-meta">
+      <div><span class="k">Location</span><span>Chicago, Illinois, USA</span></div>
+      <div><span class="k">Programme</span><span>BA Economics, Business Economics specialisation</span></div>
+      <div><span class="k">Admitted</span><span class="num">4.5% (2,039 of 45,533)</span></div>
+      <div><span class="k">First deadline</span><span class="num">~2 Nov 2027</span></div>
+    </div>
+  </div>
+  <div class="two">
+    <div>
+      <p class="label">Why it fits</p>
+      <ul class="list">
+        <li>UChicago's economics department is among the most respected in the world.</li>
+        <li>The Business Economics specialisation is 13 courses across core, methods, empirical analysis, perspectives and electives. Three of the five electives are taken at Chicago Booth.</li>
+        <li>This track has no maths requirement beyond the Core, unlike the standard track's full calculus sequence. That suits Maths AA SL.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="label">Cost and aid</p>
+      <dl class="kv">
+        <dt>Tuition 2026–27</dt><dd class="num">US$77,955</dd>
+        <dt>Food and housing</dt><dd class="num">US$21,414</dd>
+        <dt>All-in</dt><dd>Over US$100,000 a year</dd>
+        <dt>Aid</dt><dd>International students can get need-based and merit aid. UChicago meets 100% of demonstrated need with no loans, but only if you apply for aid when you apply for admission.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-head"><p class="label">Requirements</p><h3>What they look for, and where you stand</h3></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Area</th><th>What UChicago sees in admits</th><th>You now</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><th>Grades</th><td>Average reported GPA 4.54; 97% in the top tenth of their class</td><td>Predicted 35–37</td><td><span class="pill bad">Below typical</span></td></tr>
+        <tr><th>Tests</th><td>Optional under a "no harm" policy: a score only counts if it helps. Middle 50% SAT of enrolled students: 1500–1560</td><td>No SAT yet</td><td><span class="pill warn">Optional</span> Send only a strong score</td></tr>
+        <tr><th>Essays</th><td>Common App essay plus UChicago's own supplement, known for unusual prompts</td><td>Not started</td><td><span class="pill warn">Summer 2027</span></td></tr>
+        <tr><th>Recommendations</th><td>Counsellor and teacher recommendations</td><td>Choose Economics and Business teachers</td><td><span class="pill warn">Ask in DP2</span></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <div class="block">
+    <div class="block-head"><p class="label">How to apply</p><h3>Four rounds, two binding</h3></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Round</th><th>Deadline (2026–27 cycle)</th><th>Decision</th><th>Binding</th></tr></thead>
+      <tbody>
+        <tr><th>Early Action</th><td class="num">2 Nov</td><td>Mid-December</td><td>No</td></tr>
+        <tr><th>Early Decision I</th><td class="num">2 Nov</td><td>Mid-December</td><td>Yes</td></tr>
+        <tr><th>Early Decision II</th><td class="num">4 Jan</td><td>Mid-February</td><td>Yes</td></tr>
+        <tr><th>Regular Decision</th><td class="num">4 Jan</td><td>Late March</td><td>No</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <div class="verdict-box">
+    <h3><span class="pill bad">Dream</span> Apply, but keep it non-binding</h3>
+    <p>At 35–37 predicted, UChicago is a long shot at a 4.5% admit rate. Use Early Action: it gives an answer in December without locking you in. Early Decision only makes sense if UChicago is clearly first and the family can pay the full cost if aid falls short. Your best lever is the supplement essay, where curiosity counts and Chạm and Action for Earth give you real material.</p>
+  </div>
+  <ol class="sources">
+    <li><a href="https://collegeadmissions.uchicago.edu/apply/first-year-applicants">UChicago first-year applicants</a> and <a href="https://collegeadmissions.uchicago.edu/apply/class-profile/">class profile</a></li>
+    <li><a href="https://economics.uchicago.edu/undergraduate-study/curriculum/business-economics-specialization">Business Economics specialisation</a></li>
+    <li><a href="https://bursar.uchicago.edu/tuition-and-fees/tuition-and-fees-2026-27">Tuition and fees 2026–27</a> · <a href="https://collegeadmissions.uchicago.edu/financial-support/international-financial-aid/">International financial aid</a></li>
+  </ol>
+</div>
+</div>
+
+<!-- NYU SHANGHAI -->
+<div class="tabpanel" role="tabpanel" id="nyush" aria-labelledby="tab-nyush" hidden>
+<div class="panel-body">
+  <div class="uni-head">
+    <p class="crumb"><button type="button" data-go="overview">Shortlist</button> / NYU Shanghai</p>
+    <div><span class="tag reach">Reach</span></div>
+    <h2>NYU Shanghai</h2>
+    <p class="muted">An NYU degree taught in Shanghai, with half the class from China and half from the rest of the world.</p>
+    <div class="uni-meta">
+      <div><span class="k">Location</span><span>Shanghai, China</span></div>
+      <div><span class="k">Programme</span><span>Business and Finance, Business and Marketing, or Economics</span></div>
+      <div><span class="k">Places</span><span class="num">~500 a year, about half international</span></div>
+      <div><span class="k">First deadline</span><span class="num">1 Nov 2027</span></div>
+    </div>
+  </div>
+  <div class="two">
+    <div>
+      <p class="label">Why it fits</p>
+      <ul class="list">
+        <li>Two business majors and an economics major. Business and Finance has tracks including Business Management, Accounting, Analytics and Marketing.</li>
+        <li>You graduate with an NYU degree and can spend semesters at NYU's other campuses, including New York.</li>
+        <li>A few hours' flight from Ho Chi Minh City.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="label">Cost and aid</p>
+      <dl class="kv">
+        <dt>Tuition 2026–27</dt><dd class="num">US$68,576</dd>
+        <dt>Estimated total</dt><dd class="num">≈ US$91,700 a year</dd>
+        <dt>Aid</dt><dd>File the CSS Profile. NYU is need-aware for international students, and packages can mix grants, loans and work-study.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-head"><p class="label">Requirements</p><h3>What they look for, and where you stand</h3></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Area</th><th>Needed</th><th>You now</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><th>Academic record</th><td>Holistic; about 24,000 applications for the Class of 2029</td><td>Predicted 35–37</td><td><span class="pill bad">Reach</span></td></tr>
+        <tr><th>Application</th><td>Common App with NYU's questions</td><td>Not started</td><td><span class="pill warn">Summer 2027</span></td></tr>
+        <tr><th>English</th><td>TOEFL or IELTS if English isn't your first language</td><td>IELTS planned for mid-2027</td><td><span class="pill warn">Book it</span></td></tr>
+        <tr><th>Fit</th><td>A clear reason for Shanghai and a global outlook</td><td>Vietnamese, international school, Chạm</td><td><span class="pill good">Strong story</span></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <div class="block">
+    <div class="block-head"><p class="label">How to apply</p><h3>Three rounds on the Common App</h3></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Round</th><th>Deadline</th><th>Binding</th></tr></thead>
+      <tbody>
+        <tr><th>Early Decision I</th><td class="num">1 Nov 2027</td><td>Yes: accept within 25 days if the aid lets you enrol</td></tr>
+        <tr><th>Early Decision II</th><td class="num">1 Jan 2028</td><td>Yes</td></tr>
+        <tr><th>Regular Decision</th><td class="num">5 Jan 2028</td><td>No</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <div class="verdict-box">
+    <h3><span class="pill bad">Reach</span> A strong fit on story, a stretch on grades</h3>
+    <p>Only about 250 places go to international students each year. Apply Regular Decision unless NYU Shanghai becomes your clear first choice, and budget as if aid will be partial.</p>
+  </div>
+  <ol class="sources">
+    <li><a href="https://shanghai.nyu.edu/page/how-apply">How to apply</a> · <a href="https://shanghai.nyu.edu/undergraduate-admissions/how-to-apply/early-decision">Early Decision</a></li>
+    <li><a href="https://shanghai.nyu.edu/page/cost-attendance">Cost of attendance</a> · <a href="https://shanghai.nyu.edu/page/how-apply-financial-aid">How to apply for financial aid</a></li>
+    <li><a href="https://shanghai.nyu.edu/academics/majors/business-and-finance">Business and Finance major</a> · <a href="https://nyunews.com/news/2025/03/12/nyu-shanghai-record-applications/">Class of 2029 applications (WSN)</a></li>
+  </ol>
+</div>
+</div>
+
+<!-- UNSW -->
+<div class="tabpanel" role="tabpanel" id="unsw" aria-labelledby="tab-unsw" hidden>
+<div class="panel-body">
+  <div class="uni-head">
+    <p class="crumb"><button type="button" data-go="overview">Shortlist</button> / UNSW Sydney</p>
+    <div><span class="tag target">Target</span></div>
+    <h2>UNSW Sydney</h2>
+    <p class="muted">Economics sits inside the UNSW Business School, so Commerce and Economics share one faculty.</p>
+    <div class="uni-meta">
+      <div><span class="k">Location</span><span>Kensington, Sydney</span></div>
+      <div><span class="k">Programme</span><span>Bachelor of Commerce or Bachelor of Economics</span></div>
+      <div><span class="k">IB 2027</span><span class="num">Commerce 36 · Economics 33</span></div>
+      <div><span class="k">Intakes</span><span>Feb, Jun, Sep (3 terms)</span></div>
+    </div>
+  </div>
+  <div class="two">
+    <div>
+      <p class="label">Why it fits</p>
+      <ul class="list">
+        <li>Commerce majors include <strong>Business Economics</strong>, <strong>Business Sustainability and Social Impact</strong>, Behavioural Economics, Finance, International Business, and Innovation, Strategy and Entrepreneurship.</li>
+        <li>Sustainability plus economics inside one Commerce degree is the closest match to your Action for Earth interest.</li>
+        <li>Three-year degree, and three intakes a year give flexibility after results.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="label">Cost</p>
+      <dl class="kv">
+        <dt>Tuition, first year</dt><dd class="num">A$56,500 (2026, indicative)</dd>
+        <dt>Whole degree</dt><dd class="num">≈ A$180,500</dd>
+        <dt>Living</dt><dd class="num">≈ A$30,000 a year in Sydney</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-head"><p class="label">Requirements</p><h3>Your score against UNSW's table</h3></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Requirement (2027 table)</th><th>Needed</th><th>You now</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><th>Bachelor of Economics</th><td class="num">IB 33</td><td>Predicted 35–37</td><td><span class="pill good">Met</span></td></tr>
+        <tr><th>Bachelor of Commerce</th><td class="num">IB 36</td><td>Predicted 35–37</td><td><span class="pill warn">On the line</span></td></tr>
+        <tr><th>Commerce (International)</th><td class="num">IB 38</td><td>Predicted 35–37</td><td><span class="pill bad">1 to 3 short</span></td></tr>
+        <tr><th>Offer on predicted grades</th><td>Forecast total 2 above the requirement: 35 for Economics, 38 for Commerce</td><td>Predicted 35–37</td><td><span class="pill warn">Economics yes</span> Commerce waits for July results unless you're predicted 38</td></tr>
+        <tr><th>Double degrees</th><td>The higher of the two requirements</td><td>n/a</td><td><span class="pill jac">Note</span></td></tr>
+        <tr><th>English</th><td>IELTS 7.0, at least 6.0 in each band</td><td>Not taken</td><td><span class="pill warn">Mid-2027</span></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <div class="verdict-box">
+    <h3><span class="pill warn">Target</span> Economics is safe, Commerce is right in your band</h3>
+    <p>Apply in DP2 for Commerce with Economics as a second preference. At a predicted 38 you get a Commerce offer before results. At 36 or 37 you still get in once the final score arrives in July 2028, in time for Term 3 in September or Term 1 in February 2029.</p>
+  </div>
+  <ol class="sources">
+    <li><a href="https://www.unsw.edu.au/content/dam/pdfs/future-students/2027-int-ug-entry-table.pdf">UNSW 2027 international undergraduate entry table</a></li>
+    <li><a href="https://www.unsw.edu.au/study/undergraduate/bachelor-of-commerce">Bachelor of Commerce</a> (entry, English, fees and majors)</li>
+    <li><a href="https://www.unsw.edu.au/business/our-schools/economics">UNSW Business School: Economics</a></li>
+  </ol>
+</div>
+</div>
+
+<!-- USYD -->
+<div class="tabpanel" role="tabpanel" id="usyd" aria-labelledby="tab-usyd" hidden>
+<div class="panel-body">
+  <div class="uni-head">
+    <p class="crumb"><button type="button" data-go="overview">Shortlist</button> / The University of Sydney</p>
+    <div><span class="tag target">Target</span></div>
+    <h2>The University of Sydney</h2>
+    <div class="uni-meta">
+      <div><span class="k">Location</span><span>Camperdown/Darlington, Sydney</span></div>
+      <div><span class="k">Programme</span><span>Bachelor of Commerce or Bachelor of Economics</span></div>
+      <div><span class="k">IB 2027</span><span class="num">Commerce 38 · Economics 31</span></div>
+      <div><span class="k">Intakes</span><span>Feb and Aug</span></div>
+    </div>
+  </div>
+  <div class="syd-bar">
+    <span class="small">The full Sydney brief: Foundation at Taylors College versus finishing the IB, majors and minors, and costs. Written in English and Vietnamese for the family.</span>
+    <div class="seg" role="group" aria-label="Language of the Sydney brief">
+      <button type="button" id="syd-btn-en" aria-pressed="true">English</button>
+      <button type="button" id="syd-btn-vi" aria-pressed="false">Tiếng Việt</button>
+    </div>
+  </div>
+  <div class="syd" id="syd-en" lang="en">
+<header class="masthead">
+  <p class="eyebrow">Decision brief for Peter · researched 18 Sep 2026 · USyd rules for 2027 entry</p>
+  <h2 class="syd-h">Foundation in Sydney next year, or finish the IB at home?</h2>
+  <p class="lede">You are in DP1 at ISHCMC. <strong>Option A:</strong> leave after Grade 11 and do the University of Sydney Foundation Program at Taylors College, aiming for Commerce. <strong>Option B:</strong> finish the IB, where Commerce needs 38 and Economics needs 31.</p>
+</header>
+
+<div class="hero">
+  <figure>
+    <img src="usyd-report-images/saigon.jpg" alt="Ho Chi Minh City skyline at blue hour with Landmark 81 across the Saigon River">
+    <div class="tag stay"><b>Option B · Stay</b><span>Finish the IB at ISHCMC, graduate May 2028</span></div>
+  </figure>
+  <figure>
+    <img src="usyd-report-images/sydney.jpg" alt="Sydney Opera House, city skyline and Harbour Bridge on a sunny day">
+    <div class="tag go"><b>Option A · Go</b><span>Taylors College Foundation, Sydney, from July 2027</span></div>
+  </figure>
+</div>
+
+<div class="verdict" aria-labelledby="verdict-h">
+  <div class="call">
+    <span class="pill jade">Recommendation</span>
+    <h2 id="verdict-h">Finish the IB. Foundation doesn't buy you anything you need.</h2>
+  </div>
+  <ol class="reasons">
+    <li><span class="n">1</span><span><strong>No time saved.</strong> Both routes get you into a USyd lecture theatre in <strong>August 2028</strong> at the earliest.</span></li>
+    <li><span class="n">2</span><span><strong>About A$27,000 more</strong> for that one year: Taylors tuition plus Sydney living, against staying home for DP2.</span></li>
+    <li><span class="n">3</span><span><strong>You'd trade the IB Diploma</strong> (accepted everywhere) for a certificate built to get you into one university.</span></li>
+    <li><span class="n">4</span><span><strong>Your dream double is open at 31, not just 38.</strong> Environmental economics plus business management works inside the Bachelor of Economics.</span></li>
+  </ol>
+  <p class="small muted">Foundation only wins in a few situations. See <a href="#when">when Foundation is the right call</a>.</p>
+</div>
+
+<div class="stats">
+  <div class="stat biz"><span class="v">38</span><span class="k">IB for Bachelor of Commerce (2027 entry)</span></div>
+  <div class="stat econ"><span class="v">31</span><span class="k">IB for Bachelor of Economics (2027 entry)</span></div>
+  <div class="stat sand"><span class="v">8.5<span class="small">/10</span></span><span class="k">Foundation GPA for Commerce, plus English grade C+</span></div>
+  <div class="stat jac"><span class="v">Aug 2028</span><span class="k">Earliest USyd start on either route</span></div>
+</div>
+
+<nav class="toc" aria-label="Sections">
+  <a href="#timeline">Timeline</a>
+  <a href="#compare">Side by side</a>
+  <a href="#cost">Cost</a>
+  <a href="#econ-business">Is econ part of business?</a>
+  <a href="#majors">Majors &amp; minors</a>
+  <a href="#examples">Real examples</a>
+  <a href="#gap">Gap check</a>
+  <a href="#shortlist">Shortlist</a>
+  <a href="#next">Next steps</a>
+</nav>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="sec-head">
+    <p class="eyebrow">01 · The calendar</p>
+    <h2>Both routes land on the same day</h2>
+    <p class="prose muted">You can't start Foundation until Grade 11 is finished (Taylors asks for a completed first year of the IB). ISHCMC's year ends in June 2027, so your earliest Foundation start is the <strong>July 2027</strong> intake (12 months) or the <strong>late-September</strong> Intensive (9 months). Both finish on 30 June 2028. Meanwhile the IB route has results in early July 2028, and both USyd degrees take an <strong>August</strong> intake.</p>
+  </div>
+  <figure class="diagram">
+    <div class="scroll">
+    <svg class="tl" viewBox="0 0 1060 330" role="img" aria-label="Timeline from June 2027 to March 2029. Foundation route: Taylors from July 2027 to June 2028, then USyd from August 2028. IB route: DP2 at ISHCMC until May 2028 exams, results in July, then USyd from August 2028 or February 2029, with HAPP in late 2028 as the backup for scores of 35 to 37.">
+      <!-- year labels -->
+      <text x="210" y="16" class="t-bold">2027</text>
+      <text x="476" y="16" class="t-bold">2028</text>
+      <text x="932" y="16" class="t-bold">2029</text>
+      <!-- month labels and grid -->
+      <g class="t-muted t-small">
+        <text x="229" y="34" text-anchor="middle" class="t-muted t-small">J</text>
+        <text x="267" y="34" text-anchor="middle" class="t-muted t-small">J</text>
+        <text x="305" y="34" text-anchor="middle" class="t-muted t-small">A</text>
+        <text x="343" y="34" text-anchor="middle" class="t-muted t-small">S</text>
+        <text x="381" y="34" text-anchor="middle" class="t-muted t-small">O</text>
+        <text x="419" y="34" text-anchor="middle" class="t-muted t-small">N</text>
+        <text x="457" y="34" text-anchor="middle" class="t-muted t-small">D</text>
+        <text x="495" y="34" text-anchor="middle" class="t-muted t-small">J</text>
+        <text x="533" y="34" text-anchor="middle" class="t-muted t-small">F</text>
+        <text x="571" y="34" text-anchor="middle" class="t-muted t-small">M</text>
+        <text x="609" y="34" text-anchor="middle" class="t-muted t-small">A</text>
+        <text x="647" y="34" text-anchor="middle" class="t-muted t-small">M</text>
+        <text x="685" y="34" text-anchor="middle" class="t-muted t-small">J</text>
+        <text x="723" y="34" text-anchor="middle" class="t-muted t-small">J</text>
+        <text x="761" y="34" text-anchor="middle" class="t-muted t-small">A</text>
+        <text x="799" y="34" text-anchor="middle" class="t-muted t-small">S</text>
+        <text x="837" y="34" text-anchor="middle" class="t-muted t-small">O</text>
+        <text x="875" y="34" text-anchor="middle" class="t-muted t-small">N</text>
+        <text x="913" y="34" text-anchor="middle" class="t-muted t-small">D</text>
+        <text x="951" y="34" text-anchor="middle" class="t-muted t-small">J</text>
+        <text x="989" y="34" text-anchor="middle" class="t-muted t-small">F</text>
+        <text x="1027" y="34" text-anchor="middle" class="t-muted t-small">M</text>
+      </g>
+      <g>
+        <line class="grid" x1="210" y1="42" x2="210" y2="282"/>
+        <line class="grid" x1="476" y1="42" x2="476" y2="282"/>
+        <line class="grid" x1="932" y1="42" x2="932" y2="282"/>
+        <line class="grid" x1="1046" y1="42" x2="1046" y2="282"/>
+        <line class="grid" x1="210" y1="42" x2="1046" y2="42"/>
+      </g>
+
+      <!-- Row A -->
+      <text x="10" y="72" class="t-bold">A · Foundation</text>
+      <text x="10" y="88" class="t-muted t-small">leave ISHCMC after Grade 11</text>
+      <rect x="210" y="62" width="19" height="28" rx="4" class="f-jade"/>
+      <rect x="271" y="62" width="433" height="28" rx="4" class="f-sand"/>
+      <text x="281" y="80" class="t-on">Taylors Foundation, Sydney · 19 Jul 2027 to 30 Jun 2028</text>
+      <rect x="746" y="62" width="300" height="28" rx="4" class="f-jac"/>
+      <text x="756" y="80" class="t-on">USyd BCom (GPA 8.5) or BEc (GPA 7.3)</text>
+
+      <!-- Row B1 -->
+      <text x="10" y="132" class="t-bold">B · IB 38+</text>
+      <text x="10" y="148" class="t-muted t-small">finish IB, direct entry</text>
+      <rect x="210" y="122" width="19" height="28" rx="4" class="f-jade"/>
+      <rect x="301" y="122" width="354" height="28" rx="4" class="f-jade"/>
+      <text x="311" y="140" class="t-on">ISHCMC DP2 · IB exams in May 2028</text>
+      <polygon points="709,128 716,136 709,144 702,136" class="f-jac"/>
+      <text x="709" y="162" text-anchor="middle" class="t-small t-muted">results ~5 Jul</text>
+      <rect x="746" y="122" width="255" height="28" rx="4" class="f-jac-soft"/>
+      <text x="756" y="140" class="t-jac">Aug 2028 start (possible, tight)</text>
+      <rect x="1001" y="122" width="45" height="28" rx="4" class="f-jac"/>
+      <text x="1023" y="140" text-anchor="middle" class="t-on">Feb</text>
+
+      <!-- Row B2 -->
+      <text x="10" y="192" class="t-bold">B · IB 35 to 37</text>
+      <text x="10" y="208" class="t-muted t-small">HAPP bridge into Commerce</text>
+      <rect x="210" y="182" width="19" height="28" rx="4" class="f-jade"/>
+      <rect x="301" y="182" width="354" height="28" rx="4" class="f-jade"/>
+      <text x="311" y="200" class="t-on">ISHCMC DP2 · IB exams in May 2028</text>
+      <rect x="795" y="182" width="120" height="28" rx="4" class="f-sand"/>
+      <text x="855" y="200" text-anchor="middle" class="t-on">HAPP · 14 wks</text>
+      <rect x="1001" y="182" width="45" height="28" rx="4" class="f-jac"/>
+      <text x="1023" y="200" text-anchor="middle" class="t-on">BCom</text>
+
+      <!-- Row B3 -->
+      <text x="10" y="252" class="t-bold">B · IB 31 to 34</text>
+      <text x="10" y="268" class="t-muted t-small">Economics, direct entry</text>
+      <rect x="210" y="242" width="19" height="28" rx="4" class="f-jade"/>
+      <rect x="301" y="242" width="354" height="28" rx="4" class="f-jade"/>
+      <text x="311" y="260" class="t-on">ISHCMC DP2 · IB exams in May 2028</text>
+      <rect x="746" y="242" width="300" height="28" rx="4" class="f-jac"/>
+      <text x="756" y="260" class="t-on">USyd BEc · Aug 2028 or Feb 2029</text>
+
+      <!-- earliest start line -->
+      <line x1="746" y1="46" x2="746" y2="296" class="line-jac"/>
+      <text x="746" y="314" text-anchor="middle" class="t-jac">Aug 2028: earliest USyd start on every route</text>
+    </svg>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--jade)"></i>At ISHCMC, Ho Chi Minh City</span>
+      <span><i style="background:var(--sand)"></i>At Taylors College, Sydney</span>
+      <span><i style="background:var(--jac)"></i>University of Sydney degree</span>
+    </div>
+    <figcaption>The Foundation route does not arrive earlier. It swaps DP2 in Saigon for a year in Sydney and ends at the same August 2028 start. HAPP 2028 dates are not published yet; the bar uses the 2027 pattern (13 Sep to 17 Dec).</figcaption>
+  </figure>
+</section>
+
+<!-- COMPARE -->
+<section id="compare">
+  <div class="sec-head">
+    <p class="eyebrow">02 · Side by side</p>
+    <h2>What each route actually gives you</h2>
+  </div>
+  <div class="tbl">
+    <table class="cmp">
+      <thead><tr><th></th><th class="a">A · Foundation (Taylors, Sydney)</th><th class="b">B · Finish IB (ISHCMC)</th></tr></thead>
+      <tbody>
+        <tr><th>You leave home</th><td class="a">July 2027</td><td class="b">Mid-2028 or early 2029</td></tr>
+        <tr><th>Earliest USyd start</th><td class="a">Aug 2028</td><td class="b win">Aug 2028 (tight) or Feb 2029</td></tr>
+        <tr><th>Score for Commerce</th><td class="a">Foundation GPA 8.5 / 10 + English C+</td><td class="b">IB 38 (35 to 37 via HAPP)</td></tr>
+        <tr><th>Score for Economics</th><td class="a">GPA 7.3 / 10 + English C+</td><td class="b">IB 31</td></tr>
+        <tr><th>School credential</th><td class="a">Foundation certificate + Grade 11 report</td><td class="b win">IB Diploma</td></tr>
+        <tr><th>Other countries</th><td class="a">Mainly USyd. Other unis decide case by case</td><td class="b win">UK, US, Singapore, NYU Shanghai, all of Australia</td></tr>
+        <tr><th>Cost of that year</th><td class="a">≈ A$80,500</td><td class="b win">≈ A$53,400</td></tr>
+        <tr><th>Living</th><td class="a">Sydney. Under-18 welfare rules apply until you turn 18</td><td class="b">At home</td></tr>
+        <tr><th>What you give up</th><td class="a">DP2, CAS, Action for Earth, Chạm, Student Ambassador</td><td class="b">At most, six months of Sydney head start</td></tr>
+        <tr><th>Track record</th><td class="a">2025: over 90% of USFP grads eligible for a USyd offer (any degree)</td><td class="b">Predicted 35 to 37: Economics direct, Commerce via HAPP or by reaching 38</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- COST -->
+<section id="cost">
+  <div class="sec-head">
+    <p class="eyebrow">03 · Money</p>
+    <h2>The deciding year costs about A$27k more in Sydney</h2>
+    <p class="prose muted">Surprise: ISHCMC's DP2 fee is higher than Taylors' tuition. The gap comes from living in Sydney.</p>
+  </div>
+  <figure class="diagram">
+    <div class="scroll">
+    <svg viewBox="0 0 760 190" role="img" aria-label="Bar chart. Option A Foundation year costs about 80,500 Australian dollars: 50,520 Taylors tuition and fees plus about 30,000 living costs. Option B DP2 at ISHCMC costs about 53,400 Australian dollars in tuition.">
+      <!-- scale: x = 170 + v * (560/90000) -->
+      <line class="grid" x1="170" y1="20" x2="170" y2="150"/>
+      <line class="grid" x1="294.4" y1="20" x2="294.4" y2="150"/>
+      <line class="grid" x1="418.9" y1="20" x2="418.9" y2="150"/>
+      <line class="grid" x1="543.3" y1="20" x2="543.3" y2="150"/>
+      <line class="grid" x1="667.8" y1="20" x2="667.8" y2="150"/>
+      <text x="170" y="168" text-anchor="middle" class="t-muted t-small">A$0</text>
+      <text x="294.4" y="168" text-anchor="middle" class="t-muted t-small">20k</text>
+      <text x="418.9" y="168" text-anchor="middle" class="t-muted t-small">40k</text>
+      <text x="543.3" y="168" text-anchor="middle" class="t-muted t-small">60k</text>
+      <text x="667.8" y="168" text-anchor="middle" class="t-muted t-small">80k</text>
+
+      <text x="10" y="54" class="t-bold">A · Foundation</text>
+      <text x="10" y="70" class="t-muted t-small">Jul 2027 to Jun 2028</text>
+      <rect x="170" y="40" width="314.3" height="34" class="bar-a"/>
+      <text x="180" y="62" class="t-on">Taylors tuition + fees 50,520</text>
+      <rect x="484.3" y="40" width="186.7" height="34" class="bar-a2"/>
+      <text x="494" y="62">Living ~30,000</text>
+      <text x="678" y="62" class="t-bold">≈ A$80.5k</text>
+
+      <text x="10" y="114" class="t-bold">B · Finish IB</text>
+      <text x="10" y="130" class="t-muted t-small">Aug 2027 to Jun 2028</text>
+      <rect x="170" y="100" width="332.3" height="34" class="bar-b"/>
+      <text x="180" y="122" class="t-on">ISHCMC Grade 12 fee 987.8M VND</text>
+      <text x="512" y="122" class="t-bold">≈ A$53.4k</text>
+    </svg>
+    </div>
+    <figcaption>Taylors: 2027 USFP Standard tuition A$49,800 + A$370 enrolment + A$350 e-textbooks; living cost is Taylors' own ~A$30,000 estimate. ISHCMC: 2026-27 Grade 12 fee (2027-28 not published yet) at 18,492 VND per A$ (17 Sep 2026). Not included: flights, health cover (OSHC), homestay placement, visa fees.</figcaption>
+  </figure>
+</section>
+
+<!-- ECON VS BUSINESS -->
+<section id="econ-business">
+  <div class="sec-head">
+    <p class="eyebrow">04 · The big confusion</p>
+    <h2>Is economics part of business?</h2>
+    <p class="prose">In ideas, they overlap. At USyd, they are <strong>two separate faculties that let you borrow from each other</strong>. You already live this in the IB: Economics HL and Business Management HL are different subjects that share a lot of vocabulary.</p>
+  </div>
+  <div class="figs">
+    <figure class="diagram">
+      <svg class="venn" viewBox="0 0 640 330" role="img" aria-label="Venn diagram. Economics covers microeconomics, macroeconomics, econometrics, public policy and environmental economics. Business covers accounting, marketing, management, HR and entrepreneurship. They overlap on finance, analytics and pricing.">
+        <circle cx="235" cy="178" r="138" class="c-econ"/>
+        <circle cx="405" cy="178" r="138" class="c-biz"/>
+        <text x="185" y="26" text-anchor="middle" class="t-econ t-disp">Economics</text>
+        <text x="455" y="26" text-anchor="middle" class="t-biz t-disp">Business</text>
+                <g>
+          <text x="170" y="112" text-anchor="middle">Microeconomics</text>
+          <text x="165" y="142" text-anchor="middle">Macroeconomics</text>
+          <text x="165" y="172" text-anchor="middle">Econometrics</text>
+          <text x="165" y="202" text-anchor="middle">Public policy</text>
+          <text x="170" y="232" text-anchor="middle">Environmental &amp;</text>
+          <text x="170" y="247" text-anchor="middle">resource econ</text>
+        </g>
+        <g>
+          <text x="470" y="112" text-anchor="middle">Accounting</text>
+          <text x="475" y="142" text-anchor="middle">Marketing</text>
+          <text x="475" y="172" text-anchor="middle">Management</text>
+          <text x="475" y="202" text-anchor="middle">HR &amp; employment</text>
+          <text x="470" y="232" text-anchor="middle">Entrepreneurship</text>
+        </g>
+        <g>
+          <text x="320" y="150" text-anchor="middle" class="t-bold">Finance</text>
+          <text x="320" y="180" text-anchor="middle" class="t-bold">Analytics</text>
+          <text x="320" y="210" text-anchor="middle" class="t-bold">Pricing</text>
+        </g>
+      </svg>
+      <figcaption>Economics asks how a whole market or country uses scarce resources. Business asks how one organisation competes inside that market. Finance, analytics and pricing sit in both.</figcaption>
+    </figure>
+    <figure class="diagram">
+      <svg class="org" viewBox="0 0 760 330" role="img" aria-label="At the University of Sydney, the Business School runs the Bachelor of Commerce and the School of Economics, in the Faculty of Arts and Social Sciences, runs the Bachelor of Economics. Commerce students can take Economics or Environmental, Agricultural and Resource Economics as a second major or minor. Economics students can take Business School majors such as Finance, Marketing or Management as a second major or minor.">
+        <defs>
+          <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker>
+        </defs>
+        <text x="380" y="20" text-anchor="middle" class="t-disp">University of Sydney</text>
+        <rect x="10" y="36" width="260" height="284" rx="10" class="box-biz"/>
+        <text x="26" y="62" class="t-biz">Business School</text>
+        <rect x="26" y="76" width="228" height="44" rx="6" class="in-biz"/>
+        <text x="140" y="103" text-anchor="middle" class="t-bold">Bachelor of Commerce</text>
+        <text x="26" y="146" class="t-muted t-small">Majors (2027)</text>
+        <text x="26" y="166">Management &amp; Leadership</text>
+        <text x="26" y="186">Marketing · Finance</text>
+        <text x="26" y="206">Accounting, Governance &amp; Reg.</text>
+        <text x="26" y="226">Business Analytics</text>
+        <text x="26" y="246">Global Business · Digital Business</text>
+        <text x="26" y="266">Innovation &amp; Entrepreneurship</text>
+        <text x="26" y="286">HRM &amp; Employment Relations</text>
+
+        <rect x="490" y="36" width="260" height="284" rx="10" class="box-econ"/>
+        <text x="506" y="62" class="t-econ">Arts &amp; Social Sciences</text>
+        <text x="506" y="80" class="t-muted t-small">School of Economics</text>
+        <rect x="506" y="90" width="228" height="44" rx="6" class="in-econ"/>
+        <text x="620" y="117" text-anchor="middle" class="t-bold">Bachelor of Economics</text>
+        <text x="506" y="160" class="t-muted t-small">Embedded major (pick one)</text>
+        <text x="506" y="180">Economics</text>
+        <text x="506" y="200">Econometrics</text>
+        <text x="506" y="220">Financial Economics</text>
+        <text x="506" y="240">Environmental, Agricultural</text>
+        <text x="506" y="256">&amp; Resource Economics (EARE)</text>
+
+        <line x1="490" y1="108" x2="274" y2="108" class="arrow" marker-end="url(#ah)"/>
+        <text x="382" y="96" text-anchor="middle" class="t-small t-bold">Economics or EARE</text>
+        <text x="382" y="126" text-anchor="middle" class="t-small t-muted">as 2nd major or minor</text>
+
+        <line x1="270" y1="206" x2="486" y2="206" class="arrow" marker-end="url(#ah)"/>
+        <text x="378" y="194" text-anchor="middle" class="t-small t-bold">Finance, Marketing, Mgmt…</text>
+        <text x="378" y="226" text-anchor="middle" class="t-small t-muted">as 2nd major or minor</text>
+      </svg>
+      <figcaption>At USyd the two sit in different faculties, but each degree can take a second major or minor from the other side. That is how "business major + econ minor" and "econ major + business minor" both exist.</figcaption>
+    </figure>
+  </div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>University</th><th>Where economics lives</th><th>What that means for you</th></tr></thead>
+      <tbody>
+        <tr><th>Sydney (USyd)</th><td>School of Economics, Faculty of Arts &amp; Social Sciences. Business School is separate.</td><td>Two different degrees (BCom 38, BEc 31) that cross-borrow majors and minors.</td></tr>
+        <tr><th>UNSW</th><td>School of Economics sits <em>inside</em> UNSW Business School.</td><td>There, economics really is "part of business". Same faculty, same school culture.</td></tr>
+        <tr><th>Melbourne</th><td>Faculty of Business and Economics.</td><td>Economics is a major <em>inside</em> the Bachelor of Commerce.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- MAJORS -->
+<section id="majors">
+  <div class="sec-head">
+    <p class="eyebrow">05 · Majors and minors, decoded</p>
+    <h2>A USyd degree is 24 units. You choose how to fill them.</h2>
+  </div>
+  <div class="defs">
+    <div><b>144 cp</b><span>A 3-year degree. Most units are 6 credit points, so about 24 units, 4 per semester.</span></div>
+    <div><b>Major</b><span>48 cp = 8 units in one area, climbing from 1000 to 3000 level.</span></div>
+    <div><b>Minor</b><span>36 cp = 6 units. A lighter second specialty.</span></div>
+    <div><b>Shared pool</b><span>USyd's list of majors and minors any degree can borrow ("Table S"). EARE, Economics, Finance and Management are all on it.</span></div>
+  </div>
+
+  <div class="qa">
+    <div><h3>Can I do a business major with an econ minor?</h3><p class="ans"><span class="pill good">Yes</span>In the Bachelor of Commerce. USyd's 2027 BCom page lists Economics as a second major or minor option.</p></div>
+    <div><h3>Can I do an econ major with a business minor?</h3><p class="ans"><span class="pill good">Yes</span>In the Bachelor of Economics. You add a second major or minor from the Business School, e.g. Finance or Management &amp; Leadership.</p></div>
+    <div><h3>Can I get environmental economics + business management?</h3><p class="ans"><span class="pill good">Yes, two ways</span>BEc with the EARE major + Management &amp; Leadership (needs 31), or BCom with Management &amp; Leadership + EARE (needs 38). Plans 1 and 2 below.</p></div>
+    <div><h3>Can I switch from Economics to Commerce later?</h3><p class="ans"><span class="pill warn">Maybe</span>Internal transfers exist (apply 1 Oct to 1 Dec for Semester 1). USyd publishes no minimum mark, and changing course affects your visa paperwork. Don't plan on it.</p></div>
+    <div><h3>Does the degree name matter to employers?</h3><p class="ans"><span class="pill jac">Sometimes</span>CPA / Chartered Accountant accreditation runs through the BCom accounting path. Economist and policy roles lean on the BEc's full econometrics sequence. Consulting, banking and corporate roles hire both.</p></div>
+    <div><h3>Anything changing before I arrive?</h3><p class="ans"><span class="pill warn">Yes</span>Commerce got four new core units for 2027. Banking and Business Law majors are listed for 2027 but not 2028, so don't build a plan on them.</p></div>
+  </div>
+
+  <div class="plans">
+    <div class="plan">
+      <div class="plan-head"><h3>Plan 1 · Commerce: Management &amp; Leadership + EARE</h3><span class="pill biz">Needs IB 38</span></div>
+      <div class="cells" role="img" aria-label="Plan 1: 4 Commerce core units, 8 Management and Leadership units, 8 Environmental, Agricultural and Resource Economics units, 4 open learning or elective units.">
+        <div class="cell core">Core: Pro Success</div><div class="cell core">Core: Acct &amp; Fin</div><div class="cell core">Core: Problem Solving</div><div class="cell core">Core: Data Analytics</div>
+        <div class="cell biz">Mgmt 1</div><div class="cell biz">Mgmt 2</div><div class="cell biz">Mgmt 3</div><div class="cell biz">Mgmt 4</div><div class="cell biz">Mgmt 5</div><div class="cell biz">Mgmt 6</div><div class="cell biz">Mgmt 7</div><div class="cell biz">Mgmt 8</div>
+        <div class="cell econ">ECON1001</div><div class="cell econ">ECON1002</div><div class="cell econ">AREC2005</div><div class="cell econ">ECOS2001</div><div class="cell econ">AREC3006</div><div class="cell econ">ECOS3013</div><div class="cell econ">AREC3007</div><div class="cell econ">ECOS3991</div>
+        <div class="cell free">OLE</div><div class="cell free">Elective</div><div class="cell free">Elective</div><div class="cell free">Elective</div>
+      </div>
+      <p>Business-first degree title, with environmental economics as a full second major. EARE is in the shared pool in the 2026 handbook; confirm it's open to Commerce students in your intake year.</p>
+    </div>
+    <div class="plan">
+      <div class="plan-head"><h3>Plan 2 · Economics: EARE major + Management &amp; Leadership</h3><span class="pill econ">Needs IB 31</span></div>
+      <div class="cells" role="img" aria-label="Plan 2: 7 Economics core units, 5 Environmental, Agricultural and Resource Economics embedded-major units, 6 Management and Leadership units plus 2 swap electives, 4 open learning or elective units.">
+        <div class="cell econ">ECON1001</div><div class="cell econ">ECON1002</div><div class="cell econ">ECMT1010</div><div class="cell econ">ECMT1020</div><div class="cell econ">ECMT2150</div><div class="cell econ">ECOS2001</div><div class="cell econ">ECOS2002</div>
+        <div class="cell econ">AREC2005</div><div class="cell econ">AREC3006</div><div class="cell econ">ECOS3013</div><div class="cell econ">AREC3007</div><div class="cell econ">ECOS3991</div>
+        <div class="cell biz">Mgmt 2k</div><div class="cell biz">Mgmt 2k</div><div class="cell biz">Mgmt 2k</div><div class="cell biz">Mgmt 3k</div><div class="cell biz">Mgmt 3k</div><div class="cell biz">Mgmt 3k</div><div class="cell free">Swap elective</div><div class="cell free">Swap elective</div>
+        <div class="cell free">OLE</div><div class="cell free">Elective</div><div class="cell free">Elective</div><div class="cell free">Elective</div>
+      </div>
+      <p>This is the closest match to "Environmental Economics + Business Management", sitting 4 to 6 points below your predicted 35 to 37. Real units: <span class="mono">AREC2005</span> Concepts in Environmental and Agricultural Economics, <span class="mono">ECOS3013</span> Environmental Economics, <span class="mono">AREC3007</span> Benefit-Cost Analysis. BEc students taking a Business School major swap its 1000-level units for 12 cp of electives.</p>
+    </div>
+    <div class="plan">
+      <div class="plan-head"><h3>Plan 3 · Commerce: Finance major + Economics minor</h3><span class="pill biz">Needs IB 38</span></div>
+      <div class="cells" role="img" aria-label="Plan 3: 4 Commerce core units, 8 Finance units, 6 Economics minor units, 6 open learning or elective units.">
+        <div class="cell core">Core: Pro Success</div><div class="cell core">Core: Acct &amp; Fin</div><div class="cell core">Core: Problem Solving</div><div class="cell core">Core: Data Analytics</div>
+        <div class="cell biz">Fin 1</div><div class="cell biz">Fin 2</div><div class="cell biz">Fin 3</div><div class="cell biz">Fin 4</div><div class="cell biz">Fin 5</div><div class="cell biz">Fin 6</div><div class="cell biz">Fin 7</div><div class="cell biz">Fin 8</div>
+        <div class="cell econ">ECON1001</div><div class="cell econ">ECON1002</div><div class="cell econ">Econ 2k</div><div class="cell econ">Econ 2k</div><div class="cell econ">Econ 3k</div><div class="cell econ">Econ 3k</div>
+        <div class="cell free">OLE</div><div class="cell free">Elective</div><div class="cell free">Elective</div><div class="cell free">Elective</div><div class="cell free">Elective</div><div class="cell free">Elective</div>
+      </div>
+      <p>The classic "business major, econ minor". USyd's Finance major is a CFA Program Partner route. Leaves room for electives like Sustainability.</p>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--surface-2);border:1px solid var(--rule)"></i>Degree core</span>
+      <span><i style="background:var(--biz-soft);border:1px solid var(--biz)"></i>Business School units</span>
+      <span><i style="background:var(--econ-soft);border:1px solid var(--econ)"></i>School of Economics units</span>
+      <span><i style="border:1px dashed var(--muted)"></i>Open Learning (OLE) and electives</span>
+    </div>
+    <p class="small muted">Illustrative layouts built from the 2026 handbooks and 2027 course pages. Unit codes shown are real; "Mgmt 1" style boxes are placeholders. Exact rules follow the handbook for the year you start.</p>
+  </div>
+</section>
+
+<!-- EXAMPLES -->
+<section id="examples">
+  <div class="sec-head">
+    <p class="eyebrow">06 · Real people, real routes</p>
+    <h2>What these degrees and pathways have led to</h2>
+  </div>
+  <div class="photos">
+    <figure>
+      <img src="usyd-report-images/quad.jpg" alt="The sandstone Main Quadrangle of the University of Sydney with students on the lawn">
+      <figcaption class="muted">Main Quadrangle, Camperdown campus. Where both routes end up.</figcaption>
+    </figure>
+    <figure>
+      <img src="usyd-report-images/abercrombie.jpg" alt="Looking up a spiralling timber staircase inside the Abercrombie Building">
+      <figcaption class="muted">Abercrombie Building, home of the Business School.</figcaption>
+    </figure>
+  </div>
+  <div class="cards">
+    <article class="card">
+      <p class="who">Glenn Stevens</p>
+      <dl class="path"><dt>Degree</dt><dd>USyd Bachelor of Economics, First Class Honours (1979)</dd><dt>Became</dt><dd>Governor of the Reserve Bank of Australia, 2006 to 2016</dd></dl>
+      <p class="lesson">The classic BEc story: an econometrics-heavy degree leading to the top of economic policy. Proof the "31 degree" is not the lesser one.</p>
+    </article>
+    <article class="card">
+      <p class="who">Margaret Zhang</p>
+      <dl class="path"><dt>Degree</dt><dd>USyd Bachelor of Commerce and Bachelor of Laws</dd><dt>Became</dt><dd>Editor-in-Chief of Vogue China (former); filmmaker and creative director</dd></dl>
+      <p class="lesson">A Commerce degree doesn't lock you into accounting. It works as a launchpad for very different careers.</p>
+    </article>
+    <article class="card">
+      <p class="who">Taylors 2024 top performers</p>
+      <dl class="path"><dt>Result</dt><dd>Foundation GPA 9.2 or higher</dd><dt>Offers</dt><dd>Yijing: BCom · Yunwen: BCom/Laws · Quang Minh and Taeyun: Advanced Computing/Commerce · Ba Phong, Minh Phuong: Computing, Science</dd></dl>
+      <p class="lesson">Foundation to Commerce works for students near the top of the cohort. Commerce needs 8.5, close to that top band. In 2025, over 90% of USFP grads were eligible for <em>a</em> USyd offer, not necessarily Commerce.</p>
+    </article>
+    <article class="card">
+      <p class="who">Where EARE graduates go</p>
+      <dl class="path"><dt>USyd lists</dt><dd>Environmental economist, policy analyst, commodities and futures trader, adviser, journalist, merchant and trading banker</dd><dt>Especially</dt><dd>Energy and environmental consulting firms, government regulators</dd></dl>
+      <p class="lesson">This is the Action for Earth version of economics: climate, energy, water and resources, with real numbers behind the policy.</p>
+    </article>
+  </div>
+</section>
+
+<!-- GAP CHECK -->
+<section id="gap">
+  <div class="sec-head">
+    <p class="eyebrow">07 · Gap check</p>
+    <h2>What you meet, what's at risk</h2>
+  </div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Requirement (2027 entry)</th><th>Needed</th><th>You</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><th>IB total, Commerce</th><td>38</td><td>Predicted 35 to 37</td><td><span class="pill warn">1 to 3 short</span> HAPP covers 35 to 37</td></tr>
+        <tr><th>IB total, Economics</th><td>31</td><td>Predicted 35 to 37</td><td><span class="pill good">Met, 4 to 6 point buffer</span></td></tr>
+        <tr><th>English</th><td>IELTS Academic 7.0, no band below 6.0 (or TOEFL iBT 96) for both degrees</td><td>IB English B HL</td><td><span class="pill bad">At risk</span> USyd's concordance table maps English B HL grade 7 to IELTS 6.5 only. Plan to sit IELTS.</td></tr>
+        <tr><th>Maths</th><td>BEc assumes NSW Mathematics Advanced. BCom: no assumed knowledge</td><td>Maths AA SL</td><td><span class="pill good">Met</span> USyd accepts IB Math AA SL (aim for a 5 or higher).</td></tr>
+        <tr><th>Subject prerequisites</th><td>None for BCom or BEc</td><td>Econ HL, BM HL, ESS SL</td><td><span class="pill good">Met</span> and directly relevant</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- SHORTLIST -->
+<section id="shortlist">
+  <div class="sec-head">
+    <p class="eyebrow">08 · Shortlist</p>
+    <h2>Your USyd options in one table</h2>
+  </div>
+  <div class="tbl">
+    <table class="w-uni">
+      <thead><tr><th>Uni</th><th>Course</th><th>Country</th><th>IB score</th><th>Required subjects</th><th>English</th><th>Deadline</th><th>Tuition/yr</th><th>Fit</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>USyd</td><td>Bachelor of Commerce</td><td>Australia</td><td>38</td><td>None</td><td>IELTS 7.0 (6.0)</td><td>Not published for 2028/29; confirm</td><td>A$59,100 (2027)</td><td><span class="pill warn">Stretch</span></td><td><a href="https://www.sydney.edu.au/dam/corporate/documents/study/how-to-apply/international-admission-guide.pdf">2027 guide</a></td></tr>
+        <tr><td>USyd</td><td>Bachelor of Economics (EARE major)</td><td>Australia</td><td>31</td><td>None; Maths Advanced assumed</td><td>IELTS 7.0 (6.0)</td><td>Not published for 2028/29; confirm</td><td>A$59,100 (2027)</td><td><span class="pill good">Safe</span></td><td><a href="https://www.sydney.edu.au/courses/courses/uc/bachelor-of-economics.html">Course page</a></td></tr>
+        <tr><td>USyd via Taylors HAPP</td><td>Bridge into Commerce</td><td>Australia</td><td>35 to 37 (max 3 below)</td><td>None</td><td>IELTS 6.0 to enter (confirm)</td><td>Acceptance by mid-Aug (16 Aug in 2027)</td><td>A$32,240 (2027, 14 wks)</td><td><span class="pill good">Safe backup</span></td><td><a href="https://www.taylorssydney.edu.au/how-apply/entry-requirements/">Taylors</a></td></tr>
+        <tr><td>USyd via Taylors USFP</td><td>Foundation, then Commerce at GPA 8.5</td><td>Australia</td><td>n/a: Grade 11 with four 4s (16)</td><td>None for Commerce</td><td>IELTS 6.0 (5.0) to enter; C+ to progress</td><td>21 Jun 2027 (July intake)</td><td>A$49,800 (2027)</td><td><span class="pill bad">Not advised</span></td><td><a href="https://www.taylorssydney.edu.au/how-apply/fees/">Taylors fees</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="two">
+    <div class="box">
+      <h3>Scholarships you can aim for</h3>
+      <ul>
+        <li><strong>Sydney International Student Award:</strong> 20% off tuition for the whole degree. Vietnam is eligible. Needs a short personal statement (2027 commencements).</li>
+        <li><strong>Sydney International Undergraduate Academic Excellence Scholarship:</strong> 100% tuition, about 20 per year worldwide. A strong IB score is your best shot.</li>
+      </ul>
+      <p class="small muted">Foundation students' eligibility isn't stated on these pages. Confirm before relying on it.</p>
+    </div>
+    <div class="box" id="when">
+      <h3>When Foundation <em>is</em> the right call</h3>
+      <ul>
+        <li>Your DP1 predictions land around 30 or lower and aren't moving.</li>
+        <li>The IB is seriously hurting your health, or you need to leave ISHCMC anyway.</li>
+        <li>USyd is the only university you would ever consider, and you want a Sydney adjustment year.</li>
+      </ul>
+      <p class="small muted">If you go before 18, you need approved welfare: Taylors' homestay (CAAW) or a relative aged 21+ nominated as guardian (Form 157N).</p>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT -->
+<section id="next">
+  <div class="next">
+    <p class="eyebrow">Next steps</p>
+    <ol>
+      <li><strong>Stay in DP2 and aim for 38+.</strong> Tell your IB coordinator the target so predicted grades reflect it.</li>
+      <li><strong>Book IELTS Academic for mid-2027</strong> and aim for 7.0 with no band under 6.0. English B HL won't cover it.</li>
+      <li><strong>Apply to USyd in DP2</strong> with BCom first and BEc (EARE) as your safe, plus the 20% Sydney International Student Award.</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <p class="eyebrow">Sources · all checked 18 Sep 2026</p>
+  </div>
+  <ol class="sources">
+    <li><a href="https://www.sydney.edu.au/dam/corporate/documents/study/how-to-apply/international-admission-guide.pdf">USyd 2027 International Admission Guide</a>: IB 38 / 31, USFP 8.5 / 7.3, IELTS 7.0 (6.0), A$59,100 (2027 intake)</li>
+    <li><a href="https://www.sydney.edu.au/courses/courses/uc/bachelor-of-commerce0.html">USyd Bachelor of Commerce page</a>: 2027 core units, second major/minor incl. Economics, no assumed knowledge, Feb/Aug intakes</li>
+    <li><a href="https://www.sydney.edu.au/courses/courses/uc/bachelor-of-economics.html">USyd Bachelor of Economics page</a>: embedded majors, Maths Advanced assumed, Feb/Aug intakes</li>
+    <li><a href="https://www.sydney.edu.au/handbooks/arts/coursework/economics-economics-advanced-studies/economics-program-unit-of-study-tables.html">2026 Handbook: Economics program (72 cp)</a> and <a href="https://www.sydney.edu.au/handbooks/arts/coursework/economics-economics-advanced-studies/economics-program-unit-of-study-tables/environmental-agricultural-resource-economics-major.html">EARE major units</a></li>
+    <li><a href="https://www.sydney.edu.au/handbooks/business-school/coursework/commerce/commerce-course-resolutions.html">2026 Handbook: Commerce course resolutions</a> and <a href="https://www.sydney.edu.au/handbooks/interdisciplinary-studies/table-s/subject-areas.html">Shared pool (Table S)</a></li>
+    <li><a href="https://www.sydney.edu.au/business/study/undergraduate-courses.html">USyd Business School majors 2027 / 2028</a></li>
+    <li><a href="https://www.sydney.edu.au/arts/schools/school-of-economics.html">USyd School of Economics (Arts &amp; Social Sciences)</a> · <a href="https://www.unsw.edu.au/business/our-schools/economics">UNSW Business School: Economics</a> · <a href="https://study.unimelb.edu.au/find/courses/major/economics/">Melbourne BCom Economics major</a></li>
+    <li><a href="https://www.sydney.edu.au/content/dam/corporate/documents/study/how-to-apply/english-language-concordance-table.pdf">USyd English concordance table</a> (updated 27 Nov 2025)</li>
+    <li><a href="https://www.sydney.edu.au/study/applying/how-to-apply/undergraduate/mathematics-prerequisite.html">USyd mathematics prerequisites</a></li>
+    <li><a href="https://www.taylorssydney.edu.au/how-apply/entry-requirements/">Taylors entry requirements</a> · <a href="https://www.taylorssydney.edu.au/programs/term-dates/">Term dates 2026/27</a> · <a href="https://www.taylorssydney.edu.au/how-apply/fees/">Fees 2026/27</a> · <a href="https://www.taylorssydney.edu.au/programs/student-results/">Student results</a> · <a href="https://www.taylorssydney.edu.au/wp-content/uploads/taylors_college_sydney_2026_prospectus_web.pdf">2026 prospectus</a></li>
+    <li><a href="https://www.sydney.edu.au/students/change-course.html">USyd changing course</a></li>
+    <li><a href="https://www.sydney.edu.au/study/fees-and-loans/scholarships/sydney-international-student-award.html">Sydney International Student Award</a> · <a href="https://www.sydney.edu.au/scholarships/e/sydney-international-undergraduate-academic-excellence-scholarship.html">Academic Excellence Scholarship</a></li>
+    <li><a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500/welfare-arrangements-students-under-18">Home Affairs: welfare for students under 18</a></li>
+    <li><a href="https://www.ishcmc.com/admissions/tuition-fees/">ISHCMC tuition 2026-27</a> · <a href="https://www.exchange-rates.org/exchange-rate-history/aud-vnd-2026">AUD/VND 2026</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Glenn_Stevens">Glenn Stevens</a> · <a href="https://en.wikipedia.org/wiki/Margaret_Zhang">Margaret Zhang</a> · <a href="https://www.sydney.edu.au/courses/subject-areas/progrm/economics-major-in-environmental-agricultural-and-resource-economics.html">EARE careers (USyd)</a></li>
+  </ol>
+</section>
+
+<div class="syd-foot">
+  <p>Photos via Wikimedia Commons: Saigon at Blue Hour, Radek Kucharski (CC BY 2.0) · Sydney Opera House and Harbour Bridge, Miro Kesich (CC BY-SA 3.0) · Main Quadrangle, University of Sydney, Jason Tong (CC BY 2.0) · Abercrombie architecture, Ananya Duvvuri (CC BY-SA 4.0). Images resized.</p>
+  <p>Requirements change every year. Everything here is for 2027 entry unless stated; re-check the 2028 guide when it's published.</p>
+</div>
+
+  </div>
+  <div class="syd" id="syd-vi" lang="vi" hidden>
+<header class="masthead">
+  <p class="eyebrow">Bản phân tích cho Peter và gia đình · nghiên cứu ngày 18/9/2026 · theo quy định tuyển sinh USyd năm 2027</p>
+  <h2 class="syd-h">Sang Sydney học Dự bị từ năm sau, hay học hết IB ở nhà?</h2>
+  <p class="lede">Peter đang học năm đầu chương trình IB (DP1, lớp 11) tại ISHCMC. <strong>Lựa chọn A:</strong> nghỉ sau lớp 11, sang Sydney học chương trình Dự bị Đại học của Đại học Sydney (USyd) tại Taylors College, nhắm vào ngành Thương mại. <strong>Lựa chọn B:</strong> học hết IB; ngành Thương mại cần 38 điểm IB, ngành Kinh tế học cần 31 điểm.</p>
+</header>
+
+<div class="hero">
+  <figure>
+    <img src="usyd-report-images/saigon.jpg" alt="Toàn cảnh TP.HCM lúc chạng vạng với tòa Landmark 81 bên sông Sài Gòn">
+    <div class="tag stay"><b>Lựa chọn B · Ở lại</b><span>Học hết IB tại ISHCMC, tốt nghiệp tháng 5/2028</span></div>
+  </figure>
+  <figure>
+    <img src="usyd-report-images/sydney.jpg" alt="Nhà hát Opera Sydney, trung tâm thành phố và cầu cảng Sydney vào ngày nắng">
+    <div class="tag go"><b>Lựa chọn A · Đi</b><span>Dự bị tại Taylors College, Sydney, từ tháng 7/2027</span></div>
+  </figure>
+</div>
+
+<div class="verdict" aria-labelledby="verdict-h-vi">
+  <div class="call">
+    <span class="pill jade">Khuyến nghị</span>
+    <h2 id="verdict-h-vi">Nên học hết IB. Chương trình Dự bị không mang lại điều gì Peter thực sự cần.</h2>
+  </div>
+  <ol class="reasons">
+    <li><span class="n">1</span><span><strong>Không vào đại học sớm hơn.</strong> Cả hai lộ trình đều bắt đầu học tại USyd sớm nhất vào <strong>tháng 8/2028</strong>.</span></li>
+    <li><span class="n">2</span><span><strong>Tốn thêm khoảng A$27.000</strong> (khoảng 500 triệu đồng) cho năm đó: học phí Taylors cộng chi phí sống ở Sydney, so với ở nhà học lớp 12.</span></li>
+    <li><span class="n">3</span><span><strong>Mất bằng IB</strong> (được công nhận trên toàn thế giới) để đổi lấy một chứng chỉ chủ yếu chỉ dùng để vào một trường đại học.</span></li>
+    <li><span class="n">4</span><span><strong>Hướng học mơ ước chỉ cần 31 điểm, không phải 38.</strong> Kinh tế môi trường kết hợp quản trị kinh doanh học được ngay trong bằng Cử nhân Kinh tế học.</span></li>
+  </ol>
+  <p class="small muted">Dự bị chỉ hợp lý trong vài trường hợp. Xem <a href="#when-vi">khi nào nên chọn Dự bị</a>.</p>
+</div>
+
+<div class="stats">
+  <div class="stat biz"><span class="v">38</span><span class="k">điểm IB vào Cử nhân Thương mại (tuyển sinh 2027)</span></div>
+  <div class="stat econ"><span class="v">31</span><span class="k">điểm IB vào Cử nhân Kinh tế học (tuyển sinh 2027)</span></div>
+  <div class="stat sand"><span class="v">8,5<span class="small">/10</span></span><span class="k">điểm GPA Dự bị cần cho ngành Thương mại, kèm tiếng Anh C+</span></div>
+  <div class="stat jac"><span class="v">8/2028</span><span class="k">Sớm nhất vào USyd, dù chọn lộ trình nào</span></div>
+</div>
+
+<div class="gloss" aria-label="Giải thích thuật ngữ">
+  <p class="eyebrow gloss-title">Giải thích nhanh các thuật ngữ</p>
+  <div><b>IB (Tú tài Quốc tế)</b><span>Chương trình 2 năm cuối cấp (lớp 11 và 12) Peter đang học. Tổng điểm tối đa 45.</span></div>
+  <div><b>DP1 / DP2</b><span>Năm thứ nhất (lớp 11) và năm thứ hai (lớp 12) của chương trình IB.</span></div>
+  <div><b>Dự bị Đại học (Foundation, USFP)</b><span>Khóa 9 đến 12 tháng tại Taylors College ở Sydney, học thay lớp 12, dùng để vào Đại học Sydney.</span></div>
+  <div><b>HAPP</b><span>Khóa ngắn 14 tuần của Taylors cho học sinh đã tốt nghiệp IB nhưng thiếu tối đa 3 điểm so với yêu cầu ngành.</span></div>
+  <div><b>BCom / BEc</b><span>Cử nhân Thương mại (khối kinh doanh) / Cử nhân Kinh tế học.</span></div>
+  <div><b>Chuyên ngành chính / phụ</b><span>Major / minor: chính là 8 môn, phụ là 6 môn trong cùng một lĩnh vực.</span></div>
+  <div><b>IELTS</b><span>Bài thi tiếng Anh. Hai ngành này cần 7.0, không kỹ năng nào dưới 6.0.</span></div>
+  <div><b>CAS</b><span>Phần hoạt động bắt buộc của IB: Sáng tạo, Vận động, Phục vụ cộng đồng.</span></div>
+</div>
+
+<nav class="toc" aria-label="Các phần">
+  <a href="#timeline-vi">Lịch trình</a>
+  <a href="#compare-vi">So sánh</a>
+  <a href="#cost-vi">Chi phí</a>
+  <a href="#econ-business-vi">Kinh tế có thuộc kinh doanh?</a>
+  <a href="#majors-vi">Chuyên ngành</a>
+  <a href="#examples-vi">Ví dụ thực tế</a>
+  <a href="#gap-vi">Đối chiếu yêu cầu</a>
+  <a href="#shortlist-vi">Danh sách trường</a>
+  <a href="#next-vi">Bước tiếp theo</a>
+</nav>
+
+<!-- LỊCH TRÌNH -->
+<section id="timeline-vi">
+  <div class="sec-head">
+    <p class="eyebrow">01 · Lịch trình</p>
+    <h2>Hai lộ trình về đích cùng một thời điểm</h2>
+    <p class="prose muted">Peter chỉ có thể bắt đầu Dự bị sau khi học xong lớp 11 (Taylors yêu cầu hoàn thành năm đầu IB). Năm học ở ISHCMC kết thúc tháng 6/2027, nên sớm nhất là khóa <strong>tháng 7/2027</strong> (12 tháng) hoặc khóa cấp tốc <strong>cuối tháng 9/2027</strong> (9 tháng). Cả hai đều kết thúc ngày 30/6/2028. Trong khi đó, lộ trình IB có điểm thi vào đầu tháng 7/2028, và cả hai ngành ở USyd đều có kỳ nhập học <strong>tháng 8</strong>.</p>
+  </div>
+  <figure class="diagram">
+    <div class="scroll">
+    <svg class="tl" viewBox="0 0 1060 330" role="img" aria-label="Lịch trình từ tháng 6/2027 đến tháng 3/2029. Lộ trình Dự bị: Taylors từ tháng 7/2027 đến tháng 6/2028, rồi vào USyd từ tháng 8/2028. Lộ trình IB: học lớp 12 tại ISHCMC đến kỳ thi tháng 5/2028, có điểm vào tháng 7, rồi vào USyd từ tháng 8/2028 hoặc tháng 2/2029; khóa HAPP cuối năm 2028 là phương án dự phòng cho mức 35 đến 37 điểm.">
+      <text x="210" y="16" class="t-bold">2027</text>
+      <text x="476" y="16" class="t-bold">2028</text>
+      <text x="932" y="16" class="t-bold">2029</text>
+      <g>
+        <text x="229" y="34" text-anchor="middle" class="t-muted t-small">6</text>
+        <text x="267" y="34" text-anchor="middle" class="t-muted t-small">7</text>
+        <text x="305" y="34" text-anchor="middle" class="t-muted t-small">8</text>
+        <text x="343" y="34" text-anchor="middle" class="t-muted t-small">9</text>
+        <text x="381" y="34" text-anchor="middle" class="t-muted t-small">10</text>
+        <text x="419" y="34" text-anchor="middle" class="t-muted t-small">11</text>
+        <text x="457" y="34" text-anchor="middle" class="t-muted t-small">12</text>
+        <text x="495" y="34" text-anchor="middle" class="t-muted t-small">1</text>
+        <text x="533" y="34" text-anchor="middle" class="t-muted t-small">2</text>
+        <text x="571" y="34" text-anchor="middle" class="t-muted t-small">3</text>
+        <text x="609" y="34" text-anchor="middle" class="t-muted t-small">4</text>
+        <text x="647" y="34" text-anchor="middle" class="t-muted t-small">5</text>
+        <text x="685" y="34" text-anchor="middle" class="t-muted t-small">6</text>
+        <text x="723" y="34" text-anchor="middle" class="t-muted t-small">7</text>
+        <text x="761" y="34" text-anchor="middle" class="t-muted t-small">8</text>
+        <text x="799" y="34" text-anchor="middle" class="t-muted t-small">9</text>
+        <text x="837" y="34" text-anchor="middle" class="t-muted t-small">10</text>
+        <text x="875" y="34" text-anchor="middle" class="t-muted t-small">11</text>
+        <text x="913" y="34" text-anchor="middle" class="t-muted t-small">12</text>
+        <text x="951" y="34" text-anchor="middle" class="t-muted t-small">1</text>
+        <text x="989" y="34" text-anchor="middle" class="t-muted t-small">2</text>
+        <text x="1027" y="34" text-anchor="middle" class="t-muted t-small">3</text>
+      </g>
+      <g>
+        <line class="grid" x1="210" y1="42" x2="210" y2="282"/>
+        <line class="grid" x1="476" y1="42" x2="476" y2="282"/>
+        <line class="grid" x1="932" y1="42" x2="932" y2="282"/>
+        <line class="grid" x1="1046" y1="42" x2="1046" y2="282"/>
+        <line class="grid" x1="210" y1="42" x2="1046" y2="42"/>
+      </g>
+
+      <text x="10" y="72" class="t-bold">A · Dự bị</text>
+      <text x="10" y="88" class="t-muted t-small">rời ISHCMC sau lớp 11</text>
+      <rect x="210" y="62" width="19" height="28" rx="4" class="f-jade"/>
+      <rect x="271" y="62" width="433" height="28" rx="4" class="f-sand"/>
+      <text x="281" y="80" class="t-on">Dự bị Taylors, Sydney · 19/7/2027 đến 30/6/2028</text>
+      <rect x="746" y="62" width="300" height="28" rx="4" class="f-jac"/>
+      <text x="756" y="80" class="t-on">USyd BCom (GPA 8,5) hoặc BEc (GPA 7,3)</text>
+
+      <text x="10" y="132" class="t-bold">B · IB 38+</text>
+      <text x="10" y="148" class="t-muted t-small">học hết IB, vào thẳng</text>
+      <rect x="210" y="122" width="19" height="28" rx="4" class="f-jade"/>
+      <rect x="301" y="122" width="354" height="28" rx="4" class="f-jade"/>
+      <text x="311" y="140" class="t-on">ISHCMC lớp 12 · thi IB tháng 5/2028</text>
+      <polygon points="709,128 716,136 709,144 702,136" class="f-jac"/>
+      <text x="709" y="162" text-anchor="middle" class="t-small t-muted">có điểm ~5/7</text>
+      <rect x="746" y="122" width="255" height="28" rx="4" class="f-jac-soft"/>
+      <text x="756" y="140" class="t-jac">Nhập học 8/2028 (được, nhưng gấp)</text>
+      <rect x="1001" y="122" width="45" height="28" rx="4" class="f-jac"/>
+      <text x="1023" y="140" text-anchor="middle" class="t-on">2/29</text>
+
+      <text x="10" y="192" class="t-bold">B · IB 35 đến 37</text>
+      <text x="10" y="208" class="t-muted t-small">qua HAPP vào Thương mại</text>
+      <rect x="210" y="182" width="19" height="28" rx="4" class="f-jade"/>
+      <rect x="301" y="182" width="354" height="28" rx="4" class="f-jade"/>
+      <text x="311" y="200" class="t-on">ISHCMC lớp 12 · thi IB tháng 5/2028</text>
+      <rect x="795" y="182" width="120" height="28" rx="4" class="f-sand"/>
+      <text x="855" y="200" text-anchor="middle" class="t-on">HAPP · 14 tuần</text>
+      <rect x="1001" y="182" width="45" height="28" rx="4" class="f-jac"/>
+      <text x="1023" y="200" text-anchor="middle" class="t-on">BCom</text>
+
+      <text x="10" y="252" class="t-bold">B · IB 31 đến 34</text>
+      <text x="10" y="268" class="t-muted t-small">vào thẳng Kinh tế học</text>
+      <rect x="210" y="242" width="19" height="28" rx="4" class="f-jade"/>
+      <rect x="301" y="242" width="354" height="28" rx="4" class="f-jade"/>
+      <text x="311" y="260" class="t-on">ISHCMC lớp 12 · thi IB tháng 5/2028</text>
+      <rect x="746" y="242" width="300" height="28" rx="4" class="f-jac"/>
+      <text x="756" y="260" class="t-on">USyd BEc · 8/2028 hoặc 2/2029</text>
+
+      <line x1="746" y1="46" x2="746" y2="296" class="line-jac"/>
+      <text x="746" y="314" text-anchor="middle" class="t-jac">Tháng 8/2028: sớm nhất vào USyd, với mọi lộ trình</text>
+    </svg>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--jade)"></i>Tại ISHCMC, TP.HCM</span>
+      <span><i style="background:var(--sand)"></i>Tại Taylors College, Sydney</span>
+      <span><i style="background:var(--jac)"></i>Học đại học tại USyd</span>
+    </div>
+    <figcaption>Đi Dự bị không giúp vào đại học sớm hơn: chỉ đổi năm lớp 12 ở Sài Gòn thành một năm ở Sydney, rồi cũng nhập học tháng 8/2028. Lịch HAPP năm 2028 chưa công bố; thanh trên biểu đồ dựa theo lịch năm 2027 (13/9 đến 17/12).</figcaption>
+  </figure>
+</section>
+
+<!-- SO SÁNH -->
+<section id="compare-vi">
+  <div class="sec-head">
+    <p class="eyebrow">02 · So sánh</p>
+    <h2>Mỗi lộ trình thực sự mang lại gì</h2>
+  </div>
+  <div class="tbl">
+    <table class="cmp">
+      <thead><tr><th></th><th class="a">A · Dự bị (Taylors, Sydney)</th><th class="b">B · Học hết IB (ISHCMC)</th></tr></thead>
+      <tbody>
+        <tr><th>Rời nhà</th><td class="a">Tháng 7/2027</td><td class="b">Giữa năm 2028 hoặc đầu năm 2029</td></tr>
+        <tr><th>Sớm nhất vào USyd</th><td class="a">Tháng 8/2028</td><td class="b win">Tháng 8/2028 (gấp) hoặc tháng 2/2029</td></tr>
+        <tr><th>Điểm vào Thương mại</th><td class="a">GPA Dự bị 8,5/10 + tiếng Anh C+</td><td class="b">IB 38 (35 đến 37 qua HAPP)</td></tr>
+        <tr><th>Điểm vào Kinh tế học</th><td class="a">GPA 7,3/10 + tiếng Anh C+</td><td class="b">IB 31</td></tr>
+        <tr><th>Bằng cấp phổ thông</th><td class="a">Chứng chỉ Dự bị + học bạ lớp 11</td><td class="b win">Bằng IB</td></tr>
+        <tr><th>Du học nước khác</th><td class="a">Chủ yếu chỉ USyd. Trường khác xét từng trường hợp</td><td class="b win">Anh, Mỹ, Singapore, NYU Thượng Hải, mọi trường ở Úc</td></tr>
+        <tr><th>Chi phí năm đó</th><td class="a">≈ A$80.500 (~1,49 tỷ đồng)</td><td class="b win">≈ A$53.400 (~988 triệu đồng)</td></tr>
+        <tr><th>Nơi ở</th><td class="a">Sydney. Dưới 18 tuổi phải có người hoặc đơn vị bảo trợ được duyệt</td><td class="b">Ở nhà</td></tr>
+        <tr><th>Phải bỏ lại</th><td class="a">Lớp 12, CAS, Action for Earth, Chạm, vai trò Đại sứ Học sinh</td><td class="b">Nhiều nhất là 6 tháng làm quen Sydney sớm</td></tr>
+        <tr><th>Kết quả thực tế</th><td class="a">2025: hơn 90% học viên Dự bị đủ điều kiện nhận thư mời của USyd (ngành bất kỳ)</td><td class="b">Điểm dự đoán 35 đến 37: vào thẳng Kinh tế học, Thương mại qua HAPP hoặc khi đạt 38</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- CHI PHÍ -->
+<section id="cost-vi">
+  <div class="sec-head">
+    <p class="eyebrow">03 · Chi phí</p>
+    <h2>Năm quyết định tốn thêm khoảng A$27.000 (~500 triệu đồng) nếu ở Sydney</h2>
+    <p class="prose muted">Điều bất ngờ: học phí lớp 12 ở ISHCMC còn cao hơn học phí Taylors. Khoản chênh lệch đến từ chi phí sống ở Sydney.</p>
+  </div>
+  <figure class="diagram">
+    <div class="scroll">
+    <svg viewBox="0 0 760 190" role="img" aria-label="Biểu đồ cột. Năm Dự bị tốn khoảng 80.500 đô Úc: 50.520 học phí và phí Taylors cộng khoảng 30.000 chi phí sống. Năm lớp 12 tại ISHCMC tốn khoảng 53.400 đô Úc học phí.">
+      <line class="grid" x1="170" y1="20" x2="170" y2="150"/>
+      <line class="grid" x1="294.4" y1="20" x2="294.4" y2="150"/>
+      <line class="grid" x1="418.9" y1="20" x2="418.9" y2="150"/>
+      <line class="grid" x1="543.3" y1="20" x2="543.3" y2="150"/>
+      <line class="grid" x1="667.8" y1="20" x2="667.8" y2="150"/>
+      <text x="170" y="168" text-anchor="middle" class="t-muted t-small">A$0</text>
+      <text x="294.4" y="168" text-anchor="middle" class="t-muted t-small">20.000</text>
+      <text x="418.9" y="168" text-anchor="middle" class="t-muted t-small">40.000</text>
+      <text x="543.3" y="168" text-anchor="middle" class="t-muted t-small">60.000</text>
+      <text x="667.8" y="168" text-anchor="middle" class="t-muted t-small">80.000</text>
+
+      <text x="10" y="54" class="t-bold">A · Dự bị</text>
+      <text x="10" y="70" class="t-muted t-small">7/2027 đến 6/2028</text>
+      <rect x="170" y="40" width="314.3" height="34" class="bar-a"/>
+      <text x="180" y="62" class="t-on">Học phí + phí Taylors 50.520</text>
+      <rect x="484.3" y="40" width="186.7" height="34" class="bar-a2"/>
+      <text x="494" y="62">Sinh hoạt ~30.000</text>
+      <text x="678" y="55" class="t-bold">≈ A$80.500</text>
+      <text x="678" y="71" class="t-muted t-small">~1,49 tỷ đ</text>
+
+      <text x="10" y="114" class="t-bold">B · Học hết IB</text>
+      <text x="10" y="130" class="t-muted t-small">8/2027 đến 6/2028</text>
+      <rect x="170" y="100" width="332.3" height="34" class="bar-b"/>
+      <text x="180" y="122" class="t-on">Học phí lớp 12 ISHCMC: 987,8 triệu đ</text>
+      <text x="512" y="115" class="t-bold">≈ A$53.400</text>
+      <text x="512" y="131" class="t-muted t-small">~988 triệu đ</text>
+    </svg>
+    </div>
+    <figcaption>Taylors: học phí khóa Dự bị tiêu chuẩn 2027 là A$49.800 + A$370 phí ghi danh + A$350 sách điện tử; chi phí sống theo ước tính của Taylors khoảng A$30.000. ISHCMC: học phí lớp 12 năm học 2026-27 (năm 2027-28 chưa công bố), quy đổi 18.492 đồng/A$ (ngày 17/9/2026). Chưa tính: vé máy bay, bảo hiểm y tế du học sinh (OSHC), phí homestay, phí visa.</figcaption>
+  </figure>
+</section>
+
+<!-- KINH TẾ VS KINH DOANH -->
+<section id="econ-business-vi">
+  <div class="sec-head">
+    <p class="eyebrow">04 · Điều hay nhầm lẫn</p>
+    <h2>Kinh tế học có phải là một phần của kinh doanh không?</h2>
+    <p class="prose">Về kiến thức, hai ngành giao nhau. Tại USyd, đây là <strong>hai khoa riêng biệt nhưng sinh viên được học chéo</strong>. Peter đã quen với điều này ở IB: Kinh tế HL và Quản trị Kinh doanh HL là hai môn khác nhau nhưng dùng chung nhiều khái niệm.</p>
+  </div>
+  <div class="figs">
+    <figure class="diagram">
+      <svg class="venn" viewBox="0 0 640 330" role="img" aria-label="Biểu đồ Venn. Kinh tế học gồm kinh tế vi mô, kinh tế vĩ mô, kinh tế lượng, chính sách công và kinh tế môi trường. Kinh doanh gồm kế toán, marketing, quản trị, nhân sự và khởi nghiệp. Hai bên giao nhau ở tài chính, dữ liệu và định giá.">
+        <circle cx="235" cy="178" r="138" class="c-econ"/>
+        <circle cx="405" cy="178" r="138" class="c-biz"/>
+        <text x="185" y="26" text-anchor="middle" class="t-econ t-disp">Kinh tế học</text>
+        <text x="455" y="26" text-anchor="middle" class="t-biz t-disp">Kinh doanh</text>
+        <g>
+          <text x="170" y="112" text-anchor="middle">Kinh tế vi mô</text>
+          <text x="165" y="142" text-anchor="middle">Kinh tế vĩ mô</text>
+          <text x="165" y="172" text-anchor="middle">Kinh tế lượng</text>
+          <text x="165" y="202" text-anchor="middle">Chính sách công</text>
+          <text x="170" y="232" text-anchor="middle">Kinh tế môi trường</text>
+          <text x="170" y="247" text-anchor="middle">&amp; tài nguyên</text>
+        </g>
+        <g>
+          <text x="470" y="112" text-anchor="middle">Kế toán</text>
+          <text x="475" y="142" text-anchor="middle">Marketing</text>
+          <text x="475" y="172" text-anchor="middle">Quản trị</text>
+          <text x="475" y="202" text-anchor="middle">Nhân sự</text>
+          <text x="470" y="232" text-anchor="middle">Khởi nghiệp</text>
+        </g>
+        <g>
+          <text x="320" y="150" text-anchor="middle" class="t-bold">Tài chính</text>
+          <text x="320" y="180" text-anchor="middle" class="t-bold">Dữ liệu</text>
+          <text x="320" y="210" text-anchor="middle" class="t-bold">Định giá</text>
+        </g>
+      </svg>
+      <figcaption>Kinh tế học nghiên cứu cách cả một thị trường hay một quốc gia sử dụng nguồn lực khan hiếm. Kinh doanh nghiên cứu cách một doanh nghiệp cạnh tranh trong thị trường đó. Tài chính, dữ liệu và định giá thuộc cả hai.</figcaption>
+    </figure>
+    <figure class="diagram">
+      <svg class="org" viewBox="0 0 760 330" role="img" aria-label="Tại Đại học Sydney, Trường Kinh doanh đào tạo Cử nhân Thương mại, còn Trường Kinh tế thuộc Khoa Nghệ thuật và Khoa học Xã hội đào tạo Cử nhân Kinh tế học. Sinh viên Thương mại có thể học Kinh tế học hoặc Kinh tế Môi trường, Nông nghiệp và Tài nguyên làm chuyên ngành thứ hai hoặc phụ. Sinh viên Kinh tế học có thể học các chuyên ngành của Trường Kinh doanh như Tài chính, Marketing, Quản trị làm chuyên ngành thứ hai hoặc phụ.">
+        <defs>
+          <marker id="ah-vi" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker>
+        </defs>
+        <text x="380" y="20" text-anchor="middle" class="t-disp">Đại học Sydney</text>
+        <rect x="10" y="36" width="260" height="284" rx="10" class="box-biz"/>
+        <text x="26" y="62" class="t-biz">Trường Kinh doanh</text>
+        <rect x="26" y="76" width="228" height="44" rx="6" class="in-biz"/>
+        <text x="140" y="103" text-anchor="middle" class="t-bold">Cử nhân Thương mại (BCom)</text>
+        <text x="26" y="146" class="t-muted t-small">Chuyên ngành (2027)</text>
+        <text x="26" y="166">Quản trị &amp; Lãnh đạo</text>
+        <text x="26" y="186">Marketing · Tài chính</text>
+        <text x="26" y="206">Kế toán, Quản trị &amp; Pháp quy</text>
+        <text x="26" y="226">Phân tích kinh doanh</text>
+        <text x="26" y="246">Kinh doanh toàn cầu · Kinh doanh số</text>
+        <text x="26" y="266">Đổi mới &amp; Khởi nghiệp</text>
+        <text x="26" y="286">Nhân sự &amp; Quan hệ lao động</text>
+
+        <rect x="490" y="36" width="260" height="284" rx="10" class="box-econ"/>
+        <text x="506" y="62" class="t-econ">Khoa Nghệ thuật &amp; KH Xã hội</text>
+        <text x="506" y="80" class="t-muted t-small">Trường Kinh tế (School of Economics)</text>
+        <rect x="506" y="90" width="228" height="44" rx="6" class="in-econ"/>
+        <text x="620" y="117" text-anchor="middle" class="t-bold">Cử nhân Kinh tế học (BEc)</text>
+        <text x="506" y="160" class="t-muted t-small">Chuyên ngành đi kèm (chọn 1)</text>
+        <text x="506" y="180">Kinh tế học</text>
+        <text x="506" y="200">Kinh tế lượng</text>
+        <text x="506" y="220">Kinh tế tài chính</text>
+        <text x="506" y="240">Kinh tế Môi trường, Nông nghiệp</text>
+        <text x="506" y="256">&amp; Tài nguyên (EARE)</text>
+
+        <line x1="490" y1="108" x2="274" y2="108" class="arrow" marker-end="url(#ah-vi)"/>
+        <text x="382" y="96" text-anchor="middle" class="t-small t-bold">Kinh tế học hoặc EARE</text>
+        <text x="382" y="126" text-anchor="middle" class="t-small t-muted">làm chuyên ngành 2 hoặc phụ</text>
+
+        <line x1="270" y1="206" x2="486" y2="206" class="arrow" marker-end="url(#ah-vi)"/>
+        <text x="378" y="194" text-anchor="middle" class="t-small t-bold">Tài chính, Marketing, Quản trị…</text>
+        <text x="378" y="226" text-anchor="middle" class="t-small t-muted">làm chuyên ngành 2 hoặc phụ</text>
+      </svg>
+      <figcaption>Ở USyd, hai ngành thuộc hai khoa khác nhau, nhưng mỗi bằng đều được lấy chuyên ngành thứ hai hoặc chuyên ngành phụ từ khoa bên kia. Nhờ vậy mới có cả hai kiểu "chính kinh doanh, phụ kinh tế" và "chính kinh tế, phụ kinh doanh".</figcaption>
+    </figure>
+  </div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Trường</th><th>Kinh tế học thuộc đâu</th><th>Ý nghĩa với Peter</th></tr></thead>
+      <tbody>
+        <tr><th>Sydney (USyd)</th><td>Trường Kinh tế thuộc Khoa Nghệ thuật &amp; Khoa học Xã hội. Trường Kinh doanh là đơn vị riêng.</td><td>Hai bằng khác nhau (BCom 38, BEc 31) nhưng được học chéo chuyên ngành.</td></tr>
+        <tr><th>UNSW</th><td>Trường Kinh tế nằm <em>bên trong</em> Trường Kinh doanh UNSW.</td><td>Ở đây kinh tế đúng là "một phần của kinh doanh", cùng một khoa.</td></tr>
+        <tr><th>Melbourne</th><td>Khoa Kinh doanh và Kinh tế.</td><td>Kinh tế học là một chuyên ngành <em>bên trong</em> bằng Cử nhân Thương mại.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- CHUYÊN NGÀNH -->
+<section id="majors-vi">
+  <div class="sec-head">
+    <p class="eyebrow">05 · Chuyên ngành chính và phụ</p>
+    <h2>Một bằng cử nhân ở USyd gồm khoảng 24 môn. Sinh viên tự chọn cách sắp xếp.</h2>
+  </div>
+  <div class="defs">
+    <div><b>144 tín chỉ</b><span>Bằng 3 năm. Mỗi môn thường 6 tín chỉ, tức khoảng 24 môn, 4 môn mỗi học kỳ.</span></div>
+    <div><b>Ngành chính</b><span>48 tín chỉ = 8 môn trong một lĩnh vực, từ cấp 1000 lên cấp 3000.</span></div>
+    <div><b>Ngành phụ</b><span>36 tín chỉ = 6 môn. Một hướng chuyên sâu thứ hai, nhẹ hơn.</span></div>
+    <div><b>Danh mục chung</b><span>Danh sách chuyên ngành mà mọi bằng đều được chọn ("Table S"). Có cả Kinh tế học, EARE, Tài chính và Quản trị.</span></div>
+  </div>
+
+  <div class="qa">
+    <div><h3>Học chính kinh doanh, phụ kinh tế được không?</h3><p class="ans"><span class="pill good">Được</span>Trong Cử nhân Thương mại. Trang ngành BCom 2027 của USyd liệt kê Kinh tế học là lựa chọn chuyên ngành thứ hai hoặc phụ.</p></div>
+    <div><h3>Học chính kinh tế, phụ kinh doanh được không?</h3><p class="ans"><span class="pill good">Được</span>Trong Cử nhân Kinh tế học: thêm chuyên ngành thứ hai hoặc phụ từ Trường Kinh doanh, ví dụ Tài chính hoặc Quản trị &amp; Lãnh đạo.</p></div>
+    <div><h3>Học được kinh tế môi trường + quản trị kinh doanh không?</h3><p class="ans"><span class="pill good">Được, 2 cách</span>BEc với chuyên ngành EARE + Quản trị &amp; Lãnh đạo (cần 31), hoặc BCom với Quản trị &amp; Lãnh đạo + EARE (cần 38). Xem Phương án 1 và 2 bên dưới.</p></div>
+    <div><h3>Sau này chuyển từ Kinh tế học sang Thương mại được không?</h3><p class="ans"><span class="pill warn">Có thể</span>USyd cho phép chuyển ngành nội bộ (nộp từ 1/10 đến 1/12 cho học kỳ 1), nhưng không công bố điểm tối thiểu, và việc chuyển ngành ảnh hưởng đến hồ sơ visa. Không nên dựa vào cách này.</p></div>
+    <div><h3>Tên bằng có quan trọng với nhà tuyển dụng không?</h3><p class="ans"><span class="pill jac">Đôi khi</span>Chứng chỉ kế toán CPA / CA đi qua lộ trình kế toán của BCom. Vị trí kinh tế gia, hoạch định chính sách thiên về BEc vì có đủ chuỗi môn kinh tế lượng. Tư vấn, ngân hàng, doanh nghiệp tuyển cả hai.</p></div>
+    <div><h3>Có gì thay đổi trước khi Peter nhập học không?</h3><p class="ans"><span class="pill warn">Có</span>Ngành Thương mại có 4 môn cốt lõi mới từ 2027. Chuyên ngành Ngân hàng và Luật Kinh doanh có trong năm 2027 nhưng không có trong năm 2028, nên không lập kế hoạch dựa vào hai ngành này.</p></div>
+  </div>
+
+  <div class="plans">
+    <div class="plan">
+      <div class="plan-head"><h3>Phương án 1 · Thương mại: Quản trị &amp; Lãnh đạo + EARE</h3><span class="pill biz">Cần IB 38</span></div>
+      <div class="cells" role="img" aria-label="Phương án 1: 4 môn cốt lõi Thương mại, 8 môn Quản trị và Lãnh đạo, 8 môn Kinh tế Môi trường, Nông nghiệp và Tài nguyên, 4 môn tự do hoặc tự chọn.">
+        <div class="cell core">Cốt lõi: Kỹ năng nghề</div><div class="cell core">Cốt lõi: Kế toán &amp; TC</div><div class="cell core">Cốt lõi: Giải quyết vấn đề</div><div class="cell core">Cốt lõi: Phân tích dữ liệu</div>
+        <div class="cell biz">Quản trị 1</div><div class="cell biz">Quản trị 2</div><div class="cell biz">Quản trị 3</div><div class="cell biz">Quản trị 4</div><div class="cell biz">Quản trị 5</div><div class="cell biz">Quản trị 6</div><div class="cell biz">Quản trị 7</div><div class="cell biz">Quản trị 8</div>
+        <div class="cell econ">ECON1001</div><div class="cell econ">ECON1002</div><div class="cell econ">AREC2005</div><div class="cell econ">ECOS2001</div><div class="cell econ">AREC3006</div><div class="cell econ">ECOS3013</div><div class="cell econ">AREC3007</div><div class="cell econ">ECOS3991</div>
+        <div class="cell free">OLE</div><div class="cell free">Tự chọn</div><div class="cell free">Tự chọn</div><div class="cell free">Tự chọn</div>
+      </div>
+      <p>Tên bằng thiên về kinh doanh, có kinh tế môi trường là chuyên ngành thứ hai đầy đủ. EARE nằm trong danh mục chung theo sổ tay 2026; cần xác nhận sinh viên Thương mại được chọn EARE vào năm nhập học.</p>
+    </div>
+    <div class="plan">
+      <div class="plan-head"><h3>Phương án 2 · Kinh tế học: EARE + Quản trị &amp; Lãnh đạo</h3><span class="pill econ">Cần IB 31</span></div>
+      <div class="cells" role="img" aria-label="Phương án 2: 7 môn cốt lõi Kinh tế học, 5 môn chuyên ngành EARE, 6 môn Quản trị và Lãnh đạo cộng 2 môn tự chọn thay thế, 4 môn tự do hoặc tự chọn.">
+        <div class="cell econ">ECON1001</div><div class="cell econ">ECON1002</div><div class="cell econ">ECMT1010</div><div class="cell econ">ECMT1020</div><div class="cell econ">ECMT2150</div><div class="cell econ">ECOS2001</div><div class="cell econ">ECOS2002</div>
+        <div class="cell econ">AREC2005</div><div class="cell econ">AREC3006</div><div class="cell econ">ECOS3013</div><div class="cell econ">AREC3007</div><div class="cell econ">ECOS3991</div>
+        <div class="cell biz">Quản trị 2000</div><div class="cell biz">Quản trị 2000</div><div class="cell biz">Quản trị 2000</div><div class="cell biz">Quản trị 3000</div><div class="cell biz">Quản trị 3000</div><div class="cell biz">Quản trị 3000</div><div class="cell free">Tự chọn thay thế</div><div class="cell free">Tự chọn thay thế</div>
+        <div class="cell free">OLE</div><div class="cell free">Tự chọn</div><div class="cell free">Tự chọn</div><div class="cell free">Tự chọn</div>
+      </div>
+      <p>Đây là phương án gần nhất với "Kinh tế Môi trường + Quản trị Kinh doanh", cao hơn yêu cầu 4 đến 6 điểm so với điểm dự đoán 35 đến 37 của Peter. Môn học thật: <span class="mono">AREC2005</span> Khái niệm Kinh tế Môi trường và Nông nghiệp, <span class="mono">ECOS3013</span> Kinh tế Môi trường, <span class="mono">AREC3007</span> Phân tích Chi phí và Lợi ích. Sinh viên BEc chọn chuyên ngành của Trường Kinh doanh sẽ thay các môn cấp 1000 của chuyên ngành đó bằng 12 tín chỉ môn tự chọn.</p>
+    </div>
+    <div class="plan">
+      <div class="plan-head"><h3>Phương án 3 · Thương mại: chính Tài chính + phụ Kinh tế học</h3><span class="pill biz">Cần IB 38</span></div>
+      <div class="cells" role="img" aria-label="Phương án 3: 4 môn cốt lõi Thương mại, 8 môn Tài chính, 6 môn phụ Kinh tế học, 6 môn tự do hoặc tự chọn.">
+        <div class="cell core">Cốt lõi: Kỹ năng nghề</div><div class="cell core">Cốt lõi: Kế toán &amp; TC</div><div class="cell core">Cốt lõi: Giải quyết vấn đề</div><div class="cell core">Cốt lõi: Phân tích dữ liệu</div>
+        <div class="cell biz">Tài chính 1</div><div class="cell biz">Tài chính 2</div><div class="cell biz">Tài chính 3</div><div class="cell biz">Tài chính 4</div><div class="cell biz">Tài chính 5</div><div class="cell biz">Tài chính 6</div><div class="cell biz">Tài chính 7</div><div class="cell biz">Tài chính 8</div>
+        <div class="cell econ">ECON1001</div><div class="cell econ">ECON1002</div><div class="cell econ">Kinh tế 2000</div><div class="cell econ">Kinh tế 2000</div><div class="cell econ">Kinh tế 3000</div><div class="cell econ">Kinh tế 3000</div>
+        <div class="cell free">OLE</div><div class="cell free">Tự chọn</div><div class="cell free">Tự chọn</div><div class="cell free">Tự chọn</div><div class="cell free">Tự chọn</div><div class="cell free">Tự chọn</div>
+      </div>
+      <p>Kiểu "chính kinh doanh, phụ kinh tế" quen thuộc. Chuyên ngành Tài chính của USyd là đối tác chính thức của chương trình CFA. Vẫn còn chỗ cho môn tự chọn như Phát triển bền vững.</p>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--surface-2);border:1px solid var(--rule)"></i>Môn cốt lõi của bằng</span>
+      <span><i style="background:var(--biz-soft);border:1px solid var(--biz)"></i>Môn của Trường Kinh doanh</span>
+      <span><i style="background:var(--econ-soft);border:1px solid var(--econ)"></i>Môn của Trường Kinh tế</span>
+      <span><i style="border:1px dashed var(--muted)"></i>Môn tự do (OLE) và tự chọn</span>
+    </div>
+    <p class="small muted">Sơ đồ minh họa dựa trên sổ tay 2026 và trang ngành 2027. Mã môn là mã thật; các ô như "Quản trị 1" chỉ là ví dụ. Quy định chính xác theo sổ tay của năm nhập học.</p>
+  </div>
+</section>
+
+<!-- VÍ DỤ -->
+<section id="examples-vi">
+  <div class="sec-head">
+    <p class="eyebrow">06 · Người thật, lộ trình thật</p>
+    <h2>Những bằng cấp và lộ trình này đã dẫn đến đâu</h2>
+  </div>
+  <div class="photos">
+    <figure>
+      <img src="usyd-report-images/quad.jpg" alt="Tòa nhà Main Quadrangle bằng đá sa thạch của Đại học Sydney, sinh viên ngồi trên bãi cỏ">
+      <figcaption class="muted">Main Quadrangle, khuôn viên Camperdown. Cả hai lộ trình đều kết thúc ở đây.</figcaption>
+    </figure>
+    <figure>
+      <img src="usyd-report-images/abercrombie.jpg" alt="Cầu thang gỗ xoắn ốc bên trong tòa Abercrombie">
+      <figcaption class="muted">Tòa Abercrombie, nơi đặt Trường Kinh doanh.</figcaption>
+    </figure>
+  </div>
+  <div class="cards">
+    <article class="card">
+      <p class="who">Glenn Stevens</p>
+      <dl class="path"><dt>Bằng cấp</dt><dd>Cử nhân Kinh tế học USyd, Honours hạng Nhất (1979)</dd><dt>Sự nghiệp</dt><dd>Thống đốc Ngân hàng Dự trữ Úc (RBA), 2006 đến 2016</dd></dl>
+      <p class="lesson">Câu chuyện kinh điển của bằng BEc: nặng về kinh tế lượng, dẫn đến vị trí cao nhất trong chính sách kinh tế. Chứng minh bằng "31 điểm" không hề kém hơn.</p>
+    </article>
+    <article class="card">
+      <p class="who">Margaret Zhang</p>
+      <dl class="path"><dt>Bằng cấp</dt><dd>Cử nhân Thương mại và Cử nhân Luật, USyd</dd><dt>Sự nghiệp</dt><dd>Cựu Tổng biên tập Vogue Trung Quốc; nhà làm phim, giám đốc sáng tạo</dd></dl>
+      <p class="lesson">Bằng Thương mại không bó buộc vào nghề kế toán. Đây là bệ phóng cho nhiều sự nghiệp rất khác nhau.</p>
+    </article>
+    <article class="card">
+      <p class="who">Học viên xuất sắc nhất Taylors 2024</p>
+      <dl class="path"><dt>Kết quả</dt><dd>GPA Dự bị từ 9,2 trở lên</dd><dt>Thư mời</dt><dd>Yijing: BCom · Yunwen: BCom/Luật · Quang Minh và Taeyun: Máy tính Nâng cao/Thương mại · Ba Phong, Minh Phuong: Máy tính, Khoa học</dd></dl>
+      <p class="lesson">Đi Dự bị rồi vào Thương mại khả thi với học viên thuộc nhóm đầu. Ngành Thương mại cần 8,5, rất gần mức nhóm đầu. Năm 2025, hơn 90% học viên Dự bị đủ điều kiện nhận <em>một</em> thư mời của USyd, không nhất thiết là ngành Thương mại.</p>
+    </article>
+    <article class="card">
+      <p class="who">Sinh viên EARE ra trường làm gì</p>
+      <dl class="path"><dt>USyd liệt kê</dt><dd>Chuyên gia kinh tế môi trường, chuyên viên phân tích chính sách, giao dịch viên hàng hóa và hợp đồng tương lai, cố vấn, nhà báo, chuyên viên ngân hàng đầu tư và giao dịch</dd><dt>Đặc biệt</dt><dd>Công ty tư vấn năng lượng và môi trường, cơ quan quản lý nhà nước</dd></dl>
+      <p class="lesson">Đây là phiên bản kinh tế học gắn với Action for Earth: khí hậu, năng lượng, nước và tài nguyên, có số liệu thật đằng sau chính sách.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ĐỐI CHIẾU -->
+<section id="gap-vi">
+  <div class="sec-head">
+    <p class="eyebrow">07 · Đối chiếu yêu cầu</p>
+    <h2>Đã đạt gì, còn rủi ro gì</h2>
+  </div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Yêu cầu (tuyển sinh 2027)</th><th>Cần</th><th>Peter</th><th>Tình trạng</th></tr></thead>
+      <tbody>
+        <tr><th>Tổng điểm IB, Thương mại</th><td>38</td><td>Dự đoán 35 đến 37</td><td><span class="pill warn">Thiếu 1 đến 3 điểm</span> HAPP áp dụng cho mức 35 đến 37</td></tr>
+        <tr><th>Tổng điểm IB, Kinh tế học</th><td>31</td><td>Dự đoán 35 đến 37</td><td><span class="pill good">Đạt, dư 4 đến 6 điểm</span></td></tr>
+        <tr><th>Tiếng Anh</th><td>IELTS Academic 7.0, không kỹ năng nào dưới 6.0 (hoặc TOEFL iBT 96) cho cả hai ngành</td><td>IB English B HL</td><td><span class="pill bad">Rủi ro</span> Bảng quy đổi của USyd chỉ tính English B HL điểm 7 tương đương IELTS 6.5. Nên thi IELTS.</td></tr>
+        <tr><th>Toán</th><td>BEc yêu cầu nền tảng tương đương Toán Nâng cao (Mathematics Advanced) của bang NSW. BCom: không yêu cầu</td><td>Toán AA SL</td><td><span class="pill good">Đạt</span> USyd chấp nhận IB Math AA SL (nên đạt từ 5 trở lên).</td></tr>
+        <tr><th>Môn tiên quyết</th><td>Không có với BCom và BEc</td><td>Kinh tế HL, Kinh doanh HL, ESS SL</td><td><span class="pill good">Đạt</span> và rất liên quan</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- DANH SÁCH -->
+<section id="shortlist-vi">
+  <div class="sec-head">
+    <p class="eyebrow">08 · Danh sách lựa chọn</p>
+    <h2>Các cách vào USyd trong một bảng</h2>
+  </div>
+  <div class="tbl">
+    <table class="w-uni">
+      <thead><tr><th>Trường</th><th>Ngành</th><th>Quốc gia</th><th>Điểm IB</th><th>Môn bắt buộc</th><th>Tiếng Anh</th><th>Hạn nộp</th><th>Học phí/năm</th><th>Mức độ</th><th>Nguồn</th></tr></thead>
+      <tbody>
+        <tr><td>USyd</td><td>Cử nhân Thương mại</td><td>Úc</td><td>38</td><td>Không</td><td>IELTS 7.0 (6.0)</td><td>Chưa công bố cho 2028/29; cần xác nhận</td><td>A$59.100 (2027, ~1,09 tỷ đ)</td><td><span class="pill warn">Cần cố gắng</span></td><td><a href="https://www.sydney.edu.au/dam/corporate/documents/study/how-to-apply/international-admission-guide.pdf">Cẩm nang 2027</a></td></tr>
+        <tr><td>USyd</td><td>Cử nhân Kinh tế học (chuyên ngành EARE)</td><td>Úc</td><td>31</td><td>Không; cần nền tảng Toán Nâng cao</td><td>IELTS 7.0 (6.0)</td><td>Chưa công bố cho 2028/29; cần xác nhận</td><td>A$59.100 (2027, ~1,09 tỷ đ)</td><td><span class="pill good">An toàn</span></td><td><a href="https://www.sydney.edu.au/courses/courses/uc/bachelor-of-economics.html">Trang ngành</a></td></tr>
+        <tr><td>USyd qua HAPP (Taylors)</td><td>Cầu nối vào Thương mại</td><td>Úc</td><td>35 đến 37 (thiếu tối đa 3)</td><td>Không</td><td>IELTS 6.0 để vào (cần xác nhận)</td><td>Xác nhận nhập học trước giữa tháng 8 (16/8 năm 2027)</td><td>A$32.240 (2027, 14 tuần)</td><td><span class="pill good">Dự phòng an toàn</span></td><td><a href="https://www.taylorssydney.edu.au/how-apply/entry-requirements/">Taylors</a></td></tr>
+        <tr><td>USyd qua Dự bị USFP</td><td>Dự bị, rồi vào Thương mại với GPA 8,5</td><td>Úc</td><td>Không áp dụng: xong lớp 11 với bốn môn điểm 4 (16)</td><td>Không với Thương mại</td><td>IELTS 6.0 (5.0) để vào; C+ để lên đại học</td><td>21/6/2027 (khóa tháng 7)</td><td>A$49.800 (2027, ~921 triệu đ)</td><td><span class="pill bad">Không khuyến nghị</span></td><td><a href="https://www.taylorssydney.edu.au/how-apply/fees/">Học phí Taylors</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="two">
+    <div class="box">
+      <h3>Học bổng có thể nhắm tới</h3>
+      <ul>
+        <li><strong>Sydney International Student Award:</strong> giảm 20% học phí cho cả khóa học. Việt Nam thuộc diện được xét. Cần viết một bài giới thiệu ngắn (áp dụng cho sinh viên nhập học 2027).</li>
+        <li><strong>Sydney International Undergraduate Academic Excellence Scholarship:</strong> miễn 100% học phí, khoảng 20 suất mỗi năm trên toàn thế giới. Điểm IB cao là cơ hội tốt nhất.</li>
+      </ul>
+      <p class="small muted">Các trang này không nói rõ học viên Dự bị có được xét hay không. Cần xác nhận trước khi tính đến.</p>
+    </div>
+    <div class="box" id="when-vi">
+      <h3>Khi nào <em>nên</em> chọn Dự bị</h3>
+      <ul>
+        <li>Điểm dự đoán năm DP1 chỉ quanh mức 30 hoặc thấp hơn và không cải thiện.</li>
+        <li>IB đang ảnh hưởng nghiêm trọng đến sức khỏe, hoặc dù sao cũng cần rời ISHCMC.</li>
+        <li>USyd là trường duy nhất Peter cân nhắc, và muốn có một năm làm quen với Sydney.</li>
+      </ul>
+      <p class="small muted">Nếu sang Úc trước 18 tuổi, bắt buộc phải có bảo trợ được duyệt: homestay do Taylors sắp xếp (CAAW) hoặc người thân từ 21 tuổi trở lên làm người giám hộ (mẫu Form 157N).</p>
+    </div>
+  </div>
+</section>
+
+<!-- BƯỚC TIẾP THEO -->
+<section id="next-vi">
+  <div class="next">
+    <p class="eyebrow">Bước tiếp theo</p>
+    <ol>
+      <li><strong>Ở lại học lớp 12 (DP2) và đặt mục tiêu 38+.</strong> Báo mục tiêu này với điều phối viên IB để điểm dự đoán phản ánh đúng.</li>
+      <li><strong>Đăng ký thi IELTS Academic vào giữa năm 2027</strong>, mục tiêu 7.0, không kỹ năng nào dưới 6.0. English B HL không đủ thay thế.</li>
+      <li><strong>Nộp hồ sơ vào USyd trong năm lớp 12</strong>: nguyện vọng 1 là BCom, BEc (EARE) là lựa chọn an toàn, kèm học bổng Sydney International Student Award 20%.</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <p class="eyebrow">Nguồn · kiểm tra ngày 18/9/2026</p>
+  </div>
+  <ol class="sources">
+    <li><a href="https://www.sydney.edu.au/dam/corporate/documents/study/how-to-apply/international-admission-guide.pdf">Cẩm nang tuyển sinh quốc tế 2027 của USyd</a>: IB 38 / 31, Dự bị 8,5 / 7,3, IELTS 7.0 (6.0), A$59.100 (kỳ nhập học 2027)</li>
+    <li><a href="https://www.sydney.edu.au/courses/courses/uc/bachelor-of-commerce0.html">Trang ngành Cử nhân Thương mại USyd</a>: 4 môn cốt lõi 2027, chuyên ngành 2 hoặc phụ gồm cả Kinh tế học, không yêu cầu nền tảng, nhập học tháng 2 và 8</li>
+    <li><a href="https://www.sydney.edu.au/courses/courses/uc/bachelor-of-economics.html">Trang ngành Cử nhân Kinh tế học USyd</a>: các chuyên ngành đi kèm, nền tảng Toán Nâng cao, nhập học tháng 2 và 8</li>
+    <li><a href="https://www.sydney.edu.au/handbooks/arts/coursework/economics-economics-advanced-studies/economics-program-unit-of-study-tables.html">Sổ tay 2026: chương trình Kinh tế học (72 tín chỉ)</a> và <a href="https://www.sydney.edu.au/handbooks/arts/coursework/economics-economics-advanced-studies/economics-program-unit-of-study-tables/environmental-agricultural-resource-economics-major.html">các môn chuyên ngành EARE</a></li>
+    <li><a href="https://www.sydney.edu.au/handbooks/business-school/coursework/commerce/commerce-course-resolutions.html">Sổ tay 2026: quy định bằng Thương mại</a> và <a href="https://www.sydney.edu.au/handbooks/interdisciplinary-studies/table-s/subject-areas.html">danh mục chung (Table S)</a></li>
+    <li><a href="https://www.sydney.edu.au/business/study/undergraduate-courses.html">Các chuyên ngành của Trường Kinh doanh USyd 2027 / 2028</a></li>
+    <li><a href="https://www.sydney.edu.au/arts/schools/school-of-economics.html">Trường Kinh tế USyd (Khoa Nghệ thuật &amp; KH Xã hội)</a> · <a href="https://www.unsw.edu.au/business/our-schools/economics">UNSW Business School: Kinh tế</a> · <a href="https://study.unimelb.edu.au/find/courses/major/economics/">Melbourne: chuyên ngành Kinh tế trong BCom</a></li>
+    <li><a href="https://www.sydney.edu.au/content/dam/corporate/documents/study/how-to-apply/english-language-concordance-table.pdf">Bảng quy đổi tiếng Anh của USyd</a> (cập nhật 27/11/2025)</li>
+    <li><a href="https://www.sydney.edu.au/study/applying/how-to-apply/undergraduate/mathematics-prerequisite.html">Yêu cầu toán của USyd</a></li>
+    <li><a href="https://www.taylorssydney.edu.au/how-apply/entry-requirements/">Điều kiện đầu vào Taylors</a> · <a href="https://www.taylorssydney.edu.au/programs/term-dates/">Lịch học 2026/27</a> · <a href="https://www.taylorssydney.edu.au/how-apply/fees/">Học phí 2026/27</a> · <a href="https://www.taylorssydney.edu.au/programs/student-results/">Kết quả học viên</a> · <a href="https://www.taylorssydney.edu.au/wp-content/uploads/taylors_college_sydney_2026_prospectus_web.pdf">Tài liệu giới thiệu 2026</a></li>
+    <li><a href="https://www.sydney.edu.au/students/change-course.html">USyd: chuyển ngành</a></li>
+    <li><a href="https://www.sydney.edu.au/study/fees-and-loans/scholarships/sydney-international-student-award.html">Sydney International Student Award</a> · <a href="https://www.sydney.edu.au/scholarships/e/sydney-international-undergraduate-academic-excellence-scholarship.html">Học bổng Academic Excellence</a></li>
+    <li><a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500/welfare-arrangements-students-under-18">Bộ Nội vụ Úc: bảo trợ du học sinh dưới 18 tuổi</a></li>
+    <li><a href="https://www.ishcmc.com/admissions/tuition-fees/">Học phí ISHCMC 2026-27</a> · <a href="https://www.exchange-rates.org/exchange-rate-history/aud-vnd-2026">Tỷ giá AUD/VND 2026</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Glenn_Stevens">Glenn Stevens</a> · <a href="https://en.wikipedia.org/wiki/Margaret_Zhang">Margaret Zhang</a> · <a href="https://www.sydney.edu.au/courses/subject-areas/progrm/economics-major-in-environmental-agricultural-and-resource-economics.html">Nghề nghiệp ngành EARE (USyd)</a></li>
+  </ol>
+</section>
+
+<div class="syd-foot">
+  <p>Ảnh từ Wikimedia Commons: Saigon at Blue Hour, Radek Kucharski (CC BY 2.0) · Sydney Opera House and Harbour Bridge, Miro Kesich (CC BY-SA 3.0) · Main Quadrangle, University of Sydney, Jason Tong (CC BY 2.0) · Abercrombie architecture, Ananya Duvvuri (CC BY-SA 4.0). Ảnh đã được thu nhỏ.</p>
+  <p>Yêu cầu tuyển sinh thay đổi hằng năm. Mọi thông tin ở đây áp dụng cho kỳ tuyển sinh 2027 trừ khi ghi khác; cần kiểm tra lại cẩm nang 2028 khi được công bố.</p>
+</div>
+
+  </div>
+</div>
+</div>
+
+<!-- UCSC -->
+<div class="tabpanel" role="tabpanel" id="ucsc" aria-labelledby="tab-ucsc" hidden>
+<div class="panel-body">
+  <div class="uni-head">
+    <p class="crumb"><button type="button" data-go="overview">Shortlist</button> / UC Santa Cruz</p>
+    <div><span class="tag likely">Likely</span></div>
+    <h2>University of California, Santa Cruz</h2>
+    <p class="muted">A University of California campus on the coast south of San Francisco, with a major that blends economics and business.</p>
+    <div class="uni-meta">
+      <div><span class="k">Location</span><span>Santa Cruz, California, USA</span></div>
+      <div><span class="k">Programme</span><span>BA Business Management Economics</span></div>
+      <div><span class="k">Admitted</span><span class="num">71.9% of internationals (Fall 2025)</span></div>
+      <div><span class="k">Deadline</span><span class="num">30 Nov 2027</span></div>
+    </div>
+  </div>
+  <div class="two">
+    <div>
+      <p class="label">Why it fits</p>
+      <ul class="list">
+        <li>Business Management Economics gives "a foundation in economics and a selection of applied fields related to business management". It is exactly economics plus business in one major.</li>
+        <li>The same department offers Economics and Global Economics if you want to switch.</li>
+        <li>One UC Application also lets you add other UC campuses later if you want.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="label">Cost</p>
+      <dl class="kv">
+        <dt>Tuition and fees</dt><dd class="num">US$54,848 (2026–27, nonresident)</dd>
+        <dt>Food and housing</dt><dd class="num">US$21,591</dd>
+        <dt>All-in</dt><dd class="num">≈ US$76,400 before books, personal costs and health insurance</dd>
+        <dt>Aid</dt><dd>Very little for international students. Plan to self-fund.</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="block">
+    <div class="block-head"><p class="label">Requirements</p><h3>What they need, and where you stand</h3></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Area</th><th>Needed</th><th>You now</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><th>GPA</th><td>3.40 minimum for international applicants; IB grades are converted</td><td>35–37 is about a 6 per subject</td><td><span class="pill good">Likely met</span></td></tr>
+        <tr><th>Tests</th><td>Test-free: SAT and ACT are not used</td><td>n/a</td><td><span class="pill good">Nothing to do</span></td></tr>
+        <tr><th>English</th><td>IELTS 6.5, TOEFL iBT 80 (older format) or 4.5 (new format), or Duolingo 115</td><td>IELTS planned</td><td><span class="pill warn">Mid-2027</span></td></tr>
+        <tr><th>Personal insight questions</th><td>Answer 4 of 8, up to 350 words each</td><td>Not started</td><td><span class="pill warn">Summer 2027</span></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <div class="verdict-box">
+    <h3><span class="pill good">Likely</span> Your safety in the United States</h3>
+    <p>With a 3.4 GPA floor and 71.9% of international applicants admitted in Fall 2025, a 35–37 IB student is well placed. The real question is cost: around US$76,000 a year with little aid. Submit between 1 October and 30 November 2027.</p>
+  </div>
+  <ol class="sources">
+    <li><a href="https://admissions.ucsc.edu/first-year-student">UCSC first-year students</a> · <a href="https://admissions.ucsc.edu/posts/english-proficiency-requirement">English proficiency</a></li>
+    <li><a href="https://catalog.ucsc.edu/current/general-catalog/academic-units/social-sciences-division/economics/business-management-economics-ba/">Business Management Economics BA (catalog)</a></li>
+    <li><a href="https://financialaid.ucsc.edu/managing-aid/budget-cost-to-attend/">Cost to attend</a> · <a href="https://www.collegekickstart.com/blog/item/university-of-california-fall-2025-admission-trends">UC Fall 2025 admission trends</a></li>
+  </ol>
+</div>
+</div>
+
+</div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>Researched 18 to 29 Sep 2026 from each university's own pages where possible. Requirements change every year, so re-check each one in August 2027 before applying.</p>
+    <p>Sydney brief photos via Wikimedia Commons (CC BY and CC BY-SA), credited in that tab.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('[role="tab"]'));
+  var ids=tabs.map(function(t){return t.getAttribute('aria-controls');});
+  function show(id, push){
+    if(ids.indexOf(id)<0) return false;
+    tabs.forEach(function(t){
+      var on=t.getAttribute('aria-controls')===id;
+      t.setAttribute('aria-selected',String(on));
+      t.tabIndex=on?0:-1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden=!on;
+    });
+    if(push){ try{ history.replaceState(null,'','#'+id); }catch(e){} try{ localStorage.setItem('plan-tab',id); }catch(e){} }
+    return true;
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){ show(t.getAttribute('aria-controls'),true); });
+    t.addEventListener('keydown',function(e){
+      var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;
+      if(!d) return;
+      var n=tabs[(i+d+tabs.length)%tabs.length]; n.focus(); show(n.getAttribute('aria-controls'),true);
+    });
+  });
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-go]');
+    if(!b) return;
+    show(b.getAttribute('data-go'),true);
+    window.scrollTo(0,0);
+  });
+  window.addEventListener('hashchange',function(){ show(location.hash.slice(1),false); });
+  var start=location.hash.slice(1);
+  if(!show(start,false)){
+    var saved=null; try{ saved=localStorage.getItem('plan-tab'); }catch(e){}
+    if(!show(saved,false)) show('overview',false);
+  }
+  var en=document.getElementById('syd-en'), vi=document.getElementById('syd-vi');
+  var bEn=document.getElementById('syd-btn-en'), bVi=document.getElementById('syd-btn-vi');
+  function lang(l,save){
+    var toVi=l==='vi';
+    en.hidden=toVi; vi.hidden=!toVi;
+    bEn.setAttribute('aria-pressed',String(!toVi)); bVi.setAttribute('aria-pressed',String(toVi));
+    if(save){ try{ localStorage.setItem('usyd-lang',l); }catch(e){} }
+  }
+  var sl=null; try{ sl=localStorage.getItem('usyd-lang'); }catch(e){}
+  lang(sl==='vi'?'vi':'en',false);
+  bEn.addEventListener('click',function(){ lang('en',true); });
+  bVi.addEventListener('click',function(){ lang('vi',true); });
+})();
+</script>
+
+</body></html>
