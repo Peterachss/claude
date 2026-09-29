@@ -400,6 +400,48 @@ svg .tgtl{font-weight:700;font-size:13px}
   .mm-stack>div+div{border-left:none;border-top:1px solid var(--rule)}
   .mm-cards{grid-template-columns:1fr}
 }
+
+/* extracurricular */
+.ec-bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 16px;background:var(--panel);padding:12px 14px}
+.ec-bar-right{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.ec-status{font-size:.88rem;color:var(--muted);min-width:4em}
+.ec-status.bad{color:var(--bad)}
+.ec-list{display:grid;gap:18px}
+.ec-empty{border:1px dashed var(--rule);padding:28px;text-align:center;color:var(--muted)}
+.ec-card{border:1px solid var(--rule);border-left:3px solid var(--accent-fill);padding:16px 18px;display:grid;gap:12px}
+.ec-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px}
+.ec-card input,.ec-card select,.ec-card textarea{font:inherit;color:var(--ink);background:transparent;border:1px solid transparent;border-radius:2px;padding:6px 8px;width:100%;min-width:0}
+.ec-card input:hover,.ec-card textarea:hover,.ec-card select:hover{border-color:var(--rule)}
+.ec-card input:focus,.ec-card textarea:focus,.ec-card select:focus{outline:none;border-color:var(--accent);background:var(--panel)}
+.ec-card select{background:var(--paper);width:auto;border-color:var(--rule);font-size:.9rem}
+.ec-card input::placeholder,.ec-card textarea::placeholder{color:var(--muted);opacity:.7}
+.ec-name{flex:1 1 240px;font-family:var(--display)!important;font-size:1.3rem!important;font-weight:500}
+.ec-tools{display:flex;gap:4px}
+.ec-icon{font:inherit;font-size:.95rem;line-height:1;color:var(--muted);background:none;border:1px solid var(--rule);padding:7px 10px;cursor:pointer;min-height:36px}
+.ec-icon:hover{color:var(--ink);border-color:var(--muted)}
+.ec-icon.del:hover{color:var(--bad);border-color:var(--bad)}
+.ec-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px 16px}
+.ec-fields label{display:grid;gap:0}
+.ec-k{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;padding-left:9px}
+.ec-card textarea{resize:vertical;min-height:70px;line-height:1.5}
+.ec-photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
+.ec-photo{position:relative;aspect-ratio:4/3;background:var(--panel);overflow:hidden}
+.ec-photo button.open{display:block;width:100%;height:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.ec-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.ec-photo .rm{position:absolute;top:4px;right:4px;width:28px;height:28px;border-radius:50%;border:0;background:rgba(10,12,16,.75);color:#fff;font-size:16px;line-height:28px;cursor:pointer;padding:0}
+.ec-photo .rm:hover{background:var(--bad)}
+.ec-addphoto{aspect-ratio:4/3;border:1px dashed var(--rule);display:grid;place-content:center;justify-items:center;gap:4px;color:var(--muted);font-size:.9rem;cursor:pointer;text-align:center;padding:6px}
+.ec-addphoto:hover{border-color:var(--accent);color:var(--accent)}
+.ec-addphoto svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8}
+.ec-addphoto.busy{opacity:.6;pointer-events:none}
+dialog.ec-view{border:0;padding:0;background:transparent;max-width:min(94vw,1200px);max-height:92vh}
+dialog.ec-view::backdrop{background:rgba(5,6,8,.85)}
+dialog.ec-view img{display:block;max-width:100%;max-height:82vh;margin:0 auto}
+dialog.ec-view .btn{margin:10px auto 0;display:flex}
+@media (max-width:720px){
+  .ec-fields{grid-template-columns:1fr}
+  .ec-photos{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 </style>
 
 <div class="strip">
@@ -418,7 +460,7 @@ svg .tgtl{font-weight:700;font-size:13px}
     <h1><span class="l-en">Where I'm going after the IB</span><span class="l-vi">Sau IB, mình sẽ học ở đâu</span></h1>
     <p class="lead"><span class="l-en">Economics and business, five universities on three continents, and one predicted score to raise.</span><span class="l-vi">Kinh tế và kinh doanh, năm trường đại học trên ba châu lục, và một mục tiêu điểm cần nâng lên.</span></p>
     <nav class="tabs" role="tablist" aria-label="Sections">
-      <div class="tabrow main" role="presentation"><button type="button" role="tab" id="tab-overview" aria-controls="overview" aria-selected="true"><span class="l-en">Overview</span><span class="l-vi">Tổng quan</span></button><button type="button" role="tab" id="tab-table" aria-controls="table" aria-selected="false"><span class="l-en">Compare</span><span class="l-vi">So sánh</span></button><button type="button" role="tab" id="tab-majmin" aria-controls="majmin" aria-selected="false"><span class="l-en">Majors &amp; minors</span><span class="l-vi">Chuyên ngành</span></button><button type="button" role="tab" id="tab-schedule" aria-controls="schedule" aria-selected="false"><span class="l-en">Timeline</span><span class="l-vi">Lịch trình</span></button><button type="button" role="tab" id="tab-money" aria-controls="money" aria-selected="false"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></button><button type="button" role="tab" id="tab-visa" aria-controls="visa" aria-selected="false"><span class="l-en">Visas &amp; IELTS</span><span class="l-vi">Visa &amp; IELTS</span></button></div>
+      <div class="tabrow main" role="presentation"><button type="button" role="tab" id="tab-overview" aria-controls="overview" aria-selected="true"><span class="l-en">Overview</span><span class="l-vi">Tổng quan</span></button><button type="button" role="tab" id="tab-table" aria-controls="table" aria-selected="false"><span class="l-en">Compare</span><span class="l-vi">So sánh</span></button><button type="button" role="tab" id="tab-majmin" aria-controls="majmin" aria-selected="false"><span class="l-en">Majors &amp; minors</span><span class="l-vi">Chuyên ngành</span></button><button type="button" role="tab" id="tab-schedule" aria-controls="schedule" aria-selected="false"><span class="l-en">Timeline</span><span class="l-vi">Lịch trình</span></button><button type="button" role="tab" id="tab-money" aria-controls="money" aria-selected="false"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></button><button type="button" role="tab" id="tab-visa" aria-controls="visa" aria-selected="false"><span class="l-en">Visas &amp; IELTS</span><span class="l-vi">Visa &amp; IELTS</span></button><button type="button" role="tab" id="tab-extra" aria-controls="extra" aria-selected="false"><span class="l-en">Extracurricular</span><span class="l-vi">Ngoại khóa</span></button></div>
       <div class="tabrow unis" role="presentation"><div class="tgroup" role="presentation"><span class="tabgrp"><span class="l-en">Australia</span><span class="l-vi">Úc</span></span><button type="button" role="tab" id="tab-usyd" aria-controls="usyd" aria-selected="false"><span class="l-en">University of Sydney</span><span class="l-vi">Đại học Sydney</span></button><button type="button" role="tab" id="tab-unsw" aria-controls="unsw" aria-selected="false">UNSW Sydney</button></div><div class="tgroup" role="presentation"><span class="tabgrp"><span class="l-en">United States</span><span class="l-vi">Mỹ</span></span><button type="button" role="tab" id="tab-uchicago" aria-controls="uchicago" aria-selected="false">UChicago</button><button type="button" role="tab" id="tab-ucsc" aria-controls="ucsc" aria-selected="false">UC Santa Cruz</button></div><div class="tgroup" role="presentation"><span class="tabgrp"><span class="l-en">China</span><span class="l-vi">Trung Quốc</span></span><button type="button" role="tab" id="tab-nyush" aria-controls="nyush" aria-selected="false"><span class="l-en">NYU Shanghai</span><span class="l-vi">NYU Thượng Hải</span></button></div></div>
     </nav>
   </div>
@@ -951,6 +993,31 @@ svg .tgtl{font-weight:700;font-size:13px}
   </div>
 </div>
 </div>
+
+<!-- ============ EXTRACURRICULAR ============ -->
+<div class="tabpanel" role="tabpanel" id="extra" aria-labelledby="tab-extra" hidden>
+<div class="panel-body">
+  <div class="block">
+    <div class="block-head">
+      <p class="label"><span class="l-en">Beyond the classroom</span><span class="l-vi">Ngoài lớp học</span></p>
+      <h2><span class="l-en">Extracurricular</span><span class="l-vi">Hoạt động ngoại khóa</span></h2>
+      <p class="muted"><span class="l-en">Everything I do outside class, with photos. Click any field to edit it. Changes save automatically.</span><span class="l-vi">Mọi hoạt động ngoài giờ học, kèm ảnh. Bấm vào bất kỳ ô nào để sửa. Thay đổi được lưu tự động.</span></p>
+    </div>
+    <div class="ec-bar">
+      <button type="button" class="btn" id="ec-add"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span class="l-en">Add activity</span><span class="l-vi">Thêm hoạt động</span></button>
+      <div class="ec-bar-right">
+        <span class="ec-status" id="ec-status" aria-live="polite"></span>
+        <button type="button" class="btn" id="ec-export"><span class="l-en">Save backup</span><span class="l-vi">Lưu bản sao</span></button>
+        <label class="btn" for="ec-import"><span class="l-en">Load backup</span><span class="l-vi">Tải bản sao</span></label>
+        <input type="file" id="ec-import" accept="application/json,.json" hidden>
+      </div>
+    </div>
+    <p class="small muted"><span class="l-en">Edits and photos are stored in this browser on this device, so other people who open the site won't see them. Use "Save backup" to keep a copy or move it to another device.</span><span class="l-vi">Nội dung sửa và ảnh được lưu trong trình duyệt trên thiết bị này, nên người khác mở trang sẽ không thấy. Dùng "Lưu bản sao" để giữ một bản hoặc chuyển sang thiết bị khác.</span></p>
+    <div class="ec-list" id="ec-list"></div>
+  </div>
+</div>
+</div>
+<dialog class="ec-view" id="ec-view"><img alt=""><button type="button" class="btn" id="ec-view-close"><span class="l-en">Close</span><span class="l-vi">Đóng</span></button></dialog>
 
 <!-- ============ UCHICAGO ============ -->
 <div class="tabpanel" role="tabpanel" id="uchicago" aria-labelledby="tab-uchicago" hidden>
@@ -2408,6 +2475,205 @@ svg .tgtl{font-weight:700;font-size:13px}
   lang(sl==='vi'?'vi':'en',false);
   bEn.addEventListener('click',function(){ lang('en',true); });
   bVi.addEventListener('click',function(){ lang('vi',true); });
+})();
+</script>
+
+<script>
+/* Extracurricular tab: editable list with photos, saved in this browser (localStorage for text, IndexedDB for photos). */
+(function(){
+  var KEY='ec-items-v1', root=document.documentElement;
+  var list=document.getElementById('ec-list'), statusEl=document.getElementById('ec-status');
+  if(!list) return;
+  function vi(){ return root.getAttribute('lang')==='vi'; }
+  function t(en,v){ return vi()?v:en; }
+  var TYPES=[['service','Service','Phục vụ cộng đồng'],['leadership','Leadership','Lãnh đạo'],['creativity','Creativity','Sáng tạo'],['activity','Activity','Hoạt động thể chất'],['other','Other','Khác']];
+  function uid(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,8); }
+  var SEED=[
+    {name:'Chạm (student nonprofit)',type:'leadership'},
+    {name:'Action for Earth',type:'service'},
+    {name:'Student Ambassador',type:'leadership'}
+  ];
+  var items;
+  try{ items=JSON.parse(localStorage.getItem(KEY)||'null'); }catch(e){ items=null; }
+  if(!Array.isArray(items)){
+    items=SEED.map(function(s){ return {id:uid(),name:s.name,role:'',when:'',hours:'',type:s.type,desc:'',photos:[]}; });
+  }
+
+  /* ---------- photo store (IndexedDB, falls back to memory) ---------- */
+  var mem={}, dbp=null;
+  function db(){
+    if(dbp) return dbp;
+    dbp=new Promise(function(res){
+      try{
+        var r=indexedDB.open('uni-plan-ec',1);
+        r.onupgradeneeded=function(){ r.result.createObjectStore('photos'); };
+        r.onsuccess=function(){ res(r.result); };
+        r.onerror=function(){ res(null); };
+      }catch(e){ res(null); }
+    });
+    return dbp;
+  }
+  function tx(mode,fn){
+    return db().then(function(d){
+      if(!d) return fn(null);
+      return new Promise(function(res,rej){
+        try{
+          var x=d.transaction('photos',mode), st=x.objectStore('photos'), out=fn(st);
+          x.oncomplete=function(){ res(out&&out.result!==undefined?out.result:out); };
+          x.onerror=function(){ rej(x.error); };
+        }catch(e){ rej(e); }
+      });
+    });
+  }
+  function putPhoto(id,data){ mem[id]=data; return tx('readwrite',function(st){ if(st) st.put(data,id); }).catch(function(){ setStatus(t('Photo kept until you close the page (storage full or blocked)','Ảnh chỉ giữ đến khi đóng trang (bộ nhớ đầy hoặc bị chặn)'),true); }); }
+  function getPhoto(id){ if(mem[id]) return Promise.resolve(mem[id]); return tx('readonly',function(st){ return st?st.get(id):null; }).then(function(v){ if(v) mem[id]=v; return v||null; }).catch(function(){ return null; }); }
+  function delPhoto(id){ delete mem[id]; return tx('readwrite',function(st){ if(st) st.delete(id); }).catch(function(){}); }
+
+  /* ---------- saving ---------- */
+  var timer=null;
+  function setStatus(msg,bad){ statusEl.textContent=msg; statusEl.className='ec-status'+(bad?' bad':''); }
+  function save(){
+    clearTimeout(timer);
+    timer=setTimeout(function(){
+      try{ localStorage.setItem(KEY,JSON.stringify(items)); setStatus(t('Saved','Đã lưu')); }
+      catch(e){ setStatus(t('Couldn’t save in this browser','Không lưu được trên trình duyệt này'),true); }
+    },300);
+  }
+
+  /* ---------- images: shrink before storing ---------- */
+  function shrink(file){
+    return new Promise(function(res,rej){
+      var url=URL.createObjectURL(file), img=new Image();
+      img.onload=function(){
+        var max=1600, w=img.naturalWidth, h=img.naturalHeight, k=Math.min(1,max/Math.max(w,h));
+        var c=document.createElement('canvas'); c.width=Math.round(w*k); c.height=Math.round(h*k);
+        c.getContext('2d').drawImage(img,0,0,c.width,c.height);
+        URL.revokeObjectURL(url);
+        res(c.toDataURL('image/jpeg',0.82));
+      };
+      img.onerror=function(){ URL.revokeObjectURL(url); rej(new Error('bad image')); };
+      img.src=url;
+    });
+  }
+
+  /* ---------- rendering ---------- */
+  function el(tag,attrs,kids){
+    var n=document.createElement(tag);
+    if(attrs) for(var k in attrs){ if(k==='text') n.textContent=attrs[k]; else if(k==='on') for(var ev in attrs.on) n.addEventListener(ev,attrs.on[ev]); else n.setAttribute(k,attrs[k]); }
+    (kids||[]).forEach(function(c){ if(c) n.appendChild(c); });
+    return n;
+  }
+  function field(item,key,label,ph){
+    var input=el('input',{type:'text',value:item[key]||'',placeholder:ph,'aria-label':label});
+    input.value=item[key]||'';
+    input.addEventListener('input',function(){ item[key]=input.value; save(); });
+    return el('label',null,[el('span',{'class':'ec-k',text:label}),input]);
+  }
+  function move(i,d){ var j=i+d; if(j<0||j>=items.length) return; var x=items[i]; items[i]=items[j]; items[j]=x; save(); render(); }
+  var viewer=document.getElementById('ec-view');
+  function openPhoto(id){ getPhoto(id).then(function(src){ if(!src) return; viewer.querySelector('img').src=src; try{ viewer.showModal(); }catch(e){ window.open(src); } }); }
+  document.getElementById('ec-view-close').addEventListener('click',function(){ viewer.close(); });
+  viewer.addEventListener('click',function(e){ if(e.target===viewer) viewer.close(); });
+
+  function card(item,i){
+    var name=el('input',{type:'text','class':'ec-name',placeholder:t('Activity name','Tên hoạt động'),'aria-label':t('Activity name','Tên hoạt động')});
+    name.value=item.name||'';
+    name.addEventListener('input',function(){ item.name=name.value; save(); });
+    var sel=el('select',{'aria-label':t('Type','Loại')});
+    TYPES.forEach(function(ty){ var o=el('option',{value:ty[0],text:t(ty[1],ty[2])}); if(item.type===ty[0]) o.selected=true; sel.appendChild(o); });
+    sel.addEventListener('change',function(){ item.type=sel.value; save(); });
+    var tools=el('div',{'class':'ec-tools'},[
+      el('button',{type:'button','class':'ec-icon',title:t('Move up','Lên'),'aria-label':t('Move up','Lên'),text:'↑',on:{click:function(){ move(i,-1); }}}),
+      el('button',{type:'button','class':'ec-icon',title:t('Move down','Xuống'),'aria-label':t('Move down','Xuống'),text:'↓',on:{click:function(){ move(i,1); }}}),
+      el('button',{type:'button','class':'ec-icon del',title:t('Delete activity','Xóa hoạt động'),'aria-label':t('Delete activity','Xóa hoạt động'),text:'✕',on:{click:function(){
+        if(!confirm(t('Delete “'+(item.name||'this activity')+'” and its photos?','Xóa “'+(item.name||'hoạt động này')+'” và ảnh của nó?'))) return;
+        (item.photos||[]).forEach(delPhoto); items.splice(i,1); save(); render();
+      }}})
+    ]);
+    var desc=el('textarea',{rows:'3',placeholder:t('What I do, what changed because of it, what I learned','Mình làm gì, tạo ra thay đổi gì, học được gì'),'aria-label':t('Description','Mô tả')});
+    desc.value=item.desc||'';
+    desc.addEventListener('input',function(){ item.desc=desc.value; save(); });
+
+    var photos=el('div',{'class':'ec-photos'});
+    (item.photos||[]).forEach(function(pid){
+      var img=el('img',{alt:(item.name||'')+' photo',loading:'lazy'});
+      getPhoto(pid).then(function(src){ if(src) img.src=src; });
+      photos.appendChild(el('div',{'class':'ec-photo'},[
+        el('button',{type:'button','class':'open','aria-label':t('Open photo','Mở ảnh'),on:{click:function(){ openPhoto(pid); }}},[img]),
+        el('button',{type:'button','class':'rm',title:t('Remove photo','Xóa ảnh'),'aria-label':t('Remove photo','Xóa ảnh'),text:'×',on:{click:function(){
+          if(!confirm(t('Remove this photo?','Xóa ảnh này?'))) return;
+          item.photos=item.photos.filter(function(x){ return x!==pid; }); delPhoto(pid); save(); render();
+        }}})
+      ]));
+    });
+    var fileIn=el('input',{type:'file',accept:'image/*',multiple:'',hidden:''});
+    var add=el('label',{'class':'ec-addphoto'},[
+      (function(){ var s=document.createElementNS('http://www.w3.org/2000/svg','svg'); s.setAttribute('viewBox','0 0 24 24'); s.setAttribute('aria-hidden','true'); s.innerHTML='<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 17l-5-5-8 7"/>'; return s; })(),
+      el('span',{text:t('Add photos','Thêm ảnh')}),fileIn
+    ]);
+    fileIn.addEventListener('change',function(){
+      var files=[].slice.call(fileIn.files||[]); if(!files.length) return;
+      add.classList.add('busy'); setStatus(t('Adding photos…','Đang thêm ảnh…'));
+      files.reduce(function(p,f){
+        return p.then(function(){ return shrink(f).then(function(data){ var pid=uid(); item.photos=item.photos||[]; item.photos.push(pid); return putPhoto(pid,data); }).catch(function(){}); });
+      },Promise.resolve()).then(function(){ save(); render(); });
+    });
+    photos.appendChild(add);
+
+    return el('article',{'class':'ec-card'},[
+      el('div',{'class':'ec-head'},[name,sel,tools]),
+      el('div',{'class':'ec-fields'},[
+        field(item,'role',t('Role','Vai trò'),t('e.g. Founder','VD: Người sáng lập')),
+        field(item,'when',t('When','Thời gian'),t('e.g. 2025 – now','VD: 2025 – nay')),
+        field(item,'hours',t('Hours / week','Giờ / tuần'),t('e.g. 3','VD: 3'))
+      ]),
+      desc,
+      photos
+    ]);
+  }
+  function render(){
+    list.textContent='';
+    if(!items.length){ list.appendChild(el('p',{'class':'ec-empty',text:t('No activities yet. Press “Add activity” to start.','Chưa có hoạt động. Bấm “Thêm hoạt động” để bắt đầu.')})); return; }
+    items.forEach(function(it,i){ list.appendChild(card(it,i)); });
+  }
+
+  document.getElementById('ec-add').addEventListener('click',function(){
+    items.push({id:uid(),name:'',role:'',when:'',hours:'',type:'other',desc:'',photos:[]});
+    save(); render();
+    var inputs=list.querySelectorAll('.ec-name'); if(inputs.length) inputs[inputs.length-1].focus();
+  });
+
+  /* ---------- backup ---------- */
+  document.getElementById('ec-export').addEventListener('click',function(){
+    var ids=[]; items.forEach(function(it){ (it.photos||[]).forEach(function(p){ ids.push(p); }); });
+    Promise.all(ids.map(getPhoto)).then(function(data){
+      var photos={}; ids.forEach(function(id,k){ if(data[k]) photos[id]=data[k]; });
+      var blob=new Blob([JSON.stringify({version:1,saved:new Date().toISOString(),items:items,photos:photos})],{type:'application/json'});
+      var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='extracurricular-backup.json';
+      document.body.appendChild(a); a.click(); setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); },1000);
+    });
+  });
+  var imp=document.getElementById('ec-import');
+  imp.addEventListener('change',function(){
+    var f=imp.files&&imp.files[0]; if(!f) return;
+    var r=new FileReader();
+    r.onload=function(){
+      try{
+        var d=JSON.parse(r.result);
+        if(!d||!Array.isArray(d.items)) throw new Error('bad');
+        if(!confirm(t('Replace the current list with this backup?','Thay danh sách hiện tại bằng bản sao này?'))) return;
+        items=d.items.map(function(it){ return {id:String(it.id||uid()),name:String(it.name||''),role:String(it.role||''),when:String(it.when||''),hours:String(it.hours||''),type:String(it.type||'other'),desc:String(it.desc||''),photos:Array.isArray(it.photos)?it.photos.map(String):[]}; });
+        var ph=d.photos||{};
+        Promise.all(Object.keys(ph).filter(function(k){ return /^data:image\//.test(ph[k]); }).map(function(k){ return putPhoto(k,ph[k]); })).then(function(){ save(); render(); });
+      }catch(e){ setStatus(t('That file isn’t a backup from this page','Tệp này không phải bản sao của trang này'),true); }
+      imp.value='';
+    };
+    r.readAsText(f);
+  });
+
+  /* re-draw labels when the language changes */
+  try{ new MutationObserver(render).observe(root,{attributes:true,attributeFilter:['lang']}); }catch(e){}
+  render();
 })();
 </script>
 
