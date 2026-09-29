@@ -8,17 +8,19 @@
 /* Layout: an admissions-office course finder. Navy utility strip, plain white page, profile panel on the left, course cards on the right, tabs for each university. */
 /* Layout: an admissions-office course finder on black. Navy utility strip, profile panel on the left, course cards on the right, forest green for everything interactive. */
 :root{
-  --paper:#000000; --panel:#0D0F0D; --panel-2:#181B18; --ink:#ECEFEC; --muted:#A2A9A3; --rule:#2A2E2B;
-  --accent:#3BA55C; --accent-fill:#228B22; --accent-soft:#0D2515; --navy:#1C2638; --on-navy:#FFFFFF;
-  --tag-reach:#9B2F35; --tag-target:#2F5E8A; --tag-likely:#1F7A34;
-  --good:#5CC47C; --good-soft:#0E2616; --warn:#E6C656; --warn-soft:#29230E; --bad:#F2877D; --bad-soft:#2D1412;
+  /* forest green with its classic partners: cream, soft gold, burgundy, navy */
+  --paper:#0F1813; --panel:#15211A; --panel-2:#1C2B22; --ink:#ECE7D8; --muted:#A9B3A2; --rule:#2B3B31;
+  --accent:#8CC49A; --accent-fill:#2F6B45; --accent-soft:#1A3324; --cream:#ECE7D8;
+  --strip:#1F4A2E; --on-strip:#ECE7D8; --navy:#2E4466; --on-navy:#F6F2E6;
+  --tag-dream:#7B2D3A; --tag-reach:#2E4466; --tag-target:#6E6428; --tag-likely:#2F6B45;
+  --good:#8CC49A; --good-soft:#1A3324; --warn:#D8BD6A; --warn-soft:#2E2913; --bad:#DE9A94; --bad-soft:#35191A;
   --display:"Jost","Futura","Century Gothic","Trebuchet MS",sans-serif;
   --body:"Source Sans 3","Segoe UI",system-ui,-apple-system,sans-serif;
   --bg:var(--paper); --surface:var(--paper); --surface-2:var(--panel); --rule-2:var(--rule);
-  --sand:#228B22; --sand-soft:#0D2515; --jade:#3B6EA5; --jade-soft:#0F1B2A; --jac:#50638E; --jac-soft:#121A2A; --jac-text:#AAB9D9;
-  --econ:#72A9DB; --econ-soft:#0F1F2D; --biz:#E28DA8; --biz-soft:#2A121B;
+  --sand:#2F6B45; --sand-soft:#1A3324; --jade:#3F5F8A; --jade-soft:#18233A; --jac:#4F6384; --jac-soft:#18223A; --jac-text:#AEBCD6;
+  --econ:#8FB3D6; --econ-soft:#172536; --biz:#D9A0AE; --biz-soft:#33191F;
   --good-bg:var(--good-soft); --warn-bg:var(--warn-soft); --bad-bg:var(--bad-soft);
-  --on-strong:#FFFFFF; --mono:var(--body);
+  --on-strong:#F6F2E6; --mono:var(--body);
   color-scheme:dark;
 }
 :root[lang="vi"]{--display:"Lexend","Source Sans 3","Segoe UI",sans-serif}
@@ -39,7 +41,7 @@ p{margin:0}
 .wrap{max-width:1200px;margin:0 auto;padding-inline:24px}
 
 /* utility strip + header */
-.strip{background:var(--navy);color:var(--on-navy);font-size:.88rem}
+.strip{background:var(--strip);color:var(--on-strip);font-size:.88rem}
 .strip .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:6px 18px;padding-block:7px}
 .masthead-top{border-bottom:1px solid var(--rule)}
 .masthead-top .wrap{padding-block:34px 0;display:grid;gap:10px}
@@ -57,7 +59,7 @@ main{padding-block:36px 72px}
 .block{display:grid;gap:16px}
 .block-head{display:grid;gap:6px;border-top:1px solid var(--rule);padding-top:20px}
 .label{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--muted)}
-.tag{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px 5px;color:var(--on-navy);background:var(--navy);line-height:1}
+.tag{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px 5px;color:var(--on-navy);background:var(--tag-dream);line-height:1}
 .tag.reach{background:var(--tag-reach)}
 .tag.target{background:var(--tag-target)}
 .tag.likely{background:var(--tag-likely)}
@@ -186,8 +188,8 @@ dl.kv dt{color:var(--muted);padding-right:16px}
 .syd .hero img{width:100%;height:100%;object-fit:cover;display:block}
 .syd .hero .tag{position:absolute;left:0;bottom:0;right:0;display:grid;gap:4px;padding:14px 16px;background:linear-gradient(0deg,rgba(10,14,22,.78),rgba(10,14,22,0));color:#fff;letter-spacing:0;text-transform:none;font-size:inherit;font-weight:400}
 .syd .hero .tag b{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;width:max-content;padding:5px 9px 4px;color:#fff}
-.syd .hero .stay b{background:#3B6EA5}
-.syd .hero .go b{background:#228B22}
+.syd .hero .stay b{background:#2E4466}
+.syd .hero .go b{background:#2F6B45}
 .syd .hero .tag span{font-family:var(--display);font-size:clamp(1.02rem,2.2vw,1.35rem);font-weight:500;line-height:1.25}
 .syd .verdict{margin-top:22px;border:1px solid var(--rule);border-top:3px solid var(--jade);padding:22px 24px;display:grid;gap:14px}
 .syd .verdict .call{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px}
@@ -328,8 +330,8 @@ footer.site .wrap{padding-block:20px 36px;display:grid;gap:6px}
 
 /* language switch */
 .lang{display:inline-flex;border:1px solid rgba(255,255,255,.3)}
-.lang button{font-family:var(--body);font-size:.84rem;font-weight:600;border:0;background:transparent;color:var(--on-navy);padding:5px 12px;cursor:pointer;opacity:.75}
-.lang button[aria-pressed="true"]{background:var(--accent-fill);opacity:1}
+.lang button{font-family:var(--body);font-size:.84rem;font-weight:600;border:0;background:transparent;color:var(--on-strip);padding:5px 12px;cursor:pointer;opacity:.75}
+.lang button[aria-pressed="true"]{background:var(--cream);color:var(--strip);opacity:1}
 /* score chart */
 svg .sub{fill:var(--muted);font-size:12px}
 svg .nm{font-weight:600;font-size:14px}
