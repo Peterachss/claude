@@ -370,6 +370,36 @@ svg .tgtl{font-weight:700;font-size:13px}
 .country h3{font-size:1.35rem}
 .country>span{font-size:.88rem;color:var(--muted)}
 .cards>.country:first-child{margin-top:0}
+
+/* majors & minors */
+.pill.env{background:var(--good-soft);color:var(--good)}
+.mm-defs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.mm-defs div{border-top:2px solid var(--ink);padding-top:8px;display:grid;gap:2px;align-content:start}
+.mm-defs b{font-family:var(--display);font-size:1.25rem;font-weight:500}
+.mm-defs span{font-size:.92rem;color:var(--muted);line-height:1.45}
+.mm-stack{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--rule)}
+.mm-stack>div{padding:16px 20px;display:grid;gap:6px;align-content:start}
+.mm-stack>div+div{border-left:1px solid var(--rule)}
+.mm-stack .rank{font-family:var(--display);font-size:2rem;font-weight:500;line-height:1}
+.mm-stack .biz .rank{color:var(--biz)} .mm-stack .econ .rank{color:var(--econ)} .mm-stack .env .rank{color:var(--good)}
+.mm-stack .maybe{border-left-style:dashed}
+.mm-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px}
+.mm-card{border:1px solid var(--rule);border-top:3px solid var(--accent-fill);padding:18px 20px;display:grid;gap:12px;align-content:start}
+.mm-card-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 12px}
+.mm-card-head h3{font-size:1.2rem}
+.mm-card-head button{font:inherit;font-size:.88rem;color:var(--accent);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.mm-card dl{margin:0;display:grid;grid-template-columns:minmax(96px,auto) 1fr;gap:0;font-size:.95rem;border-top:1px solid var(--rule)}
+.mm-card dt,.mm-card dd{margin:0;padding:8px 0;border-bottom:1px solid var(--rule)}
+.mm-card dt{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;padding-right:12px;padding-top:11px}
+.mm-card .note{font-size:.92rem;color:var(--muted)}
+.mm-card .note button{font:inherit;color:var(--accent);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+@media (max-width:720px){
+  .mm-defs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mm-stack{grid-template-columns:1fr}
+  .mm-stack>div+div{border-left:none;border-top:1px solid var(--rule)}
+  .mm-stack .maybe{border-top-style:dashed}
+  .mm-cards{grid-template-columns:1fr}
+}
 </style>
 
 <div class="strip">
@@ -388,7 +418,7 @@ svg .tgtl{font-weight:700;font-size:13px}
     <h1><span class="l-en">Where I'm going after the IB</span><span class="l-vi">Sau IB, mình sẽ học ở đâu</span></h1>
     <p class="lead"><span class="l-en">Economics and business, five universities on three continents, and one predicted score to raise.</span><span class="l-vi">Kinh tế và kinh doanh, năm trường đại học trên ba châu lục, và một mục tiêu điểm cần nâng lên.</span></p>
     <nav class="tabs" role="tablist" aria-label="Sections">
-      <div class="tabrow main" role="presentation"><button type="button" role="tab" id="tab-overview" aria-controls="overview" aria-selected="true"><span class="l-en">Overview</span><span class="l-vi">Tổng quan</span></button><button type="button" role="tab" id="tab-table" aria-controls="table" aria-selected="false"><span class="l-en">Compare</span><span class="l-vi">So sánh</span></button><button type="button" role="tab" id="tab-schedule" aria-controls="schedule" aria-selected="false"><span class="l-en">Timeline</span><span class="l-vi">Lịch trình</span></button><button type="button" role="tab" id="tab-money" aria-controls="money" aria-selected="false"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></button><button type="button" role="tab" id="tab-visa" aria-controls="visa" aria-selected="false"><span class="l-en">Visas &amp; IELTS</span><span class="l-vi">Visa &amp; IELTS</span></button></div>
+      <div class="tabrow main" role="presentation"><button type="button" role="tab" id="tab-overview" aria-controls="overview" aria-selected="true"><span class="l-en">Overview</span><span class="l-vi">Tổng quan</span></button><button type="button" role="tab" id="tab-table" aria-controls="table" aria-selected="false"><span class="l-en">Compare</span><span class="l-vi">So sánh</span></button><button type="button" role="tab" id="tab-majmin" aria-controls="majmin" aria-selected="false"><span class="l-en">Majors &amp; minors</span><span class="l-vi">Chuyên ngành</span></button><button type="button" role="tab" id="tab-schedule" aria-controls="schedule" aria-selected="false"><span class="l-en">Timeline</span><span class="l-vi">Lịch trình</span></button><button type="button" role="tab" id="tab-money" aria-controls="money" aria-selected="false"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></button><button type="button" role="tab" id="tab-visa" aria-controls="visa" aria-selected="false"><span class="l-en">Visas &amp; IELTS</span><span class="l-vi">Visa &amp; IELTS</span></button></div>
       <div class="tabrow unis" role="presentation"><div class="tgroup" role="presentation"><span class="tabgrp"><span class="l-en">Australia</span><span class="l-vi">Úc</span></span><button type="button" role="tab" id="tab-usyd" aria-controls="usyd" aria-selected="false"><span class="l-en">University of Sydney</span><span class="l-vi">Đại học Sydney</span></button><button type="button" role="tab" id="tab-unsw" aria-controls="unsw" aria-selected="false">UNSW Sydney</button></div><div class="tgroup" role="presentation"><span class="tabgrp"><span class="l-en">United States</span><span class="l-vi">Mỹ</span></span><button type="button" role="tab" id="tab-uchicago" aria-controls="uchicago" aria-selected="false">UChicago</button><button type="button" role="tab" id="tab-ucsc" aria-controls="ucsc" aria-selected="false">UC Santa Cruz</button></div><div class="tgroup" role="presentation"><span class="tabgrp"><span class="l-en">China</span><span class="l-vi">Trung Quốc</span></span><button type="button" role="tab" id="tab-nyush" aria-controls="nyush" aria-selected="false"><span class="l-en">NYU Shanghai</span><span class="l-vi">NYU Thượng Hải</span></button></div></div>
     </nav>
   </div>
@@ -667,6 +697,130 @@ svg .tgtl{font-weight:700;font-size:13px}
       </table>
     </div>
     <p class="small muted"><span class="l-en">Tuition years: UChicago, NYU Shanghai, UC Santa Cruz 2026–27; UNSW 2026; USyd 2027. Australian all-in uses ~A$30,000 a year for living. US deadlines are the 2026–27 pattern.</span><span class="l-vi">Năm học phí: UChicago, NYU Thượng Hải, UC Santa Cruz 2026–27; UNSW 2026; USyd 2027. Tổng chi phí ở Úc tính thêm ~A$30.000/năm sinh hoạt. Hạn nộp ở Mỹ theo lịch năm 2026–27.</span></p>
+  </div>
+</div>
+</div>
+
+<!-- ============ MAJORS & MINORS ============ -->
+<div class="tabpanel" role="tabpanel" id="majmin" aria-labelledby="tab-majmin" hidden>
+<div class="panel-body">
+  <div class="block">
+    <div class="block-head">
+      <p class="label"><span class="l-en">Major and minor planning</span><span class="l-vi">Kế hoạch chuyên ngành chính và phụ</span></p>
+      <h2><span class="l-en">What I'd actually study at each university</span><span class="l-vi">Mình sẽ thực sự học gì ở mỗi trường</span></h2>
+      <p class="muted"><span class="l-en">Business comes first, economics second, and environmental economics is a maybe. Each university packages these differently, so the same plan turns into a different mix of majors and minors at each one.</span><span class="l-vi">Kinh doanh là ưu tiên số một, kinh tế đứng thứ hai, còn kinh tế môi trường thì có thể. Mỗi trường sắp xếp các ngành khác nhau, nên cùng một kế hoạch sẽ thành một tổ hợp chuyên ngành khác nhau ở mỗi trường.</span></p>
+    </div>
+    <div class="mm-stack">
+      <div class="biz"><span class="rank">1</span><strong><span class="l-en">Business</span><span class="l-vi">Kinh doanh</span></strong><span class="muted small"><span class="l-en">The main major. Management, strategy, international business or finance.</span><span class="l-vi">Chuyên ngành chính. Quản trị, chiến lược, kinh doanh quốc tế hoặc tài chính.</span></span></div>
+      <div class="econ"><span class="rank">2</span><strong><span class="l-en">Economics</span><span class="l-vi">Kinh tế học</span></strong><span class="muted small"><span class="l-en">A second major or a minor, to keep the Economics HL thread going.</span><span class="l-vi">Chuyên ngành thứ hai hoặc chuyên ngành phụ, để tiếp nối Kinh tế HL.</span></span></div>
+      <div class="env maybe"><span class="rank">3</span><strong><span class="l-en">Environmental economics</span><span class="l-vi">Kinh tế môi trường</span> <span class="pill env"><span class="l-en">Maybe</span><span class="l-vi">Có thể</span></span></strong><span class="muted small"><span class="l-en">Keep the door open. Add it only if it still feels right after first-year classes.</span><span class="l-vi">Giữ cơ hội mở. Chỉ thêm vào nếu sau năm nhất vẫn thấy phù hợp.</span></span></div>
+    </div>
+    <div class="mm-defs">
+      <div><b><span class="l-en">Major</span><span class="l-vi">Chuyên ngành chính</span></b><span><span class="l-en">Your main subject: about a third of the degree. In Australia, 8 courses.</span><span class="l-vi">Môn học chính: khoảng một phần ba bằng. Ở Úc là 8 môn.</span></span></div>
+      <div><b><span class="l-en">Minor</span><span class="l-vi">Chuyên ngành phụ</span></b><span><span class="l-en">A lighter second subject, usually 6 courses.</span><span class="l-vi">Môn thứ hai nhẹ hơn, thường là 6 môn.</span></span></div>
+      <div><b><span class="l-en">Double major</span><span class="l-vi">Song ngành</span></b><span><span class="l-en">Two full majors in one degree, using up your free electives.</span><span class="l-vi">Hai chuyên ngành đầy đủ trong một bằng, dùng hết các môn tự chọn.</span></span></div>
+      <div><b><span class="l-en">Specialisation / track</span><span class="l-vi">Hướng chuyên sâu</span></b><span><span class="l-en">A focus inside one major, like UChicago's Business Economics.</span><span class="l-vi">Trọng tâm bên trong một chuyên ngành, như Business Economics của UChicago.</span></span></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-head">
+      <p class="label"><span class="l-en">My plan at each university</span><span class="l-vi">Kế hoạch ở từng trường</span></p>
+      <h2><span class="l-en">Business first, economics second, environment if it stays</span><span class="l-vi">Kinh doanh trước, kinh tế sau, môi trường nếu còn hứng thú</span></h2>
+    </div>
+    <div class="mm-cards">
+      <div class="mm-card">
+        <div class="mm-card-head"><h3><span class="l-en">University of Sydney</span><span class="l-vi">Đại học Sydney</span></h3><span class="pill good"><span class="l-en">Business first</span><span class="l-vi">Kinh doanh trước</span></span></div>
+        <dl>
+          <dt><span class="l-en">Degree</span><span class="l-vi">Bằng</span></dt><dd><span class="l-en">Bachelor of Commerce (IB 38)</span><span class="l-vi">Cử nhân Thương mại (IB 38)</span></dd>
+          <dt><span class="l-en">Major</span><span class="l-vi">Chính</span></dt><dd>Management &amp; Leadership</dd>
+          <dt><span class="l-en">Minor</span><span class="l-vi">Phụ</span></dt><dd><span class="l-en">Economics</span><span class="l-vi">Kinh tế học</span></dd>
+          <dt><span class="l-en">If env stays</span><span class="l-vi">Nếu giữ MT</span></dt><dd><span class="l-en">Swap the minor for a second major in Environmental, Agricultural &amp; Resource Economics (EARE)</span><span class="l-vi">Đổi chuyên ngành phụ thành chuyên ngành thứ hai Kinh tế Môi trường, Nông nghiệp &amp; Tài nguyên (EARE)</span></dd>
+          <dt><span class="l-en">Below 38</span><span class="l-vi">Dưới 38</span></dt><dd><span class="l-en">Bachelor of Economics (IB 31) with Management &amp; Leadership as a second major</span><span class="l-vi">Cử nhân Kinh tế (IB 31) với Management &amp; Leadership là chuyên ngành thứ hai</span></dd>
+        </dl>
+        <p class="note"><span class="l-en">Commerce and Economics are separate faculties that share majors, so both orders work.</span><span class="l-vi">Thương mại và Kinh tế là hai khoa riêng nhưng dùng chung chuyên ngành, nên cả hai cách đều được.</span> <button type="button" data-go="usyd"><span class="l-en">See the unit-by-unit plans</span><span class="l-vi">Xem kế hoạch từng môn</span></button></p>
+      </div>
+      <div class="mm-card">
+        <div class="mm-card-head"><h3>UNSW Sydney</h3><span class="pill good"><span class="l-en">Business first</span><span class="l-vi">Kinh doanh trước</span></span></div>
+        <dl>
+          <dt><span class="l-en">Degree</span><span class="l-vi">Bằng</span></dt><dd><span class="l-en">Bachelor of Commerce (IB 36)</span><span class="l-vi">Cử nhân Thương mại (IB 36)</span></dd>
+          <dt><span class="l-en">Major 1</span><span class="l-vi">Chính 1</span></dt><dd>Innovation, Strategy &amp; Entrepreneurship <span class="muted"><span class="l-en">or International Business</span><span class="l-vi">hoặc International Business</span></span></dd>
+          <dt><span class="l-en">Major 2</span><span class="l-vi">Chính 2</span></dt><dd>Business Economics</dd>
+          <dt><span class="l-en">If env stays</span><span class="l-vi">Nếu giữ MT</span></dt><dd><span class="l-en">Make Business Sustainability and Social Impact the second major instead</span><span class="l-vi">Chọn Business Sustainability and Social Impact làm chuyên ngành thứ hai</span></dd>
+          <dt><span class="l-en">Below 36</span><span class="l-vi">Dưới 36</span></dt><dd><span class="l-en">Bachelor of Economics (IB 33) plus a Commerce major or minor</span><span class="l-vi">Cử nhân Kinh tế (IB 33) cộng một chuyên ngành chính hoặc phụ của Thương mại</span></dd>
+        </dl>
+        <p class="note"><span class="l-en">24 courses: one Commerce major (8 courses) is required, and the other 8 free courses can become a second major. UNSW doesn't list formal minors for Commerce.</span><span class="l-vi">24 môn: bắt buộc một chuyên ngành Thương mại (8 môn), 8 môn tự do còn lại có thể thành chuyên ngành thứ hai. UNSW không có chuyên ngành phụ chính thức cho Thương mại.</span></p>
+      </div>
+      <div class="mm-card">
+        <div class="mm-card-head"><h3>NYU Shanghai</h3><span class="pill good"><span class="l-en">Business first</span><span class="l-vi">Kinh doanh trước</span></span></div>
+        <dl>
+          <dt><span class="l-en">Major</span><span class="l-vi">Chính</span></dt><dd><span class="l-en">Business and Finance, Business Management track</span><span class="l-vi">Business and Finance, hướng Business Management</span></dd>
+          <dt><span class="l-en">Minor</span><span class="l-vi">Phụ</span></dt><dd><span class="l-en">Economics</span><span class="l-vi">Kinh tế học</span></dd>
+          <dt><span class="l-en">If env stays</span><span class="l-vi">Nếu giữ MT</span></dt><dd><span class="l-en">No environmental minor is listed. Use electives and a study-away semester instead.</span><span class="l-vi">Không có chuyên ngành phụ về môi trường. Dùng môn tự chọn và một kỳ học ở campus khác.</span></dd>
+          <dt><span class="l-en">Declare</span><span class="l-vi">Đăng ký</span></dt><dd><span class="l-en">Between 32 and 64 credits (second year). Needs a C in Statistics for Business and Economics.</span><span class="l-vi">Trong khoảng 32 đến 64 tín chỉ (năm hai). Cần điểm C môn Statistics for Business and Economics.</span></dd>
+        </dl>
+        <p class="note"><span class="l-en">Double majors are allowed. At least 12 credits of a minor must not overlap with your major.</span><span class="l-vi">Được học song ngành. Ít nhất 12 tín chỉ của chuyên ngành phụ không được trùng với chuyên ngành chính.</span></p>
+      </div>
+      <div class="mm-card">
+        <div class="mm-card-head"><h3>UC Santa Cruz</h3><span class="pill jade"><span class="l-en">Blended</span><span class="l-vi">Kết hợp</span></span></div>
+        <dl>
+          <dt><span class="l-en">Major</span><span class="l-vi">Chính</span></dt><dd><span class="l-en">Business Management Economics (business and economics in one major)</span><span class="l-vi">Business Management Economics (kinh doanh và kinh tế trong một ngành)</span></dd>
+          <dt><span class="l-en">Minor</span><span class="l-vi">Phụ</span></dt><dd><span class="l-en">Optional. An Economics minor adds little because the major already covers it.</span><span class="l-vi">Không bắt buộc. Chuyên ngành phụ Kinh tế không thêm nhiều vì ngành chính đã bao gồm.</span></dd>
+          <dt><span class="l-en">If env stays</span><span class="l-vi">Nếu giữ MT</span></dt><dd><span class="l-en">Switch to the Environmental Studies/Economics combined major. It is course-heavy, so start it in first year.</span><span class="l-vi">Chuyển sang ngành kết hợp Environmental Studies/Economics. Ngành này nhiều môn, nên phải bắt đầu từ năm nhất.</span></dd>
+          <dt><span class="l-en">Declare</span><span class="l-vi">Đăng ký</span></dt><dd><span class="l-en">After ECON 1, ECON 2 and calculus, with a 2.8 GPA in those courses</span><span class="l-vi">Sau ECON 1, ECON 2 và giải tích, với GPA 2.8 ở các môn này</span></dd>
+        </dl>
+      </div>
+      <div class="mm-card">
+        <div class="mm-card-head"><h3>UChicago</h3><span class="pill warn"><span class="l-en">Economics first</span><span class="l-vi">Kinh tế trước</span></span></div>
+        <dl>
+          <dt><span class="l-en">Major</span><span class="l-vi">Chính</span></dt><dd><span class="l-en">Economics, Business Economics specialisation (13 courses, 3 at Booth)</span><span class="l-vi">Kinh tế học, hướng Business Economics (13 môn, 3 môn tại Booth)</span></dd>
+          <dt><span class="l-en">Minor</span><span class="l-vi">Phụ</span></dt><dd><span class="l-en">Optional</span><span class="l-vi">Không bắt buộc</span></dd>
+          <dt><span class="l-en">If env stays</span><span class="l-vi">Nếu giữ MT</span></dt><dd><span class="l-en">Minor in Environment, Geography and Urbanization (6 courses)</span><span class="l-vi">Chuyên ngành phụ Environment, Geography and Urbanization (6 môn)</span></dd>
+          <dt><span class="l-en">Declare</span><span class="l-vi">Đăng ký</span></dt><dd><span class="l-en">By the end of second year. The Core curriculum fills most of year one.</span><span class="l-vi">Trước cuối năm hai. Năm nhất chủ yếu là chương trình Core.</span></dd>
+        </dl>
+        <p class="note"><span class="l-en">UChicago has no undergraduate business major, so business comes through the specialisation instead.</span><span class="l-vi">UChicago không có ngành kinh doanh bậc cử nhân, nên kinh doanh được học qua hướng chuyên sâu.</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-head">
+      <p class="label"><span class="l-en">Side by side</span><span class="l-vi">So sánh</span></p>
+      <h2><span class="l-en">Where each subject lives</span><span class="l-vi">Mỗi môn nằm ở đâu</span></h2>
+    </div>
+    <div class="tbl">
+      <table class="wide">
+        <thead><tr><th><span class="l-en">University</span><span class="l-vi">Trường</span></th><th><span class="l-en">Business</span><span class="l-vi">Kinh doanh</span></th><th><span class="l-en">Economics</span><span class="l-vi">Kinh tế</span></th><th><span class="l-en">Environmental economics</span><span class="l-vi">Kinh tế môi trường</span></th><th><span class="l-en">When I choose</span><span class="l-vi">Khi nào chọn</span></th></tr></thead>
+        <tbody>
+          <tr><th><span class="l-en">Univ. of Sydney</span><span class="l-vi">Đại học Sydney</span></th><td><span class="l-en">Commerce majors: Management &amp; Leadership, Finance, Marketing, Business Analytics, Global Business and more</span><span class="l-vi">Chuyên ngành Thương mại: Management &amp; Leadership, Finance, Marketing, Business Analytics, Global Business và các ngành khác</span></td><td><span class="l-en">Economics major or minor from the shared pool</span><span class="l-vi">Chuyên ngành chính hoặc phụ Kinh tế từ danh sách dùng chung</span></td><td><span class="pill good"><span class="l-en">Full major</span><span class="l-vi">Chuyên ngành đầy đủ</span></span> EARE</td><td><span class="l-en">Degree when I apply; majors during the degree</span><span class="l-vi">Chọn bằng khi nộp hồ sơ; chọn chuyên ngành trong lúc học</span></td></tr>
+          <tr><th>UNSW</th><td><span class="l-en">16 Commerce majors, including International Business and Innovation, Strategy &amp; Entrepreneurship</span><span class="l-vi">16 chuyên ngành Thương mại, gồm International Business và Innovation, Strategy &amp; Entrepreneurship</span></td><td><span class="l-en">Business Economics or Behavioural Economics as a Commerce major</span><span class="l-vi">Business Economics hoặc Behavioural Economics là chuyên ngành Thương mại</span></td><td><span class="pill warn"><span class="l-en">Close match</span><span class="l-vi">Gần giống</span></span> <span class="l-en">Business Sustainability and Social Impact</span><span class="l-vi">Business Sustainability and Social Impact</span></td><td><span class="l-en">Degree when I apply; majors during the degree</span><span class="l-vi">Chọn bằng khi nộp hồ sơ; chọn chuyên ngành trong lúc học</span></td></tr>
+          <tr><th><span class="l-en">NYU Shanghai</span><span class="l-vi">NYU Thượng Hải</span></th><td><span class="l-en">Business and Finance, or Business and Marketing</span><span class="l-vi">Business and Finance, hoặc Business and Marketing</span></td><td><span class="l-en">Economics major or minor</span><span class="l-vi">Chuyên ngành chính hoặc phụ Kinh tế</span></td><td><span class="pill bad"><span class="l-en">None listed</span><span class="l-vi">Không có</span></span> <span class="l-en">Electives only</span><span class="l-vi">Chỉ có môn tự chọn</span></td><td><span class="l-en">Second year</span><span class="l-vi">Năm hai</span></td></tr>
+          <tr><th>UC Santa Cruz</th><td><span class="l-en">Inside Business Management Economics</span><span class="l-vi">Nằm trong Business Management Economics</span></td><td><span class="l-en">Economics, Global Economics, or an Economics minor</span><span class="l-vi">Economics, Global Economics, hoặc chuyên ngành phụ Kinh tế</span></td><td><span class="pill good"><span class="l-en">Combined major</span><span class="l-vi">Ngành kết hợp</span></span> <span class="l-en">Environmental Studies/Economics</span><span class="l-vi">Environmental Studies/Economics</span></td><td><span class="l-en">After the qualifying courses, usually first or second year</span><span class="l-vi">Sau các môn điều kiện, thường năm nhất hoặc năm hai</span></td></tr>
+          <tr><th>UChicago</th><td><span class="l-en">Business Economics specialisation, with Booth electives</span><span class="l-vi">Hướng Business Economics, có môn tự chọn tại Booth</span></td><td><span class="l-en">Economics major (standard, data science or business track)</span><span class="l-vi">Chuyên ngành Kinh tế (hướng chuẩn, khoa học dữ liệu hoặc kinh doanh)</span></td><td><span class="pill warn"><span class="l-en">Minor</span><span class="l-vi">Ngành phụ</span></span> <span class="l-en">Environment, Geography and Urbanization</span><span class="l-vi">Environment, Geography and Urbanization</span></td><td><span class="l-en">By the end of second year</span><span class="l-vi">Trước cuối năm hai</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-head">
+      <p class="label"><span class="l-en">Decisions to make</span><span class="l-vi">Những quyết định cần đưa ra</span></p>
+      <h2><span class="l-en">What to decide, and when</span><span class="l-vi">Quyết định gì, và khi nào</span></h2>
+    </div>
+    <ol class="steps">
+      <li><div><strong><span class="l-en">Now to mid-2027: test the environmental "maybe".</span><span class="l-vi">Từ nay đến giữa 2027: kiểm chứng chữ "có thể" về môi trường.</span></strong> <span class="l-en">Action for Earth, the ESS SL course and the Economics IA are cheap ways to find out whether environmental economics really interests me.</span><span class="l-vi">Action for Earth, môn ESS SL và bài IA Kinh tế là những cách đơn giản để biết mình có thật sự thích kinh tế môi trường không.</span></div></li>
+      <li><div><strong><span class="l-en">Applications, late 2027: pick the degree, not the majors.</span><span class="l-vi">Nộp hồ sơ, cuối 2027: chọn bằng, chưa cần chọn chuyên ngành.</span></strong> <span class="l-en">In Australia I choose Commerce or Economics when I apply. In the US and Shanghai I only name an intended major, and it isn't binding.</span><span class="l-vi">Ở Úc, mình chọn Thương mại hoặc Kinh tế khi nộp hồ sơ. Ở Mỹ và Thượng Hải chỉ ghi ngành dự định, không ràng buộc.</span></div></li>
+      <li><div><strong><span class="l-en">First year at university: take one intro class from each area.</span><span class="l-vi">Năm nhất đại học: học một môn nhập môn của mỗi lĩnh vực.</span></strong> <span class="l-en">Intro microeconomics and macroeconomics count toward both business and economics plans almost everywhere, so they keep every option open.</span><span class="l-vi">Kinh tế vi mô và vĩ mô nhập môn được tính cho cả kế hoạch kinh doanh lẫn kinh tế ở hầu hết các trường, nên giữ được mọi lựa chọn.</span></div></li>
+      <li><div><strong><span class="l-en">End of first or second year: lock the second major or minor.</span><span class="l-vi">Cuối năm nhất hoặc năm hai: chốt chuyên ngành thứ hai hoặc chuyên ngành phụ.</span></strong> <span class="l-en">If environment is still a yes, this is when it becomes EARE, Business Sustainability, the UCSC combined major, or a UChicago minor.</span><span class="l-vi">Nếu vẫn thích môi trường, đây là lúc chọn EARE, Business Sustainability, ngành kết hợp của UCSC, hoặc ngành phụ ở UChicago.</span></div></li>
+    </ol>
+    <p class="small muted"><span class="l-en">From each university's official course pages and handbooks, checked 29 Sep 2026. Course lists change every year, so confirm them for the year I start.</span><span class="l-vi">Theo trang chương trình và sổ tay chính thức của từng trường, kiểm tra ngày 29/9/2026. Danh sách môn thay đổi hằng năm, cần kiểm tra lại cho năm nhập học.</span></p>
+    <ol class="sources">
+      <li><a href="https://www.sydney.edu.au/courses/courses/uc/bachelor-of-commerce.html"><span class="l-en">USyd Bachelor of Commerce</span><span class="l-vi">USyd Cử nhân Thương mại</span></a> · <a href="https://www.sydney.edu.au/courses/courses/uc/bachelor-of-economics.html"><span class="l-en">USyd Bachelor of Economics</span><span class="l-vi">USyd Cử nhân Kinh tế</span></a></li>
+      <li><a href="https://www.unsw.edu.au/study/undergraduate/bachelor-of-commerce"><span class="l-en">UNSW Bachelor of Commerce</span><span class="l-vi">UNSW Cử nhân Thương mại</span></a> · <a href="https://www.unsw.edu.au/study/undergraduate/bachelor-of-economics"><span class="l-en">UNSW Bachelor of Economics</span><span class="l-vi">UNSW Cử nhân Kinh tế</span></a></li>
+      <li><a href="https://shanghai.nyu.edu/academics/majors"><span class="l-en">NYU Shanghai majors</span><span class="l-vi">Chuyên ngành NYU Thượng Hải</span></a> · <a href="https://shanghai.nyu.edu/academics/minors"><span class="l-en">minors</span><span class="l-vi">chuyên ngành phụ</span></a> · <a href="https://shanghai.nyu.edu/content/second-year-planning"><span class="l-en">second-year planning</span><span class="l-vi">kế hoạch năm hai</span></a></li>
+      <li><a href="https://economics.ucsc.edu/academics/ba-programs-minor/"><span class="l-en">UCSC Economics programmes</span><span class="l-vi">Chương trình Kinh tế UCSC</span></a> · <a href="https://catalog.ucsc.edu/en/current/general-catalog/academic-units/social-sciences-division/environmental-studies/environmental-studieseconomics-combined-major-ba"><span class="l-en">Environmental Studies/Economics</span><span class="l-vi">Environmental Studies/Economics</span></a></li>
+      <li><a href="https://economics.uchicago.edu/undergraduate-study/curriculum/business-economics-specialization">UChicago Business Economics</a> · <a href="https://cegu.uchicago.edu/undergraduate-studies/cegu-major-minor/"><span class="l-en">CEGU minor</span><span class="l-vi">Ngành phụ CEGU</span></a></li>
+    </ol>
   </div>
 </div>
 </div>
