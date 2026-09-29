@@ -355,14 +355,18 @@ svg .tgtl{font-weight:700;font-size:13px}
 @media (max-width:720px){.award>div{grid-template-columns:1fr;gap:4px}}
 
 /* country grouping */
-.tabs{flex-wrap:wrap}
-.tabs button{padding-inline:12px}
-.tabs .tabgrp{align-self:center;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;padding:0 4px 0 12px;margin-left:6px;border-left:1px solid var(--rule);white-space:nowrap}
+.tabs{display:block;overflow:visible;min-width:0;max-width:100%}
+.tabrow{display:flex;overflow-x:auto;scrollbar-width:thin}
+.tabrow.unis{border-top:1px solid var(--rule)}
+.tgroup{display:flex;align-items:center;flex:none}
+.tgroup+.tgroup{border-left:1px solid var(--rule);margin-left:14px;padding-left:18px}
+.tgroup:first-child .tabgrp{padding-left:0}
+.tabrow.unis button{font-size:.95rem;padding:10px 12px 9px}
+.tabs .tabgrp{border-left:none!important;margin-left:0!important;align-self:center;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;padding:0 4px 0 12px;margin-left:6px;border-left:1px solid var(--rule);white-space:nowrap}
 .country{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;border-bottom:2px solid var(--accent-fill);padding-bottom:8px;margin-top:10px}
 .country h3{font-size:1.35rem}
 .country>span{font-size:.88rem;color:var(--muted)}
 .cards>.country:first-child{margin-top:0}
-@media (max-width:720px){.tabs{flex-wrap:nowrap}}
 </style>
 
 <div class="strip">
@@ -381,19 +385,8 @@ svg .tgtl{font-weight:700;font-size:13px}
     <h1><span class="l-en">Where I'm going after the IB</span><span class="l-vi">Sau IB, mình sẽ học ở đâu</span></h1>
     <p class="lead"><span class="l-en">Economics and business, five universities on three continents, and one predicted score to raise.</span><span class="l-vi">Kinh tế và kinh doanh, năm trường đại học trên ba châu lục, và một mục tiêu điểm cần nâng lên.</span></p>
     <nav class="tabs" role="tablist" aria-label="Sections">
-      <button type="button" role="tab" id="tab-overview" aria-controls="overview" aria-selected="true"><span class="l-en">Overview</span><span class="l-vi">Tổng quan</span></button>
-      <button type="button" role="tab" id="tab-table" aria-controls="table" aria-selected="false"><span class="l-en">Compare</span><span class="l-vi">So sánh</span></button>
-      <button type="button" role="tab" id="tab-schedule" aria-controls="schedule" aria-selected="false"><span class="l-en">Timeline</span><span class="l-vi">Lịch trình</span></button>
-      <button type="button" role="tab" id="tab-money" aria-controls="money" aria-selected="false"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></button>
-      <button type="button" role="tab" id="tab-visa" aria-controls="visa" aria-selected="false"><span class="l-en">Visas &amp; IELTS</span><span class="l-vi">Visa &amp; IELTS</span></button>
-      <span class="tabgrp"><span class="l-en">Australia</span><span class="l-vi">Úc</span></span>
-      <button type="button" role="tab" id="tab-unsw" aria-controls="unsw" aria-selected="false">UNSW Sydney</button>
-      <button type="button" role="tab" id="tab-usyd" aria-controls="usyd" aria-selected="false"><span class="l-en">University of Sydney</span><span class="l-vi">Đại học Sydney</span></button>
-      <span class="tabgrp"><span class="l-en">United States</span><span class="l-vi">Mỹ</span></span>
-      <button type="button" role="tab" id="tab-uchicago" aria-controls="uchicago" aria-selected="false">UChicago</button>
-      <button type="button" role="tab" id="tab-ucsc" aria-controls="ucsc" aria-selected="false">UC Santa Cruz</button>
-      <span class="tabgrp"><span class="l-en">China</span><span class="l-vi">Trung Quốc</span></span>
-      <button type="button" role="tab" id="tab-nyush" aria-controls="nyush" aria-selected="false"><span class="l-en">NYU Shanghai</span><span class="l-vi">NYU Thượng Hải</span></button>
+      <div class="tabrow main" role="presentation"><button type="button" role="tab" id="tab-overview" aria-controls="overview" aria-selected="true"><span class="l-en">Overview</span><span class="l-vi">Tổng quan</span></button><button type="button" role="tab" id="tab-table" aria-controls="table" aria-selected="false"><span class="l-en">Compare</span><span class="l-vi">So sánh</span></button><button type="button" role="tab" id="tab-schedule" aria-controls="schedule" aria-selected="false"><span class="l-en">Timeline</span><span class="l-vi">Lịch trình</span></button><button type="button" role="tab" id="tab-money" aria-controls="money" aria-selected="false"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></button><button type="button" role="tab" id="tab-visa" aria-controls="visa" aria-selected="false"><span class="l-en">Visas &amp; IELTS</span><span class="l-vi">Visa &amp; IELTS</span></button></div>
+      <div class="tabrow unis" role="presentation"><div class="tgroup" role="presentation"><span class="tabgrp"><span class="l-en">Australia</span><span class="l-vi">Úc</span></span><button type="button" role="tab" id="tab-unsw" aria-controls="unsw" aria-selected="false">UNSW Sydney</button><button type="button" role="tab" id="tab-usyd" aria-controls="usyd" aria-selected="false"><span class="l-en">University of Sydney</span><span class="l-vi">Đại học Sydney</span></button></div><div class="tgroup" role="presentation"><span class="tabgrp"><span class="l-en">United States</span><span class="l-vi">Mỹ</span></span><button type="button" role="tab" id="tab-uchicago" aria-controls="uchicago" aria-selected="false">UChicago</button><button type="button" role="tab" id="tab-ucsc" aria-controls="ucsc" aria-selected="false">UC Santa Cruz</button></div><div class="tgroup" role="presentation"><span class="tabgrp"><span class="l-en">China</span><span class="l-vi">Trung Quốc</span></span><button type="button" role="tab" id="tab-nyush" aria-controls="nyush" aria-selected="false"><span class="l-en">NYU Shanghai</span><span class="l-vi">NYU Thượng Hải</span></button></div></div>
     </nav>
   </div>
 </header>
