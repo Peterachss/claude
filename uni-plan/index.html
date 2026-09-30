@@ -571,6 +571,61 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 .cd-g{font-size:.84rem;white-space:nowrap}
 @media (max-width:720px){ .cd-list li{grid-template-columns:1fr auto auto} }
 @media print{ .bk-bar,.cd-g,[data-ics],.es-meta select,.es-meta input,.es-meta a{display:none!important} #gr-table select{border:0;appearance:none;-webkit-appearance:none} }
+/* monthly living budget */
+.bud-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
+.bud-card{border:1px solid var(--rule);padding:16px 18px;display:grid;gap:10px;align-content:start;min-width:0}
+.bud-card h3{font-size:1.15rem}
+.bud-tot{font-family:var(--display);font-size:1.35rem;font-weight:500;font-variant-numeric:tabular-nums;color:var(--accent)}
+.bud-card table{font-size:.9rem}
+.bud-card th,.bud-card td{padding:6px 8px 6px 0}
+.bud-card td{text-align:right;white-space:nowrap}
+.bud-card thead th{text-align:right;font-size:.7rem;background:none;padding-top:0}
+.bud-card thead th:first-child{text-align:left}
+.bud-card tbody th{font-weight:500}
+.bud-card tr.bud-sum th,.bud-card tr.bud-sum td{font-weight:700;border-top:2px solid var(--ink)}
+.bud-card td.muted{white-space:normal;font-size:.84rem}
+@media print{ .bud-card{break-inside:avoid} }
+/* compare two + decision matrix */
+.cmp-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 8px;background:var(--panel);padding:10px 14px}
+.cmp-bar .cmp-k{font-size:.9rem;color:var(--muted);margin-right:4px}
+.cmp-bar .cmp-hint{font-size:.86rem;color:var(--muted);flex-basis:100%}
+#cmp-table.pair{min-width:0;table-layout:fixed}
+#cmp-table.pair tr>*:nth-child(n+2){display:none}
+#cmp-table.pair.c1 tr>*:nth-child(2),#cmp-table.pair.c2 tr>*:nth-child(3),#cmp-table.pair.c3 tr>*:nth-child(4),#cmp-table.pair.c4 tr>*:nth-child(5),#cmp-table.pair.c5 tr>*:nth-child(6),#cmp-table.pair.c6 tr>*:nth-child(7){display:table-cell}
+#cmp-table.pair{font-size:.88rem}
+#cmp-table.pair tbody th{white-space:normal;width:27%}
+#cmp-table.pair th,#cmp-table.pair td{padding:9px 8px;overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
+#cmp-table.pair .links-row a{white-space:normal}
+#cmp-table.pair .pill{white-space:normal;letter-spacing:0;text-transform:none;font-size:.8rem;display:inline;line-height:1.9;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.dm-w{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:4px 24px}
+.dm-w label{display:grid;grid-template-columns:minmax(0,1fr) 100px 1.2em;min-width:0;gap:10px;align-items:center;padding:6px 0;border-bottom:1px solid var(--rule);font-size:.93rem}
+.dm-w input[type=range]{width:100%;min-width:0;margin:0;accent-color:var(--accent-fill)}
+.dm-w output{font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+.dm-s{min-width:560px}
+.dm-s select{font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--rule);padding:3px 4px}
+.dm-s td{text-align:center}
+.dm-s tbody th{font-weight:500;font-size:.9rem}
+.dm-rank{list-style:none;margin:0;padding:0;display:grid;border-top:1px solid var(--rule)}
+.dm-rank li{display:grid;grid-template-columns:1.6em minmax(110px,1fr) minmax(90px,2fr) auto;gap:6px 14px;align-items:center;padding:10px 0;border-bottom:1px solid var(--rule)}
+.dm-rank .n{font-family:var(--display);color:var(--muted)}
+.dm-rank li:first-child .n,.dm-rank li:first-child strong{color:var(--accent)}
+.dm-rank .bar{height:12px;background:var(--panel)}
+.dm-rank .bar i{display:block;height:100%;background:var(--accent-fill)}
+.dm-rank .v{font-variant-numeric:tabular-nums;font-weight:700;text-align:right;white-space:nowrap}
+@media (max-width:480px){ .dm-rank li{grid-template-columns:1.6em 1fr auto} .dm-rank .bar{grid-column:2/-1;grid-row:2} }
+@media print{ .cmp-bar,.dm-w input,.dm-reset{display:none!important} .dm-s select{border:0;appearance:none;-webkit-appearance:none} }
+/* UChicago aid steps */
+.aid-flow{margin:0}
+.aid-flow ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;counter-reset:none}
+.aid-flow li{position:relative;border:1px solid var(--rule);border-top:3px solid var(--accent-fill);background:var(--panel);padding:14px 16px;display:grid;gap:4px;align-content:start}
+.aid-flow .aid-n{position:absolute;top:10px;right:12px;width:28px;height:28px;border-radius:50%;background:var(--accent-fill);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.9rem}
+.aid-flow .aid-d{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);padding-right:34px}
+.aid-flow strong{font-family:var(--display);font-weight:500;font-size:1.08rem;line-height:1.25}
+.aid-flow .aid-x{font-size:.9rem;color:var(--muted)}
+.aid-warn{margin-top:14px;border:1px solid var(--bad);background:var(--bad-soft);color:var(--ink);padding:12px 16px;display:flex;gap:12px;align-items:flex-start;font-weight:600}
+.aid-warn b{flex:none;width:24px;height:24px;border-radius:50%;background:var(--bad);color:#15171B;display:grid;place-items:center}
+.aid-text{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media print{ .aid-flow{display:none} .aid-text{position:static;width:auto;height:auto;overflow:visible;clip:auto;margin:0;padding-left:1.4em;display:grid;gap:6px} }
 </style>
 
 <div class="strip">
@@ -605,7 +660,8 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
   <aside class="profile" aria-label="Student profile">
     <div class="grp">
       <div class="grp-h"><span class="l-en">Predicted score</span><span class="l-vi">Điểm dự đoán</span></div>
-      <div class="score"><b>35–37</b><span>/ 45</span></div>
+      <div class="score"><b id="pf-score">35–37</b><span>/ 45</span></div>
+      <p class="small muted" id="pf-from" hidden></p>
       <p class="small muted"><span class="l-en">Current IB prediction. Target by DP2 predictions: <strong>38</strong>.</span><span class="l-vi">Điểm IB dự đoán hiện tại. Mục tiêu khi dự đoán DP2: <strong>38</strong>.</span></p>
     </div>
     <div class="grp">
@@ -665,78 +721,87 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <div class="block-head">
         <p class="label"><span class="l-en">Score against entry points</span><span class="l-vi">Điểm so với yêu cầu đầu vào</span></p>
         <h2><span class="l-en">Where 35 to 37 gets me in Australia</span><span class="l-vi">Với 35 đến 37 điểm, mình vào được đâu ở Úc</span></h2>
-        <p class="muted"><span class="l-en">Australian universities publish a fixed IB score. My predicted band already clears both Economics degrees. Commerce sits right on the edge, and 38 clears all of it.</span><span class="l-vi">Các trường ở Úc công bố điểm IB cố định. Mức dự đoán hiện tại đã đủ cho cả hai bằng Kinh tế học. Ngành Thương mại nằm sát ngưỡng, và 38 điểm thì đủ cho tất cả.</span></p>
+        <p class="muted"><span class="l-en">Australian universities publish a fixed IB score. My predicted band already clears UTS Business and both Economics degrees. Commerce sits right on the edge, and 38 clears all of it.</span><span class="l-vi">Các trường ở Úc công bố điểm IB cố định. Mức dự đoán hiện tại đã đủ cho UTS Kinh doanh và cả hai bằng Kinh tế học. Ngành Thương mại nằm sát ngưỡng, và 38 điểm thì đủ cho tất cả.</span></p>
       </div>
       <figure class="chart">
         <div class="scroll">
-        <svg viewBox="0 0 800 340" role="img" aria-label="IB entry scores from 28 to 45. Predicted band 35 to 37 is shaded, target 38 is a dashed line. USyd Economics 31. UNSW Economics 33, early offer at predicted 35. UNSW Commerce 36, early offer at predicted 38. USyd Commerce 38, HAPP bridge from 35. UNSW Commerce International 38, early offer at predicted 40.">
+        <svg viewBox="0 0 800 390" role="img" aria-label="IB entry scores from 28 to 45. Predicted band 35 to 37 is shaded, target 38 is a dashed line. UTS Business 29, offer on predicted grades at 34. USyd Economics 31. UNSW Economics 33, early offer at predicted 35. UNSW Commerce 36, early offer at predicted 38. USyd Commerce 38, HAPP bridge from 35. UNSW Commerce International 38, early offer at predicted 40.">
         <!-- x = 260 + 30 * (score - 28) -->
-        <rect x="470" y="46" width="60" height="252" class="bandr"/>
+        <rect x="470" y="46" width="60" height="302" class="bandr"/>
         <text x="500" y="30" text-anchor="middle" class="bandl"><tspan class="l-en">Predicted 35–37</tspan><tspan class="l-vi">Dự đoán 35–37</tspan></text>
-        <line x1="560" y1="46" x2="560" y2="298" class="tgt"/>
+        <line x1="560" y1="46" x2="560" y2="348" class="tgt"/>
         <text x="568" y="30" class="tgtl"><tspan class="l-en">Target 38</tspan><tspan class="l-vi">Mục tiêu 38</tspan></text>
-        <line x1="260" y1="298" x2="770" y2="298" class="grid"/>
+        <line x1="260" y1="348" x2="770" y2="348" class="grid"/>
         <g class="ax">
-          <text x="260" y="320" text-anchor="middle" class="ax">28</text>
-          <text x="320" y="320" text-anchor="middle" class="ax">30</text>
-          <text x="380" y="320" text-anchor="middle" class="ax">32</text>
-          <text x="440" y="320" text-anchor="middle" class="ax">34</text>
-          <text x="500" y="320" text-anchor="middle" class="ax">36</text>
-          <text x="560" y="320" text-anchor="middle" class="ax">38</text>
-          <text x="620" y="320" text-anchor="middle" class="ax">40</text>
-          <text x="680" y="320" text-anchor="middle" class="ax">42</text>
-          <text x="740" y="320" text-anchor="middle" class="ax">44</text>
-          <text x="770" y="320" text-anchor="middle" class="ax">45</text>
+          <text x="260" y="370" text-anchor="middle" class="ax">28</text>
+          <text x="320" y="370" text-anchor="middle" class="ax">30</text>
+          <text x="380" y="370" text-anchor="middle" class="ax">32</text>
+          <text x="440" y="370" text-anchor="middle" class="ax">34</text>
+          <text x="500" y="370" text-anchor="middle" class="ax">36</text>
+          <text x="560" y="370" text-anchor="middle" class="ax">38</text>
+          <text x="620" y="370" text-anchor="middle" class="ax">40</text>
+          <text x="680" y="370" text-anchor="middle" class="ax">42</text>
+          <text x="740" y="370" text-anchor="middle" class="ax">44</text>
+          <text x="770" y="370" text-anchor="middle" class="ax">45</text>
         </g>
 
-        <text x="0" y="78" class="nm"><tspan class="l-en">USyd Economics</tspan><tspan class="l-vi">USyd Kinh tế học</tspan></text>
-        <text x="0" y="96" class="sub"><tspan class="l-en">Bachelor of Economics</tspan><tspan class="l-vi">Cử nhân Kinh tế học</tspan></text>
+        <text x="0" y="78" class="nm"><tspan class="l-en">UTS Business</tspan><tspan class="l-vi">UTS Kinh doanh</tspan></text>
+        <text x="0" y="96" class="sub"><tspan class="l-en">Offer on predicted grades at 34</tspan><tspan class="l-vi">Thư mời theo điểm dự đoán 34</tspan></text>
         <line x1="260" y1="82" x2="770" y2="82" class="track"/>
-        <circle cx="350" cy="82" r="7" class="d-good"/>
-        <text x="338" y="87" text-anchor="end" class="val">31</text>
+        <line x1="290" y1="82" x2="440" y2="82" class="l-good"/>
+        <circle cx="290" cy="82" r="7" class="d-good"/>
+        <circle cx="440" cy="82" r="7" class="r-good"/>
+        <text x="278" y="87" text-anchor="end" class="val">29</text>
+        <text x="452" y="87" class="val m">34</text>
 
-        <text x="0" y="128" class="nm"><tspan class="l-en">UNSW Economics</tspan><tspan class="l-vi">UNSW Kinh tế học</tspan></text>
-        <text x="0" y="146" class="sub"><tspan class="l-en">Early offer if predicted 35</tspan><tspan class="l-vi">Thư mời sớm nếu dự đoán 35</tspan></text>
+        <text x="0" y="128" class="nm"><tspan class="l-en">USyd Economics</tspan><tspan class="l-vi">USyd Kinh tế học</tspan></text>
+        <text x="0" y="146" class="sub"><tspan class="l-en">Bachelor of Economics</tspan><tspan class="l-vi">Cử nhân Kinh tế học</tspan></text>
         <line x1="260" y1="132" x2="770" y2="132" class="track"/>
-        <line x1="410" y1="132" x2="470" y2="132" class="l-good"/>
-        <circle cx="410" cy="132" r="7" class="d-good"/>
-        <circle cx="470" cy="132" r="7" class="r-good"/>
-        <text x="398" y="137" text-anchor="end" class="val">33</text>
-        <text x="482" y="137" class="val m">35</text>
+        <circle cx="350" cy="132" r="7" class="d-good"/>
+        <text x="338" y="137" text-anchor="end" class="val">31</text>
 
-        <text x="0" y="178" class="nm"><tspan class="l-en">UNSW Commerce</tspan><tspan class="l-vi">UNSW Thương mại</tspan></text>
-        <text x="0" y="196" class="sub"><tspan class="l-en">Early offer if predicted 38</tspan><tspan class="l-vi">Thư mời sớm nếu dự đoán 38</tspan></text>
+        <text x="0" y="178" class="nm"><tspan class="l-en">UNSW Economics</tspan><tspan class="l-vi">UNSW Kinh tế học</tspan></text>
+        <text x="0" y="196" class="sub"><tspan class="l-en">Early offer if predicted 35</tspan><tspan class="l-vi">Thư mời sớm nếu dự đoán 35</tspan></text>
         <line x1="260" y1="182" x2="770" y2="182" class="track"/>
-        <line x1="500" y1="182" x2="560" y2="182" class="l-warn"/>
-        <circle cx="500" cy="182" r="7" class="d-warn"/>
-        <circle cx="560" cy="182" r="7" class="r-warn"/>
-        <text x="488" y="187" text-anchor="end" class="val">36</text>
-        <text x="572" y="187" class="val m">38</text>
+        <line x1="410" y1="182" x2="470" y2="182" class="l-good"/>
+        <circle cx="410" cy="182" r="7" class="d-good"/>
+        <circle cx="470" cy="182" r="7" class="r-good"/>
+        <text x="398" y="187" text-anchor="end" class="val">33</text>
+        <text x="482" y="187" class="val m">35</text>
 
-        <text x="0" y="228" class="nm"><tspan class="l-en">USyd Commerce</tspan><tspan class="l-vi">USyd Thương mại</tspan></text>
-        <text x="0" y="246" class="sub"><tspan class="l-en">HAPP bridge from 35</tspan><tspan class="l-vi">Khóa cầu nối HAPP từ 35</tspan></text>
+        <text x="0" y="228" class="nm"><tspan class="l-en">UNSW Commerce</tspan><tspan class="l-vi">UNSW Thương mại</tspan></text>
+        <text x="0" y="246" class="sub"><tspan class="l-en">Early offer if predicted 38</tspan><tspan class="l-vi">Thư mời sớm nếu dự đoán 38</tspan></text>
         <line x1="260" y1="232" x2="770" y2="232" class="track"/>
-        <line x1="470" y1="232" x2="560" y2="232" class="l-bad" stroke-dasharray="4 4"/>
-        <circle cx="560" cy="232" r="7" class="d-bad"/>
-        <text x="572" y="237" class="val">38</text>
+        <line x1="500" y1="232" x2="560" y2="232" class="l-warn"/>
+        <circle cx="500" cy="232" r="7" class="d-warn"/>
+        <circle cx="560" cy="232" r="7" class="r-warn"/>
+        <text x="488" y="237" text-anchor="end" class="val">36</text>
+        <text x="572" y="237" class="val m">38</text>
 
-        <text x="0" y="278" class="nm"><tspan class="l-en">UNSW Commerce (International)</tspan><tspan class="l-vi">UNSW Thương mại (Quốc tế)</tspan></text>
-        <text x="0" y="296" class="sub"><tspan class="l-en">Early offer if predicted 40</tspan><tspan class="l-vi">Thư mời sớm nếu dự đoán 40</tspan></text>
+        <text x="0" y="278" class="nm"><tspan class="l-en">USyd Commerce</tspan><tspan class="l-vi">USyd Thương mại</tspan></text>
+        <text x="0" y="296" class="sub"><tspan class="l-en">HAPP bridge from 35</tspan><tspan class="l-vi">Khóa cầu nối HAPP từ 35</tspan></text>
         <line x1="260" y1="282" x2="770" y2="282" class="track"/>
-        <line x1="560" y1="282" x2="620" y2="282" class="l-bad"/>
+        <line x1="470" y1="282" x2="560" y2="282" class="l-bad" stroke-dasharray="4 4"/>
         <circle cx="560" cy="282" r="7" class="d-bad"/>
-        <circle cx="620" cy="282" r="7" class="r-bad"/>
-        <text x="548" y="287" text-anchor="end" class="val">38</text>
-        <text x="632" y="287" class="val m">40</text>
+        <text x="572" y="287" class="val">38</text>
+
+        <text x="0" y="328" class="nm"><tspan class="l-en">UNSW Commerce (International)</tspan><tspan class="l-vi">UNSW Thương mại (Quốc tế)</tspan></text>
+        <text x="0" y="346" class="sub"><tspan class="l-en">Early offer if predicted 40</tspan><tspan class="l-vi">Thư mời sớm nếu dự đoán 40</tspan></text>
+        <line x1="260" y1="332" x2="770" y2="332" class="track"/>
+        <line x1="560" y1="332" x2="620" y2="332" class="l-bad"/>
+        <circle cx="560" cy="332" r="7" class="d-bad"/>
+        <circle cx="620" cy="332" r="7" class="r-bad"/>
+        <text x="548" y="337" text-anchor="end" class="val">38</text>
+        <text x="632" y="337" class="val m">40</text>
       </svg>
         </div>
         <div class="legend">
           <span><i style="background:var(--good);border-radius:50%"></i><span class="l-en">Within reach now</span><span class="l-vi">Đã trong tầm với</span></span>
           <span><i style="background:var(--warn);border-radius:50%"></i><span class="l-en">On the edge</span><span class="l-vi">Sát ngưỡng</span></span>
           <span><i style="background:var(--bad);border-radius:50%"></i><span class="l-en">Above my band</span><span class="l-vi">Cao hơn mức dự đoán</span></span>
-          <span><i style="border:2px solid var(--muted);border-radius:50%"></i><span class="l-en">Predicted total UNSW needs for an offer before results (final + 2)</span><span class="l-vi">Điểm dự đoán UNSW cần để gửi thư mời trước khi có kết quả (yêu cầu + 2)</span></span>
+          <span><i style="border:2px solid var(--muted);border-radius:50%"></i><span class="l-en">Predicted total needed for an offer before results (UNSW: final + 2; UTS: 34)</span><span class="l-vi">Điểm dự đoán cần để có thư mời trước khi có kết quả (UNSW: yêu cầu + 2; UTS: 34)</span></span>
         </div>
-        <figcaption><span class="l-en">Scores are for 2027 entry, the latest published. UNSW's table says a forecast IB total must be two points above the final requirement to earn an offer before results. Below that, you still get in once the final score arrives in July 2028.</span><span class="l-vi">Điểm theo kỳ tuyển sinh 2027, số liệu mới nhất. Theo bảng của UNSW, điểm IB dự đoán phải cao hơn yêu cầu 2 điểm thì mới được thư mời trước khi có kết quả. Nếu thấp hơn, vẫn có thể được nhận khi có điểm chính thức vào tháng 7/2028.</span></figcaption>
+        <figcaption><span class="l-en">Scores are for 2027 entry, the latest published. UNSW's table says a forecast IB total must be two points above the final requirement to earn an offer before results. Below that, you still get in once the final score arrives in July 2028. UTS figures come from its 2027 international entry table for the Bachelor of Business (C10026): IB 29 final, or 34 predicted for an early offer.</span><span class="l-vi">Điểm theo kỳ tuyển sinh 2027, số liệu mới nhất. Theo bảng của UNSW, điểm IB dự đoán phải cao hơn yêu cầu 2 điểm thì mới được thư mời trước khi có kết quả. Nếu thấp hơn, vẫn có thể được nhận khi có điểm chính thức vào tháng 7/2028. Số liệu UTS lấy từ bảng tuyển sinh quốc tế 2027 cho Cử nhân Kinh doanh (C10026): IB 29 điểm chính thức, hoặc 34 điểm dự đoán để có thư mời sớm.</span></figcaption>
       </figure>
       <div class="whatif" id="whatif">
         <div class="whatif-head">
@@ -868,8 +933,19 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <h2><span class="l-en">The six options on one table</span><span class="l-vi">Sáu lựa chọn trong một bảng</span></h2>
       <p class="muted"><span class="l-en">Latest published figures, checked 29 Sep 2026. Fees are per year in each university's own currency.</span><span class="l-vi">Số liệu mới nhất, kiểm tra ngày 29/9/2026. Học phí tính theo năm, bằng đơn vị tiền của từng trường.</span></p>
     </div>
+    <div class="cmp-bar" id="cmp-bar" role="group" aria-label="Compare two universities">
+      <span class="cmp-k"><span class="l-en">Compare two:</span><span class="l-vi">So sánh hai trường:</span></span>
+      <button type="button" class="ec-chip" data-cmp="1" aria-pressed="false">USyd</button>
+      <button type="button" class="ec-chip" data-cmp="2" aria-pressed="false">UNSW</button>
+      <button type="button" class="ec-chip" data-cmp="3" aria-pressed="false">UTS</button>
+      <button type="button" class="ec-chip" data-cmp="4" aria-pressed="false">UChicago</button>
+      <button type="button" class="ec-chip" data-cmp="5" aria-pressed="false">UCSC</button>
+      <button type="button" class="ec-chip" data-cmp="6" aria-pressed="false"><span class="l-en">NYU Shanghai</span><span class="l-vi">NYU Thượng Hải</span></button>
+      <button type="button" class="linkish" id="cmp-all"><span class="l-en">Show all</span><span class="l-vi">Hiện tất cả</span></button>
+      <span class="cmp-hint" id="cmp-hint" aria-live="polite"></span>
+    </div>
     <div class="tbl">
-      <table class="wide">
+      <table class="wide" id="cmp-table">
         <thead><tr><th></th><th><span class="l-en">Univ. of Sydney</span><span class="l-vi">Đại học Sydney</span></th><th>UNSW Sydney</th><th>UTS</th><th>UChicago</th><th>UC Santa Cruz</th><th><span class="l-en">NYU Shanghai</span><span class="l-vi">NYU Thượng Hải</span></th></tr></thead>
         <tbody>
           <tr><th><span class="l-en">Fit</span><span class="l-vi">Mức độ</span></th><td><span class="tag target"><span class="l-en">Target</span><span class="l-vi">Vừa sức</span></span></td><td><span class="tag target"><span class="l-en">Target</span><span class="l-vi">Vừa sức</span></span></td><td><span class="tag likely"><span class="l-en">Likely</span><span class="l-vi">Chắc chắn</span></span></td><td><span class="tag"><span class="l-en">Dream</span><span class="l-vi">Mơ ước</span></span></td><td><span class="tag likely"><span class="l-en">Likely</span><span class="l-vi">Chắc chắn</span></span></td><td><span class="tag reach"><span class="l-en">Reach</span><span class="l-vi">Thử thách</span></span></td></tr>
@@ -893,7 +969,22 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       </table>
     </div>
     <p class="small muted"><span class="l-en">Tuition years: UChicago, NYU Shanghai, UC Santa Cruz 2026–27; UNSW 2026; USyd and UTS 2027. Australian all-in uses ~A$30,000 a year for living. US deadlines are the 2026–27 pattern.</span><span class="l-vi">Năm học phí: UChicago, NYU Thượng Hải, UC Santa Cruz 2026–27; UNSW 2026; USyd và UTS 2027. Tổng chi phí ở Úc tính thêm ~A$30.000/năm sinh hoạt. Hạn nộp ở Mỹ theo lịch năm 2026–27.</span></p>
-  </div>
+    </div>
+  <div class="block">
+    <div class="block-head">
+      <p class="label"><span class="l-en">Decision matrix</span><span class="l-vi">Ma trận quyết định</span></p>
+      <h2><span class="l-en">Which one comes out on top for me</span><span class="l-vi">Trường nào phù hợp với mình nhất</span></h2>
+      <p class="muted"><span class="l-en">Set how much each factor matters (0 to 5), then score each university from 1 (weak) to 5 (strong). The ranking updates as you go and is saved on this device.</span><span class="l-vi">Chọn mức quan trọng của từng yếu tố (0 đến 5), rồi chấm mỗi trường từ 1 (yếu) đến 5 (mạnh). Thứ hạng cập nhật ngay và được lưu trên thiết bị này.</span></p>
+    </div>
+    <p class="label"><span class="l-en">1. How much each factor matters</span><span class="l-vi">1. Mức quan trọng của từng yếu tố</span></p>
+    <div class="dm-w" id="dm-w"></div>
+    <p class="label"><span class="l-en">2. Scores, 1 to 5</span><span class="l-vi">2. Điểm, từ 1 đến 5</span></p>
+    <div class="tbl"><table class="dm-s" id="dm-s"></table></div>
+    <p class="small muted"><span class="l-en">Starting scores: cost from the whole-degree cost in dong (cheapest = 5); chance of admission from the fit tags (Likely 5, Target 4, Reach 2, Dream 1); course fit from the Majors tab (business first scores highest). The rest are my own first guesses. Change any of them.</span><span class="l-vi">Điểm ban đầu: chi phí theo tổng chi phí cả khóa bằng tiền Việt (rẻ nhất = 5); khả năng trúng tuyển theo nhãn mức độ (Chắc chắn 5, Vừa sức 4, Thử sức 2, Mơ ước 1); mức phù hợp ngành theo thẻ Chuyên ngành (ưu tiên kinh doanh điểm cao nhất). Các mục còn lại là ước đoán ban đầu. Có thể đổi bất kỳ mục nào.</span></p>
+    <p class="label"><span class="l-en">3. Result</span><span class="l-vi">3. Kết quả</span></p>
+    <ol class="dm-rank" id="dm-rank" aria-live="polite"></ol>
+    <button type="button" class="linkish dm-reset" id="dm-reset"><span class="l-en">Reset to the starting scores</span><span class="l-vi">Đặt lại điểm ban đầu</span></button>
+</div>
 </div>
 </div>
 
@@ -1122,16 +1213,26 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
     <div class="block-head">
       <p class="label"><span class="l-en">Full degree cost</span><span class="l-vi">Tổng chi phí cả khóa</span></p>
       <h2><span class="l-en">What each degree costs in Vietnamese dong</span><span class="l-vi">Mỗi bằng tốn bao nhiêu tiền Việt</span></h2>
-      <p class="muted"><span class="l-en">Tuition plus living for the whole degree, minus the scholarship I am most likely to get. Change the exchange rates or add a yearly fee rise to test it.</span><span class="l-vi">Học phí cộng sinh hoạt phí cho cả khóa, trừ học bổng dễ nhận nhất. Có thể đổi tỷ giá hoặc thêm mức tăng học phí hằng năm.</span></p>
+      <p class="muted"><span class="l-en">Tuition plus living for the whole degree, minus the scholarship I am most likely to get. Everything is projected to a 2028 start with a yearly rise (4% by default). Change the exchange rates or the rise to test it.</span><span class="l-vi">Học phí cộng sinh hoạt phí cho cả khóa, trừ học bổng dễ nhận nhất. Mọi con số được tính cho khóa nhập học 2028 với mức tăng hằng năm (mặc định 4%). Có thể đổi tỷ giá hoặc mức tăng để thử.</span></p>
     </div>
     <div class="cost-ctl">
       <label>A$1 = <input type="number" id="fx-aud" value="18492" min="1" step="1"> đ</label>
       <label>US$1 = <input type="number" id="fx-usd" value="26020" min="1" step="1"> đ</label>
-      <label><span class="l-en">Fee rise per year</span><span class="l-vi">Tăng phí mỗi năm</span> <input type="number" id="fx-rise" value="0" min="0" max="15" step="0.5"> %</label>
+      <label><span class="l-en">Fee rise per year</span><span class="l-vi">Tăng phí mỗi năm</span> <input type="number" id="fx-rise" value="4" min="0" max="15" step="0.5"> %</label>
       <label class="chk"><input type="checkbox" id="fx-schol" checked> <span class="l-en">Subtract likely scholarships</span><span class="l-vi">Trừ học bổng dễ nhận</span></label>
     </div>
     <div class="cost-list" id="cost-list"></div>
-    <p class="small muted"><span class="l-en">Exchange rates: A$ on 17 Sep 2026, US$ in late Sep 2026. Yearly costs are each university's latest all-in estimate from the Compare tab; UChicago is over US$100,000, so its figure is a floor. UChicago and NYU Shanghai give need-based aid that depends on family income, so none is subtracted. The grey bar is before scholarships, green is after.</span><span class="l-vi">Tỷ giá: A$ ngày 17/9/2026, US$ cuối tháng 9/2026. Chi phí mỗi năm là ước tính tổng mới nhất của từng trường trong thẻ So sánh; UChicago trên US$100.000 nên đây là mức tối thiểu. UChicago và NYU Thượng Hải hỗ trợ theo thu nhập gia đình nên không trừ. Thanh xám là trước học bổng, xanh là sau học bổng.</span></p>
+    <p class="small muted"><span class="l-en">Exchange rates: A$ on 17 Sep 2026, US$ in late Sep 2026. Yearly costs are each university's latest all-in estimate from the Compare tab; UChicago is over US$100,000, so its figure is a floor. UChicago and NYU Shanghai give need-based aid that depends on family income, so none is subtracted. The yearly rise is applied from each figure&rsquo;s year (2027 for USyd and UTS, 2026 for UNSW and the US and Shanghai universities) up to 2028, then every year of the degree. The default 4% is about 4% a year, the rate implied by UTS&rsquo;s own estimate (A$159,248 for a 2027 start ≈ A$51,016 × (1 + 1.04 + 1.04²)). The grey bar is before scholarships, green is after.</span><span class="l-vi">Tỷ giá: A$ ngày 17/9/2026, US$ cuối tháng 9/2026. Chi phí mỗi năm là ước tính tổng mới nhất của từng trường trong thẻ So sánh; UChicago trên US$100.000 nên đây là mức tối thiểu. UChicago và NYU Thượng Hải hỗ trợ theo thu nhập gia đình nên không trừ. Mức tăng được tính từ năm của từng con số (2027 với USyd và UTS, 2026 với UNSW, các trường Mỹ và Thượng Hải) đến 2028, rồi áp dụng cho mỗi năm học. Mức mặc định 4% là khoảng 4%/năm, mức suy ra từ chính ước tính của UTS (A$159.248 cho khóa 2027 ≈ A$51.016 × (1 + 1,04 + 1,04²)). Thanh xám là trước học bổng, xanh là sau học bổng.</span></p>
+  </div>
+  <div class="block">
+    <div class="block-head">
+      <p class="label"><span class="l-en">Monthly living budget</span><span class="l-vi">Sinh hoạt phí mỗi tháng</span></p>
+      <h2><span class="l-en">What a month costs in each city</span><span class="l-vi">Mỗi tháng ở từng thành phố tốn bao nhiêu</span></h2>
+      <p class="muted"><span class="l-en">Rent, food, transport, phone and the rest, in local money and in Vietnamese dong at the exchange rates above. Tuition is not included.</span><span class="l-vi">Tiền nhà, ăn uống, đi lại, điện thoại và các khoản khác, tính bằng tiền địa phương và tiền Việt theo tỷ giá ở trên. Chưa gồm học phí.</span></p>
+    </div>
+    <div class="bud-grid" id="bud-grid"></div>
+    <p class="small muted"><span class="l-en">Sydney: monthly ranges from the University of Sydney&rsquo;s living-cost guide; personal and other covers lifestyle (A$350–650) plus a gym (A$70–100). Health cover (OSHC) is extra. For the visa you must show A$29,710 a year, the current Department of Home Affairs figure checked on 29 Sep 2026; the University of Sydney&rsquo;s page still shows the older A$24,505.</span><span class="l-vi">Sydney: mức mỗi tháng theo hướng dẫn chi phí sinh hoạt của Đại học Sydney; mục cá nhân và khác gồm giải trí (A$350–650) và phòng gym (A$70–100). Chưa gồm bảo hiểm y tế (OSHC). Khi xin visa phải chứng minh A$29.710/năm, mức hiện hành của Bộ Nội vụ Úc (kiểm tra ngày 29/9/2026); trang của Đại học Sydney vẫn ghi mức cũ A$24.505.</span></p>
+    <p class="small muted"><span class="l-en">Chicago, Santa Cruz and Shanghai: each university&rsquo;s 2026–27 yearly living items divided by 9 academic months, so summer is extra; phone sits inside personal costs. UChicago excludes U-SHIP health insurance and the US$720 Class Fee charged in each of the first two years.</span><span class="l-vi">Chicago, Santa Cruz và Thượng Hải: các khoản sinh hoạt cả năm 2026–27 của từng trường chia cho 9 tháng học, nên chưa tính mùa hè; tiền điện thoại nằm trong chi phí cá nhân. UChicago chưa gồm bảo hiểm y tế U-SHIP và phí lớp US$720 thu mỗi năm trong hai năm đầu.</span></p>
   </div>
   <div class="block">
     <div class="block-head">
@@ -1298,6 +1399,36 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
     </div>
   </div>
   <div class="block">
+    <div class="block-head">
+      <p class="label"><span class="l-en">How to apply for aid</span><span class="l-vi">Cách xin hỗ trợ tài chính</span></p>
+      <h2><span class="l-en">UChicago financial aid, step by step</span><span class="l-vi">Hỗ trợ tài chính UChicago, từng bước</span></h2>
+      <p class="muted"><span class="l-en">Need-based aid for international students is decided once, at the same time as admission. Here is the order, set against my own dates.</span><span class="l-vi">Hỗ trợ theo nhu cầu cho du học sinh chỉ được xét một lần, cùng lúc với hồ sơ nhập học. Đây là thứ tự các bước, theo đúng mốc thời gian của mình.</span></p>
+    </div>
+    <figure class="aid-flow" aria-hidden="true">
+      <ol>
+        <li><span class="aid-n">1</span><span class="aid-d"><span class="l-en">Summer 2027</span><span class="l-vi">Hè 2027</span></span><strong><span class="l-en">Gather the documents</span><span class="l-vi">Chuẩn bị giấy tờ</span></strong><span class="aid-x"><span class="l-en">Proof of family income: tax forms translated into English and converted to US dollars, or an employer statement, or bank statements. Plus bank, savings and investment statements for the Asset Verification Form.</span><span class="l-vi">Chứng minh thu nhập gia đình: tờ khai thuế dịch sang tiếng Anh và quy đổi ra đô la Mỹ, hoặc xác nhận của nơi làm việc, hoặc sao kê ngân hàng. Kèm sao kê tài khoản, tiết kiệm và đầu tư cho Asset Verification Form.</span></span></li>
+        <li><span class="aid-n">2</span><span class="aid-d"><span class="l-en">Aug to Oct 2027</span><span class="l-vi">Tháng 8 đến 10/2027</span></span><strong><span class="l-en">Talk it through as a family</span><span class="l-vi">Bàn với gia đình</span></strong><span class="aid-x"><span class="l-en">Run UChicago&rsquo;s Net Price Calculator together, agree what the family can pay each year, then choose Early Action (not binding) or Early Decision I (binding).</span><span class="l-vi">Cùng làm Net Price Calculator của UChicago, thống nhất mức gia đình có thể chi mỗi năm, rồi chọn Early Action (không ràng buộc) hay Early Decision I (ràng buộc).</span></span></li>
+        <li><span class="aid-n">3</span><span class="aid-d"><span class="l-en">~2 Nov 2027</span><span class="l-vi">~2/11/2027</span></span><strong><span class="l-en">Submit the Common App</span><span class="l-vi">Nộp Common App</span></strong><span class="aid-x"><span class="l-en">Say that you are applying for financial aid. Aid can only be requested now, alongside admission.</span><span class="l-vi">Ghi rõ là có xin hỗ trợ tài chính. Chỉ được xin vào lúc này, cùng với hồ sơ nhập học.</span></span></li>
+        <li><span class="aid-n">4</span><span class="aid-d"><span class="l-en">After applying</span><span class="l-vi">Sau khi nộp</span></span><strong><span class="l-en">Fill in the aid worksheet</span><span class="l-vi">Điền bảng khai tài chính</span></strong><span class="aid-x"><span class="l-en">Log in to the UChicago Account and complete the Student Financial Aid Worksheet. International students do not use the CSS Profile or the FAFSA.</span><span class="l-vi">Đăng nhập UChicago Account và điền Student Financial Aid Worksheet. Du học sinh không dùng CSS Profile hay FAFSA.</span></span></li>
+        <li><span class="aid-n">5</span><span class="aid-d"><span class="l-en">15 Nov 2027</span><span class="l-vi">15/11/2027</span></span><strong><span class="l-en">Upload the documents</span><span class="l-vi">Tải giấy tờ lên</span></strong><span class="aid-x"><span class="l-en">Income documents plus the Asset Verification Form and statements. This is the aid deadline for EA and ED I (ED II: 15 Jan; RD: 15 Feb).</span><span class="l-vi">Giấy tờ thu nhập, Asset Verification Form và các sao kê. Đây là hạn nộp hồ sơ tài chính cho EA và ED I (ED II: 15/1; RD: 15/2).</span></span></li>
+        <li><span class="aid-n">6</span><span class="aid-d"><span class="l-en">Automatic</span><span class="l-vi">Tự động</span></span><strong><span class="l-en">Merit scholarships</span><span class="l-vi">Học bổng năng lực</span></strong><span class="aid-x"><span class="l-en">No form and no extra essay. Every applicant is considered for partial-tuition awards.</span><span class="l-vi">Không cần đơn hay bài luận thêm. Mọi hồ sơ đều được xét học bổng một phần học phí.</span></span></li>
+        <li><span class="aid-n">7</span><span class="aid-d"><span class="l-en">Mid-Dec 2027</span><span class="l-vi">Giữa tháng 12/2027</span></span><strong><span class="l-en">Decision and aid package</span><span class="l-vi">Kết quả và gói hỗ trợ</span></strong><span class="aid-x"><span class="l-en">The admission decision arrives with the need-based aid offer: 100% of need, no loans. Merit notices roll out until the end of April 2028, and only winners are told.</span><span class="l-vi">Kết quả nhập học đến cùng gói hỗ trợ theo nhu cầu: đáp ứng 100% nhu cầu, không vay. Thông báo học bổng năng lực gửi dần đến cuối tháng 4/2028, và chỉ người nhận được mới được báo.</span></span></li>
+      </ol>
+      <p class="aid-warn"><b>!</b> <span class="l-en">Miss this window and you can never apply for aid at UChicago: not after the decision, and not in any of the four years.</span><span class="l-vi">Lỡ thời điểm này thì không bao giờ xin được hỗ trợ tài chính ở UChicago nữa: kể cả sau khi có kết quả hay trong suốt bốn năm học.</span></p>
+    </figure>
+    <ol class="aid-text">
+      <li><span class="l-en">Summer 2027</span><span class="l-vi">Hè 2027</span>: <span class="l-en">Gather the documents</span><span class="l-vi">Chuẩn bị giấy tờ</span>. <span class="l-en">Proof of family income: tax forms translated into English and converted to US dollars, or an employer statement, or bank statements. Plus bank, savings and investment statements for the Asset Verification Form.</span><span class="l-vi">Chứng minh thu nhập gia đình: tờ khai thuế dịch sang tiếng Anh và quy đổi ra đô la Mỹ, hoặc xác nhận của nơi làm việc, hoặc sao kê ngân hàng. Kèm sao kê tài khoản, tiết kiệm và đầu tư cho Asset Verification Form.</span></li>
+      <li><span class="l-en">Aug to Oct 2027</span><span class="l-vi">Tháng 8 đến 10/2027</span>: <span class="l-en">Talk it through as a family</span><span class="l-vi">Bàn với gia đình</span>. <span class="l-en">Run UChicago&rsquo;s Net Price Calculator together, agree what the family can pay each year, then choose Early Action (not binding) or Early Decision I (binding).</span><span class="l-vi">Cùng làm Net Price Calculator của UChicago, thống nhất mức gia đình có thể chi mỗi năm, rồi chọn Early Action (không ràng buộc) hay Early Decision I (ràng buộc).</span></li>
+      <li><span class="l-en">~2 Nov 2027</span><span class="l-vi">~2/11/2027</span>: <span class="l-en">Submit the Common App</span><span class="l-vi">Nộp Common App</span>. <span class="l-en">Say that you are applying for financial aid. Aid can only be requested now, alongside admission.</span><span class="l-vi">Ghi rõ là có xin hỗ trợ tài chính. Chỉ được xin vào lúc này, cùng với hồ sơ nhập học.</span></li>
+      <li><span class="l-en">After applying</span><span class="l-vi">Sau khi nộp</span>: <span class="l-en">Fill in the aid worksheet</span><span class="l-vi">Điền bảng khai tài chính</span>. <span class="l-en">Log in to the UChicago Account and complete the Student Financial Aid Worksheet. International students do not use the CSS Profile or the FAFSA.</span><span class="l-vi">Đăng nhập UChicago Account và điền Student Financial Aid Worksheet. Du học sinh không dùng CSS Profile hay FAFSA.</span></li>
+      <li><span class="l-en">15 Nov 2027</span><span class="l-vi">15/11/2027</span>: <span class="l-en">Upload the documents</span><span class="l-vi">Tải giấy tờ lên</span>. <span class="l-en">Income documents plus the Asset Verification Form and statements. This is the aid deadline for EA and ED I (ED II: 15 Jan; RD: 15 Feb).</span><span class="l-vi">Giấy tờ thu nhập, Asset Verification Form và các sao kê. Đây là hạn nộp hồ sơ tài chính cho EA và ED I (ED II: 15/1; RD: 15/2).</span></li>
+      <li><span class="l-en">Automatic</span><span class="l-vi">Tự động</span>: <span class="l-en">Merit scholarships</span><span class="l-vi">Học bổng năng lực</span>. <span class="l-en">No form and no extra essay. Every applicant is considered for partial-tuition awards.</span><span class="l-vi">Không cần đơn hay bài luận thêm. Mọi hồ sơ đều được xét học bổng một phần học phí.</span></li>
+      <li><span class="l-en">Mid-Dec 2027</span><span class="l-vi">Giữa tháng 12/2027</span>: <span class="l-en">Decision and aid package</span><span class="l-vi">Kết quả và gói hỗ trợ</span>. <span class="l-en">The admission decision arrives with the need-based aid offer: 100% of need, no loans. Merit notices roll out until the end of April 2028, and only winners are told.</span><span class="l-vi">Kết quả nhập học đến cùng gói hỗ trợ theo nhu cầu: đáp ứng 100% nhu cầu, không vay. Thông báo học bổng năng lực gửi dần đến cuối tháng 4/2028, và chỉ người nhận được mới được báo.</span></li>
+      <li><span class="l-en">Miss this window and you can never apply for aid at UChicago: not after the decision, and not in any of the four years.</span><span class="l-vi">Lỡ thời điểm này thì không bao giờ xin được hỗ trợ tài chính ở UChicago nữa: kể cả sau khi có kết quả hay trong suốt bốn năm học.</span></li>
+    </ol>
+    <p class="small muted"><span class="l-en">From UChicago&rsquo;s international financial aid page, checked 30 Sep 2026. UChicago reports nearly US$20 million in need-based aid to international students over four years, plus a US$35 million gift for international aid. The page asks for 2024 tax forms in the current cycle; expect a later year for mine, and confirm in August 2027 that the ED II and RD aid dates are the same for international students.</span><span class="l-vi">Theo trang hỗ trợ tài chính quốc tế của UChicago, kiểm tra ngày 30/9/2026. UChicago cho biết đã hỗ trợ gần US$20 triệu theo nhu cầu cho du học sinh trong bốn năm, cùng khoản tài trợ US$35 triệu dành cho hỗ trợ quốc tế. Chu kỳ hiện tại yêu cầu tờ khai thuế năm 2024; khóa của mình sẽ là năm sau đó, và cần xác nhận vào tháng 8/2027 rằng hạn ED II và RD cũng áp dụng cho du học sinh.</span></p>
+  </div>
+  <div class="block">
     <p class="label"><span class="l-en">English test and visa</span><span class="l-vi">Tiếng Anh và thị thực</span></p>
     <div class="award">
       <div><span class="name">IELTS Academic</span><span class="val"><span class="l-en">Optional, no minimum</span><span class="l-vi">Không bắt buộc, không có mức tối thiểu</span></span><span class="muted"><span class="l-en">Not required if the application already shows strong English. Send a score only if it helps.</span><span class="l-vi">Không cần nếu hồ sơ đã thể hiện tiếng Anh tốt. Chỉ gửi điểm nếu có lợi.</span></span></div>
@@ -1449,9 +1580,10 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <p class="label"><span class="l-en">Cost</span><span class="l-vi">Chi phí</span></p>
       <dl class="kv">
         <dt><span class="l-en">Tuition, first year</span><span class="l-vi">Học phí năm đầu</span></dt><dd class="num"><span class="l-en">A$56,500 (2026)</span><span class="l-vi">A$56.500 (2026)</span></dd>
-        <dt><span class="l-en">Whole degree</span><span class="l-vi">Cả khóa</span></dt><dd class="num">≈ A$180,500</dd>
+        <dt><span class="l-en">Whole degree</span><span class="l-vi">Cả khóa</span></dt><dd class="num"><span class="l-en">≈ A$190,800 (2028 start: two rises on the 2026 fee, then one a year)</span><span class="l-vi">≈ A$190.800 (nhập học 2028: tăng hai lần từ mức 2026, sau đó mỗi năm một lần)</span></dd>
         <dt><span class="l-en">Living</span><span class="l-vi">Sinh hoạt</span></dt><dd class="num"><span class="l-en">≈ A$30,000 a year</span><span class="l-vi">≈ A$30.000/năm</span></dd>
       </dl>
+      <p class="small muted"><span class="l-en">Whole-degree tuition assumes about 4% a year, the rate implied by UTS&rsquo;s own estimate (A$159,248 for a 2027 start ≈ A$51,016 × (1 + 1.04 + 1.04²)).</span><span class="l-vi">Học phí cả khóa giả định khoảng 4%/năm, mức suy ra từ chính ước tính của UTS (A$159.248 cho khóa 2027 ≈ A$51.016 × (1 + 1,04 + 1,04²)).</span></p>
     </div>
   </div>
   <div class="block">
@@ -1521,9 +1653,10 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <p class="label"><span class="l-en">Cost</span><span class="l-vi">Chi phí</span></p>
       <dl class="kv">
         <dt><span class="l-en">Tuition 2027</span><span class="l-vi">Học phí 2027</span></dt><dd class="num"><span class="l-en">A$25,508 a semester (A$51,016 a year)</span><span class="l-vi">A$25.508/học kỳ (A$51.016/năm)</span></dd>
-        <dt><span class="l-en">Whole degree</span><span class="l-vi">Cả khóa</span></dt><dd class="num"><span class="l-en">≈ A$159,250 (UTS estimate, with yearly rises)</span><span class="l-vi">≈ A$159.250 (ước tính của UTS, đã tính mức tăng hằng năm)</span></dd>
+        <dt><span class="l-en">Whole degree</span><span class="l-vi">Cả khóa</span></dt><dd class="num"><span class="l-en">≈ A$165,600 for a 2028 start (UTS&rsquo;s own estimate for a 2027 start: A$159,248)</span><span class="l-vi">≈ A$165.600 nếu nhập học 2028 (ước tính của UTS cho khóa 2027: A$159.248)</span></dd>
         <dt><span class="l-en">Living</span><span class="l-vi">Sinh hoạt</span></dt><dd class="num"><span class="l-en">≈ A$30,000 a year</span><span class="l-vi">≈ A$30.000/năm</span></dd>
       </dl>
+      <p class="small muted"><span class="l-en">Whole-degree tuition assumes about 4% a year, the rate implied by UTS&rsquo;s own estimate (A$159,248 for a 2027 start ≈ A$51,016 × (1 + 1.04 + 1.04²)).</span><span class="l-vi">Học phí cả khóa giả định khoảng 4%/năm, mức suy ra từ chính ước tính của UTS (A$159.248 cho khóa 2027 ≈ A$51.016 × (1 + 1,04 + 1,04²)).</span></p>
     </div>
   </div>
   <div class="block">
@@ -1590,10 +1723,11 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <p class="label"><span class="l-en">Cost</span><span class="l-vi">Chi phí</span></p>
       <dl class="kv">
         <dt><span class="l-en">Tuition, first year</span><span class="l-vi">Học phí năm đầu</span></dt><dd class="num"><span class="l-en">A$59,100 (2027)</span><span class="l-vi">A$59.100 (2027)</span></dd>
-        <dt><span class="l-en">Whole degree</span><span class="l-vi">Cả khóa</span></dt><dd class="num">≈ A$177,300</dd>
+        <dt><span class="l-en">Whole degree</span><span class="l-vi">Cả khóa</span></dt><dd class="num"><span class="l-en">≈ A$191,900 (2028 start, rising each year)</span><span class="l-vi">≈ A$191.900 (nhập học 2028, tăng mỗi năm)</span></dd>
         <dt><span class="l-en">Living</span><span class="l-vi">Sinh hoạt</span></dt><dd class="num"><span class="l-en">≈ A$30,000 a year</span><span class="l-vi">≈ A$30.000/năm</span></dd>
         <dt><span class="l-en">After the 20% award</span><span class="l-vi">Sau học bổng 20%</span></dt><dd class="num"><span class="l-en">≈ A$47,300 a year in tuition</span><span class="l-vi">≈ A$47.300/năm học phí</span></dd>
       </dl>
+      <p class="small muted"><span class="l-en">Whole-degree tuition assumes about 4% a year, the rate implied by UTS&rsquo;s own estimate (A$159,248 for a 2027 start ≈ A$51,016 × (1 + 1.04 + 1.04²)).</span><span class="l-vi">Học phí cả khóa giả định khoảng 4%/năm, mức suy ra từ chính ước tính của UTS (A$159.248 cho khóa 2027 ≈ A$51.016 × (1 + 1,04 + 1,04²)).</span></p>
     </div>
   </div>
   <div class="block">
@@ -3055,6 +3189,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
     ['2027-10-31','My target: applied to USyd, UNSW and UTS','Mục tiêu: đã nộp USyd, UNSW và UTS',false,true],
     ['2027-11-01','NYU Shanghai Early Decision I','NYU Thượng Hải Early Decision I'],
     ['2027-11-02','UChicago Early Action / Early Decision I','UChicago Early Action / Early Decision I',true],
+    ['2027-11-15','UChicago financial aid: worksheet and documents (EA/ED I)','UChicago hỗ trợ tài chính: bảng khai và giấy tờ (EA/ED I)'],
     ['2027-11-30','UC Application deadline (UC Santa Cruz)','Hạn UC Application (UC Santa Cruz)'],
     ['2028-01-01','NYU Shanghai Early Decision II','NYU Thượng Hải Early Decision II'],
     ['2028-01-04','UChicago Early Decision II and Regular Decision','UChicago Early Decision II và Regular Decision',true],
@@ -3157,7 +3292,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       ['common','Common App personal essay','Bài luận chính Common App'],
       ['supp','UChicago supplement essays','Các bài luận phụ của UChicago'],
       ['letters','Ask the counsellor and two teachers for letters','Nhờ cố vấn và hai giáo viên viết thư giới thiệu'],
-      ['aid','Financial aid forms sent with the application','Nộp hồ sơ hỗ trợ tài chính cùng hồ sơ nhập học'],
+      ['aid','Student Financial Aid Worksheet + income and asset documents by 15 Nov','Student Financial Aid Worksheet + giấy tờ thu nhập và tài sản trước 15/11'],
       ['submit','Submit by ~2 Nov 2027 (EA/ED I) or ~4 Jan 2028','Nộp trước ~2/11/2027 (EA/ED I) hoặc ~4/1/2028'],
       ['visa','Deposit by 1 May, then I-20 and F-1 visa','Đặt cọc trước 1/5, rồi I-20 và visa F-1']]},
     {k:'ucsc',en:'UC Santa Cruz',vi:'UC Santa Cruz',items:[
@@ -3217,12 +3352,12 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 
   /* ---------- 4. degree cost in VND ---------- */
   var COST=[
-    {en:'University of Sydney',vi:'Đại học Sydney',cur:'AUD',yr:89100,n:3,s:11820,pct:true,sen:'Sydney International Student Award (20% of tuition)',svi:'Sydney International Student Award (20% học phí)'},
-    {en:'UNSW Sydney',vi:'UNSW Sydney',cur:'AUD',yr:86500,n:3,s:11300,pct:true,sen:'International Student Award (20% of tuition)',svi:'International Student Award (20% học phí)'},
-    {en:'UTS',vi:'UTS',cur:'AUD',yr:81016,n:3,s:0,sen:'Academic Excellence (30%) is merit-based, so not subtracted',svi:'Academic Excellence (30%) xét theo thành tích nên không trừ'},
-    {en:'UC Santa Cruz',vi:'UC Santa Cruz',cur:'USD',yr:87807,n:4,s:3000,sen:"Dean's Award at its lowest (US$3,000 a year)",svi:"Dean's Award mức thấp nhất (US$3.000/năm)"},
-    {en:'NYU Shanghai',vi:'NYU Thượng Hải',cur:'USD',yr:91700,n:4,s:0,sen:'Need-based aid depends on family income',svi:'Hỗ trợ theo nhu cầu phụ thuộc thu nhập gia đình'},
-    {en:'UChicago',vi:'UChicago',cur:'USD',yr:100000,n:4,s:0,plus:true,sen:'Need-based aid depends on family income',svi:'Hỗ trợ theo nhu cầu phụ thuộc thu nhập gia đình'}
+    {en:'University of Sydney',vi:'Đại học Sydney',cur:'AUD',base:2027,yr:89100,n:3,s:11820,pct:true,sen:'Sydney International Student Award (20% of tuition)',svi:'Sydney International Student Award (20% học phí)'},
+    {en:'UNSW Sydney',vi:'UNSW Sydney',cur:'AUD',base:2026,yr:86500,n:3,s:11300,pct:true,sen:'International Student Award (20% of tuition)',svi:'International Student Award (20% học phí)'},
+    {en:'UTS',vi:'UTS',cur:'AUD',base:2027,yr:81016,n:3,s:0,sen:'Academic Excellence (30%) is merit-based, so not subtracted',svi:'Academic Excellence (30%) xét theo thành tích nên không trừ'},
+    {en:'UC Santa Cruz',vi:'UC Santa Cruz',cur:'USD',base:2026,yr:87807,n:4,s:3000,sen:"Dean's Award at its lowest (US$3,000 a year)",svi:"Dean's Award mức thấp nhất (US$3.000/năm)"},
+    {en:'NYU Shanghai',vi:'NYU Thượng Hải',cur:'USD',base:2026,yr:91700,n:4,s:0,sen:'Need-based aid depends on family income',svi:'Hỗ trợ theo nhu cầu phụ thuộc thu nhập gia đình'},
+    {en:'UChicago',vi:'UChicago',cur:'USD',base:2026,yr:100000,n:4,s:0,plus:true,sen:'Need-based aid depends on family income',svi:'Hỗ trợ theo nhu cầu phụ thuộc thu nhập gia đình'}
   ];
   function num(id,def){ var v=parseFloat((document.getElementById(id)||{}).value); return isFinite(v)&&v>0?v:def; }
   function ty(v){ var b=v/1e9; return vi()?b.toFixed(2).replace('.',',')+' tỷ đ':b.toFixed(2)+' billion VND'; }
@@ -3232,7 +3367,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
     var aud=num('fx-aud',18492), usd=num('fx-usd',26020), rise=(parseFloat(document.getElementById('fx-rise').value)||0)/100, useS=document.getElementById('fx-schol').checked;
     var rows=COST.map(function(c){
       var fx=c.cur==='AUD'?aud:usd, gross=0, sch=0;
-      for(var i=0;i<c.n;i++){ var f=Math.pow(1+rise,i); gross+=c.yr*f; sch+=c.s*(c.pct?f:1); }
+      for(var i=0;i<c.n;i++){ var f=Math.pow(1+rise,2028-c.base+i); gross+=c.yr*f; sch+=c.s*(c.pct?f:1); }
       var net=gross-(useS?sch:0);
       return {c:c,fx:fx,gross:gross,net:net,gv:gross*fx,nv:net*fx};
     });
@@ -3241,7 +3376,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
     rows.forEach(function(r){
       var c=r.c, cut=useS&&r.gv>r.nv;
       box.appendChild(el('div',{'class':'cost-row'},[
-        el('div',{'class':'cost-name'},[el('strong',{text:t(c.en,c.vi)}),el('span',{'class':'muted small',text:t(c.n+' years × '+money(c.cur,c.yr)+(c.plus?'+':'')+' a year',c.n+' năm × '+money(c.cur,c.yr)+(c.plus?'+':'')+'/năm')})]),
+        el('div',{'class':'cost-name'},[el('strong',{text:t(c.en,c.vi)}),el('span',{'class':'muted small',text:t(c.n+' years from 2028 · '+money(c.cur,c.yr)+(c.plus?'+':'')+' a year at '+c.base+' prices',c.n+' năm từ 2028 · '+money(c.cur,c.yr)+(c.plus?'+':'')+'/năm theo giá '+c.base)})]),
         el('div',{'class':'cost-bar'},[el('i',{'class':'g',style:'width:'+(r.gv/max*100).toFixed(1)+'%'}),el('i',{'class':'n',style:'width:'+(r.nv/max*100).toFixed(1)+'%'})]),
         el('div',{'class':'cost-val'},[
           el('b',{text:(c.plus?'':'≈ ')+ty(cut?r.nv:r.gv)+(c.plus?'+':'')}),
@@ -3252,6 +3387,46 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
   }
   ['fx-aud','fx-usd','fx-rise','fx-schol'].forEach(function(id){ var n=document.getElementById(id); if(n) n.addEventListener('input',drawCost); if(n) n.addEventListener('change',drawCost); });
   drawCost();
+
+  /* ---------- 4b. monthly living budget ---------- */
+  var BUDGET=[
+    {en:'Sydney',vi:'Sydney',uen:'University of Sydney, UNSW, UTS',uvi:'Đại học Sydney, UNSW, UTS',cur:'AUD',per:1,rows:[
+      ['Rent','Tiền nhà',980,3500],['Food','Ăn uống',1000,2500],['Transport','Đi lại',130,800],['Phone','Điện thoại',30,100],['Personal and other','Cá nhân và khác',420,750]],
+      en2:'Cheapest campus room: Queen Mary Building single, A$392 a week (about A$1,699 a month).',vi2:'Phòng rẻ nhất trong trường: phòng đơn Queen Mary Building, A$392/tuần (khoảng A$1.699/tháng).'},
+    {en:'Chicago',vi:'Chicago',uen:'UChicago, 2026–27',uvi:'UChicago, 2026–27',cur:'USD',per:9,rows:[
+      ['Housing and food (meal plan)','Nhà ở và ăn uống (gói bữa ăn)',21414],['Food','Ăn uống',null,'In housing','Trong nhà ở'],['Transport (UPASS and travel)','Đi lại (UPASS và di chuyển)',1020],['Phone','Điện thoại',null,'In personal','Trong chi phí cá nhân'],['Personal and books','Cá nhân và sách',3750]]},
+    {en:'Santa Cruz',vi:'Santa Cruz',uen:'UC Santa Cruz, 2026–27',uvi:'UC Santa Cruz, 2026–27',cur:'USD',per:9,rows:[
+      ['Housing','Nhà ở',15120],['Food','Ăn uống',6837],['Transport','Đi lại',993],['Phone','Điện thoại',null,'In personal','Trong chi phí cá nhân'],['Personal and books','Cá nhân và sách',3939],['Health insurance','Bảo hiểm y tế',4209]]},
+    {en:'Shanghai',vi:'Thượng Hải',uen:'NYU Shanghai, 2026–27',uvi:'NYU Thượng Hải, 2026–27',cur:'USD',per:9,rows:[
+      ['Housing','Nhà ở',5774],['Food','Ăn uống',5264],['Travel','Đi lại',4454],['Phone','Điện thoại',null,'In personal','Trong chi phí cá nhân'],['Personal and books','Cá nhân và sách',2468],['Health insurance','Bảo hiểm y tế',5140]]}
+  ];
+  function nf(v,d){ var s=v.toLocaleString('en-US',{minimumFractionDigits:d||0,maximumFractionDigits:d||0}); return vi()?s.replace(/[,.]/g,function(c){ return c===','?'.':','; }):s; }
+  function drawBudget(){
+    var box=document.getElementById('bud-grid'); if(!box) return;
+    var aud=num('fx-aud',18492), usd=num('fx-usd',26020);
+    box.innerHTML='';
+    BUDGET.forEach(function(b){
+      var fx=b.cur==='AUD'?aud:usd, sym=b.cur==='AUD'?'A$':'US$', lo=0, hi=0;
+      function loc(a,z){ return sym+nf(a)+(z!=null&&z!==a?'–'+nf(z):''); }
+      function vnd(a,z){ return nf(a*fx/1e6,1)+(z!=null&&z!==a?'–'+nf(z*fx/1e6,1):''); }
+      var tb=el('tbody');
+      b.rows.forEach(function(r){
+        if(r[2]==null){ tb.appendChild(el('tr',null,[el('th',{text:t(r[0],r[1])}),el('td',{'class':'muted',colspan:'2',text:t(r[3],r[4])})])); return; }
+        var a=r[2]/b.per, z=(r[3]!=null?r[3]:r[2])/b.per; lo+=a; hi+=z;
+        tb.appendChild(el('tr',null,[el('th',{text:t(r[0],r[1])}),el('td',{text:loc(Math.round(a),Math.round(z))}),el('td',{text:vnd(a,z)})]));
+      });
+      tb.appendChild(el('tr',{'class':'bud-sum'},[el('th',{text:t('Total a month','Tổng mỗi tháng')}),el('td',{text:loc(Math.round(lo),Math.round(hi))}),el('td',{text:vnd(lo,hi)})]));
+      var head=el('tr',null,[el('th',{text:t('Item','Khoản')}),el('th',{text:t(sym+' a month',sym+'/tháng')}),el('th',{text:t('million VND','triệu đ')})]);
+      box.appendChild(el('article',{'class':'bud-card'},[
+        el('div',null,[el('h3',{text:t(b.en,b.vi)}),el('p',{'class':'small muted',text:t(b.uen,b.uvi)})]),
+        el('p',{'class':'bud-tot',text:vnd(lo,hi)+' '+t('million VND a month','triệu đ/tháng')}),
+        el('table',null,[el('thead',null,[head]),tb]),
+        b.en2?el('p',{'class':'small muted',text:t(b.en2,b.vi2)}):null
+      ]));
+    });
+  }
+  ['fx-aud','fx-usd'].forEach(function(id){ var n=document.getElementById(id); if(n) n.addEventListener('input',drawBudget); });
+  drawBudget();
 
   /* ---------- 5. print ---------- */
   function openAll(){ [].forEach.call(document.querySelectorAll('details'),function(d){ d.open=true; }); }
@@ -3265,7 +3440,110 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
     var d=document.getElementById(a.getAttribute('href').slice(1)); if(d) d.open=true;
   });
 
-  redraw.push(drawCountdown,drawSlider,drawChecklist,drawCost);
+  redraw.push(drawCountdown,drawSlider,drawChecklist,drawCost,drawBudget);
+})();
+</script>
+
+<script>
+/* Compare two universities, and the decision matrix. */
+(function(){
+  var root=document.documentElement;
+  function vi(){ return root.getAttribute('lang')==='vi'; }
+  function t(en,v){ return vi()?v:en; }
+  function el(tag,attrs,kids){
+    var n=document.createElement(tag);
+    if(attrs) for(var k in attrs){ if(k==='text') n.textContent=attrs[k]; else if(k==='on') for(var ev in attrs.on) n.addEventListener(ev,attrs.on[ev]); else n.setAttribute(k,attrs[k]); }
+    (kids||[]).forEach(function(c){ if(c) n.appendChild(c); });
+    return n;
+  }
+  function load(key,def){ try{ var v=JSON.parse(localStorage.getItem(key)||'null'); return v&&typeof v==='object'?v:def; }catch(e){ return def; } }
+  function store(key,v){ try{ localStorage.setItem(key,JSON.stringify(v)); }catch(e){} }
+  var redraw=[];
+  try{ new MutationObserver(function(){ redraw.forEach(function(f){ f(); }); }).observe(root,{attributes:true,attributeFilter:['lang']}); }catch(e){}
+
+  /* ---------- compare two ---------- */
+  var table=document.getElementById('cmp-table'), chips=[].slice.call(document.querySelectorAll('[data-cmp]'));
+  var pick=load('plan-cmp',[]); if(!Array.isArray(pick)) pick=[];
+  pick=pick.filter(function(n){ return n>=1&&n<=6; }).slice(-2);
+  function drawCmp(){
+    if(!table) return;
+    table.className='wide'+(pick.length===2?' pair c'+pick[0]+' c'+pick[1]:'');
+    chips.forEach(function(c){ c.setAttribute('aria-pressed',pick.indexOf(+c.getAttribute('data-cmp'))>=0?'true':'false'); });
+    var h=document.getElementById('cmp-hint');
+    if(h) h.textContent=pick.length===2?t('Showing two universities side by side.','Đang so sánh hai trường.'):pick.length===1?t('Pick one more to compare.','Chọn thêm một trường để so sánh.'):t('Pick two to see them side by side; it fits on a phone.','Chọn hai trường để xem cạnh nhau, vừa màn hình điện thoại.');
+  }
+  chips.forEach(function(c){ c.addEventListener('click',function(){
+    var n=+c.getAttribute('data-cmp'), i=pick.indexOf(n);
+    if(i>=0) pick.splice(i,1); else { pick.push(n); if(pick.length>2) pick.shift(); }
+    store('plan-cmp',pick); drawCmp();
+  }); });
+  var all=document.getElementById('cmp-all');
+  if(all) all.addEventListener('click',function(){ pick=[]; store('plan-cmp',pick); drawCmp(); });
+  drawCmp();
+
+  /* ---------- decision matrix ---------- */
+  var UNI=[['usyd','USyd','USyd','Target','Vừa sức','target'],['unsw','UNSW','UNSW','Target','Vừa sức','target'],['uts','UTS','UTS','Likely','Chắc chắn','likely'],['uchicago','UChicago','UChicago','Dream','Mơ ước','dream'],['ucsc','UC Santa Cruz','UC Santa Cruz','Likely','Chắc chắn','likely'],['nyush','NYU Shanghai','NYU Thượng Hải','Reach','Thử sức','reach']];
+  var FAC=[
+    ['cost','Cost after likely scholarship','Chi phí sau học bổng dễ nhận',4,{usyd:5,unsw:5,uts:5,uchicago:1,ucsc:2,nyush:2}],
+    ['rank','Ranking and reputation','Xếp hạng và danh tiếng',3,{usyd:4,unsw:4,uts:3,uchicago:5,ucsc:2,nyush:3}],
+    ['city','City and lifestyle','Thành phố và lối sống',2,{usyd:4,unsw:4,uts:4,uchicago:3,ucsc:3,nyush:4}],
+    ['fit','Course fit (business first, plus economics)','Phù hợp ngành (kinh doanh trước, kèm kinh tế)',4,{usyd:5,unsw:5,uts:5,uchicago:3,ucsc:4,nyush:4}],
+    ['admit','Chance of admission','Khả năng trúng tuyển',4,{usyd:4,unsw:4,uts:5,uchicago:1,ucsc:5,nyush:2}],
+    ['schol','Scholarship chances','Khả năng nhận học bổng',3,{usyd:4,unsw:4,uts:3,uchicago:3,ucsc:5,nyush:2}],
+    ['dist','Distance and flights from Ho Chi Minh City','Khoảng cách và chuyến bay từ TP.HCM',2,{usyd:4,unsw:4,uts:4,uchicago:1,ucsc:2,nyush:5}]
+  ];
+  function fresh(){ var d={w:{},s:{}}; FAC.forEach(function(f){ d.w[f[0]]=f[3]; UNI.forEach(function(u){ d.s[u[0]+':'+f[0]]=f[4][u[0]]; }); }); return d; }
+  var dm=load('dm-v1',null); if(!dm||!dm.w||!dm.s) dm=fresh();
+  function W(f){ var v=dm.w[f[0]]; return v==null?f[3]:+v; }
+  function S(u,f){ var v=dm.s[u[0]+':'+f[0]]; return v==null?f[4][u[0]]:+v; }
+  function save(){ store('dm-v1',dm); }
+  function drawWeights(){
+    var box=document.getElementById('dm-w'); if(!box) return; box.innerHTML='';
+    FAC.forEach(function(f){
+      var out=el('output',{text:String(W(f))});
+      var r=el('input',{type:'range',min:'0',max:'5',step:'1',value:String(W(f)),'aria-label':t(f[1],f[2])});
+      r.addEventListener('input',function(){ dm.w[f[0]]=+r.value; out.textContent=r.value; save(); drawRank(); });
+      box.appendChild(el('label',null,[el('span',{text:t(f[1],f[2])}),r,out]));
+    });
+  }
+  function drawScores(){
+    var tbl=document.getElementById('dm-s'); if(!tbl) return; tbl.innerHTML='';
+    var hr=el('tr',null,[el('th',{text:t('Factor','Yếu tố')})]);
+    UNI.forEach(function(u){ hr.appendChild(el('th',{text:t(u[1],u[2])})); });
+    var tb=el('tbody');
+    FAC.forEach(function(f){
+      var tr=el('tr',null,[el('th',{text:t(f[1],f[2])})]);
+      UNI.forEach(function(u){
+        var sel=el('select',{'aria-label':t(u[1],u[2])+': '+t(f[1],f[2])});
+        [1,2,3,4,5].forEach(function(v){ var o=el('option',{value:String(v),text:String(v)}); if(v===S(u,f)) o.selected=true; sel.appendChild(o); });
+        sel.addEventListener('change',function(){ dm.s[u[0]+':'+f[0]]=+sel.value; save(); drawRank(); });
+        tr.appendChild(el('td',null,[sel]));
+      });
+      tb.appendChild(tr);
+    });
+    tbl.appendChild(el('thead',null,[hr])); tbl.appendChild(tb);
+  }
+  function drawRank(){
+    var ol=document.getElementById('dm-rank'); if(!ol) return; ol.innerHTML='';
+    var max=0; FAC.forEach(function(f){ max+=W(f)*5; });
+    var rows=UNI.map(function(u){ var tot=0; FAC.forEach(function(f){ tot+=W(f)*S(u,f); }); return {u:u,tot:tot}; });
+    rows.sort(function(a,b){ return b.tot-a.tot; });
+    rows.forEach(function(r,i){
+      var pct=max?r.tot/max*100:0;
+      ol.appendChild(el('li',null,[
+        el('span',{'class':'n',text:String(i+1)}),
+        el('span',null,[el('strong',{text:t(r.u[1],r.u[2])}),document.createTextNode(' '),el('span',{'class':'tag '+r.u[5],text:t(r.u[3],r.u[4])})]),
+        el('span',{'class':'bar'},[el('i',{style:'width:'+pct.toFixed(1)+'%'})]),
+        el('span',{'class':'v',text:r.tot+' / '+max+' · '+Math.round(pct)+'%'})
+      ]));
+    });
+    if(!max) ol.appendChild(el('li',null,[el('span',{'class':'muted',text:t('Give at least one factor a weight above 0.','Hãy đặt ít nhất một yếu tố lớn hơn 0.')})]));
+  }
+  function drawDM(){ drawWeights(); drawScores(); drawRank(); }
+  var rs=document.getElementById('dm-reset');
+  if(rs) rs.addEventListener('click',function(){ dm=fresh(); save(); drawDM(); });
+  drawDM();
+  redraw.push(drawCmp,drawDM);
 })();
 </script>
 
@@ -3345,7 +3623,13 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       var tt=totalAt(c[0]);
       td.textContent=tt.subjects?(tt.complete?String(tt.sum):tt.sum+' '+t('(so far)','(tạm)')):'–';
     });
-    drawTrend(); pushToSlider();
+    drawTrend(); pushToSlider(); drawProfile();
+  }
+  function drawProfile(){
+    var b=document.getElementById('pf-score'), note=document.getElementById('pf-from'); if(!b) return;
+    var r=latestComplete();
+    b.textContent=r?String(r.total):'35–37';
+    if(note){ note.hidden=!r; note.textContent=r?t('From my grade tracker: '+r.c[1]+'.','Theo bảng điểm: '+r.c[2]+'.'):''; }
   }
   function drawTrend(){
     var svg=document.getElementById('gr-trend'); if(!svg) return;
@@ -3446,7 +3730,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
   function saveAll(){
     var ec=window.ecStore?window.ecStore.dump():Promise.resolve({items:[],photos:{}});
     ec.then(function(d){
-      var data={version:2,saved:new Date().toISOString(),items:d.items,photos:d.photos,checklist:load('cl-v1',null),grades:load(GKEY,null),essays:load(EKEY,null)};
+      var data={version:2,saved:new Date().toISOString(),items:d.items,photos:d.photos,checklist:load('cl-v1',null),grades:load(GKEY,null),essays:load(EKEY,null),matrix:load('dm-v1',null),compare:load('plan-cmp',null)};
       var blob=new Blob([JSON.stringify(data)],{type:'application/json'});
       var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='university-plan-backup.json';
       document.body.appendChild(a); a.click(); setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); },1000);
@@ -3463,6 +3747,8 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       if(d.checklist) store('cl-v1',d.checklist);
       if(d.grades) store(GKEY,d.grades);
       if(d.essays) store(EKEY,d.essays);
+      if(d.matrix) store('dm-v1',d.matrix);
+      if(d.compare) store('plan-cmp',d.compare);
       var p=window.ecStore?window.ecStore.restore(d.items,d.photos||{}):Promise.resolve();
       p.then(function(){ location.reload(); });
     };
