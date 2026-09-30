@@ -626,6 +626,14 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 .aid-warn b{flex:none;width:24px;height:24px;border-radius:50%;background:var(--bad);color:#15171B;display:grid;place-items:center}
 .aid-text{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 @media print{ .aid-flow{display:none} .aid-text{position:static;width:auto;height:auto;overflow:visible;clip:auto;margin:0;padding-left:1.4em;display:grid;gap:6px} }
+/* University of Sydney sub-pages */
+.usyd-nav{position:sticky;top:0;z-index:6;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;background:var(--paper);border-bottom:1px solid var(--rule);margin-bottom:-20px}
+.usyd-nav .ec-chip{font-size:.9rem;padding:6px 13px;min-height:34px}
+#usyd [data-v]{scroll-margin-top:110px}
+.usyd-next{justify-self:start}
+@media (max-width:720px){ .usyd-nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding-inline:16px;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent)} .usyd-nav::-webkit-scrollbar{display:none} .usyd-nav .ec-chip{flex:none} #usyd [data-v]{scroll-margin-top:70px} }
+@media screen{ #usyd .v-off{display:none!important} }
+@media print{ .usyd-nav,.usyd-next{display:none!important} }
 </style>
 
 <div class="strip">
@@ -1710,7 +1718,16 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <div><span class="k"><span class="l-en">Intakes</span><span class="l-vi">Kỳ nhập học</span></span><span><span class="l-en">Feb and Aug</span><span class="l-vi">Tháng 2 và 8</span></span></div>
     </div>
   </div>
-  <div class="two">
+  <nav class="usyd-nav" id="usyd-nav" aria-label="University of Sydney sections">
+    <button type="button" class="ec-chip" data-sv="sum" aria-pressed="true"><span class="l-en">At a glance</span><span class="l-vi">Tổng quan</span></button>
+    <button type="button" class="ec-chip" data-sv="deg" aria-pressed="false"><span class="l-en">Degrees &amp; majors</span><span class="l-vi">Ngành học</span></button>
+    <button type="button" class="ec-chip" data-sv="fit" aria-pressed="false"><span class="l-en">My chances</span><span class="l-vi">Cơ hội của mình</span></button>
+    <button type="button" class="ec-chip" data-sv="home" aria-pressed="false"><span class="l-en">Housing</span><span class="l-vi">Chỗ ở</span></button>
+    <button type="button" class="ec-chip" data-sv="out" aria-pressed="false"><span class="l-en">Where it leads</span><span class="l-vi">Đầu ra</span></button>
+    <button type="button" class="ec-chip" data-sv="fdn" aria-pressed="false"><span class="l-en">Foundation?</span><span class="l-vi">Dự bị?</span></button>
+    <button type="button" class="ec-chip" data-sv="src" aria-pressed="false"><span class="l-en">Sources</span><span class="l-vi">Nguồn</span></button>
+  </nav>
+  <div class="two" data-v="sum">
     <div>
       <p class="label"><span class="l-en">Why it fits</span><span class="l-vi">Vì sao phù hợp</span></p>
       <ul class="list">
@@ -1730,7 +1747,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <p class="small muted"><span class="l-en">Whole-degree tuition assumes about 4% a year, the rate implied by UTS&rsquo;s own estimate (A$159,248 for a 2027 start ≈ A$51,016 × (1 + 1.04 + 1.04²)).</span><span class="l-vi">Học phí cả khóa giả định khoảng 4%/năm, mức suy ra từ chính ước tính của UTS (A$159.248 cho khóa 2027 ≈ A$51.016 × (1 + 1,04 + 1,04²)).</span></p>
     </div>
   </div>
-  <div class="block">
+  <div class="block" data-v="sum">
     <p class="label"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></p>
     <div class="award">
       <div><span class="name">Sydney International Student Award</span><span class="val"><span class="l-en">20% off tuition, whole degree</span><span class="l-vi">Giảm 20% học phí cả khóa</span></span><span class="muted"><span class="l-en">Vietnam is eligible. Short personal statement. The most reachable award on this page.</span><span class="l-vi">Việt Nam thuộc diện được xét. Bài giới thiệu ngắn. Học bổng dễ đạt nhất trong trang này.</span></span></div>
@@ -1738,14 +1755,14 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <div><span class="name">Academic Excellence Scholarship</span><span class="val"><span class="l-en">100% tuition</span><span class="l-vi">100% học phí</span></span><span class="muted"><span class="l-en">About 20 a year worldwide. Needs a top IB score.</span><span class="l-vi">Khoảng 20 suất/năm trên toàn thế giới. Cần điểm IB rất cao.</span></span></div>
     </div>
   </div>
-  <div class="block">
+  <div class="block" data-v="sum">
     <p class="label"><span class="l-en">English test and visa</span><span class="l-vi">Tiếng Anh và thị thực</span></p>
     <div class="award">
       <div><span class="name">IELTS Academic</span><span class="val"><span class="l-en">7.0 overall, 6.0 each band</span><span class="l-vi">7.0 tổng, mỗi kỹ năng 6.0</span></span><span class="muted"><span class="l-en">English B HL counts as IELTS 6.5 at best, so the test is needed. TOEFL iBT 96 also works.</span><span class="l-vi">English B HL chỉ tương đương tối đa IELTS 6.5, nên vẫn cần thi. TOEFL iBT 96 cũng được chấp nhận.</span></span></div>
       <div><span class="name"><span class="l-en">Student visa (subclass 500)</span><span class="l-vi">Thị thực du học (subclass 500)</span></span><span class="val">A$2,500</span><span class="muted"><span class="l-en">Apply online once the university issues your CoE. Show A$29,710 a year for living plus first-year tuition and travel, and buy OSHC health cover.</span><span class="l-vi">Nộp trực tuyến khi trường cấp CoE. Chứng minh A$29.710/năm sinh hoạt phí cộng học phí năm đầu và vé máy bay, và mua bảo hiểm OSHC.</span></span></div>
     </div>
   </div>
-  <div class="block">
+  <div class="block" data-v="home">
     <p class="label"><span class="l-en">On-campus housing</span><span class="l-vi">Chỗ ở trong trường</span></p>
     <h3><span class="l-en">Living on the Camperdown campus</span><span class="l-vi">Sống trong khuôn viên Camperdown</span></h3>
     <p class="muted"><span class="l-en">The university runs four residences on or next to campus. All rooms are furnished and self-catered (shared kitchens), and rent includes electricity, water, gas and Wi-Fi. Food is extra.</span><span class="l-vi">Trường có bốn khu ký túc xá trong hoặc sát khuôn viên. Tất cả phòng đều có sẵn nội thất, tự nấu ăn (bếp chung), và tiền thuê đã gồm điện, nước, gas và Wi-Fi. Tiền ăn tính riêng.</span></p>
@@ -1755,7 +1772,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
     </table></div>
     <p class="small muted"><span class="l-en">Weekly rents are the university's 2027 rates for new residents; 2028 rates come out in 2027. Cheapest option: a Queen Mary Building single at about A$18,800 for 48 weeks, well under the ~A$30,000 living estimate used elsewhere on this page, but food and transport are on top.</span><span class="l-vi">Giá thuê theo tuần là mức năm 2027 cho sinh viên mới; giá năm 2028 sẽ công bố vào năm 2027. Rẻ nhất: phòng đơn Queen Mary Building khoảng A$18.800 cho 48 tuần, thấp hơn nhiều so với mức sinh hoạt ~A$30.000 dùng trong trang này, nhưng chưa gồm tiền ăn và đi lại.</span></p>
   </div>
-  <div class="block">
+  <div class="block" data-v="home">
     <p class="label"><span class="l-en">How to sign up</span><span class="l-vi">Cách đăng ký</span></p>
     <ol class="steps">
       <li><strong><span class="l-en">Accept your University of Sydney offer first.</span><span class="l-vi">Chấp nhận thư mời của Đại học Sydney trước.</span></strong> <span class="l-en">Then apply for a room straight away.</span><span class="l-vi">Sau đó đăng ký phòng ngay.</span></li>
@@ -1764,33 +1781,16 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <li><strong><span class="l-en">If you will be under 18 on arrival, ask first.</span><span class="l-vi">Nếu chưa đủ 18 tuổi khi đến, hãy hỏi trước.</span></strong> <span class="l-en">Your student visa needs an approved welfare arrangement, so ask the accommodation team whether a residence can work with it.</span><span class="l-vi">Visa du học yêu cầu có người bảo trợ được duyệt, nên hãy hỏi bộ phận chỗ ở xem ký túc xá có đáp ứng được không.</span></li>
     </ol>
   </div>
-  <div class="block">
+  <div class="block" data-v="home">
     <p class="label"><span class="l-en">The other option: residential colleges</span><span class="l-vi">Lựa chọn khác: các college nội trú</span></p>
     <div class="award">
       <div><span class="name"><span class="l-en">Fully catered colleges on campus</span><span class="l-vi">College nội trú có bao ăn trong khuôn viên</span></span><span class="val"><span class="l-en">About A$28,000–41,000 a year</span><span class="l-vi">Khoảng A$28.000–41.000/năm</span></span><span class="muted"><span class="l-en">St Andrew's, St John's, St Paul's, Wesley, Women's (women only), Sancta Sophia (women only) and Mandelbaum House. Most include all meals over a 40-week year and have their own application, fee and interview. For 2027 entry, St Andrew's closed on 5 October 2026 and St John's on 1 November 2026, so apply to colleges in the year before you start. Example: Wesley A$33,760 for 40 weeks (2026). Figures are approximate; check each college.</span><span class="l-vi">St Andrew's, St John's, St Paul's, Wesley, Women's (chỉ nữ), Sancta Sophia (chỉ nữ) và Mandelbaum House. Phần lớn bao ăn cả ngày trong năm học 40 tuần, và có đơn, phí, phỏng vấn riêng. Với khóa 2027, St Andrew's đóng đơn ngày 5/10/2026 và St John's ngày 1/11/2026, nên cần nộp vào năm trước khi nhập học. Ví dụ: Wesley A$33.760 cho 40 tuần (2026). Số liệu mang tính ước tính; cần kiểm tra từng college.</span> <a href="https://www.sydney.edu.au/study/accommodation/camperdown-darlington/residential-colleges.html"><span class="l-en">List of colleges</span><span class="l-vi">Danh sách college</span></a></span></div>
     </div>
     <p class="small muted"><span class="l-en">Sources:</span><span class="l-vi">Nguồn:</span> <a href="https://www.sydney.edu.au/study/accommodation/camperdown-darlington/university-residences.html"><span class="l-en">University residences</span><span class="l-vi">Ký túc xá của trường</span></a> · <a href="https://usyddatatransfer.s3.amazonaws.com/starrezstatic/2027_Term_sessions_and_Rates_Main_Campus.pdf"><span class="l-en">2027 rates and terms (PDF)</span><span class="l-vi">Giá và kỳ hạn 2027 (PDF)</span></a></p>
   </div>
-  <p class="label"><span class="l-en">Full Sydney brief</span><span class="l-vi">Phân tích đầy đủ về Sydney</span></p>
   <div class="syd l-en" lang="en">
-<header class="masthead">
-  <p class="eyebrow">Sydney deep dive · researched Sep 2026 · USyd rules for 2027 entry</p>
-  <h2 class="syd-h">Commerce or Economics at the University of Sydney</h2>
-  <p class="lede">How the two degrees fit together, what to major in, what graduates go on to do, and where I stand. The Foundation question is settled: <strong>finish the IB at ISHCMC</strong>. The reasoning is folded away at the bottom.</p>
-</header>
-
-<nav class="toc" aria-label="Sections">
-  <a href="#econ-business">Is econ part of business?</a>
-  <a href="#majors">Majors &amp; minors</a>
-  <a href="#examples">Real examples</a>
-  <a href="#gap">Gap check</a>
-  <a href="#shortlist">Shortlist</a>
-  <a href="#next">Next steps</a>
-  <a href="#foundation">Foundation decision</a>
-</nav>
-
 <!-- ECON VS BUSINESS -->
-<section id="econ-business">
+<section id="econ-business" data-v="deg">
   <div class="sec-head">
     <p class="eyebrow">01 · The big confusion</p>
     <h2>Is economics part of business?</h2>
@@ -1881,7 +1881,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 </section>
 
 <!-- MAJORS -->
-<section id="majors">
+<section id="majors" data-v="deg">
   <div class="sec-head">
     <p class="eyebrow">02 · Majors and minors, decoded</p>
     <h2>A USyd degree is 24 units. You choose how to fill them.</h2>
@@ -1944,7 +1944,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 </section>
 
 <!-- EXAMPLES -->
-<section id="examples">
+<section id="examples" data-v="out">
   <div class="sec-head">
     <p class="eyebrow">03 · Real people, real routes</p>
     <h2>What these degrees and pathways have led to</h2>
@@ -1984,7 +1984,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 </section>
 
 <!-- GAP CHECK -->
-<section id="gap">
+<section id="gap" data-v="fit">
   <div class="sec-head">
     <p class="eyebrow">04 · Gap check</p>
     <h2>What you meet, what's at risk</h2>
@@ -2004,7 +2004,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 </section>
 
 <!-- SHORTLIST -->
-<section id="shortlist">
+<section id="shortlist" data-v="fit">
   <div class="sec-head">
     <p class="eyebrow">05 · Shortlist</p>
     <h2>Your USyd options in one table</h2>
@@ -2042,7 +2042,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 </section>
 
 <!-- NEXT -->
-<section id="next">
+<section id="next" data-v="sum">
   <div class="next">
     <p class="eyebrow">Next steps</p>
     <ol>
@@ -2053,7 +2053,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
   </div>
 </section>
 
-<details class="decided" id="foundation">
+<details class="decided" id="foundation" data-v="fdn">
 <summary><span class="pill good">Decided</span> Finish the IB, not the Foundation year <span class="muted small">Show the reasoning</span></summary>
 <div class="decided-body">
 <div class="hero">
@@ -2259,7 +2259,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 </div>
 </details>
 
-<section>
+<section data-v="src">
   <div class="sec-head">
     <p class="eyebrow">Sources · all checked 18 Sep 2026</p>
   </div>
@@ -2282,31 +2282,15 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
   </ol>
 </section>
 
-<div class="syd-foot">
+<div class="syd-foot" data-v="src">
   <p>Photos via Wikimedia Commons: Saigon at Blue Hour, Radek Kucharski (CC BY 2.0) · Sydney Opera House and Harbour Bridge, Miro Kesich (CC BY-SA 3.0) · Main Quadrangle, University of Sydney, Jason Tong (CC BY 2.0) · Abercrombie architecture, Ananya Duvvuri (CC BY-SA 4.0). Images resized.</p>
   <p>Requirements change every year. Everything here is for 2027 entry unless stated; re-check the 2028 guide when it's published.</p>
 </div>
 
   </div>
   <div class="syd l-vi" lang="vi">
-<header class="masthead">
-  <p class="eyebrow">Phân tích sâu về Sydney · nghiên cứu tháng 9/2026 · quy định USyd cho khóa 2027</p>
-  <h2 class="syd-h">Thương mại hay Kinh tế học tại Đại học Sydney</h2>
-  <p class="lede">Hai bằng liên quan thế nào, nên chọn chuyên ngành gì, sinh viên ra trường làm gì, và mình đang ở đâu. Câu hỏi về Foundation đã có lời đáp: <strong>học hết IB tại ISHCMC</strong>. Phần lý giải được thu gọn ở cuối trang.</p>
-</header>
-
-<nav class="toc" aria-label="Các phần">
-  <a href="#econ-business-vi">Kinh tế có thuộc kinh doanh?</a>
-  <a href="#majors-vi">Chuyên ngành</a>
-  <a href="#examples-vi">Ví dụ thực tế</a>
-  <a href="#gap-vi">Đối chiếu yêu cầu</a>
-  <a href="#shortlist-vi">Danh sách trường</a>
-  <a href="#next-vi">Bước tiếp theo</a>
-  <a href="#foundation-vi">Quyết định về Foundation</a>
-</nav>
-
 <!-- KINH TẾ VS KINH DOANH -->
-<section id="econ-business-vi">
+<section id="econ-business-vi" data-v="deg">
   <div class="sec-head">
     <p class="eyebrow">01 · Điều hay nhầm lẫn</p>
     <h2>Kinh tế học có phải là một phần của kinh doanh không?</h2>
@@ -2397,7 +2381,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 </section>
 
 <!-- CHUYÊN NGÀNH -->
-<section id="majors-vi">
+<section id="majors-vi" data-v="deg">
   <div class="sec-head">
     <p class="eyebrow">02 · Chuyên ngành chính và phụ</p>
     <h2>Một bằng cử nhân ở USyd gồm khoảng 24 môn. Sinh viên tự chọn cách sắp xếp.</h2>
@@ -2460,7 +2444,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 </section>
 
 <!-- VÍ DỤ -->
-<section id="examples-vi">
+<section id="examples-vi" data-v="out">
   <div class="sec-head">
     <p class="eyebrow">03 · Người thật, lộ trình thật</p>
     <h2>Những bằng cấp và lộ trình này đã dẫn đến đâu</h2>
@@ -2500,7 +2484,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 </section>
 
 <!-- ĐỐI CHIẾU -->
-<section id="gap-vi">
+<section id="gap-vi" data-v="fit">
   <div class="sec-head">
     <p class="eyebrow">04 · Đối chiếu yêu cầu</p>
     <h2>Đã đạt gì, còn rủi ro gì</h2>
@@ -2520,7 +2504,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 </section>
 
 <!-- DANH SÁCH -->
-<section id="shortlist-vi">
+<section id="shortlist-vi" data-v="fit">
   <div class="sec-head">
     <p class="eyebrow">05 · Danh sách lựa chọn</p>
     <h2>Các cách vào USyd trong một bảng</h2>
@@ -2558,7 +2542,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 </section>
 
 <!-- BƯỚC TIẾP THEO -->
-<section id="next-vi">
+<section id="next-vi" data-v="sum">
   <div class="next">
     <p class="eyebrow">Bước tiếp theo</p>
     <ol>
@@ -2569,7 +2553,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
   </div>
 </section>
 
-<details class="decided" id="foundation-vi">
+<details class="decided" id="foundation-vi" data-v="fdn">
 <summary><span class="pill good">Đã quyết định</span> Học hết IB, không học Foundation <span class="muted small">Xem lý giải</span></summary>
 <div class="decided-body">
 <div class="hero">
@@ -2781,7 +2765,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 </div>
 </details>
 
-<section>
+<section data-v="src">
   <div class="sec-head">
     <p class="eyebrow">Nguồn · kiểm tra ngày 18/9/2026</p>
   </div>
@@ -2804,7 +2788,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
   </ol>
 </section>
 
-<div class="syd-foot">
+<div class="syd-foot" data-v="src">
   <p>Ảnh từ Wikimedia Commons: Saigon at Blue Hour, Radek Kucharski (CC BY 2.0) · Sydney Opera House and Harbour Bridge, Miro Kesich (CC BY-SA 3.0) · Main Quadrangle, University of Sydney, Jason Tong (CC BY 2.0) · Abercrombie architecture, Ananya Duvvuri (CC BY-SA 4.0). Ảnh đã được thu nhỏ.</p>
   <p>Yêu cầu tuyển sinh thay đổi hằng năm. Mọi thông tin ở đây áp dụng cho kỳ tuyển sinh 2027 trừ khi ghi khác; cần kiểm tra lại cẩm nang 2028 khi được công bố.</p>
 </div>
@@ -3439,6 +3423,36 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
     var a=e.target.closest('a[href^="#foundation"]'); if(!a) return;
     var d=document.getElementById(a.getAttribute('href').slice(1)); if(d) d.open=true;
   });
+
+  /* ---------- University of Sydney: sub-pages ---------- */
+  var USV=[['sum','At a glance','Tổng quan'],['deg','Degrees & majors','Ngành học'],['fit','My chances','Cơ hội của mình'],['home','Housing','Chỗ ở'],['out','Where it leads','Đầu ra'],['fdn','Foundation?','Dự bị?'],['src','Sources','Nguồn']];
+  var unav=document.getElementById('usyd-nav'), ucur='sum';
+  function showUsyd(v,scroll){
+    ucur=v;
+    [].forEach.call(document.querySelectorAll('#usyd [data-v]'),function(n){ n.classList.toggle('v-off',n.getAttribute('data-v')!==v); });
+    if(unav) [].forEach.call(unav.querySelectorAll('[data-sv]'),function(b){ b.setAttribute('aria-pressed',b.getAttribute('data-sv')===v?'true':'false'); });
+    if(v==='fdn') [].forEach.call(document.querySelectorAll('#usyd details.decided'),function(d){ d.open=true; });
+    drawUsydNext();
+    var on=unav&&unav.querySelector('[aria-pressed="true"]'); if(on&&unav.scrollWidth>unav.clientWidth) unav.scrollLeft=on.offsetLeft-unav.clientWidth/2+on.offsetWidth/2;
+    if(scroll&&unav){ var head=document.querySelector('#usyd .uni-head'), top=head.getBoundingClientRect().bottom+window.scrollY; if(window.scrollY>top) window.scrollTo(0,top); }
+  }
+  function drawUsydNext(){
+    var body=document.querySelector('#usyd .panel-body'); if(!body) return;
+    var old=document.getElementById('usyd-next'); if(old) old.remove();
+    var i=USV.map(function(x){ return x[0]; }).indexOf(ucur); if(i<0||i===USV.length-1) return;
+    var nx=USV[i+1];
+    body.appendChild(el('button',{type:'button','class':'linkish usyd-next',id:'usyd-next',text:t('Next: '+nx[1]+' →','Tiếp theo: '+nx[2]+' →'),on:{click:function(){ showUsyd(nx[0],true); }}}));
+  }
+  if(unav){
+    unav.addEventListener('click',function(e){ var b=e.target.closest('[data-sv]'); if(b) showUsyd(b.getAttribute('data-sv'),true); });
+    document.addEventListener('click',function(e){
+      var a=e.target.closest('#usyd a[href^="#"]'); if(!a||a.getAttribute('href').length<2) return;
+      var tgt=document.getElementById(a.getAttribute('href').slice(1)), box=tgt&&tgt.closest('[data-v]');
+      if(box&&box.closest('#usyd')) showUsyd(box.getAttribute('data-v'),false);
+    },true);
+    showUsyd('sum',false);
+    redraw.push(drawUsydNext);
+  }
 
   redraw.push(drawCountdown,drawSlider,drawChecklist,drawCost,drawBudget);
 })();
