@@ -626,14 +626,15 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 .aid-warn b{flex:none;width:24px;height:24px;border-radius:50%;background:var(--bad);color:#15171B;display:grid;place-items:center}
 .aid-text{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 @media print{ .aid-flow{display:none} .aid-text{position:static;width:auto;height:auto;overflow:visible;clip:auto;margin:0;padding-left:1.4em;display:grid;gap:6px} }
-/* University of Sydney sub-pages */
-.usyd-nav{position:sticky;top:0;z-index:6;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;background:var(--paper);border-bottom:1px solid var(--rule);margin-bottom:-20px}
-.usyd-nav .ec-chip{font-size:.9rem;padding:6px 13px;min-height:34px}
-#usyd [data-v]{scroll-margin-top:110px}
-.usyd-next{justify-self:start}
-@media (max-width:720px){ .usyd-nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding-inline:16px;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent)} .usyd-nav::-webkit-scrollbar{display:none} .usyd-nav .ec-chip{flex:none} #usyd [data-v]{scroll-margin-top:70px} }
-@media screen{ #usyd .v-off{display:none!important} }
-@media print{ .usyd-nav,.usyd-next{display:none!important} }
+/* sub-pages inside long tabs */
+.subnav{position:sticky;top:0;z-index:6;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;background:var(--paper);border-bottom:1px solid var(--rule)}
+.subnav .ec-chip{font-size:.9rem;padding:6px 13px;min-height:34px}
+.tabpanel [data-v]{scroll-margin-top:110px}
+.sub-next{justify-self:start;padding:8px 0!important;min-height:36px}
+@media (max-width:720px){ .subnav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding-inline:16px;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent)} .subnav::-webkit-scrollbar{display:none} .subnav .ec-chip{flex:none} .tabpanel [data-v]{scroll-margin-top:70px} }
+@media (max-width:900px){ #overview .overview>.panel-body{display:contents} #overview .subnav{order:-1} #overview:not([data-sub="aim"]) .profile{display:none} }
+@media screen{ .sched .phase{display:none} }
+@media print{ .subnav,.sub-next{display:none!important} }
 </style>
 
 <div class="strip">
@@ -712,20 +713,21 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
   </aside>
 
   <div class="panel-body">
-    <div class="block">
+  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="aim" aria-pressed="true"><span class="l-en">My aim</span><span class="l-vi">Mục tiêu</span></button><button type="button" class="ec-chip" data-sv="scores" aria-pressed="false"><span class="l-en">Scores</span><span class="l-vi">Điểm số</span></button><button type="button" class="ec-chip" data-sv="list" aria-pressed="false"><span class="l-en">Shortlist</span><span class="l-vi">Danh sách trường</span></button><button type="button" class="ec-chip" data-sv="prio" aria-pressed="false"><span class="l-en">Priorities</span><span class="l-vi">Ưu tiên</span></button></nav>
+    <div data-v="aim" class="block">
       <p class="label"><span class="l-en">My aim</span><span class="l-vi">Mục tiêu của mình</span></p>
       <div class="aim">
         <p><span class="l-en">Major in business, with economics alongside, at a university that lets me combine the two. Start in the second half of 2028.</span><span class="l-vi">Học chuyên ngành kinh doanh, kèm kinh tế học, ở một trường cho phép kết hợp cả hai. Nhập học vào nửa cuối năm 2028.</span></p>
       </div>
       <div class="facts">
-        <div><b>38</b><span><span class="l-en">The number that unlocks the most. See the chart below.</span><span class="l-vi">Con số mở ra nhiều lựa chọn nhất. Xem biểu đồ bên dưới.</span></span></div>
+        <div><b>38</b><span><span class="l-en">The number that unlocks the most. See Scores.</span><span class="l-vi">Con số mở ra nhiều lựa chọn nhất. Xem mục Điểm số.</span></span></div>
         <div><b>IELTS 7.0</b><span><span class="l-en">No band under 6.0. Covers every school on this list.</span><span class="l-vi">Không kỹ năng nào dưới 6.0. Đủ cho mọi trường trong danh sách.</span></span></div>
         <div id="cd-fact"><b class="num"><span class="l-en">1 Nov 2027</span><span class="l-vi">1/11/2027</span></b><span><span class="l-en">First deadline: NYU Shanghai Early Decision I.</span><span class="l-vi">Hạn đầu tiên: NYU Thượng Hải Early Decision I.</span></span></div>
       </div>
       <div class="cd"><div class="cd-top"><p class="label"><span class="l-en">Coming up</span><span class="l-vi">Sắp tới</span></p><button type="button" class="linkish" data-ics><span class="l-en">Add all dates to my calendar (.ics)</span><span class="l-vi">Thêm mọi ngày vào lịch (.ics)</span></button></div><ol class="cd-list" id="cd-list"></ol></div>
     </div>
 
-    <div class="block">
+    <div data-v="scores" class="block">
       <div class="block-head">
         <p class="label"><span class="l-en">Score against entry points</span><span class="l-vi">Điểm so với yêu cầu đầu vào</span></p>
         <h2><span class="l-en">Where 35 to 37 gets me in Australia</span><span class="l-vi">Với 35 đến 37 điểm, mình vào được đâu ở Úc</span></h2>
@@ -835,7 +837,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       </div>
     </div>
 
-    <div class="block">
+    <div data-v="list" class="block">
       <div class="block-head">
         <p class="label"><span class="l-en">Shortlist</span><span class="l-vi">Danh sách trường</span></p>
         <div class="results">
@@ -916,7 +918,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       </div>
     </div>
 
-    <div class="block">
+    <div data-v="prio" class="block">
       <div class="block-head">
         <p class="label"><span class="l-en">Priorities</span><span class="l-vi">Ưu tiên</span></p>
         <h2><span class="l-en">What moves the plan most, in order</span><span class="l-vi">Điều quan trọng nhất, theo thứ tự</span></h2>
@@ -935,7 +937,8 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 <!-- ============ COMPARE ============ -->
 <div class="tabpanel" role="tabpanel" id="table" aria-labelledby="tab-table" hidden>
 <div class="panel-body">
-  <div class="block">
+  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="side" aria-pressed="true"><span class="l-en">Side by side</span><span class="l-vi">So sánh</span></button><button type="button" class="ec-chip" data-sv="dm" aria-pressed="false"><span class="l-en">Decision matrix</span><span class="l-vi">Ma trận quyết định</span></button></nav>
+  <div data-v="side" class="block">
     <div class="block-head">
       <p class="label"><span class="l-en">Side by side</span><span class="l-vi">So sánh</span></p>
       <h2><span class="l-en">The six options on one table</span><span class="l-vi">Sáu lựa chọn trong một bảng</span></h2>
@@ -978,7 +981,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
     </div>
     <p class="small muted"><span class="l-en">Tuition years: UChicago, NYU Shanghai, UC Santa Cruz 2026–27; UNSW 2026; USyd and UTS 2027. Australian all-in uses ~A$30,000 a year for living. US deadlines are the 2026–27 pattern.</span><span class="l-vi">Năm học phí: UChicago, NYU Thượng Hải, UC Santa Cruz 2026–27; UNSW 2026; USyd và UTS 2027. Tổng chi phí ở Úc tính thêm ~A$30.000/năm sinh hoạt. Hạn nộp ở Mỹ theo lịch năm 2026–27.</span></p>
     </div>
-  <div class="block">
+  <div data-v="dm" class="block">
     <div class="block-head">
       <p class="label"><span class="l-en">Decision matrix</span><span class="l-vi">Ma trận quyết định</span></p>
       <h2><span class="l-en">Which one comes out on top for me</span><span class="l-vi">Trường nào phù hợp với mình nhất</span></h2>
@@ -999,7 +1002,8 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 <!-- ============ MAJORS & MINORS ============ -->
 <div class="tabpanel" role="tabpanel" id="majmin" aria-labelledby="tab-majmin" hidden>
 <div class="panel-body">
-  <div class="block">
+  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="basics" aria-pressed="true"><span class="l-en">The basics</span><span class="l-vi">Kiến thức cơ bản</span></button><button type="button" class="ec-chip" data-sv="plan" aria-pressed="false"><span class="l-en">My plan</span><span class="l-vi">Kế hoạch của mình</span></button><button type="button" class="ec-chip" data-sv="side" aria-pressed="false"><span class="l-en">Side by side</span><span class="l-vi">So sánh</span></button><button type="button" class="ec-chip" data-sv="decide" aria-pressed="false"><span class="l-en">Decisions</span><span class="l-vi">Quyết định</span></button></nav>
+  <div data-v="basics" class="block">
     <div class="block-head">
       <p class="label"><span class="l-en">Major and minor planning</span><span class="l-vi">Kế hoạch chuyên ngành chính và phụ</span></p>
       <h2><span class="l-en">What I'd actually study at each university</span><span class="l-vi">Mình sẽ thực sự học gì ở mỗi trường</span></h2>
@@ -1017,7 +1021,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
     </div>
   </div>
 
-  <div class="block">
+  <div data-v="plan" class="block">
     <div class="block-head">
       <p class="label"><span class="l-en">My plan at each university</span><span class="l-vi">Kế hoạch ở từng trường</span></p>
       <h2><span class="l-en">Business first, economics second</span><span class="l-vi">Kinh doanh trước, kinh tế sau</span></h2>
@@ -1088,7 +1092,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
     </div>
   </div>
 
-  <div class="block">
+  <div data-v="side" class="block">
     <div class="block-head">
       <p class="label"><span class="l-en">Side by side</span><span class="l-vi">So sánh</span></p>
       <h2><span class="l-en">Where business and economics live</span><span class="l-vi">Kinh doanh và kinh tế nằm ở đâu</span></h2>
@@ -1108,7 +1112,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
     </div>
   </div>
 
-  <div class="block">
+  <div data-v="decide" class="block">
     <div class="block-head">
       <p class="label"><span class="l-en">Decisions to make</span><span class="l-vi">Những quyết định cần đưa ra</span></p>
       <h2><span class="l-en">What to decide, and when</span><span class="l-vi">Quyết định gì, và khi nào</span></h2>
@@ -1140,27 +1144,28 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <p class="muted"><span class="l-en">Every date that matters across the six universities. US dates follow the 2026–27 pattern; re-check them in August 2027.</span><span class="l-vi">Mọi mốc quan trọng của cả sáu trường. Ngày ở Mỹ theo lịch năm 2026–27; cần kiểm tra lại vào tháng 8/2027.</span></p>
     </div>
     <div class="bk-bar"><span class="bk-status grow"><span class="l-en">Every deadline, with a reminder one week before. Works with Google Calendar, Apple Calendar and Outlook.</span><span class="l-vi">Mọi hạn nộp, kèm nhắc trước một tuần. Dùng được với Google Calendar, Apple Calendar và Outlook.</span></span><button type="button" class="btn" data-ics><span class="l-en">Add to calendar</span><span class="l-vi">Thêm vào lịch</span></button></div>
+    <nav class="subnav" aria-label="Phases"><button type="button" class="ec-chip" data-sv="dp1" aria-pressed="true"><span class="l-en">DP1 · now to Aug 2027</span><span class="l-vi">DP1 · nay đến 8/2027</span></button><button type="button" class="ec-chip" data-sv="apps" aria-pressed="false"><span class="l-en">Applications · DP2</span><span class="l-vi">Nộp hồ sơ · DP2</span></button><button type="button" class="ec-chip" data-sv="start" aria-pressed="false"><span class="l-en">Results and start · 2028</span><span class="l-vi">Kết quả và nhập học · 2028</span></button></nav>
     <div class="sched">
-      <div class="phase"><span class="l-en">DP1 · 2026 to 2027</span><span class="l-vi">DP1 · 2026 đến 2027</span></div>
-      <div class="row now"><span class="when"><span class="l-en">Sep–Dec 2026</span><span class="l-vi">9–12/2026</span></span><div class="what"><strong><span class="l-en">You are here.</span><span class="l-vi">Hiện tại.</span></strong><span class="muted"><span class="l-en">Build the list, keep records of Chạm and Action for Earth, start IA planning.</span><span class="l-vi">Lập danh sách trường, lưu lại hoạt động Chạm và Action for Earth, bắt đầu lên kế hoạch IA.</span></span></div><div class="who"><span class="pill jac"><span class="l-en">All</span><span class="l-vi">Tất cả</span></span></div></div>
-      <div class="row"><span class="when"><span class="l-en">Jan–Jun 2027</span><span class="l-vi">1–6/2027</span></span><div class="what"><strong><span class="l-en">End-of-DP1 results shape predicted grades.</span><span class="l-vi">Kết quả cuối DP1 quyết định điểm dự đoán.</span></strong><span class="muted"><span class="l-en">Tell the IB coordinator the target is 38. Draft the activity list.</span><span class="l-vi">Báo điều phối viên IB mục tiêu 38. Soạn danh sách hoạt động.</span></span></div><div class="who"><span class="pill jac"><span class="l-en">All</span><span class="l-vi">Tất cả</span></span></div></div>
-      <div class="row"><span class="when"><span class="l-en">Jun–Aug 2027</span><span class="l-vi">6–8/2027</span></span><div class="what"><strong><span class="l-en">Sit IELTS Academic.</span><span class="l-vi">Thi IELTS Academic.</span></strong><span class="muted"><span class="l-en">Target 7.0, no band under 6.0. Draft the personal essay, UC answers, and the UChicago and NYU Shanghai supplements.</span><span class="l-vi">Mục tiêu 7.0, không kỹ năng nào dưới 6.0. Viết nháp bài luận chính, câu trả lời UC, bài luận phụ UChicago và NYU Thượng Hải.</span></span></div><div class="who"><span class="pill jac"><span class="l-en">All</span><span class="l-vi">Tất cả</span></span></div></div>
-      <div class="row"><span class="when"><span class="l-en">Aug 2027</span><span class="l-vi">8/2027</span></span><div class="what"><strong><span class="l-en">Common App and UC Application open.</span><span class="l-vi">Common App và hồ sơ UC mở.</span></strong><span class="muted"><span class="l-en">Decide on Early Decision with the family budget.</span><span class="l-vi">Quyết định Early Decision cùng ngân sách gia đình.</span></span></div><div class="who"><span class="pill jac"><span class="l-en">US</span><span class="l-vi">Mỹ</span></span><span class="pill jac">NYUSH</span></div></div>
-      <div class="phase"><span class="l-en">Applications · DP2</span><span class="l-vi">Nộp hồ sơ · DP2</span></div>
-      <div class="row"><span class="when"><span class="l-en">1 Oct 2027</span><span class="l-vi">1/10/2027</span></span><div class="what"><strong><span class="l-en">UC filing opens.</span><span class="l-vi">Mở nộp hồ sơ UC.</span></strong><span class="muted"><span class="l-en">Submit any time until 30 November.</span><span class="l-vi">Nộp bất kỳ lúc nào trước 30/11.</span></span></div><div class="who"><span class="pill jac">UCSC</span></div></div>
-      <div class="row"><span class="when"><span class="l-en">Oct–Nov 2027</span><span class="l-vi">10–11/2027</span></span><div class="what"><strong><span class="l-en">Apply to UNSW and USyd with predicted grades.</span><span class="l-vi">Nộp UNSW và USyd bằng điểm dự đoán.</span></strong><span class="muted"><span class="l-en">Earlier gives earlier offers. UNSW Scientia needs an offer by its scholarship date, so apply early.</span><span class="l-vi">Nộp sớm thì có thư mời sớm. Học bổng Scientia của UNSW cần có thư mời trước hạn học bổng, nên phải nộp sớm.</span></span></div><div class="who"><span class="pill jac">UNSW</span><span class="pill jac">USyd</span></div></div>
-      <div class="row"><span class="when"><span class="l-en">1 Nov 2027</span><span class="l-vi">1/11/2027</span></span><div class="what"><strong><span class="l-en">NYU Shanghai Early Decision I (binding).</span><span class="l-vi">NYU Thượng Hải Early Decision I (ràng buộc).</span></strong></div><div class="who"><span class="pill jac">NYUSH</span></div></div>
-      <div class="row"><span class="when"><span class="l-en">~2 Nov 2027</span><span class="l-vi">~2/11/2027</span></span><div class="what"><strong><span class="l-en">UChicago Early Action (non-binding) or Early Decision I (binding).</span><span class="l-vi">UChicago Early Action (không ràng buộc) hoặc Early Decision I (ràng buộc).</span></strong><span class="muted"><span class="l-en">Aid forms are due shortly after. Merit scholarships are considered automatically.</span><span class="l-vi">Hồ sơ tài chính nộp ngay sau đó. Học bổng năng lực được xét tự động.</span></span></div><div class="who"><span class="pill jac">UChicago</span></div></div>
-      <div class="row"><span class="when"><span class="l-en">30 Nov 2027</span><span class="l-vi">30/11/2027</span></span><div class="what"><strong><span class="l-en">UC Application deadline.</span><span class="l-vi">Hạn chót hồ sơ UC.</span></strong><span class="muted"><span class="l-en">Hard deadline, 11:59 pm Pacific time.</span><span class="l-vi">Hạn cứng, 23:59 giờ Thái Bình Dương.</span></span></div><div class="who"><span class="pill jac">UCSC</span></div></div>
-      <div class="row"><span class="when"><span class="l-en">Mid-Dec 2027</span><span class="l-vi">Giữa 12/2027</span></span><div class="what"><strong><span class="l-en">Early decisions arrive.</span><span class="l-vi">Có kết quả vòng sớm.</span></strong><span class="muted"><span class="l-en">If an ED school admits you with enough aid, withdraw the others.</span><span class="l-vi">Nếu trường ED nhận với đủ hỗ trợ tài chính, phải rút các hồ sơ khác.</span></span></div><div class="who"><span class="pill jac">UChicago</span><span class="pill jac">NYUSH</span></div></div>
-      <div class="row"><span class="when"><span class="l-en">1–5 Jan 2028</span><span class="l-vi">1–5/1/2028</span></span><div class="what"><strong><span class="l-en">NYU Shanghai ED II (1 Jan) and RD (5 Jan). UChicago ED II and RD (~4 Jan).</span><span class="l-vi">NYU Thượng Hải ED II (1/1) và RD (5/1). UChicago ED II và RD (~4/1).</span></strong></div><div class="who"><span class="pill jac">UChicago</span><span class="pill jac">NYUSH</span></div></div>
-      <div class="row"><span class="when"><span class="l-en">Mar–Apr 2028</span><span class="l-vi">3–4/2028</span></span><div class="what"><strong><span class="l-en">Regular and UC decisions.</span><span class="l-vi">Kết quả vòng thường và UC.</span></strong><span class="muted"><span class="l-en">UC Santa Cruz Dean's Awards come with the offer.</span><span class="l-vi">Dean's Award của UC Santa Cruz đi kèm thư mời.</span></span></div><div class="who"><span class="pill jac"><span class="l-en">US</span><span class="l-vi">Mỹ</span></span><span class="pill jac">NYUSH</span></div></div>
-      <div class="row"><span class="when"><span class="l-en">1 May 2028</span><span class="l-vi">1/5/2028</span></span><div class="what"><strong><span class="l-en">Usual reply date for US universities.</span><span class="l-vi">Hạn xác nhận thông thường ở Mỹ.</span></strong><span class="muted"><span class="l-en">Pay the deposit at one school only.</span><span class="l-vi">Chỉ đặt cọc ở một trường.</span></span></div><div class="who"><span class="pill jac"><span class="l-en">US</span><span class="l-vi">Mỹ</span></span></div></div>
-      <div class="row"><span class="when"><span class="l-en">May–Jul 2028</span><span class="l-vi">5–7/2028</span></span><div class="what"><strong><span class="l-en">Student visa.</span><span class="l-vi">Xin thị thực du học.</span></strong><span class="muted"><span class="l-en">Australia: subclass 500 online after the CoE. US: F-1 interview in Ho Chi Minh City after the I-20. China: X1 at the visa centre after the JW202. See the Visas tab.</span><span class="l-vi">Úc: subclass 500 trực tuyến sau khi có CoE. Mỹ: phỏng vấn F-1 tại TP.HCM sau khi có I-20. Trung Quốc: X1 tại trung tâm thị thực sau khi có JW202. Xem thẻ Visa.</span></span></div><div class="who"><span class="pill jac"><span class="l-en">All</span><span class="l-vi">Tất cả</span></span></div></div>
-      <div class="phase"><span class="l-en">Results and start · 2028</span><span class="l-vi">Kết quả và nhập học · 2028</span></div>
-      <div class="row"><span class="when"><span class="l-en">May 2028</span><span class="l-vi">5/2028</span></span><div class="what"><strong><span class="l-en">IB final exams.</span><span class="l-vi">Thi IB chính thức.</span></strong></div><div class="who"><span class="pill jac"><span class="l-en">All</span><span class="l-vi">Tất cả</span></span></div></div>
-      <div class="row"><span class="when"><span class="l-en">~5 Jul 2028</span><span class="l-vi">~5/7/2028</span></span><div class="what"><strong><span class="l-en">IB results.</span><span class="l-vi">Có điểm IB.</span></strong><span class="muted"><span class="l-en">Australian offers become final. At 35 to 37, HAPP is the bridge into USyd Commerce.</span><span class="l-vi">Thư mời ở Úc được xác nhận. Nếu 35 đến 37, HAPP là cầu nối vào Thương mại USyd.</span></span></div><div class="who"><span class="pill jac">UNSW</span><span class="pill jac">USyd</span></div></div>
-      <div class="row"><span class="when"><span class="l-en">Aug–Sep 2028</span><span class="l-vi">8–9/2028</span></span><div class="what"><strong><span class="l-en">First semester.</span><span class="l-vi">Học kỳ đầu tiên.</span></strong><span class="muted"><span class="l-en">NYU Shanghai late August, USyd August, UNSW Term 3 in September, UChicago and UC Santa Cruz late September.</span><span class="l-vi">NYU Thượng Hải cuối tháng 8, USyd tháng 8, UNSW kỳ 3 tháng 9, UChicago và UC Santa Cruz cuối tháng 9.</span></span></div><div class="who"><span class="pill jac"><span class="l-en">All</span><span class="l-vi">Tất cả</span></span></div></div>
+      <div data-v="dp1" class="phase"><span class="l-en">DP1 · 2026 to 2027</span><span class="l-vi">DP1 · 2026 đến 2027</span></div>
+      <div data-v="dp1" class="row now"><span class="when"><span class="l-en">Sep–Dec 2026</span><span class="l-vi">9–12/2026</span></span><div class="what"><strong><span class="l-en">You are here.</span><span class="l-vi">Hiện tại.</span></strong><span class="muted"><span class="l-en">Build the list, keep records of Chạm and Action for Earth, start IA planning.</span><span class="l-vi">Lập danh sách trường, lưu lại hoạt động Chạm và Action for Earth, bắt đầu lên kế hoạch IA.</span></span></div><div class="who"><span class="pill jac"><span class="l-en">All</span><span class="l-vi">Tất cả</span></span></div></div>
+      <div data-v="dp1" class="row"><span class="when"><span class="l-en">Jan–Jun 2027</span><span class="l-vi">1–6/2027</span></span><div class="what"><strong><span class="l-en">End-of-DP1 results shape predicted grades.</span><span class="l-vi">Kết quả cuối DP1 quyết định điểm dự đoán.</span></strong><span class="muted"><span class="l-en">Tell the IB coordinator the target is 38. Draft the activity list.</span><span class="l-vi">Báo điều phối viên IB mục tiêu 38. Soạn danh sách hoạt động.</span></span></div><div class="who"><span class="pill jac"><span class="l-en">All</span><span class="l-vi">Tất cả</span></span></div></div>
+      <div data-v="dp1" class="row"><span class="when"><span class="l-en">Jun–Aug 2027</span><span class="l-vi">6–8/2027</span></span><div class="what"><strong><span class="l-en">Sit IELTS Academic.</span><span class="l-vi">Thi IELTS Academic.</span></strong><span class="muted"><span class="l-en">Target 7.0, no band under 6.0. Draft the personal essay, UC answers, and the UChicago and NYU Shanghai supplements.</span><span class="l-vi">Mục tiêu 7.0, không kỹ năng nào dưới 6.0. Viết nháp bài luận chính, câu trả lời UC, bài luận phụ UChicago và NYU Thượng Hải.</span></span></div><div class="who"><span class="pill jac"><span class="l-en">All</span><span class="l-vi">Tất cả</span></span></div></div>
+      <div data-v="dp1" class="row"><span class="when"><span class="l-en">Aug 2027</span><span class="l-vi">8/2027</span></span><div class="what"><strong><span class="l-en">Common App and UC Application open.</span><span class="l-vi">Common App và hồ sơ UC mở.</span></strong><span class="muted"><span class="l-en">Decide on Early Decision with the family budget.</span><span class="l-vi">Quyết định Early Decision cùng ngân sách gia đình.</span></span></div><div class="who"><span class="pill jac"><span class="l-en">US</span><span class="l-vi">Mỹ</span></span><span class="pill jac">NYUSH</span></div></div>
+      <div data-v="apps" class="phase"><span class="l-en">Applications · DP2</span><span class="l-vi">Nộp hồ sơ · DP2</span></div>
+      <div data-v="apps" class="row"><span class="when"><span class="l-en">1 Oct 2027</span><span class="l-vi">1/10/2027</span></span><div class="what"><strong><span class="l-en">UC filing opens.</span><span class="l-vi">Mở nộp hồ sơ UC.</span></strong><span class="muted"><span class="l-en">Submit any time until 30 November.</span><span class="l-vi">Nộp bất kỳ lúc nào trước 30/11.</span></span></div><div class="who"><span class="pill jac">UCSC</span></div></div>
+      <div data-v="apps" class="row"><span class="when"><span class="l-en">Oct–Nov 2027</span><span class="l-vi">10–11/2027</span></span><div class="what"><strong><span class="l-en">Apply to UNSW and USyd with predicted grades.</span><span class="l-vi">Nộp UNSW và USyd bằng điểm dự đoán.</span></strong><span class="muted"><span class="l-en">Earlier gives earlier offers. UNSW Scientia needs an offer by its scholarship date, so apply early.</span><span class="l-vi">Nộp sớm thì có thư mời sớm. Học bổng Scientia của UNSW cần có thư mời trước hạn học bổng, nên phải nộp sớm.</span></span></div><div class="who"><span class="pill jac">UNSW</span><span class="pill jac">USyd</span></div></div>
+      <div data-v="apps" class="row"><span class="when"><span class="l-en">1 Nov 2027</span><span class="l-vi">1/11/2027</span></span><div class="what"><strong><span class="l-en">NYU Shanghai Early Decision I (binding).</span><span class="l-vi">NYU Thượng Hải Early Decision I (ràng buộc).</span></strong></div><div class="who"><span class="pill jac">NYUSH</span></div></div>
+      <div data-v="apps" class="row"><span class="when"><span class="l-en">~2 Nov 2027</span><span class="l-vi">~2/11/2027</span></span><div class="what"><strong><span class="l-en">UChicago Early Action (non-binding) or Early Decision I (binding).</span><span class="l-vi">UChicago Early Action (không ràng buộc) hoặc Early Decision I (ràng buộc).</span></strong><span class="muted"><span class="l-en">Aid forms are due shortly after. Merit scholarships are considered automatically.</span><span class="l-vi">Hồ sơ tài chính nộp ngay sau đó. Học bổng năng lực được xét tự động.</span></span></div><div class="who"><span class="pill jac">UChicago</span></div></div>
+      <div data-v="apps" class="row"><span class="when"><span class="l-en">30 Nov 2027</span><span class="l-vi">30/11/2027</span></span><div class="what"><strong><span class="l-en">UC Application deadline.</span><span class="l-vi">Hạn chót hồ sơ UC.</span></strong><span class="muted"><span class="l-en">Hard deadline, 11:59 pm Pacific time.</span><span class="l-vi">Hạn cứng, 23:59 giờ Thái Bình Dương.</span></span></div><div class="who"><span class="pill jac">UCSC</span></div></div>
+      <div data-v="apps" class="row"><span class="when"><span class="l-en">Mid-Dec 2027</span><span class="l-vi">Giữa 12/2027</span></span><div class="what"><strong><span class="l-en">Early decisions arrive.</span><span class="l-vi">Có kết quả vòng sớm.</span></strong><span class="muted"><span class="l-en">If an ED school admits you with enough aid, withdraw the others.</span><span class="l-vi">Nếu trường ED nhận với đủ hỗ trợ tài chính, phải rút các hồ sơ khác.</span></span></div><div class="who"><span class="pill jac">UChicago</span><span class="pill jac">NYUSH</span></div></div>
+      <div data-v="apps" class="row"><span class="when"><span class="l-en">1–5 Jan 2028</span><span class="l-vi">1–5/1/2028</span></span><div class="what"><strong><span class="l-en">NYU Shanghai ED II (1 Jan) and RD (5 Jan). UChicago ED II and RD (~4 Jan).</span><span class="l-vi">NYU Thượng Hải ED II (1/1) và RD (5/1). UChicago ED II và RD (~4/1).</span></strong></div><div class="who"><span class="pill jac">UChicago</span><span class="pill jac">NYUSH</span></div></div>
+      <div data-v="apps" class="row"><span class="when"><span class="l-en">Mar–Apr 2028</span><span class="l-vi">3–4/2028</span></span><div class="what"><strong><span class="l-en">Regular and UC decisions.</span><span class="l-vi">Kết quả vòng thường và UC.</span></strong><span class="muted"><span class="l-en">UC Santa Cruz Dean's Awards come with the offer.</span><span class="l-vi">Dean's Award của UC Santa Cruz đi kèm thư mời.</span></span></div><div class="who"><span class="pill jac"><span class="l-en">US</span><span class="l-vi">Mỹ</span></span><span class="pill jac">NYUSH</span></div></div>
+      <div data-v="apps" class="row"><span class="when"><span class="l-en">1 May 2028</span><span class="l-vi">1/5/2028</span></span><div class="what"><strong><span class="l-en">Usual reply date for US universities.</span><span class="l-vi">Hạn xác nhận thông thường ở Mỹ.</span></strong><span class="muted"><span class="l-en">Pay the deposit at one school only.</span><span class="l-vi">Chỉ đặt cọc ở một trường.</span></span></div><div class="who"><span class="pill jac"><span class="l-en">US</span><span class="l-vi">Mỹ</span></span></div></div>
+      <div data-v="apps" class="row"><span class="when"><span class="l-en">May–Jul 2028</span><span class="l-vi">5–7/2028</span></span><div class="what"><strong><span class="l-en">Student visa.</span><span class="l-vi">Xin thị thực du học.</span></strong><span class="muted"><span class="l-en">Australia: subclass 500 online after the CoE. US: F-1 interview in Ho Chi Minh City after the I-20. China: X1 at the visa centre after the JW202. See the Visas tab.</span><span class="l-vi">Úc: subclass 500 trực tuyến sau khi có CoE. Mỹ: phỏng vấn F-1 tại TP.HCM sau khi có I-20. Trung Quốc: X1 tại trung tâm thị thực sau khi có JW202. Xem thẻ Visa.</span></span></div><div class="who"><span class="pill jac"><span class="l-en">All</span><span class="l-vi">Tất cả</span></span></div></div>
+      <div data-v="start" class="phase"><span class="l-en">Results and start · 2028</span><span class="l-vi">Kết quả và nhập học · 2028</span></div>
+      <div data-v="start" class="row"><span class="when"><span class="l-en">May 2028</span><span class="l-vi">5/2028</span></span><div class="what"><strong><span class="l-en">IB final exams.</span><span class="l-vi">Thi IB chính thức.</span></strong></div><div class="who"><span class="pill jac"><span class="l-en">All</span><span class="l-vi">Tất cả</span></span></div></div>
+      <div data-v="start" class="row"><span class="when"><span class="l-en">~5 Jul 2028</span><span class="l-vi">~5/7/2028</span></span><div class="what"><strong><span class="l-en">IB results.</span><span class="l-vi">Có điểm IB.</span></strong><span class="muted"><span class="l-en">Australian offers become final. At 35 to 37, HAPP is the bridge into USyd Commerce.</span><span class="l-vi">Thư mời ở Úc được xác nhận. Nếu 35 đến 37, HAPP là cầu nối vào Thương mại USyd.</span></span></div><div class="who"><span class="pill jac">UNSW</span><span class="pill jac">USyd</span></div></div>
+      <div data-v="start" class="row"><span class="when"><span class="l-en">Aug–Sep 2028</span><span class="l-vi">8–9/2028</span></span><div class="what"><strong><span class="l-en">First semester.</span><span class="l-vi">Học kỳ đầu tiên.</span></strong><span class="muted"><span class="l-en">NYU Shanghai late August, USyd August, UNSW Term 3 in September, UChicago and UC Santa Cruz late September.</span><span class="l-vi">NYU Thượng Hải cuối tháng 8, USyd tháng 8, UNSW kỳ 3 tháng 9, UChicago và UC Santa Cruz cuối tháng 9.</span></span></div><div class="who"><span class="pill jac"><span class="l-en">All</span><span class="l-vi">Tất cả</span></span></div></div>
     </div>
     <p class="small muted"><span class="l-en">Where to apply:</span><span class="l-vi">Nơi nộp hồ sơ:</span> <a href="https://www.commonapp.org/">Common App</a> · <a href="https://apply.universityofcalifornia.edu/">UC Application</a> · <a href="https://www.sydney.edu.au/study/applying/how-to-apply/international-students.html"><span class="l-en">University of Sydney</span><span class="l-vi">Đại học Sydney</span></a> · <a href="https://www.unsw.edu.au/study/how-to-apply/international">UNSW</a> · <a href="https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants">UTS</a> · <a href="https://collegeadmissions.uchicago.edu/apply/first-year-applicants">UChicago</a> · <a href="https://shanghai.nyu.edu/page/how-apply"><span class="l-en">NYU Shanghai</span><span class="l-vi">NYU Thượng Hải</span></a> · <a href="https://www.ielts.org/">IELTS</a></p>
   </div>
@@ -1177,6 +1182,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <p class="muted"><span class="l-en">Tick things off as you go, or add your own steps. Ticks save in this browser on this device.</span><span class="l-vi">Đánh dấu khi xong, hoặc thêm việc riêng. Dấu tích được lưu trong trình duyệt trên thiết bị này.</span></p>
     </div>
     <div class="cl-top"><strong id="cl-sum"></strong><button type="button" class="linkish" data-go="schedule"><span class="l-en">See the dates on the timeline</span><span class="l-vi">Xem ngày trong lịch trình</span></button></div>
+    <nav class="subnav" aria-label="Countries"><button type="button" class="ec-chip" data-sv="aus" aria-pressed="true"><span class="l-en">Australia</span><span class="l-vi">Úc</span></button><button type="button" class="ec-chip" data-sv="us" aria-pressed="false"><span class="l-en">United States</span><span class="l-vi">Mỹ</span></button><button type="button" class="ec-chip" data-sv="cn" aria-pressed="false"><span class="l-en">China</span><span class="l-vi">Trung Quốc</span></button></nav>
     <div class="cl-grid" id="cl-grid"></div>
     <div class="bk-bar"><span class="bk-status grow"><span class="l-en">Saved on this device. A backup covers everything: activities, photos, checklist, grades and essays.</span><span class="l-vi">Lưu trên thiết bị này. Bản sao gồm tất cả: hoạt động, ảnh, danh sách việc, điểm và bài luận.</span></span><button type="button" class="btn" data-backup="save"><span class="l-en">Save backup</span><span class="l-vi">Lưu bản sao</span></button><label class="btn"><span class="l-en">Load backup</span><span class="l-vi">Tải bản sao</span><input type="file" data-backup="load" accept="application/json,.json" hidden></label></div>
   </div>
@@ -1209,6 +1215,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <p class="muted"><span class="l-en">Draft here and watch the word count. The limits are the published ones where they exist; you can change any of them. Tag activities on the Extracurricular tab to see which stories fit which essay.</span><span class="l-vi">Viết nháp ở đây và theo dõi số chữ. Giới hạn là mức công bố nếu có; bạn có thể sửa. Gắn hoạt động ở thẻ Ngoại khóa để xem câu chuyện nào hợp với bài luận nào.</span></p>
     </div>
     <div class="bk-bar"><span class="bk-status grow"><span class="l-en">Saved on this device. A backup covers everything: activities, photos, checklist, grades and essays.</span><span class="l-vi">Lưu trên thiết bị này. Bản sao gồm tất cả: hoạt động, ảnh, danh sách việc, điểm và bài luận.</span></span><button type="button" class="btn" data-backup="save"><span class="l-en">Save backup</span><span class="l-vi">Lưu bản sao</span></button><label class="btn"><span class="l-en">Load backup</span><span class="l-vi">Tải bản sao</span><input type="file" data-backup="load" accept="application/json,.json" hidden></label></div>
+    <nav class="subnav" aria-label="Universities"><button type="button" class="ec-chip" data-sv="us" aria-pressed="true"><span class="l-en">Common App &amp; UChicago</span><span class="l-vi">Common App &amp; UChicago</span></button><button type="button" class="ec-chip" data-sv="ucsc" aria-pressed="false"><span class="l-en">UC Santa Cruz</span><span class="l-vi">UC Santa Cruz</span></button><button type="button" class="ec-chip" data-sv="nyush" aria-pressed="false"><span class="l-en">NYU Shanghai</span><span class="l-vi">NYU Thượng Hải</span></button><button type="button" class="ec-chip" data-sv="aus" aria-pressed="false"><span class="l-en">Australia</span><span class="l-vi">Úc</span></button></nav>
     <div class="es-list" id="es-list"></div>
   </div>
 </div>
@@ -1217,7 +1224,8 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 <!-- ============ SCHOLARSHIPS ============ -->
 <div class="tabpanel" role="tabpanel" id="money" aria-labelledby="tab-money" hidden>
 <div class="panel-body">
-  <div class="block">
+  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="cost" aria-pressed="true"><span class="l-en">Whole degree</span><span class="l-vi">Cả khóa</span></button><button type="button" class="ec-chip" data-sv="month" aria-pressed="false"><span class="l-en">Per month</span><span class="l-vi">Mỗi tháng</span></button><button type="button" class="ec-chip" data-sv="schol" aria-pressed="false"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></button></nav>
+  <div data-v="cost" class="block">
     <div class="block-head">
       <p class="label"><span class="l-en">Full degree cost</span><span class="l-vi">Tổng chi phí cả khóa</span></p>
       <h2><span class="l-en">What each degree costs in Vietnamese dong</span><span class="l-vi">Mỗi bằng tốn bao nhiêu tiền Việt</span></h2>
@@ -1232,17 +1240,17 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
     <div class="cost-list" id="cost-list"></div>
     <p class="small muted"><span class="l-en">Exchange rates: A$ on 17 Sep 2026, US$ in late Sep 2026. Yearly costs are each university's latest all-in estimate from the Compare tab; UChicago is over US$100,000, so its figure is a floor. UChicago and NYU Shanghai give need-based aid that depends on family income, so none is subtracted. The yearly rise is applied from each figure&rsquo;s year (2027 for USyd and UTS, 2026 for UNSW and the US and Shanghai universities) up to 2028, then every year of the degree. The default 4% is about 4% a year, the rate implied by UTS&rsquo;s own estimate (A$159,248 for a 2027 start ≈ A$51,016 × (1 + 1.04 + 1.04²)). The grey bar is before scholarships, green is after.</span><span class="l-vi">Tỷ giá: A$ ngày 17/9/2026, US$ cuối tháng 9/2026. Chi phí mỗi năm là ước tính tổng mới nhất của từng trường trong thẻ So sánh; UChicago trên US$100.000 nên đây là mức tối thiểu. UChicago và NYU Thượng Hải hỗ trợ theo thu nhập gia đình nên không trừ. Mức tăng được tính từ năm của từng con số (2027 với USyd và UTS, 2026 với UNSW, các trường Mỹ và Thượng Hải) đến 2028, rồi áp dụng cho mỗi năm học. Mức mặc định 4% là khoảng 4%/năm, mức suy ra từ chính ước tính của UTS (A$159.248 cho khóa 2027 ≈ A$51.016 × (1 + 1,04 + 1,04²)). Thanh xám là trước học bổng, xanh là sau học bổng.</span></p>
   </div>
-  <div class="block">
+  <div data-v="month" class="block">
     <div class="block-head">
       <p class="label"><span class="l-en">Monthly living budget</span><span class="l-vi">Sinh hoạt phí mỗi tháng</span></p>
       <h2><span class="l-en">What a month costs in each city</span><span class="l-vi">Mỗi tháng ở từng thành phố tốn bao nhiêu</span></h2>
-      <p class="muted"><span class="l-en">Rent, food, transport, phone and the rest, in local money and in Vietnamese dong at the exchange rates above. Tuition is not included.</span><span class="l-vi">Tiền nhà, ăn uống, đi lại, điện thoại và các khoản khác, tính bằng tiền địa phương và tiền Việt theo tỷ giá ở trên. Chưa gồm học phí.</span></p>
+      <p class="muted"><span class="l-en">Rent, food, transport, phone and the rest, in local money and in Vietnamese dong at the exchange rates set under Whole degree. Tuition is not included.</span><span class="l-vi">Tiền nhà, ăn uống, đi lại, điện thoại và các khoản khác, tính bằng tiền địa phương và tiền Việt theo tỷ giá đặt ở mục Cả khóa. Chưa gồm học phí.</span></p>
     </div>
     <div class="bud-grid" id="bud-grid"></div>
     <p class="small muted"><span class="l-en">Sydney: monthly ranges from the University of Sydney&rsquo;s living-cost guide; personal and other covers lifestyle (A$350–650) plus a gym (A$70–100). Health cover (OSHC) is extra. For the visa you must show A$29,710 a year, the current Department of Home Affairs figure checked on 29 Sep 2026; the University of Sydney&rsquo;s page still shows the older A$24,505.</span><span class="l-vi">Sydney: mức mỗi tháng theo hướng dẫn chi phí sinh hoạt của Đại học Sydney; mục cá nhân và khác gồm giải trí (A$350–650) và phòng gym (A$70–100). Chưa gồm bảo hiểm y tế (OSHC). Khi xin visa phải chứng minh A$29.710/năm, mức hiện hành của Bộ Nội vụ Úc (kiểm tra ngày 29/9/2026); trang của Đại học Sydney vẫn ghi mức cũ A$24.505.</span></p>
     <p class="small muted"><span class="l-en">Chicago, Santa Cruz and Shanghai: each university&rsquo;s 2026–27 yearly living items divided by 9 academic months, so summer is extra; phone sits inside personal costs. UChicago excludes U-SHIP health insurance and the US$720 Class Fee charged in each of the first two years.</span><span class="l-vi">Chicago, Santa Cruz và Thượng Hải: các khoản sinh hoạt cả năm 2026–27 của từng trường chia cho 9 tháng học, nên chưa tính mùa hè; tiền điện thoại nằm trong chi phí cá nhân. UChicago chưa gồm bảo hiểm y tế U-SHIP và phí lớp US$720 thu mỗi năm trong hai năm đầu.</span></p>
   </div>
-  <div class="block">
+  <div data-v="schol" class="block">
     <div class="block-head">
       <p class="label"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></p>
       <h2><span class="l-en">What each university can take off the bill</span><span class="l-vi">Mỗi trường có thể hỗ trợ bao nhiêu</span></h2>
@@ -1269,7 +1277,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
     </div>
     <p class="small muted"><span class="l-en">Values are from each university's latest published round. Rules and amounts change every year; confirm each one in August 2027.</span><span class="l-vi">Giá trị theo đợt công bố mới nhất của từng trường. Quy định và số tiền thay đổi hằng năm; cần kiểm tra lại vào tháng 8/2027.</span></p>
   </div>
-  <div class="block">
+  <div data-v="schol" class="block">
     <div class="block-head">
       <p class="label"><span class="l-en">Best bets</span><span class="l-vi">Lựa chọn tốt nhất</span></p>
       <h2><span class="l-en">Where the money is most likely</span><span class="l-vi">Nơi có khả năng nhận học bổng cao nhất</span></h2>
@@ -1287,7 +1295,8 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 <!-- ============ VISAS ============ -->
 <div class="tabpanel" role="tabpanel" id="visa" aria-labelledby="tab-visa" hidden>
 <div class="panel-body">
-  <div class="block">
+  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="visa" aria-pressed="true"><span class="l-en">Visas</span><span class="l-vi">Thị thực</span></button><button type="button" class="ec-chip" data-sv="ielts" aria-pressed="false"><span class="l-en">IELTS</span><span class="l-vi">IELTS</span></button></nav>
+  <div data-v="visa" class="block">
     <div class="block-head">
       <p class="label"><span class="l-en">Student visas</span><span class="l-vi">Thị thực du học</span></p>
       <h2><span class="l-en">One visa per country</span><span class="l-vi">Mỗi quốc gia một loại thị thực</span></h2>
@@ -1312,7 +1321,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
     </div>
     <p class="small muted"><span class="l-en">Fees and amounts from the Australian Department of Home Affairs (checked 29 Sep 2026), US State Department fee schedule, and Chinese visa service guidance. They change often; check again before you apply.</span><span class="l-vi">Lệ phí và số tiền theo Bộ Nội vụ Úc (kiểm tra 29/9/2026), biểu phí của Bộ Ngoại giao Mỹ, và hướng dẫn của trung tâm thị thực Trung Quốc. Các mức này thay đổi thường xuyên; cần kiểm tra lại trước khi nộp.</span></p>
   </div>
-  <div class="block">
+  <div data-v="ielts" class="block">
     <div class="block-head">
       <p class="label"><span class="l-en">English tests by university</span><span class="l-vi">Yêu cầu tiếng Anh theo trường</span></p>
       <h2><span class="l-en">IELTS at a glance</span><span class="l-vi">Tóm tắt IELTS</span></h2>
@@ -1338,7 +1347,8 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 <!-- ============ EXTRACURRICULAR ============ -->
 <div class="tabpanel" role="tabpanel" id="extra" aria-labelledby="tab-extra" hidden>
 <div class="panel-body">
-  <div class="block">
+  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="acts" aria-pressed="true"><span class="l-en">Activities</span><span class="l-vi">Hoạt động</span></button><button type="button" class="ec-chip" data-sv="map" aria-pressed="false"><span class="l-en">Essay map</span><span class="l-vi">Bản đồ bài luận</span></button></nav>
+  <div data-v="acts" class="block">
     <div class="block-head">
       <p class="label"><span class="l-en">Beyond the classroom</span><span class="l-vi">Ngoài lớp học</span></p>
       <h2><span class="l-en">Extracurricular</span><span class="l-vi">Hoạt động ngoại khóa</span></h2>
@@ -1354,7 +1364,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
     <p class="small muted"><span class="l-en">Edits and photos are stored in this browser on this device, so other people who open the site won't see them. Use "Save backup" to keep a copy of everything you have entered on this site (activities, photos, checklist, grades and essays) or move it to another device.</span><span class="l-vi">Nội dung sửa và ảnh được lưu trong trình duyệt trên thiết bị này, nên người khác mở trang sẽ không thấy. Dùng "Lưu bản sao" để giữ một bản mọi thứ đã nhập trên trang (hoạt động, ảnh, danh sách việc, điểm và bài luận) hoặc chuyển sang thiết bị khác.</span></p>
     <div class="ec-list" id="ec-list"></div>
   </div>
-  <div class="block">
+  <div data-v="map" class="block">
     <div class="block-head">
       <p class="label"><span class="l-en">Essay map</span><span class="l-vi">Bản đồ bài luận</span></p>
       <h2><span class="l-en">Which activity goes where</span><span class="l-vi">Hoạt động nào dùng cho hồ sơ nào</span></h2>
@@ -1381,7 +1391,8 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <div><span class="k"><span class="l-en">First deadline</span><span class="l-vi">Hạn đầu tiên</span></span><span class="num"><span class="l-en">~2 Nov 2027</span><span class="l-vi">~2/11/2027</span></span></div>
     </div>
   </div>
-  <div class="two">
+  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="glance" aria-pressed="true"><span class="l-en">At a glance</span><span class="l-vi">Tổng quan</span></button><button type="button" class="ec-chip" data-sv="money" aria-pressed="false"><span class="l-en">Scholarships &amp; aid</span><span class="l-vi">Học bổng &amp; hỗ trợ</span></button><button type="button" class="ec-chip" data-sv="apply" aria-pressed="false"><span class="l-en">How to apply</span><span class="l-vi">Cách nộp hồ sơ</span></button></nav>
+  <div data-v="glance" class="two">
     <div>
       <p class="label"><span class="l-en">Why it fits</span><span class="l-vi">Vì sao phù hợp</span></p>
       <ul class="list">
@@ -1399,14 +1410,14 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       </dl>
     </div>
   </div>
-  <div class="block">
+  <div data-v="money" class="block">
     <p class="label"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></p>
     <div class="award">
       <div><span class="name"><span class="l-en">Need-based financial aid</span><span class="l-vi">Hỗ trợ tài chính theo nhu cầu</span></span><span class="val"><span class="l-en">100% of need, no loans</span><span class="l-vi">100% nhu cầu, không vay</span></span><span class="muted"><span class="l-en">Open to international students, but only if you apply for aid together with admission. You cannot apply later in the four years.</span><span class="l-vi">Dành cả cho du học sinh, nhưng chỉ khi nộp hồ sơ tài chính cùng hồ sơ nhập học. Không thể xin sau này.</span></span></div>
       <div><span class="name"><span class="l-en">Merit scholarships</span><span class="l-vi">Học bổng năng lực</span></span><span class="val"><span class="l-en">Partial tuition</span><span class="l-vi">Một phần học phí</span></span><span class="muted"><span class="l-en">Every first-year applicant is considered automatically, internationals included. No extra essay.</span><span class="l-vi">Mọi hồ sơ năm nhất được xét tự động, kể cả du học sinh. Không cần bài luận riêng.</span></span></div>
     </div>
   </div>
-  <div class="block">
+  <div data-v="money" class="block">
     <div class="block-head">
       <p class="label"><span class="l-en">How to apply for aid</span><span class="l-vi">Cách xin hỗ trợ tài chính</span></p>
       <h2><span class="l-en">UChicago financial aid, step by step</span><span class="l-vi">Hỗ trợ tài chính UChicago, từng bước</span></h2>
@@ -1436,14 +1447,14 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
     </ol>
     <p class="small muted"><span class="l-en">From UChicago&rsquo;s international financial aid page, checked 30 Sep 2026. UChicago reports nearly US$20 million in need-based aid to international students over four years, plus a US$35 million gift for international aid. The page asks for 2024 tax forms in the current cycle; expect a later year for mine, and confirm in August 2027 that the ED II and RD aid dates are the same for international students.</span><span class="l-vi">Theo trang hỗ trợ tài chính quốc tế của UChicago, kiểm tra ngày 30/9/2026. UChicago cho biết đã hỗ trợ gần US$20 triệu theo nhu cầu cho du học sinh trong bốn năm, cùng khoản tài trợ US$35 triệu dành cho hỗ trợ quốc tế. Chu kỳ hiện tại yêu cầu tờ khai thuế năm 2024; khóa của mình sẽ là năm sau đó, và cần xác nhận vào tháng 8/2027 rằng hạn ED II và RD cũng áp dụng cho du học sinh.</span></p>
   </div>
-  <div class="block">
+  <div data-v="apply" class="block">
     <p class="label"><span class="l-en">English test and visa</span><span class="l-vi">Tiếng Anh và thị thực</span></p>
     <div class="award">
       <div><span class="name">IELTS Academic</span><span class="val"><span class="l-en">Optional, no minimum</span><span class="l-vi">Không bắt buộc, không có mức tối thiểu</span></span><span class="muted"><span class="l-en">Not required if the application already shows strong English. Send a score only if it helps.</span><span class="l-vi">Không cần nếu hồ sơ đã thể hiện tiếng Anh tốt. Chỉ gửi điểm nếu có lợi.</span></span></div>
       <div><span class="name"><span class="l-en">F-1 student visa</span><span class="l-vi">Thị thực du học F-1</span></span><span class="val"><span class="l-en">~US$785 in fees</span><span class="l-vi">~US$785 lệ phí</span></span><span class="muted"><span class="l-en">US$185 application + US$350 SEVIS + US$250 integrity fee. Interview at the US Consulate General in Ho Chi Minh City after the I-20 arrives.</span><span class="l-vi">US$185 hồ sơ + US$350 SEVIS + US$250 phí integrity. Phỏng vấn tại Tổng Lãnh sự quán Mỹ ở TP.HCM sau khi có I-20.</span></span></div>
     </div>
   </div>
-  <div class="block">
+  <div data-v="apply" class="block">
     <p class="label"><span class="l-en">Requirements</span><span class="l-vi">Yêu cầu</span></p>
     <div class="tbl"><table>
       <thead><tr><th><span class="l-en">Area</span><span class="l-vi">Mục</span></th><th><span class="l-en">What admits look like</span><span class="l-vi">Hồ sơ trúng tuyển</span></th><th><span class="l-en">Me now</span><span class="l-vi">Mình hiện tại</span></th><th><span class="l-en">Status</span><span class="l-vi">Tình trạng</span></th></tr></thead>
@@ -1455,7 +1466,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       </tbody>
     </table></div>
   </div>
-  <div class="block">
+  <div data-v="apply" class="block">
     <p class="label"><span class="l-en">How to apply</span><span class="l-vi">Cách nộp hồ sơ</span></p>
     <div class="tbl"><table>
       <thead><tr><th><span class="l-en">Round</span><span class="l-vi">Vòng</span></th><th><span class="l-en">Deadline (2026–27)</span><span class="l-vi">Hạn (2026–27)</span></th><th><span class="l-en">Decision</span><span class="l-vi">Kết quả</span></th><th><span class="l-en">Binding</span><span class="l-vi">Ràng buộc</span></th></tr></thead>
@@ -1467,11 +1478,11 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       </tbody>
     </table></div>
   </div>
-  <div class="verdict-box">
+  <div data-v="glance" class="verdict-box">
     <h3><span class="pill bad"><span class="l-en">Dream</span><span class="l-vi">Mơ ước</span></span> <span class="l-en">Apply, but keep it non-binding</span><span class="l-vi">Nộp, nhưng chọn vòng không ràng buộc</span></h3>
     <p><span class="l-en">At 35–37 predicted, UChicago is a long shot at a 4.5% admit rate. Early Action gives an answer in December without locking me in. The supplement essay is my best lever: it rewards curiosity, and Chạm and Action for Earth give real material.</span><span class="l-vi">Với 35–37 điểm dự đoán và tỷ lệ nhận 4,5%, UChicago rất khó. Early Action cho kết quả vào tháng 12 mà không ràng buộc. Bài luận phụ là cơ hội lớn nhất: trường đánh giá cao sự tò mò, và Chạm cùng Action for Earth là chất liệu thật.</span></p>
   </div>
-  <ol class="sources">
+  <ol data-v="apply" class="sources">
     <li><a href="https://collegeadmissions.uchicago.edu/apply/first-year-applicants"><span class="l-en">First-year applicants</span><span class="l-vi">Tuyển sinh năm nhất</span></a> · <a href="https://collegeadmissions.uchicago.edu/apply/class-profile/"><span class="l-en">Class profile</span><span class="l-vi">Hồ sơ khóa học</span></a></li>
     <li><a href="https://economics.uchicago.edu/undergraduate-study/curriculum/business-economics-specialization">Business Economics Specialization</a> · <a href="https://bursar.uchicago.edu/tuition-and-fees/tuition-and-fees-2026-27"><span class="l-en">Tuition 2026–27</span><span class="l-vi">Học phí 2026–27</span></a></li>
     <li><a href="https://collegeadmissions.uchicago.edu/financial-support/international-financial-aid/"><span class="l-en">International financial aid</span><span class="l-vi">Hỗ trợ tài chính quốc tế</span></a> · <a href="https://financialaid.uchicago.edu/undergraduate/how-aid-works/types-of-aid/scholarships/"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></a></li>
@@ -1494,7 +1505,8 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <div><span class="k"><span class="l-en">First deadline</span><span class="l-vi">Hạn đầu tiên</span></span><span class="num"><span class="l-en">1 Nov 2027</span><span class="l-vi">1/11/2027</span></span></div>
     </div>
   </div>
-  <div class="two">
+  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="glance" aria-pressed="true"><span class="l-en">At a glance</span><span class="l-vi">Tổng quan</span></button><button type="button" class="ec-chip" data-sv="money" aria-pressed="false"><span class="l-en">Scholarships &amp; aid</span><span class="l-vi">Học bổng &amp; hỗ trợ</span></button><button type="button" class="ec-chip" data-sv="apply" aria-pressed="false"><span class="l-en">How to apply</span><span class="l-vi">Cách nộp hồ sơ</span></button></nav>
+  <div data-v="glance" class="two">
     <div>
       <p class="label"><span class="l-en">Why it fits</span><span class="l-vi">Vì sao phù hợp</span></p>
       <ul class="list">
@@ -1511,21 +1523,21 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       </dl>
     </div>
   </div>
-  <div class="block">
+  <div data-v="money" class="block">
     <p class="label"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></p>
     <div class="award">
       <div><span class="name"><span class="l-en">Need-based grants</span><span class="l-vi">Hỗ trợ theo nhu cầu</span></span><span class="val"><span class="l-en">Varies with family income</span><span class="l-vi">Tùy thu nhập gia đình</span></span><span class="muted"><span class="l-en">File the CSS Profile by the aid deadline. NYU is need-aware for international students, and packages can mix grants, loans and work-study.</span><span class="l-vi">Nộp CSS Profile đúng hạn. NYU có xét khả năng tài chính với du học sinh, và gói hỗ trợ có thể gồm trợ cấp, khoản vay và việc làm.</span></span></div>
       <div><span class="name"><span class="l-en">Merit awards at entry</span><span class="l-vi">Học bổng năng lực khi nhập học</span></span><span class="val"><span class="l-en">Not widely published</span><span class="l-vi">Không công bố rộng rãi</span></span><span class="muted"><span class="l-en">NYU Shanghai's named merit awards mostly go to current students. Ask admissions whether any are given at entry.</span><span class="l-vi">Các học bổng năng lực có tên của NYU Thượng Hải chủ yếu dành cho sinh viên đang học. Nên hỏi phòng tuyển sinh về học bổng khi nhập học.</span></span></div>
     </div>
   </div>
-  <div class="block">
+  <div data-v="apply" class="block">
     <p class="label"><span class="l-en">English test and visa</span><span class="l-vi">Tiếng Anh và thị thực</span></p>
     <div class="award">
       <div><span class="name">IELTS Academic</span><span class="val"><span class="l-en">7.5+ is competitive</span><span class="l-vi">7.5+ là cạnh tranh</span></span><span class="muted"><span class="l-en">Exempt if your last 3 consecutive years were in an all-English curriculum. IB scores alone do not waive it.</span><span class="l-vi">Được miễn nếu 3 năm liên tiếp gần nhất học chương trình hoàn toàn bằng tiếng Anh. Điểm IB không thay thế được.</span></span></div>
       <div><span class="name"><span class="l-en">X1 study visa</span><span class="l-vi">Thị thực học tập X1</span></span><span class="val"><span class="l-en">Then a residence permit</span><span class="l-vi">Sau đó là thẻ cư trú</span></span><span class="muted"><span class="l-en">NYU Shanghai sends the admission letter and JW202. Fill in the form at visaforchina.cn, submit at the Chinese Visa Application Service Center in District 1, and get the residence permit within 30 days of arriving.</span><span class="l-vi">NYU Thượng Hải gửi thư nhập học và JW202. Điền đơn tại visaforchina.cn, nộp tại Trung tâm Dịch vụ Thị thực Trung Quốc ở Quận 1, và làm thẻ cư trú trong vòng 30 ngày sau khi đến.</span></span></div>
     </div>
   </div>
-  <div class="block">
+  <div data-v="apply" class="block">
     <p class="label"><span class="l-en">Requirements</span><span class="l-vi">Yêu cầu</span></p>
     <div class="tbl"><table>
       <thead><tr><th><span class="l-en">Area</span><span class="l-vi">Mục</span></th><th><span class="l-en">Needed</span><span class="l-vi">Cần</span></th><th><span class="l-en">Me now</span><span class="l-vi">Mình hiện tại</span></th><th><span class="l-en">Status</span><span class="l-vi">Tình trạng</span></th></tr></thead>
@@ -1537,7 +1549,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       </tbody>
     </table></div>
   </div>
-  <div class="block">
+  <div data-v="apply" class="block">
     <p class="label"><span class="l-en">How to apply</span><span class="l-vi">Cách nộp hồ sơ</span></p>
     <div class="tbl"><table>
       <thead><tr><th><span class="l-en">Round</span><span class="l-vi">Vòng</span></th><th><span class="l-en">Deadline</span><span class="l-vi">Hạn</span></th><th><span class="l-en">Binding</span><span class="l-vi">Ràng buộc</span></th></tr></thead>
@@ -1548,11 +1560,11 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       </tbody>
     </table></div>
   </div>
-  <div class="verdict-box">
+  <div data-v="glance" class="verdict-box">
     <h3><span class="pill bad"><span class="l-en">Reach</span><span class="l-vi">Thử thách</span></span> <span class="l-en">Strong on story, a stretch on grades</span><span class="l-vi">Câu chuyện tốt, điểm còn thiếu</span></h3>
     <p><span class="l-en">Only about 250 places go to international students each year. Apply Regular Decision unless NYU Shanghai becomes the clear first choice, and budget as if aid will be partial.</span><span class="l-vi">Mỗi năm chỉ khoảng 250 chỗ cho du học sinh. Nộp vòng thường, trừ khi NYU Thượng Hải là lựa chọn số một rõ ràng, và tính ngân sách như thể chỉ được hỗ trợ một phần.</span></p>
   </div>
-  <ol class="sources">
+  <ol data-v="apply" class="sources">
     <li><a href="https://shanghai.nyu.edu/page/how-apply"><span class="l-en">How to apply</span><span class="l-vi">Cách nộp hồ sơ</span></a> · <a href="https://shanghai.nyu.edu/undergraduate-admissions/how-to-apply/early-decision">Early Decision</a></li>
     <li><a href="https://shanghai.nyu.edu/page/cost-attendance"><span class="l-en">Cost of attendance</span><span class="l-vi">Chi phí</span></a> · <a href="https://shanghai.nyu.edu/page/how-apply-financial-aid"><span class="l-en">Financial aid</span><span class="l-vi">Hỗ trợ tài chính</span></a></li>
     <li><a href="https://shanghai.nyu.edu/academics/majors/business-and-finance">Business and Finance</a> · <a href="https://nyunews.com/news/2025/03/12/nyu-shanghai-record-applications/"><span class="l-en">Class of 2029 applications</span><span class="l-vi">Số hồ sơ khóa 2029</span></a></li>
@@ -1575,7 +1587,8 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <div><span class="k"><span class="l-en">Intakes</span><span class="l-vi">Kỳ nhập học</span></span><span><span class="l-en">Feb, Jun, Sep</span><span class="l-vi">Tháng 2, 6, 9</span></span></div>
     </div>
   </div>
-  <div class="two">
+  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="glance" aria-pressed="true"><span class="l-en">At a glance</span><span class="l-vi">Tổng quan</span></button><button type="button" class="ec-chip" data-sv="money" aria-pressed="false"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></button><button type="button" class="ec-chip" data-sv="apply" aria-pressed="false"><span class="l-en">How to apply</span><span class="l-vi">Cách nộp hồ sơ</span></button></nav>
+  <div data-v="glance" class="two">
     <div>
       <p class="label"><span class="l-en">Why it fits</span><span class="l-vi">Vì sao phù hợp</span></p>
       <ul class="list">
@@ -1594,7 +1607,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <p class="small muted"><span class="l-en">Whole-degree tuition assumes about 4% a year, the rate implied by UTS&rsquo;s own estimate (A$159,248 for a 2027 start ≈ A$51,016 × (1 + 1.04 + 1.04²)).</span><span class="l-vi">Học phí cả khóa giả định khoảng 4%/năm, mức suy ra từ chính ước tính của UTS (A$159.248 cho khóa 2027 ≈ A$51.016 × (1 + 1,04 + 1,04²)).</span></p>
     </div>
   </div>
-  <div class="block">
+  <div data-v="money" class="block">
     <p class="label"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></p>
     <div class="award">
       <div><span class="name">International Scientia Coursework Scholarship</span><span class="val"><span class="l-en">Full tuition, or A$20,000 a year</span><span class="l-vi">Toàn bộ học phí, hoặc A$20.000/năm</span></span><span class="muted"><span class="l-en">For high achievers with leadership in school or community. Needs a UNSW offer before the scholarship deadline (30 Oct 2026 for Term 1 2027), so apply to UNSW early in DP2.</span><span class="l-vi">Cho học sinh xuất sắc có năng lực lãnh đạo ở trường hoặc cộng đồng. Cần có thư mời UNSW trước hạn học bổng (30/10/2026 cho kỳ 1/2027), nên nộp UNSW sớm trong DP2.</span></span></div>
@@ -1602,14 +1615,14 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <div><span class="name">Business School International Scholarship</span><span class="val"><span class="l-en">A$5,000 for one year</span><span class="l-vi">A$5.000 cho một năm</span></span><span class="muted"><span class="l-en">Toward tuition for Business School students. Check the round open for 2028.</span><span class="l-vi">Hỗ trợ học phí cho sinh viên Business School. Kiểm tra đợt mở cho năm 2028.</span></span></div>
     </div>
   </div>
-  <div class="block">
+  <div data-v="apply" class="block">
     <p class="label"><span class="l-en">English test and visa</span><span class="l-vi">Tiếng Anh và thị thực</span></p>
     <div class="award">
       <div><span class="name">IELTS Academic</span><span class="val"><span class="l-en">7.0 overall, 6.0 each band</span><span class="l-vi">7.0 tổng, mỗi kỹ năng 6.0</span></span><span class="muted"><span class="l-en">Business School requirement. Sit it by late 2027 so it is ready for the application and the Scientia scholarship.</span><span class="l-vi">Yêu cầu của Business School. Thi trước cuối năm 2027 để kịp hồ sơ và học bổng Scientia.</span></span></div>
       <div><span class="name"><span class="l-en">Student visa (subclass 500)</span><span class="l-vi">Thị thực du học (subclass 500)</span></span><span class="val">A$2,500</span><span class="muted"><span class="l-en">Apply online once the university issues your CoE. Show A$29,710 a year for living plus first-year tuition and travel, and buy OSHC health cover.</span><span class="l-vi">Nộp trực tuyến khi trường cấp CoE. Chứng minh A$29.710/năm sinh hoạt phí cộng học phí năm đầu và vé máy bay, và mua bảo hiểm OSHC.</span></span></div>
     </div>
   </div>
-  <div class="block">
+  <div data-v="apply" class="block">
     <p class="label"><span class="l-en">Requirements</span><span class="l-vi">Yêu cầu</span></p>
     <div class="tbl"><table>
       <thead><tr><th><span class="l-en">Requirement (2027)</span><span class="l-vi">Yêu cầu (2027)</span></th><th><span class="l-en">Needed</span><span class="l-vi">Cần</span></th><th><span class="l-en">Me now</span><span class="l-vi">Mình hiện tại</span></th><th><span class="l-en">Status</span><span class="l-vi">Tình trạng</span></th></tr></thead>
@@ -1622,11 +1635,11 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       </tbody>
     </table></div>
   </div>
-  <div class="verdict-box">
+  <div data-v="glance" class="verdict-box">
     <h3><span class="pill warn"><span class="l-en">Target</span><span class="l-vi">Vừa sức</span></span> <span class="l-en">Economics is safe, Commerce is in my band</span><span class="l-vi">Kinh tế an toàn, Thương mại nằm trong tầm</span></h3>
     <p><span class="l-en">Apply early in DP2 for Commerce with Economics as a second preference, early enough to try for Scientia. At a predicted 38 the Commerce offer comes before results; at 36 or 37 it comes after the July 2028 results, in time for Term 3 or Term 1 2029.</span><span class="l-vi">Nộp sớm trong DP2 cho Thương mại, Kinh tế là nguyện vọng 2, đủ sớm để xét Scientia. Nếu dự đoán 38, thư mời Thương mại đến trước khi có kết quả; nếu 36 hoặc 37, thư mời đến sau kết quả tháng 7/2028, kịp kỳ 3 hoặc kỳ 1/2029.</span></p>
   </div>
-  <ol class="sources">
+  <ol data-v="apply" class="sources">
     <li><a href="https://www.unsw.edu.au/content/dam/pdfs/future-students/2027-int-ug-entry-table.pdf"><span class="l-en">2027 international entry table</span><span class="l-vi">Bảng điểm đầu vào quốc tế 2027</span></a> · <a href="https://www.unsw.edu.au/study/undergraduate/bachelor-of-commerce">Bachelor of Commerce</a></li>
     <li><a href="https://www.unsw.edu.au/study/your-future/international-scholarships"><span class="l-en">International scholarships</span><span class="l-vi">Học bổng quốc tế</span></a> · <a href="https://www.scholarships.unsw.edu.au/international-student-award">International Student Award</a></li>
   </ol>
@@ -1648,7 +1661,8 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <div><span class="k"><span class="l-en">Intakes</span><span class="l-vi">Kỳ nhập học</span></span><span><span class="l-en">Feb and Jul</span><span class="l-vi">Tháng 2 và 7</span></span></div>
     </div>
   </div>
-  <div class="two">
+  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="glance" aria-pressed="true"><span class="l-en">At a glance</span><span class="l-vi">Tổng quan</span></button><button type="button" class="ec-chip" data-sv="money" aria-pressed="false"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></button><button type="button" class="ec-chip" data-sv="apply" aria-pressed="false"><span class="l-en">How to apply</span><span class="l-vi">Cách nộp hồ sơ</span></button></nav>
+  <div data-v="glance" class="two">
     <div>
       <p class="label"><span class="l-en">Why it fits</span><span class="l-vi">Vì sao phù hợp</span></p>
       <ul class="list">
@@ -1667,21 +1681,21 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <p class="small muted"><span class="l-en">Whole-degree tuition assumes about 4% a year, the rate implied by UTS&rsquo;s own estimate (A$159,248 for a 2027 start ≈ A$51,016 × (1 + 1.04 + 1.04²)).</span><span class="l-vi">Học phí cả khóa giả định khoảng 4%/năm, mức suy ra từ chính ước tính của UTS (A$159.248 cho khóa 2027 ≈ A$51.016 × (1 + 1,04 + 1,04²)).</span></p>
     </div>
   </div>
-  <div class="block">
+  <div data-v="money" class="block">
     <p class="label"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></p>
     <div class="award">
       <div><span class="name"><a href="https://www.uts.edu.au/for-students/admissions-entry/scholarships/scholarships-search/uts-academic-excellence-international-scholarship">UTS Academic Excellence International Scholarship</a></span><span class="val"><span class="l-en">30% off tuition, whole degree</span><span class="l-vi">Giảm 30% học phí cả khóa</span></span><span class="muted"><span class="l-en">Every new international applicant is considered automatically, with no separate form. Awarded on academic merit; open to intakes from 2025 to 2028.</span><span class="l-vi">Mọi tân sinh viên quốc tế đều được xét tự động, không cần đơn riêng. Xét theo thành tích học tập; áp dụng cho các kỳ nhập học 2025 đến 2028.</span></span></div>
       <div><span class="name"><a href="https://www.uts.edu.au/for-students/admissions-entry/scholarships/uts-vice-chancellors-international-undergraduate-scholarship">Vice-Chancellor's International Undergraduate Scholarship</a></span><span class="val"><span class="l-en">Full tuition</span><span class="l-vi">Toàn bộ học phí</span></span><span class="muted"><span class="l-en">At most two a year (one per intake). Looks for excellence, innovation, entrepreneurship and social justice, so Chạm fits well.</span><span class="l-vi">Tối đa hai suất mỗi năm (một suất mỗi kỳ). Xét sự xuất sắc, đổi mới, khởi nghiệp và công bằng xã hội, nên Chạm rất phù hợp.</span></span></div>
     </div>
   </div>
-  <div class="block">
+  <div data-v="apply" class="block">
     <p class="label"><span class="l-en">English test and visa</span><span class="l-vi">Tiếng Anh và thị thực</span></p>
     <div class="award">
       <div><span class="name">IELTS Academic</span><span class="val"><span class="l-en">6.5 overall, writing 6.0</span><span class="l-vi">6.5 tổng, viết 6.0</span></span><span class="muted"><span class="l-en">Lower than USyd and UNSW, so the IELTS 7.0 I need for them covers UTS too.</span><span class="l-vi">Thấp hơn USyd và UNSW, nên IELTS 7.0 cho hai trường đó cũng đủ cho UTS.</span></span></div>
       <div><span class="name"><span class="l-en">Student visa (subclass 500)</span><span class="l-vi">Thị thực du học (subclass 500)</span></span><span class="val">A$2,500</span><span class="muted"><span class="l-en">Same visa as the other Sydney universities: apply online once UTS issues your CoE.</span><span class="l-vi">Cùng loại visa với các trường Sydney khác: nộp trực tuyến khi UTS cấp CoE.</span></span></div>
     </div>
   </div>
-  <div class="block">
+  <div data-v="apply" class="block">
     <p class="label"><span class="l-en">Requirements</span><span class="l-vi">Yêu cầu</span></p>
     <div class="tbl"><table>
       <thead><tr><th><span class="l-en">Requirement (2027)</span><span class="l-vi">Yêu cầu (2027)</span></th><th><span class="l-en">Needed</span><span class="l-vi">Cần</span></th><th><span class="l-en">Me now</span><span class="l-vi">Mình hiện tại</span></th><th><span class="l-en">Status</span><span class="l-vi">Tình trạng</span></th></tr></thead>
@@ -1693,11 +1707,11 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       </tbody>
     </table></div>
   </div>
-  <div class="verdict-box">
+  <div data-v="glance" class="verdict-box">
     <h3><span class="pill good"><span class="l-en">Likely</span><span class="l-vi">Chắc chắn</span></span> <span class="l-en">The safe Sydney offer, and a real chance at 30% off</span><span class="l-vi">Thư mời an toàn ở Sydney, và cơ hội thật để giảm 30%</span></h3>
     <p><span class="l-en">Apply in DP2 with predicted grades alongside USyd and UNSW. At 35–37 the offer should come before results, which takes the pressure off the other two. Choose a Management or International Business major with Economics as the second major.</span><span class="l-vi">Nộp trong DP2 bằng điểm dự đoán, cùng lúc với USyd và UNSW. Với 35–37, thư mời sẽ đến trước khi có kết quả, giúp giảm áp lực cho hai trường kia. Chọn chuyên ngành Quản trị hoặc Kinh doanh Quốc tế, với Kinh tế học là chuyên ngành thứ hai.</span></p>
   </div>
-  <ol class="sources">
+  <ol data-v="apply" class="sources">
     <li><a href="https://www.uts.edu.au/for-students/international/guides-for-international-students/contentassets/utsi-listing-grid-international-undergraduate-course-summary-table.pdf"><span class="l-en">2027 international entry scores and fees (PDF)</span><span class="l-vi">Điểm đầu vào và học phí quốc tế 2027 (PDF)</span></a> · <a href="https://www.uts.edu.au/courses/bachelor-of-business">Bachelor of Business</a> · <a href="https://www.uts.edu.au/courses/majors/business-economics"><span class="l-en">Economics major</span><span class="l-vi">Chuyên ngành Kinh tế học</span></a></li>
     <li><a href="https://www.uts.edu.au/for-students/admissions-entry/scholarships/international"><span class="l-en">International scholarships</span><span class="l-vi">Học bổng quốc tế</span></a> · <a href="https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants"><span class="l-en">How to apply</span><span class="l-vi">Cách nộp hồ sơ</span></a></li>
   </ol>
@@ -1718,15 +1732,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <div><span class="k"><span class="l-en">Intakes</span><span class="l-vi">Kỳ nhập học</span></span><span><span class="l-en">Feb and Aug</span><span class="l-vi">Tháng 2 và 8</span></span></div>
     </div>
   </div>
-  <nav class="usyd-nav" id="usyd-nav" aria-label="University of Sydney sections">
-    <button type="button" class="ec-chip" data-sv="sum" aria-pressed="true"><span class="l-en">At a glance</span><span class="l-vi">Tổng quan</span></button>
-    <button type="button" class="ec-chip" data-sv="deg" aria-pressed="false"><span class="l-en">Degrees &amp; majors</span><span class="l-vi">Ngành học</span></button>
-    <button type="button" class="ec-chip" data-sv="fit" aria-pressed="false"><span class="l-en">My chances</span><span class="l-vi">Cơ hội của mình</span></button>
-    <button type="button" class="ec-chip" data-sv="home" aria-pressed="false"><span class="l-en">Housing</span><span class="l-vi">Chỗ ở</span></button>
-    <button type="button" class="ec-chip" data-sv="out" aria-pressed="false"><span class="l-en">Where it leads</span><span class="l-vi">Đầu ra</span></button>
-    <button type="button" class="ec-chip" data-sv="fdn" aria-pressed="false"><span class="l-en">Foundation?</span><span class="l-vi">Dự bị?</span></button>
-    <button type="button" class="ec-chip" data-sv="src" aria-pressed="false"><span class="l-en">Sources</span><span class="l-vi">Nguồn</span></button>
-  </nav>
+  <nav class="subnav" aria-label="University of Sydney sections"><button type="button" class="ec-chip" data-sv="sum" aria-pressed="true"><span class="l-en">At a glance</span><span class="l-vi">Tổng quan</span></button><button type="button" class="ec-chip" data-sv="deg" aria-pressed="false"><span class="l-en">Degrees &amp; majors</span><span class="l-vi">Ngành học</span></button><button type="button" class="ec-chip" data-sv="fit" aria-pressed="false"><span class="l-en">My chances</span><span class="l-vi">Cơ hội của mình</span></button><button type="button" class="ec-chip" data-sv="home" aria-pressed="false"><span class="l-en">Housing</span><span class="l-vi">Chỗ ở</span></button><button type="button" class="ec-chip" data-sv="out" aria-pressed="false"><span class="l-en">Where it leads</span><span class="l-vi">Đầu ra</span></button><button type="button" class="ec-chip" data-sv="fdn" aria-pressed="false"><span class="l-en">Foundation?</span><span class="l-vi">Dự bị?</span></button><button type="button" class="ec-chip" data-sv="src" aria-pressed="false"><span class="l-en">Sources</span><span class="l-vi">Nguồn</span></button></nav>
   <div class="two" data-v="sum">
     <div>
       <p class="label"><span class="l-en">Why it fits</span><span class="l-vi">Vì sao phù hợp</span></p>
@@ -2812,7 +2818,8 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <div><span class="k"><span class="l-en">Deadline</span><span class="l-vi">Hạn nộp</span></span><span class="num"><span class="l-en">30 Nov 2027</span><span class="l-vi">30/11/2027</span></span></div>
     </div>
   </div>
-  <div class="two">
+  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="glance" aria-pressed="true"><span class="l-en">At a glance</span><span class="l-vi">Tổng quan</span></button><button type="button" class="ec-chip" data-sv="money" aria-pressed="false"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></button><button type="button" class="ec-chip" data-sv="apply" aria-pressed="false"><span class="l-en">How to apply</span><span class="l-vi">Cách nộp hồ sơ</span></button></nav>
+  <div data-v="glance" class="two">
     <div>
       <p class="label"><span class="l-en">Why it fits</span><span class="l-vi">Vì sao phù hợp</span></p>
       <ul class="list">
@@ -2831,20 +2838,20 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       </dl>
     </div>
   </div>
-  <div class="block">
+  <div data-v="money" class="block">
     <p class="label"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></p>
     <div class="award">
       <div><span class="name">Undergraduate Dean's Award</span><span class="val"><span class="l-en">US$3,000–25,000 a year</span><span class="l-vi">US$3.000–25.000/năm</span></span><span class="muted"><span class="l-en">US$12,000–100,000 over four years, paid evenly. International students are considered automatically through the UC Application, and 95% of new international students received one in 2023–24.</span><span class="l-vi">US$12.000–100.000 cho 4 năm, chia đều mỗi năm. Du học sinh quốc tế được xét tự động qua hồ sơ UC, và 95% tân sinh viên quốc tế nhận được năm 2023–24.</span></span></div>
     </div>
   </div>
-  <div class="block">
+  <div data-v="apply" class="block">
     <p class="label"><span class="l-en">English test and visa</span><span class="l-vi">Tiếng Anh và thị thực</span></p>
     <div class="award">
       <div><span class="name">IELTS Academic</span><span class="val">6.5</span><span class="muted"><span class="l-en">Or TOEFL iBT 80 (older format) / 4.5 (new), or Duolingo 115. Usually only needed with under 3 years of English-medium secondary school, so ask ISHCMC for a letter.</span><span class="l-vi">Hoặc TOEFL iBT 80 (dạng cũ) / 4.5 (dạng mới), hoặc Duolingo 115. Thường chỉ cần nếu học dưới 3 năm trung học bằng tiếng Anh, nên xin ISHCMC thư xác nhận.</span></span></div>
       <div><span class="name"><span class="l-en">F-1 student visa</span><span class="l-vi">Thị thực du học F-1</span></span><span class="val"><span class="l-en">~US$785 in fees</span><span class="l-vi">~US$785 lệ phí</span></span><span class="muted"><span class="l-en">US$185 application + US$350 SEVIS + US$250 integrity fee. Interview at the US Consulate General in Ho Chi Minh City after the I-20 arrives.</span><span class="l-vi">US$185 hồ sơ + US$350 SEVIS + US$250 phí integrity. Phỏng vấn tại Tổng Lãnh sự quán Mỹ ở TP.HCM sau khi có I-20.</span></span></div>
     </div>
   </div>
-  <div class="block">
+  <div data-v="apply" class="block">
     <p class="label"><span class="l-en">Requirements</span><span class="l-vi">Yêu cầu</span></p>
     <div class="tbl"><table>
       <thead><tr><th><span class="l-en">Area</span><span class="l-vi">Mục</span></th><th><span class="l-en">Needed</span><span class="l-vi">Cần</span></th><th><span class="l-en">Me now</span><span class="l-vi">Mình hiện tại</span></th><th><span class="l-en">Status</span><span class="l-vi">Tình trạng</span></th></tr></thead>
@@ -2856,11 +2863,11 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       </tbody>
     </table></div>
   </div>
-  <div class="verdict-box">
+  <div data-v="glance" class="verdict-box">
     <h3><span class="pill good"><span class="l-en">Likely</span><span class="l-vi">Chắc chắn</span></span> <span class="l-en">My safety in the United States</span><span class="l-vi">Lựa chọn an toàn ở Mỹ</span></h3>
     <p><span class="l-en">With a 3.4 GPA floor and 71.9% of international applicants admitted in Fall 2025, a 35–37 IB student is well placed. The Dean's Award brings the yearly cost down to roughly US$62,800–84,800. Submit between 1 October and 30 November 2027.</span><span class="l-vi">Với GPA sàn 3.4 và 71,9% hồ sơ quốc tế được nhận mùa thu 2025, học sinh IB 35–37 có vị trí tốt. Dean's Award giúp giảm chi phí còn khoảng US$62.800–84.800 mỗi năm. Nộp từ 1/10 đến 30/11/2027 (dự kiến).</span></p>
   </div>
-  <ol class="sources">
+  <ol data-v="apply" class="sources">
     <li><a href="https://admissions.ucsc.edu/first-year-student"><span class="l-en">First-year students</span><span class="l-vi">Tuyển sinh năm nhất</span></a> · <a href="https://admissions.ucsc.edu/posts/english-proficiency-requirement"><span class="l-en">English proficiency</span><span class="l-vi">Yêu cầu tiếng Anh</span></a></li>
     <li><a href="https://catalog.ucsc.edu/current/general-catalog/academic-units/social-sciences-division/economics/business-management-economics-ba/">Business Management Economics B.A.</a> · <a href="https://financialaid.ucsc.edu/types-of-aid/scholarships/"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></a></li>
     <li><a href="https://financialaid.ucsc.edu/managing-aid/budget-cost-to-attend/"><span class="l-en">Cost to attend</span><span class="l-vi">Chi phí</span></a> · <a href="https://www.collegekickstart.com/blog/item/university-of-california-fall-2025-admission-trends"><span class="l-en">UC Fall 2025 admissions</span><span class="l-vi">Tuyển sinh UC mùa thu 2025</span></a></li>
@@ -3323,7 +3330,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       var form=el('form',{'class':'cl-add'},[inp,el('button',{type:'submit','class':'ec-icon',text:'+','aria-label':t('Add','Thêm')})]);
       form.addEventListener('submit',function(e){ e.preventDefault(); var v=inp.value.trim(); if(!v) return; (cl.custom[u.k]=cl.custom[u.k]||[]).push({id:'c'+Date.now().toString(36),text:v}); clSave(); drawChecklist(); });
       var pct=items.length?Math.round(done/items.length*100):0;
-      grid.appendChild(el('article',{'class':'cl-card'},[
+      grid.appendChild(el('article',{'class':'cl-card','data-v':{usyd:'aus',unsw:'aus',uts:'aus',uchicago:'us',ucsc:'us',nyush:'cn'}[u.k]||'aus'},[
         el('div',{'class':'cl-head'},[el('h3',{text:t(u.en,u.vi)}),el('span',{'class':'muted small',text:t(done+' of '+items.length+' done',done+'/'+items.length+' việc')})]),
         el('div',{'class':'cl-bar'},[el('i',{style:'width:'+pct+'%'})]),
         ul, form
@@ -3424,35 +3431,41 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
     var d=document.getElementById(a.getAttribute('href').slice(1)); if(d) d.open=true;
   });
 
-  /* ---------- University of Sydney: sub-pages ---------- */
-  var USV=[['sum','At a glance','Tổng quan'],['deg','Degrees & majors','Ngành học'],['fit','My chances','Cơ hội của mình'],['home','Housing','Chỗ ở'],['out','Where it leads','Đầu ra'],['fdn','Foundation?','Dự bị?'],['src','Sources','Nguồn']];
-  var unav=document.getElementById('usyd-nav'), ucur='sum';
-  function showUsyd(v,scroll){
-    ucur=v;
-    [].forEach.call(document.querySelectorAll('#usyd [data-v]'),function(n){ n.classList.toggle('v-off',n.getAttribute('data-v')!==v); });
-    if(unav) [].forEach.call(unav.querySelectorAll('[data-sv]'),function(b){ b.setAttribute('aria-pressed',b.getAttribute('data-sv')===v?'true':'false'); });
-    if(v==='fdn') [].forEach.call(document.querySelectorAll('#usyd details.decided'),function(d){ d.open=true; });
-    drawUsydNext();
-    var on=unav&&unav.querySelector('[aria-pressed="true"]'); if(on&&unav.scrollWidth>unav.clientWidth) unav.scrollLeft=on.offsetLeft-unav.clientWidth/2+on.offsetWidth/2;
-    if(scroll&&unav){ var head=document.querySelector('#usyd .uni-head'), top=head.getBoundingClientRect().bottom+window.scrollY; if(window.scrollY>top) window.scrollTo(0,top); }
+  /* ---------- sub-pages inside long tabs ---------- */
+  var SUB={}, subStyle=document.createElement('style');
+  document.head.appendChild(subStyle);
+  function subCss(){
+    var sel=[]; for(var id in SUB) sel.push('#'+id+' [data-v]:not([data-v~="'+SUB[id].cur+'"])');
+    subStyle.textContent=sel.length?'@media screen{'+sel.join(',')+'{display:none!important}}':'';
   }
-  function drawUsydNext(){
-    var body=document.querySelector('#usyd .panel-body'); if(!body) return;
-    var old=document.getElementById('usyd-next'); if(old) old.remove();
-    var i=USV.map(function(x){ return x[0]; }).indexOf(ucur); if(i<0||i===USV.length-1) return;
-    var nx=USV[i+1];
-    body.appendChild(el('button',{type:'button','class':'linkish usyd-next',id:'usyd-next',text:t('Next: '+nx[1]+' →','Tiếp theo: '+nx[2]+' →'),on:{click:function(){ showUsyd(nx[0],true); }}}));
+  function subNext(id){
+    var S=SUB[id], old=S.body.querySelector(':scope>.sub-next'); if(old) old.remove();
+    var i=S.views.map(function(x){ return x[0]; }).indexOf(S.cur); if(i<0||i===S.views.length-1) return;
+    var nx=S.views[i+1];
+    S.body.appendChild(el('button',{type:'button','class':'linkish sub-next',text:t('Next: '+nx[1]+' →','Tiếp theo: '+nx[2]+' →'),on:{click:function(){ showSub(id,nx[0],true); }}}));
   }
-  if(unav){
-    unav.addEventListener('click',function(e){ var b=e.target.closest('[data-sv]'); if(b) showUsyd(b.getAttribute('data-sv'),true); });
-    document.addEventListener('click',function(e){
-      var a=e.target.closest('#usyd a[href^="#"]'); if(!a||a.getAttribute('href').length<2) return;
-      var tgt=document.getElementById(a.getAttribute('href').slice(1)), box=tgt&&tgt.closest('[data-v]');
-      if(box&&box.closest('#usyd')) showUsyd(box.getAttribute('data-v'),false);
-    },true);
-    showUsyd('sum',false);
-    redraw.push(drawUsydNext);
+  function showSub(id,v,scroll){
+    var S=SUB[id]; if(!S) return; S.cur=v; S.panel.setAttribute('data-sub',v); subCss();
+    [].forEach.call(S.nav.querySelectorAll('[data-sv]'),function(b){ b.setAttribute('aria-pressed',b.getAttribute('data-sv')===v?'true':'false'); });
+    var on=S.nav.querySelector('[aria-pressed="true"]'); if(on&&S.nav.scrollWidth>S.nav.clientWidth) S.nav.scrollLeft=on.offsetLeft-S.nav.clientWidth/2+on.offsetWidth/2;
+    if(id==='usyd'&&v==='fdn') [].forEach.call(S.panel.querySelectorAll('details.decided'),function(d){ d.open=true; });
+    subNext(id);
+    if(scroll){ var y=S.anchor.getBoundingClientRect().top+window.scrollY; if(window.scrollY>y) window.scrollTo(0,y); }
   }
+  [].forEach.call(document.querySelectorAll('nav.subnav'),function(nav){
+    var panel=nav.closest('[role="tabpanel"]'), id=panel.id, anchor=document.createElement('span');
+    nav.parentNode.insertBefore(anchor,nav);
+    SUB[id]={nav:nav,panel:panel,anchor:anchor,body:panel.querySelector('.panel-body')||panel,views:[].map.call(nav.querySelectorAll('[data-sv]'),function(b){ return [b.getAttribute('data-sv'),b.querySelector('.l-en').textContent,b.querySelector('.l-vi').textContent]; })};
+    SUB[id].cur=SUB[id].views[0][0];
+    nav.addEventListener('click',function(e){ var b=e.target.closest('[data-sv]'); if(b) showSub(id,b.getAttribute('data-sv'),true); });
+  });
+  for(var sid in SUB) showSub(sid,SUB[sid].cur,false);
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('[role="tabpanel"] a[href^="#"]'); if(!a||a.getAttribute('href').length<2) return;
+    var tgt=document.getElementById(a.getAttribute('href').slice(1)), box=tgt&&tgt.closest('[data-v]'), panel=box&&box.closest('[role="tabpanel"]');
+    if(panel&&SUB[panel.id]) showSub(panel.id,box.getAttribute('data-v').split(' ')[0],false);
+  },true);
+  redraw.push(function(){ for(var id in SUB) subNext(id); });
 
   redraw.push(drawCountdown,drawSlider,drawChecklist,drawCost,drawBudget);
 })();
@@ -3712,7 +3725,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       var kids=[head];
       if(e.noteEn) kids.push(el('p',{'class':'small muted',text:t(e.noteEn,e.noteVi)}));
       kids.push(ta,meta);
-      box.appendChild(el('article',{'class':'es-card'},kids));
+      box.appendChild(el('article',{'class':'es-card','data-v':{common:'us nyush','uc-why':'us','uc-ext':'us',uc1:'ucsc',uc2:'ucsc',uc3:'ucsc',uc4:'ucsc',nyush:'nyush'}[e.id]||'aus'},kids));
       upd();
     });
   }
