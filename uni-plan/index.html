@@ -630,6 +630,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
 .subnav{position:sticky;top:0;z-index:6;display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;background:var(--paper);border-bottom:1px solid var(--rule)}
 .subnav .ec-chip{font-size:.9rem;padding:6px 14px;min-height:34px;border-radius:3px}
 .tabpanel [data-v]{scroll-margin-top:110px}
+.block[data-v="deg"] .mm-cards{grid-template-columns:minmax(0,640px)}
 .sub-next{justify-self:start;padding:8px 0!important;min-height:36px}
 @media (max-width:720px){ .subnav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding-inline:16px;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent)} .subnav::-webkit-scrollbar{display:none} .subnav .ec-chip{flex:none} .tabpanel [data-v]{scroll-margin-top:70px} }
 @media (max-width:900px){ #overview .overview>.panel-body{display:contents} #overview .subnav{order:-1} #overview:not([data-sub="aim"]) .profile{display:none} }
@@ -1391,7 +1392,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <div><span class="k"><span class="l-en">First deadline</span><span class="l-vi">Hạn đầu tiên</span></span><span class="num"><span class="l-en">~2 Nov 2027</span><span class="l-vi">~2/11/2027</span></span></div>
     </div>
   </div>
-  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="glance" aria-pressed="true"><span class="l-en">At a glance</span><span class="l-vi">Tổng quan</span></button><button type="button" class="ec-chip" data-sv="money" aria-pressed="false"><span class="l-en">Scholarships &amp; aid</span><span class="l-vi">Học bổng &amp; hỗ trợ</span></button><button type="button" class="ec-chip" data-sv="apply" aria-pressed="false"><span class="l-en">How to apply</span><span class="l-vi">Cách nộp hồ sơ</span></button></nav>
+  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="glance" aria-pressed="true"><span class="l-en">At a glance</span><span class="l-vi">Tổng quan</span></button><button type="button" class="ec-chip" data-sv="deg" aria-pressed="false"><span class="l-en">Degrees &amp; majors</span><span class="l-vi">Ngành học</span></button><button type="button" class="ec-chip" data-sv="fit" aria-pressed="false"><span class="l-en">My chances</span><span class="l-vi">Cơ hội của mình</span></button><button type="button" class="ec-chip" data-sv="money" aria-pressed="false"><span class="l-en">Scholarships &amp; aid</span><span class="l-vi">Học bổng &amp; hỗ trợ</span></button><button type="button" class="ec-chip" data-sv="home" aria-pressed="false"><span class="l-en">Housing</span><span class="l-vi">Chỗ ở</span></button><button type="button" class="ec-chip" data-sv="out" aria-pressed="false"><span class="l-en">Where it leads</span><span class="l-vi">Đầu ra</span></button><button type="button" class="ec-chip" data-sv="src" aria-pressed="false"><span class="l-en">Sources</span><span class="l-vi">Nguồn</span></button></nav>
   <div data-v="glance" class="two">
     <div>
       <p class="label"><span class="l-en">Why it fits</span><span class="l-vi">Vì sao phù hợp</span></p>
@@ -1447,14 +1448,14 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
     </ol>
     <p class="small muted"><span class="l-en">From UChicago&rsquo;s international financial aid page, checked 30 Sep 2026. UChicago reports nearly US$20 million in need-based aid to international students over four years, plus a US$35 million gift for international aid. The page asks for 2024 tax forms in the current cycle; expect a later year for mine, and confirm in August 2027 that the ED II and RD aid dates are the same for international students.</span><span class="l-vi">Theo trang hỗ trợ tài chính quốc tế của UChicago, kiểm tra ngày 30/9/2026. UChicago cho biết đã hỗ trợ gần US$20 triệu theo nhu cầu cho du học sinh trong bốn năm, cùng khoản tài trợ US$35 triệu dành cho hỗ trợ quốc tế. Chu kỳ hiện tại yêu cầu tờ khai thuế năm 2024; khóa của mình sẽ là năm sau đó, và cần xác nhận vào tháng 8/2027 rằng hạn ED II và RD cũng áp dụng cho du học sinh.</span></p>
   </div>
-  <div data-v="apply" class="block">
+  <div data-v="glance" class="block">
     <p class="label"><span class="l-en">English test and visa</span><span class="l-vi">Tiếng Anh và thị thực</span></p>
     <div class="award">
       <div><span class="name">IELTS Academic</span><span class="val"><span class="l-en">Optional, no minimum</span><span class="l-vi">Không bắt buộc, không có mức tối thiểu</span></span><span class="muted"><span class="l-en">Not required if the application already shows strong English. Send a score only if it helps.</span><span class="l-vi">Không cần nếu hồ sơ đã thể hiện tiếng Anh tốt. Chỉ gửi điểm nếu có lợi.</span></span></div>
       <div><span class="name"><span class="l-en">F-1 student visa</span><span class="l-vi">Thị thực du học F-1</span></span><span class="val"><span class="l-en">~US$785 in fees</span><span class="l-vi">~US$785 lệ phí</span></span><span class="muted"><span class="l-en">US$185 application + US$350 SEVIS + US$250 integrity fee. Interview at the US Consulate General in Ho Chi Minh City after the I-20 arrives.</span><span class="l-vi">US$185 hồ sơ + US$350 SEVIS + US$250 phí integrity. Phỏng vấn tại Tổng Lãnh sự quán Mỹ ở TP.HCM sau khi có I-20.</span></span></div>
     </div>
   </div>
-  <div data-v="apply" class="block">
+  <div data-v="fit" class="block">
     <p class="label"><span class="l-en">Requirements</span><span class="l-vi">Yêu cầu</span></p>
     <div class="tbl"><table>
       <thead><tr><th><span class="l-en">Area</span><span class="l-vi">Mục</span></th><th><span class="l-en">What admits look like</span><span class="l-vi">Hồ sơ trúng tuyển</span></th><th><span class="l-en">Me now</span><span class="l-vi">Mình hiện tại</span></th><th><span class="l-en">Status</span><span class="l-vi">Tình trạng</span></th></tr></thead>
@@ -1466,7 +1467,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       </tbody>
     </table></div>
   </div>
-  <div data-v="apply" class="block">
+  <div data-v="fit" class="block">
     <p class="label"><span class="l-en">How to apply</span><span class="l-vi">Cách nộp hồ sơ</span></p>
     <div class="tbl"><table>
       <thead><tr><th><span class="l-en">Round</span><span class="l-vi">Vòng</span></th><th><span class="l-en">Deadline (2026–27)</span><span class="l-vi">Hạn (2026–27)</span></th><th><span class="l-en">Decision</span><span class="l-vi">Kết quả</span></th><th><span class="l-en">Binding</span><span class="l-vi">Ràng buộc</span></th></tr></thead>
@@ -1478,11 +1479,42 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       </tbody>
     </table></div>
   </div>
-  <div data-v="glance" class="verdict-box">
+  <div data-v="fit" class="verdict-box">
     <h3><span class="pill bad"><span class="l-en">Dream</span><span class="l-vi">Mơ ước</span></span> <span class="l-en">Apply, but keep it non-binding</span><span class="l-vi">Nộp, nhưng chọn vòng không ràng buộc</span></h3>
     <p><span class="l-en">At 35–37 predicted, UChicago is a long shot at a 4.5% admit rate. Early Action gives an answer in December without locking me in. The supplement essay is my best lever: it rewards curiosity, and Chạm and Action for Earth give real material.</span><span class="l-vi">Với 35–37 điểm dự đoán và tỷ lệ nhận 4,5%, UChicago rất khó. Early Action cho kết quả vào tháng 12 mà không ràng buộc. Bài luận phụ là cơ hội lớn nhất: trường đánh giá cao sự tò mò, và Chạm cùng Action for Earth là chất liệu thật.</span></p>
   </div>
-  <ol data-v="apply" class="sources">
+    <div class="block" data-v="deg">
+    <p class="label"><span class="l-en">Degrees &amp; majors</span><span class="l-vi">Ngành học</span></p>
+    <div class="mm-cards"><div class="mm-card">
+        <div class="mm-card-head"><h3>UChicago</h3><span class="pill warn"><span class="l-en">Economics first</span><span class="l-vi">Kinh tế trước</span></span></div>
+        <dl>
+          <dt><span class="l-en">Major</span><span class="l-vi">Chính</span></dt><dd><span class="l-en">Economics, Business Economics specialisation (13 courses, 3 at Booth)</span><span class="l-vi">Kinh tế học, hướng Business Economics (13 môn, 3 môn tại Booth)</span></dd>
+          <dt><span class="l-en">Minor</span><span class="l-vi">Phụ</span></dt><dd><span class="l-en">Optional</span><span class="l-vi">Không bắt buộc</span></dd>
+          <dt><span class="l-en">Declare</span><span class="l-vi">Đăng ký</span></dt><dd><span class="l-en">By the end of second year. The Core curriculum fills most of year one.</span><span class="l-vi">Trước cuối năm hai. Năm nhất chủ yếu là chương trình Core.</span></dd>
+        </dl>
+        <p class="note"><span class="l-en">UChicago has no undergraduate business major, so business comes through the specialisation instead.</span><span class="l-vi">UChicago không có ngành kinh doanh bậc cử nhân, nên kinh doanh được học qua hướng chuyên sâu.</span></p>
+        <p class="official"><a href="https://economics.uchicago.edu/undergraduate-study/curriculum/business-economics-specialization"><span class="l-en">Official course page</span><span class="l-vi">Trang chương trình chính thức</span></a></p>
+      </div></div>
+    <p class="small muted"><span class="l-en">The Majors &amp; minors tab compares this plan with the other five universities.</span><span class="l-vi">Thẻ Chuyên ngành so sánh kế hoạch này với năm trường còn lại.</span> <button type="button" class="linkish" data-go="majmin"><span class="l-en">Open Majors &amp; minors →</span><span class="l-vi">Mở Chuyên ngành →</span></button></p>
+  </div>
+  <div class="block" data-v="home">
+    <p class="label"><span class="l-en">Housing</span><span class="l-vi">Chỗ ở</span></p>
+    <h3><span class="l-en">Two years in the House system</span><span class="l-vi">Hai năm trong hệ thống House</span></h3>
+    <p class="muted"><span class="l-en">Every first-year lives on campus for the first two years (six quarters). Residence halls are split into Houses of about 70 to 100 students, each a mix of years, countries and interests.</span><span class="l-vi">Mọi sinh viên năm nhất phải ở trong trường hai năm đầu (sáu quý). Mỗi ký túc xá chia thành các House, mỗi House trộn lẫn sinh viên nhiều khóa, quốc gia và sở thích.</span></p>
+    <div class="award"><div><span class="name"><span class="l-en">Food and housing</span><span class="l-vi">Ăn ở</span></span><span class="val"><span class="l-en">US$21,414 a year (2026–27)</span><span class="l-vi">US$21.414/năm (2026–27)</span></span><span class="muted"><span class="l-en">Room and meal plan together, already counted in the all-in cost.</span><span class="l-vi">Gồm phòng và gói bữa ăn, đã tính trong tổng chi phí.</span></span></div><div><span class="name"><span class="l-en">Required</span><span class="l-vi">Bắt buộc</span></span><span class="val"><span class="l-en">Years 1 and 2</span><span class="l-vi">Năm 1 và 2</span></span><span class="muted"><span class="l-en">You can move off campus from the third year.</span><span class="l-vi">Từ năm ba có thể ra ngoài ở.</span></span></div></div>
+    <ol class="steps"><li><span class="l-en"><strong>Commit to UChicago</strong> (December for EA or ED, by 1 May for Regular Decision).</span><span class="l-vi"><strong>Xác nhận nhập học UChicago</strong> (tháng 12 nếu EA hoặc ED, trước 1/5 nếu Regular Decision).</span></li><li><span class="l-en"><strong>Fill in the housing application</strong> in the UChicago Account and share your preferences.</span><span class="l-vi"><strong>Điền đơn chỗ ở</strong> trong UChicago Account và nêu mong muốn.</span></li><li><span class="l-en"><strong>UChicago assigns your House and roommate</strong> in the summer before you arrive.</span><span class="l-vi"><strong>Trường xếp House và bạn cùng phòng</strong> vào mùa hè trước khi nhập học.</span></li></ol>
+  </div>
+  <div class="block" data-v="out">
+    <p class="label"><span class="l-en">Where it leads</span><span class="l-vi">Đầu ra</span></p>
+    <h3><span class="l-en">What UChicago graduates go on to</span><span class="l-vi">Sinh viên UChicago ra trường làm gì</span></h3>
+    <p class="muted"><span class="l-en">Career Advancement&rsquo;s figures for the Class of 2025, as of June 2025.</span><span class="l-vi">Số liệu của Career Advancement cho khóa 2025, tính đến tháng 6/2025.</span></p>
+    <div class="facts"><div><b>98%</b><span><span class="l-en">had a job, graduate school or other offer by graduation</span><span class="l-vi">có việc làm, suất học cao học hoặc cơ hội khác khi tốt nghiệp</span></span></div><div><b>71% / 29%</b><span><span class="l-en">of those offers were jobs / graduate school</span><span class="l-vi">trong đó là việc làm / học cao học</span></span></div><div><b>29%</b><span><span class="l-en">of job offers were in financial services, the biggest industry</span><span class="l-vi">việc làm trong ngành tài chính, nhiều nhất</span></span></div></div>
+    <p class="small muted"><span class="l-en">Other industries: science and technology 13%, education 12%, consulting 11%, government and nonprofit 11%. 90% of UChicago applicants to law school and to medical school were accepted in the 2025 cycle.</span><span class="l-vi">Các ngành khác: khoa học và công nghệ 13%, giáo dục 12%, tư vấn 11%, chính phủ và phi lợi nhuận 11%. 90% sinh viên UChicago nộp vào trường luật và trường y được nhận trong đợt 2025.</span></p>
+  </div>
+  <p class="label" data-v="src"><span class="l-en">Sources</span><span class="l-vi">Nguồn</span></p>
+  <ol data-v="src" class="sources">
+    <li><a href="https://collegeadmissions.uchicago.edu/campus-life/housing-dining/room-assignment-and-selection"><span class="l-en">Room assignment and selection</span><span class="l-vi">Xếp phòng</span></a> · <a href="https://financialaid.uchicago.edu/undergraduate/how-aid-works/undergraduate-costs/food-and-housing/"><span class="l-en">Food and housing</span><span class="l-vi">Ăn ở</span></a></li>
+    <li><a href="https://careeradvancement.uchicago.edu/outcomes/"><span class="l-en">Post-college outcomes</span><span class="l-vi">Kết quả sau tốt nghiệp</span></a></li>
     <li><a href="https://collegeadmissions.uchicago.edu/apply/first-year-applicants"><span class="l-en">First-year applicants</span><span class="l-vi">Tuyển sinh năm nhất</span></a> · <a href="https://collegeadmissions.uchicago.edu/apply/class-profile/"><span class="l-en">Class profile</span><span class="l-vi">Hồ sơ khóa học</span></a></li>
     <li><a href="https://economics.uchicago.edu/undergraduate-study/curriculum/business-economics-specialization">Business Economics Specialization</a> · <a href="https://bursar.uchicago.edu/tuition-and-fees/tuition-and-fees-2026-27"><span class="l-en">Tuition 2026–27</span><span class="l-vi">Học phí 2026–27</span></a></li>
     <li><a href="https://collegeadmissions.uchicago.edu/financial-support/international-financial-aid/"><span class="l-en">International financial aid</span><span class="l-vi">Hỗ trợ tài chính quốc tế</span></a> · <a href="https://financialaid.uchicago.edu/undergraduate/how-aid-works/types-of-aid/scholarships/"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></a></li>
@@ -1505,7 +1537,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <div><span class="k"><span class="l-en">First deadline</span><span class="l-vi">Hạn đầu tiên</span></span><span class="num"><span class="l-en">1 Nov 2027</span><span class="l-vi">1/11/2027</span></span></div>
     </div>
   </div>
-  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="glance" aria-pressed="true"><span class="l-en">At a glance</span><span class="l-vi">Tổng quan</span></button><button type="button" class="ec-chip" data-sv="money" aria-pressed="false"><span class="l-en">Scholarships &amp; aid</span><span class="l-vi">Học bổng &amp; hỗ trợ</span></button><button type="button" class="ec-chip" data-sv="apply" aria-pressed="false"><span class="l-en">How to apply</span><span class="l-vi">Cách nộp hồ sơ</span></button></nav>
+  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="glance" aria-pressed="true"><span class="l-en">At a glance</span><span class="l-vi">Tổng quan</span></button><button type="button" class="ec-chip" data-sv="deg" aria-pressed="false"><span class="l-en">Degrees &amp; majors</span><span class="l-vi">Ngành học</span></button><button type="button" class="ec-chip" data-sv="fit" aria-pressed="false"><span class="l-en">My chances</span><span class="l-vi">Cơ hội của mình</span></button><button type="button" class="ec-chip" data-sv="money" aria-pressed="false"><span class="l-en">Scholarships &amp; aid</span><span class="l-vi">Học bổng &amp; hỗ trợ</span></button><button type="button" class="ec-chip" data-sv="home" aria-pressed="false"><span class="l-en">Housing</span><span class="l-vi">Chỗ ở</span></button><button type="button" class="ec-chip" data-sv="out" aria-pressed="false"><span class="l-en">Where it leads</span><span class="l-vi">Đầu ra</span></button><button type="button" class="ec-chip" data-sv="src" aria-pressed="false"><span class="l-en">Sources</span><span class="l-vi">Nguồn</span></button></nav>
   <div data-v="glance" class="two">
     <div>
       <p class="label"><span class="l-en">Why it fits</span><span class="l-vi">Vì sao phù hợp</span></p>
@@ -1530,14 +1562,14 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <div><span class="name"><span class="l-en">Merit awards at entry</span><span class="l-vi">Học bổng năng lực khi nhập học</span></span><span class="val"><span class="l-en">Not widely published</span><span class="l-vi">Không công bố rộng rãi</span></span><span class="muted"><span class="l-en">NYU Shanghai's named merit awards mostly go to current students. Ask admissions whether any are given at entry.</span><span class="l-vi">Các học bổng năng lực có tên của NYU Thượng Hải chủ yếu dành cho sinh viên đang học. Nên hỏi phòng tuyển sinh về học bổng khi nhập học.</span></span></div>
     </div>
   </div>
-  <div data-v="apply" class="block">
+  <div data-v="glance" class="block">
     <p class="label"><span class="l-en">English test and visa</span><span class="l-vi">Tiếng Anh và thị thực</span></p>
     <div class="award">
       <div><span class="name">IELTS Academic</span><span class="val"><span class="l-en">7.5+ is competitive</span><span class="l-vi">7.5+ là cạnh tranh</span></span><span class="muted"><span class="l-en">Exempt if your last 3 consecutive years were in an all-English curriculum. IB scores alone do not waive it.</span><span class="l-vi">Được miễn nếu 3 năm liên tiếp gần nhất học chương trình hoàn toàn bằng tiếng Anh. Điểm IB không thay thế được.</span></span></div>
       <div><span class="name"><span class="l-en">X1 study visa</span><span class="l-vi">Thị thực học tập X1</span></span><span class="val"><span class="l-en">Then a residence permit</span><span class="l-vi">Sau đó là thẻ cư trú</span></span><span class="muted"><span class="l-en">NYU Shanghai sends the admission letter and JW202. Fill in the form at visaforchina.cn, submit at the Chinese Visa Application Service Center in District 1, and get the residence permit within 30 days of arriving.</span><span class="l-vi">NYU Thượng Hải gửi thư nhập học và JW202. Điền đơn tại visaforchina.cn, nộp tại Trung tâm Dịch vụ Thị thực Trung Quốc ở Quận 1, và làm thẻ cư trú trong vòng 30 ngày sau khi đến.</span></span></div>
     </div>
   </div>
-  <div data-v="apply" class="block">
+  <div data-v="fit" class="block">
     <p class="label"><span class="l-en">Requirements</span><span class="l-vi">Yêu cầu</span></p>
     <div class="tbl"><table>
       <thead><tr><th><span class="l-en">Area</span><span class="l-vi">Mục</span></th><th><span class="l-en">Needed</span><span class="l-vi">Cần</span></th><th><span class="l-en">Me now</span><span class="l-vi">Mình hiện tại</span></th><th><span class="l-en">Status</span><span class="l-vi">Tình trạng</span></th></tr></thead>
@@ -1549,7 +1581,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       </tbody>
     </table></div>
   </div>
-  <div data-v="apply" class="block">
+  <div data-v="fit" class="block">
     <p class="label"><span class="l-en">How to apply</span><span class="l-vi">Cách nộp hồ sơ</span></p>
     <div class="tbl"><table>
       <thead><tr><th><span class="l-en">Round</span><span class="l-vi">Vòng</span></th><th><span class="l-en">Deadline</span><span class="l-vi">Hạn</span></th><th><span class="l-en">Binding</span><span class="l-vi">Ràng buộc</span></th></tr></thead>
@@ -1560,11 +1592,42 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       </tbody>
     </table></div>
   </div>
-  <div data-v="glance" class="verdict-box">
+  <div data-v="fit" class="verdict-box">
     <h3><span class="pill bad"><span class="l-en">Reach</span><span class="l-vi">Thử thách</span></span> <span class="l-en">Strong on story, a stretch on grades</span><span class="l-vi">Câu chuyện tốt, điểm còn thiếu</span></h3>
     <p><span class="l-en">Only about 250 places go to international students each year. Apply Regular Decision unless NYU Shanghai becomes the clear first choice, and budget as if aid will be partial.</span><span class="l-vi">Mỗi năm chỉ khoảng 250 chỗ cho du học sinh. Nộp vòng thường, trừ khi NYU Thượng Hải là lựa chọn số một rõ ràng, và tính ngân sách như thể chỉ được hỗ trợ một phần.</span></p>
   </div>
-  <ol data-v="apply" class="sources">
+    <div class="block" data-v="deg">
+    <p class="label"><span class="l-en">Degrees &amp; majors</span><span class="l-vi">Ngành học</span></p>
+    <div class="mm-cards"><div class="mm-card">
+        <div class="mm-card-head"><h3>NYU Shanghai</h3><span class="pill good"><span class="l-en">Business first</span><span class="l-vi">Kinh doanh trước</span></span></div>
+        <dl>
+          <dt><span class="l-en">Major</span><span class="l-vi">Chính</span></dt><dd><span class="l-en">Business and Finance, Business Management track</span><span class="l-vi">Business and Finance, hướng Business Management</span></dd>
+          <dt><span class="l-en">Minor</span><span class="l-vi">Phụ</span></dt><dd><span class="l-en">Economics</span><span class="l-vi">Kinh tế học</span></dd>
+          <dt><span class="l-en">Declare</span><span class="l-vi">Đăng ký</span></dt><dd><span class="l-en">Between 32 and 64 credits (second year). Needs a C in Statistics for Business and Economics.</span><span class="l-vi">Trong khoảng 32 đến 64 tín chỉ (năm hai). Cần điểm C môn Statistics for Business and Economics.</span></dd>
+        </dl>
+        <p class="note"><span class="l-en">Double majors are allowed. At least 12 credits of a minor must not overlap with your major.</span><span class="l-vi">Được học song ngành. Ít nhất 12 tín chỉ của chuyên ngành phụ không được trùng với chuyên ngành chính.</span></p>
+        <p class="official"><a href="https://shanghai.nyu.edu/academics/majors/business-and-finance"><span class="l-en">Official course page</span><span class="l-vi">Trang chương trình chính thức</span></a></p>
+      </div></div>
+    <p class="small muted"><span class="l-en">The Majors &amp; minors tab compares this plan with the other five universities.</span><span class="l-vi">Thẻ Chuyên ngành so sánh kế hoạch này với năm trường còn lại.</span> <button type="button" class="linkish" data-go="majmin"><span class="l-en">Open Majors &amp; minors →</span><span class="l-vi">Mở Chuyên ngành →</span></button></p>
+  </div>
+  <div class="block" data-v="home">
+    <p class="label"><span class="l-en">Housing</span><span class="l-vi">Chỗ ở</span></p>
+    <h3><span class="l-en">Two years on campus, with a roommate from another culture</span><span class="l-vi">Hai năm ở ký túc xá, cùng bạn phòng từ nền văn hóa khác</span></h3>
+    <p class="muted"><span class="l-en">Living in the residence halls is required in the first and second years. First-year roommates are paired across cultures, usually one Chinese and one international student.</span><span class="l-vi">Ở ký túc xá là bắt buộc trong năm nhất và năm hai. Bạn cùng phòng năm nhất được ghép khác văn hóa, thường là một sinh viên Trung Quốc và một sinh viên quốc tế.</span></p>
+    <div class="award"><div><span class="name"><span class="l-en">Jingyao Residence Hall</span><span class="l-vi">Ký túc xá Jingyao</span></span><span class="val"><span class="l-en">3 km from the New Bund campus</span><span class="l-vi">Cách khuôn viên New Bund 3 km</span></span><span class="muted"><span class="l-en">Pudong, a 10-minute walk from Metro Line 7. Each room has its own bathroom and kitchen, a washer-dryer and air conditioning.</span><span class="l-vi">Quận Phố Đông, đi bộ 10 phút tới tàu điện tuyến 7. Mỗi phòng có phòng tắm và bếp riêng, máy giặt sấy và điều hòa.</span></span></div><div><span class="name"><span class="l-en">Housing cost</span><span class="l-vi">Chi phí chỗ ở</span></span><span class="val"><span class="l-en">US$5,774 a year (2026–27)</span><span class="l-vi">US$5.774/năm (2026–27)</span></span><span class="muted"><span class="l-en">From NYU Shanghai&rsquo;s own budget; food is extra (US$5,264).</span><span class="l-vi">Theo dự toán của trường; tiền ăn tính riêng (US$5.264).</span></span></div></div>
+    <ol class="steps"><li><span class="l-en"><strong>Accept your admission.</strong></span><span class="l-vi"><strong>Nhận lời nhập học.</strong></span></li><li><span class="l-en"><strong>Complete the housing application</strong> from the Student Housing Office email by its deadline.</span><span class="l-vi"><strong>Hoàn thành đơn chỗ ở</strong> theo email của Phòng Nhà ở sinh viên, đúng hạn.</span></li><li><span class="l-en"><strong>Get your room and roommate</strong> before move-in in late August.</span><span class="l-vi"><strong>Nhận phòng và bạn cùng phòng</strong> trước ngày dọn vào cuối tháng 8.</span></li></ol>
+  </div>
+  <div class="block" data-v="out">
+    <p class="label"><span class="l-en">Where it leads</span><span class="l-vi">Đầu ra</span></p>
+    <h3><span class="l-en">What NYU Shanghai graduates go on to</span><span class="l-vi">Sinh viên NYU Thượng Hải ra trường làm gì</span></h3>
+    <p class="muted"><span class="l-en">From the Class of 2025 First Destination Report: 399 graduates from 42 countries, with verified information for 95% of them.</span><span class="l-vi">Theo báo cáo First Destination khóa 2025: 399 sinh viên từ 42 quốc gia, xác minh được thông tin của 95%.</span></p>
+    <div class="facts"><div><b>90%</b><span><span class="l-en">placed: 59% studying, 27% working, 4% starting a business</span><span class="l-vi">có hướng đi: 59% học tiếp, 27% đi làm, 4% khởi nghiệp</span></span></div><div><b>89%</b><span><span class="l-en">live outside their home country after graduating</span><span class="l-vi">sống ngoài nước mình sau khi tốt nghiệp</span></span></div><div><b>21%</b><span><span class="l-en">of jobs in banking and finance; 18% tech, 10% consulting</span><span class="l-vi">việc làm trong ngân hàng và tài chính; 18% công nghệ, 10% tư vấn</span></span></div></div>
+    <p class="small muted"><span class="l-en">Employers include Boston Consulting Group, McKinsey, Morgan Stanley, HSBC, KPMG, L&rsquo;Oréal and P&amp;G, and one graduate joined MoMo in Ho Chi Minh City. 29% of the class majored in business.</span><span class="l-vi">Nhà tuyển dụng gồm Boston Consulting Group, McKinsey, Morgan Stanley, HSBC, KPMG, L&rsquo;Oréal và P&amp;G, và một sinh viên làm tại MoMo ở TP.HCM. 29% khóa học ngành kinh doanh.</span></p>
+  </div>
+  <p class="label" data-v="src"><span class="l-en">Sources</span><span class="l-vi">Nguồn</span></p>
+  <ol data-v="src" class="sources">
+    <li><a href="https://shanghai.nyu.edu/node/550"><span class="l-en">Residential Education and Housing</span><span class="l-vi">Nhà ở sinh viên</span></a> · <a href="https://shanghai.nyu.edu/node/33218"><span class="l-en">Jingyao Residence Hall</span><span class="l-vi">Ký túc xá Jingyao</span></a></li>
+    <li><a href="https://cdn.shanghai.nyu.edu/sites/default/files/Life_Beyond_the_New_Bund_2025_EN.pdf"><span class="l-en">Life Beyond the New Bund: Class of 2025</span><span class="l-vi">Life Beyond the New Bund: khóa 2025</span></a></li>
     <li><a href="https://shanghai.nyu.edu/page/how-apply"><span class="l-en">How to apply</span><span class="l-vi">Cách nộp hồ sơ</span></a> · <a href="https://shanghai.nyu.edu/undergraduate-admissions/how-to-apply/early-decision">Early Decision</a></li>
     <li><a href="https://shanghai.nyu.edu/page/cost-attendance"><span class="l-en">Cost of attendance</span><span class="l-vi">Chi phí</span></a> · <a href="https://shanghai.nyu.edu/page/how-apply-financial-aid"><span class="l-en">Financial aid</span><span class="l-vi">Hỗ trợ tài chính</span></a></li>
     <li><a href="https://shanghai.nyu.edu/academics/majors/business-and-finance">Business and Finance</a> · <a href="https://nyunews.com/news/2025/03/12/nyu-shanghai-record-applications/"><span class="l-en">Class of 2029 applications</span><span class="l-vi">Số hồ sơ khóa 2029</span></a></li>
@@ -1587,7 +1650,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <div><span class="k"><span class="l-en">Intakes</span><span class="l-vi">Kỳ nhập học</span></span><span><span class="l-en">Feb, Jun, Sep</span><span class="l-vi">Tháng 2, 6, 9</span></span></div>
     </div>
   </div>
-  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="glance" aria-pressed="true"><span class="l-en">At a glance</span><span class="l-vi">Tổng quan</span></button><button type="button" class="ec-chip" data-sv="money" aria-pressed="false"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></button><button type="button" class="ec-chip" data-sv="apply" aria-pressed="false"><span class="l-en">How to apply</span><span class="l-vi">Cách nộp hồ sơ</span></button></nav>
+  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="glance" aria-pressed="true"><span class="l-en">At a glance</span><span class="l-vi">Tổng quan</span></button><button type="button" class="ec-chip" data-sv="deg" aria-pressed="false"><span class="l-en">Degrees &amp; majors</span><span class="l-vi">Ngành học</span></button><button type="button" class="ec-chip" data-sv="fit" aria-pressed="false"><span class="l-en">My chances</span><span class="l-vi">Cơ hội của mình</span></button><button type="button" class="ec-chip" data-sv="money" aria-pressed="false"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></button><button type="button" class="ec-chip" data-sv="home" aria-pressed="false"><span class="l-en">Housing</span><span class="l-vi">Chỗ ở</span></button><button type="button" class="ec-chip" data-sv="out" aria-pressed="false"><span class="l-en">Where it leads</span><span class="l-vi">Đầu ra</span></button><button type="button" class="ec-chip" data-sv="src" aria-pressed="false"><span class="l-en">Sources</span><span class="l-vi">Nguồn</span></button></nav>
   <div data-v="glance" class="two">
     <div>
       <p class="label"><span class="l-en">Why it fits</span><span class="l-vi">Vì sao phù hợp</span></p>
@@ -1615,14 +1678,14 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <div><span class="name">Business School International Scholarship</span><span class="val"><span class="l-en">A$5,000 for one year</span><span class="l-vi">A$5.000 cho một năm</span></span><span class="muted"><span class="l-en">Toward tuition for Business School students. Check the round open for 2028.</span><span class="l-vi">Hỗ trợ học phí cho sinh viên Business School. Kiểm tra đợt mở cho năm 2028.</span></span></div>
     </div>
   </div>
-  <div data-v="apply" class="block">
+  <div data-v="glance" class="block">
     <p class="label"><span class="l-en">English test and visa</span><span class="l-vi">Tiếng Anh và thị thực</span></p>
     <div class="award">
       <div><span class="name">IELTS Academic</span><span class="val"><span class="l-en">7.0 overall, 6.0 each band</span><span class="l-vi">7.0 tổng, mỗi kỹ năng 6.0</span></span><span class="muted"><span class="l-en">Business School requirement. Sit it by late 2027 so it is ready for the application and the Scientia scholarship.</span><span class="l-vi">Yêu cầu của Business School. Thi trước cuối năm 2027 để kịp hồ sơ và học bổng Scientia.</span></span></div>
       <div><span class="name"><span class="l-en">Student visa (subclass 500)</span><span class="l-vi">Thị thực du học (subclass 500)</span></span><span class="val">A$2,500</span><span class="muted"><span class="l-en">Apply online once the university issues your CoE. Show A$29,710 a year for living plus first-year tuition and travel, and buy OSHC health cover.</span><span class="l-vi">Nộp trực tuyến khi trường cấp CoE. Chứng minh A$29.710/năm sinh hoạt phí cộng học phí năm đầu và vé máy bay, và mua bảo hiểm OSHC.</span></span></div>
     </div>
   </div>
-  <div data-v="apply" class="block">
+  <div data-v="fit" class="block">
     <p class="label"><span class="l-en">Requirements</span><span class="l-vi">Yêu cầu</span></p>
     <div class="tbl"><table>
       <thead><tr><th><span class="l-en">Requirement (2027)</span><span class="l-vi">Yêu cầu (2027)</span></th><th><span class="l-en">Needed</span><span class="l-vi">Cần</span></th><th><span class="l-en">Me now</span><span class="l-vi">Mình hiện tại</span></th><th><span class="l-en">Status</span><span class="l-vi">Tình trạng</span></th></tr></thead>
@@ -1635,11 +1698,44 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       </tbody>
     </table></div>
   </div>
-  <div data-v="glance" class="verdict-box">
+  <div data-v="fit" class="verdict-box">
     <h3><span class="pill warn"><span class="l-en">Target</span><span class="l-vi">Vừa sức</span></span> <span class="l-en">Economics is safe, Commerce is in my band</span><span class="l-vi">Kinh tế an toàn, Thương mại nằm trong tầm</span></h3>
     <p><span class="l-en">Apply early in DP2 for Commerce with Economics as a second preference, early enough to try for Scientia. At a predicted 38 the Commerce offer comes before results; at 36 or 37 it comes after the July 2028 results, in time for Term 3 or Term 1 2029.</span><span class="l-vi">Nộp sớm trong DP2 cho Thương mại, Kinh tế là nguyện vọng 2, đủ sớm để xét Scientia. Nếu dự đoán 38, thư mời Thương mại đến trước khi có kết quả; nếu 36 hoặc 37, thư mời đến sau kết quả tháng 7/2028, kịp kỳ 3 hoặc kỳ 1/2029.</span></p>
   </div>
-  <ol data-v="apply" class="sources">
+    <div class="block" data-v="deg">
+    <p class="label"><span class="l-en">Degrees &amp; majors</span><span class="l-vi">Ngành học</span></p>
+    <div class="mm-cards"><div class="mm-card">
+        <div class="mm-card-head"><h3>UNSW Sydney</h3><span class="pill good"><span class="l-en">Business first</span><span class="l-vi">Kinh doanh trước</span></span></div>
+        <dl>
+          <dt><span class="l-en">Degree</span><span class="l-vi">Bằng</span></dt><dd><span class="l-en">Bachelor of Commerce (IB 36)</span><span class="l-vi">Cử nhân Thương mại (IB 36)</span></dd>
+          <dt><span class="l-en">Major 1</span><span class="l-vi">Chính 1</span></dt><dd>Innovation, Strategy &amp; Entrepreneurship <span class="muted"><span class="l-en">or International Business</span><span class="l-vi">hoặc International Business</span></span></dd>
+          <dt><span class="l-en">Major 2</span><span class="l-vi">Chính 2</span></dt><dd>Business Economics</dd>
+          <dt><span class="l-en">Below 36</span><span class="l-vi">Dưới 36</span></dt><dd><span class="l-en">Bachelor of Economics (IB 33) plus a Commerce major or minor</span><span class="l-vi">Cử nhân Kinh tế (IB 33) cộng một chuyên ngành chính hoặc phụ của Thương mại</span></dd>
+        </dl>
+        <p class="note"><span class="l-en">24 courses: one Commerce major (8 courses) is required, and the other 8 free courses can become a second major. UNSW doesn't list formal minors for Commerce.</span><span class="l-vi">24 môn: bắt buộc một chuyên ngành Thương mại (8 môn), 8 môn tự do còn lại có thể thành chuyên ngành thứ hai. UNSW không có chuyên ngành phụ chính thức cho Thương mại.</span></p>
+        <p class="official"><a href="https://www.unsw.edu.au/study/undergraduate/bachelor-of-commerce"><span class="l-en">Official course page</span><span class="l-vi">Trang chương trình chính thức</span></a></p>
+      </div></div>
+    <p class="small muted"><span class="l-en">The Majors &amp; minors tab compares this plan with the other five universities.</span><span class="l-vi">Thẻ Chuyên ngành so sánh kế hoạch này với năm trường còn lại.</span> <button type="button" class="linkish" data-go="majmin"><span class="l-en">Open Majors &amp; minors →</span><span class="l-vi">Mở Chuyên ngành →</span></button></p>
+  </div>
+  <div class="block" data-v="home">
+    <p class="label"><span class="l-en">Housing</span><span class="l-vi">Chỗ ở</span></p>
+    <h3><span class="l-en">Living on the Kensington campus</span><span class="l-vi">Sống trong khuôn viên Kensington</span></h3>
+    <p class="muted"><span class="l-en">UNSW has self-catered apartments and fully catered residential colleges on campus.</span><span class="l-vi">UNSW có căn hộ tự nấu ăn và các college nội trú có bao ăn ngay trong khuôn viên.</span></p>
+    <div class="award"><div><span class="name"><span class="l-en">UNSW Village apartments</span><span class="l-vi">Căn hộ UNSW Village</span></span><span class="val"><span class="l-en">A$408.50–646 a week (2026)</span><span class="l-vi">A$408,50–646/tuần (2026)</span></span><span class="muted"><span class="l-en">Rooms in shared 2 to 8-bedroom flats, studios or one-bed flats. Self-catered, 48 or 50-week contract. A$55 application fee and a deposit of 4 weeks&rsquo; rent.</span><span class="l-vi">Phòng trong căn hộ chung 2 đến 8 phòng ngủ, studio hoặc căn 1 phòng ngủ. Tự nấu ăn, hợp đồng 48 hoặc 50 tuần. Phí đăng ký A$55 và đặt cọc 4 tuần tiền thuê.</span></span></div><div><span class="name"><span class="l-en">Residential colleges</span><span class="l-vi">College nội trú</span></span><span class="val"><span class="l-en">Membership fee, meals included</span><span class="l-vi">Phí thành viên, đã gồm bữa ăn</span></span><span class="muted"><span class="l-en">For example New College: a furnished room, three meals a day, weekly cleaning and academic support for 44 weeks. Places are limited; fees are on request.</span><span class="l-vi">Ví dụ New College: phòng có nội thất, ba bữa mỗi ngày, dọn phòng hằng tuần và hỗ trợ học tập trong 44 tuần. Số chỗ có hạn; học phí liên hệ trường.</span></span></div></div>
+    <ol class="steps"><li><span class="l-en"><strong>Accept your UNSW offer first,</strong> then apply on the UNSW Accommodation site straight away.</span><span class="l-vi"><strong>Chấp nhận thư mời UNSW trước,</strong> rồi đăng ký ngay trên trang UNSW Accommodation.</span></li><li><span class="l-en"><strong>Pick apartments or a college.</strong> Colleges cost more but include meals and support in the first year.</span><span class="l-vi"><strong>Chọn căn hộ hoặc college.</strong> College đắt hơn nhưng có bữa ăn và hỗ trợ trong năm đầu.</span></li><li><span class="l-en"><strong>Under 18 on arrival?</strong> Your student visa needs an approved welfare arrangement, so check before you book.</span><span class="l-vi"><strong>Chưa đủ 18 tuổi khi đến?</strong> Visa du học cần có người bảo trợ được duyệt, nên hãy kiểm tra trước khi đặt phòng.</span></li></ol>
+    <p class="small muted"><span class="l-en">A Village room at A$419 a week is about A$20,100 for 48 weeks, before food. 2027 and 2028 rates are published later.</span><span class="l-vi">Một phòng ở Village giá A$419/tuần là khoảng A$20.100 cho 48 tuần, chưa gồm ăn uống. Giá 2027 và 2028 sẽ công bố sau.</span></p>
+  </div>
+  <div class="block" data-v="out">
+    <p class="label"><span class="l-en">Where it leads</span><span class="l-vi">Đầu ra</span></p>
+    <h3><span class="l-en">What UNSW graduates go on to</span><span class="l-vi">Sinh viên UNSW ra trường làm gì</span></h3>
+    <p class="muted"><span class="l-en">From the national Graduate Outcomes Survey (QILT), which covers Australian-resident graduates only.</span><span class="l-vi">Theo khảo sát Graduate Outcomes Survey quốc gia (QILT), chỉ tính sinh viên thường trú tại Úc.</span></p>
+    <div class="facts"><div><b>81.3%</b><span><span class="l-en">of undergraduates in full-time work 4 to 6 months after graduating (national average 79.4%)</span><span class="l-vi">sinh viên có việc toàn thời gian sau 4 đến 6 tháng (trung bình cả nước 79,4%)</span></span></div><div><b>A$75,000</b><span><span class="l-en">median starting salary, the highest in the Group of Eight for eight years running</span><span class="l-vi">lương khởi điểm trung vị, cao nhất nhóm Go8 tám năm liền</span></span></div><div><b>A$92,000</b><span><span class="l-en">median salary three years after graduating, the highest in Australia</span><span class="l-vi">lương trung vị sau 3 năm, cao nhất nước Úc</span></span></div></div>
+    <p class="small muted"><span class="l-en">2023 survey results, published by UNSW in June 2024. Figures are for all undergraduate fields, not business alone.</span><span class="l-vi">Kết quả khảo sát năm 2023, UNSW công bố tháng 6/2024. Số liệu tính chung mọi ngành, không riêng kinh doanh.</span></p>
+  </div>
+  <p class="label" data-v="src"><span class="l-en">Sources</span><span class="l-vi">Nguồn</span></p>
+  <ol data-v="src" class="sources">
+    <li><a href="https://www.unsw.edu.au/accommodation/apartments/unsw-village">UNSW Village 2026</a> · <a href="https://newcollege.unsw.edu.au/admissions/fees">New College</a> · <a href="https://www.unsw.edu.au/accommodation"><span class="l-en">UNSW Accommodation</span><span class="l-vi">Chỗ ở UNSW</span></a></li>
+    <li><a href="https://inside.unsw.edu.au/academic-excellence/unsw-leads-qilt-graduate-outcomes-surveys-salaries-and-employment"><span class="l-en">UNSW and the QILT Graduate Outcomes Survey</span><span class="l-vi">UNSW và khảo sát QILT</span></a></li>
     <li><a href="https://www.unsw.edu.au/content/dam/pdfs/future-students/2027-int-ug-entry-table.pdf"><span class="l-en">2027 international entry table</span><span class="l-vi">Bảng điểm đầu vào quốc tế 2027</span></a> · <a href="https://www.unsw.edu.au/study/undergraduate/bachelor-of-commerce">Bachelor of Commerce</a></li>
     <li><a href="https://www.unsw.edu.au/study/your-future/international-scholarships"><span class="l-en">International scholarships</span><span class="l-vi">Học bổng quốc tế</span></a> · <a href="https://www.scholarships.unsw.edu.au/international-student-award">International Student Award</a></li>
   </ol>
@@ -1661,7 +1757,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <div><span class="k"><span class="l-en">Intakes</span><span class="l-vi">Kỳ nhập học</span></span><span><span class="l-en">Feb and Jul</span><span class="l-vi">Tháng 2 và 7</span></span></div>
     </div>
   </div>
-  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="glance" aria-pressed="true"><span class="l-en">At a glance</span><span class="l-vi">Tổng quan</span></button><button type="button" class="ec-chip" data-sv="money" aria-pressed="false"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></button><button type="button" class="ec-chip" data-sv="apply" aria-pressed="false"><span class="l-en">How to apply</span><span class="l-vi">Cách nộp hồ sơ</span></button></nav>
+  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="glance" aria-pressed="true"><span class="l-en">At a glance</span><span class="l-vi">Tổng quan</span></button><button type="button" class="ec-chip" data-sv="deg" aria-pressed="false"><span class="l-en">Degrees &amp; majors</span><span class="l-vi">Ngành học</span></button><button type="button" class="ec-chip" data-sv="fit" aria-pressed="false"><span class="l-en">My chances</span><span class="l-vi">Cơ hội của mình</span></button><button type="button" class="ec-chip" data-sv="money" aria-pressed="false"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></button><button type="button" class="ec-chip" data-sv="home" aria-pressed="false"><span class="l-en">Housing</span><span class="l-vi">Chỗ ở</span></button><button type="button" class="ec-chip" data-sv="out" aria-pressed="false"><span class="l-en">Where it leads</span><span class="l-vi">Đầu ra</span></button><button type="button" class="ec-chip" data-sv="src" aria-pressed="false"><span class="l-en">Sources</span><span class="l-vi">Nguồn</span></button></nav>
   <div data-v="glance" class="two">
     <div>
       <p class="label"><span class="l-en">Why it fits</span><span class="l-vi">Vì sao phù hợp</span></p>
@@ -1688,14 +1784,14 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <div><span class="name"><a href="https://www.uts.edu.au/for-students/admissions-entry/scholarships/uts-vice-chancellors-international-undergraduate-scholarship">Vice-Chancellor's International Undergraduate Scholarship</a></span><span class="val"><span class="l-en">Full tuition</span><span class="l-vi">Toàn bộ học phí</span></span><span class="muted"><span class="l-en">At most two a year (one per intake). Looks for excellence, innovation, entrepreneurship and social justice, so Chạm fits well.</span><span class="l-vi">Tối đa hai suất mỗi năm (một suất mỗi kỳ). Xét sự xuất sắc, đổi mới, khởi nghiệp và công bằng xã hội, nên Chạm rất phù hợp.</span></span></div>
     </div>
   </div>
-  <div data-v="apply" class="block">
+  <div data-v="glance" class="block">
     <p class="label"><span class="l-en">English test and visa</span><span class="l-vi">Tiếng Anh và thị thực</span></p>
     <div class="award">
       <div><span class="name">IELTS Academic</span><span class="val"><span class="l-en">6.5 overall, writing 6.0</span><span class="l-vi">6.5 tổng, viết 6.0</span></span><span class="muted"><span class="l-en">Lower than USyd and UNSW, so the IELTS 7.0 I need for them covers UTS too.</span><span class="l-vi">Thấp hơn USyd và UNSW, nên IELTS 7.0 cho hai trường đó cũng đủ cho UTS.</span></span></div>
       <div><span class="name"><span class="l-en">Student visa (subclass 500)</span><span class="l-vi">Thị thực du học (subclass 500)</span></span><span class="val">A$2,500</span><span class="muted"><span class="l-en">Same visa as the other Sydney universities: apply online once UTS issues your CoE.</span><span class="l-vi">Cùng loại visa với các trường Sydney khác: nộp trực tuyến khi UTS cấp CoE.</span></span></div>
     </div>
   </div>
-  <div data-v="apply" class="block">
+  <div data-v="fit" class="block">
     <p class="label"><span class="l-en">Requirements</span><span class="l-vi">Yêu cầu</span></p>
     <div class="tbl"><table>
       <thead><tr><th><span class="l-en">Requirement (2027)</span><span class="l-vi">Yêu cầu (2027)</span></th><th><span class="l-en">Needed</span><span class="l-vi">Cần</span></th><th><span class="l-en">Me now</span><span class="l-vi">Mình hiện tại</span></th><th><span class="l-en">Status</span><span class="l-vi">Tình trạng</span></th></tr></thead>
@@ -1707,11 +1803,44 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       </tbody>
     </table></div>
   </div>
-  <div data-v="glance" class="verdict-box">
+  <div data-v="fit" class="verdict-box">
     <h3><span class="pill good"><span class="l-en">Likely</span><span class="l-vi">Chắc chắn</span></span> <span class="l-en">The safe Sydney offer, and a real chance at 30% off</span><span class="l-vi">Thư mời an toàn ở Sydney, và cơ hội thật để giảm 30%</span></h3>
     <p><span class="l-en">Apply in DP2 with predicted grades alongside USyd and UNSW. At 35–37 the offer should come before results, which takes the pressure off the other two. Choose a Management or International Business major with Economics as the second major.</span><span class="l-vi">Nộp trong DP2 bằng điểm dự đoán, cùng lúc với USyd và UNSW. Với 35–37, thư mời sẽ đến trước khi có kết quả, giúp giảm áp lực cho hai trường kia. Chọn chuyên ngành Quản trị hoặc Kinh doanh Quốc tế, với Kinh tế học là chuyên ngành thứ hai.</span></p>
   </div>
-  <ol data-v="apply" class="sources">
+    <div class="block" data-v="deg">
+    <p class="label"><span class="l-en">Degrees &amp; majors</span><span class="l-vi">Ngành học</span></p>
+    <div class="mm-cards"><div class="mm-card">
+        <div class="mm-card-head"><h3>UTS</h3><span class="pill good"><span class="l-en">Business first</span><span class="l-vi">Kinh doanh trước</span></span></div>
+        <dl>
+          <dt><span class="l-en">Degree</span><span class="l-vi">Bằng</span></dt><dd><span class="l-en">Bachelor of Business (IB 29 final, 34 predicted)</span><span class="l-vi">Cử nhân Kinh doanh (IB 29 điểm cuối, 34 dự đoán)</span></dd>
+          <dt><span class="l-en">Major</span><span class="l-vi">Chính</span></dt><dd>Management <span class="muted"><span class="l-en">or International Business</span><span class="l-vi">hoặc International Business</span></span></dd>
+          <dt><span class="l-en">Second</span><span class="l-vi">Thứ hai</span></dt><dd><span class="l-en">Economics, as a second major</span><span class="l-vi">Kinh tế học, là chuyên ngành thứ hai</span></dd>
+          <dt><span class="l-en">When</span><span class="l-vi">Khi nào</span></dt><dd><span class="l-en">Core business subjects in year one; pick the major in year two</span><span class="l-vi">Năm nhất học các môn kinh doanh cốt lõi; chọn chuyên ngành vào năm hai</span></dd>
+        </dl>
+        <p class="note"><span class="l-en">24 subjects: 8 core, 8 in the major, and 8 for a second major, sub-major or electives.</span><span class="l-vi">24 môn: 8 môn cốt lõi, 8 môn chuyên ngành, và 8 môn cho chuyên ngành thứ hai, chuyên ngành phụ hoặc tự chọn.</span></p>
+        <p class="official"><a href="https://www.uts.edu.au/courses/majors/business-economics"><span class="l-en">Economics major page</span><span class="l-vi">Trang chuyên ngành Kinh tế học</span></a></p>
+      </div></div>
+    <p class="small muted"><span class="l-en">The Majors &amp; minors tab compares this plan with the other five universities.</span><span class="l-vi">Thẻ Chuyên ngành so sánh kế hoạch này với năm trường còn lại.</span> <button type="button" class="linkish" data-go="majmin"><span class="l-en">Open Majors &amp; minors →</span><span class="l-vi">Mở Chuyên ngành →</span></button></p>
+  </div>
+  <div class="block" data-v="home">
+    <p class="label"><span class="l-en">Housing</span><span class="l-vi">Chỗ ở</span></p>
+    <h3><span class="l-en">Living next to the city campus</span><span class="l-vi">Sống cạnh khuôn viên trung tâm</span></h3>
+    <p class="muted"><span class="l-en">UTS Housing runs Yura Mudang on Harris Street, a short walk from the Ultimo campus.</span><span class="l-vi">UTS Housing quản lý ký túc Yura Mudang trên phố Harris, đi bộ vài phút tới khuôn viên Ultimo.</span></p>
+    <div class="award"><div><span class="name"><span class="l-en">Shared apartment</span><span class="l-vi">Căn hộ chung</span></span><span class="val"><span class="l-en">A$406–438 a week (2027)</span><span class="l-vi">A$406–438/tuần (2027)</span></span><span class="muted"><span class="l-en">A room in a 6-bedroom (A$406) or 2-bedroom (A$438) apartment.</span><span class="l-vi">Một phòng trong căn 6 phòng ngủ (A$406) hoặc 2 phòng ngủ (A$438).</span></span></div><div><span class="name"><span class="l-en">Studio</span><span class="l-vi">Studio</span></span><span class="val"><span class="l-en">A$492–524 a week (2027)</span><span class="l-vi">A$492–524/tuần (2027)</span></span><span class="muted"><span class="l-en">Your own small, medium or large studio.</span><span class="l-vi">Studio riêng loại nhỏ, vừa hoặc lớn.</span></span></div><div><span class="name"><span class="l-en">What is included</span><span class="l-vi">Đã bao gồm</span></span><span class="val"><span class="l-en">Utilities, furniture, internet</span><span class="l-vi">Điện nước, nội thất, internet</span></span><span class="muted"><span class="l-en">Meals, linen and kitchenware are not included. A$200 off each 6-month contract if you pay in advance.</span><span class="l-vi">Chưa gồm ăn uống, chăn ga và đồ bếp. Giảm A$200 mỗi hợp đồng 6 tháng nếu trả trước.</span></span></div></div>
+    <ol class="steps"><li><span class="l-en"><strong>Accept your UTS offer,</strong> then apply on the UTS Housing portal.</span><span class="l-vi"><strong>Chấp nhận thư mời UTS,</strong> rồi đăng ký trên cổng UTS Housing.</span></li><li><span class="l-en"><strong>Pay to secure the room:</strong> A$50 application fee, A$150 acceptance fee and a deposit of 4 weeks&rsquo; rent (2026 rules).</span><span class="l-vi"><strong>Đóng phí giữ phòng:</strong> phí đăng ký A$50, phí xác nhận A$150 và đặt cọc 4 tuần tiền thuê (quy định 2026).</span></li><li><span class="l-en"><strong>Under 18 on arrival?</strong> Your student visa needs an approved welfare arrangement, so check before you book.</span><span class="l-vi"><strong>Chưa đủ 18 tuổi khi đến?</strong> Visa du học cần có người bảo trợ được duyệt, nên hãy kiểm tra trước khi đặt phòng.</span></li></ol>
+    <p class="small muted"><span class="l-en">A 6-bedroom share at A$406 a week is about A$21,000 for a full-year contract, before food. For the Autumn 2027 intake the full-year contract runs 20 Jan 2027 to 12 Jan 2028.</span><span class="l-vi">Phòng trong căn 6 phòng ngủ giá A$406/tuần là khoảng A$21.000 cho hợp đồng cả năm, chưa gồm ăn uống. Với kỳ nhập học tháng 2/2027, hợp đồng cả năm từ 20/1/2027 đến 12/1/2028.</span></p>
+  </div>
+  <div class="block" data-v="out">
+    <p class="label"><span class="l-en">Where it leads</span><span class="l-vi">Đầu ra</span></p>
+    <h3><span class="l-en">What UTS graduates go on to</span><span class="l-vi">Sinh viên UTS ra trường làm gì</span></h3>
+    <p class="muted"><span class="l-en">From the national Graduate Outcomes Survey 2025 (QILT), which covers Australian-resident graduates only.</span><span class="l-vi">Theo khảo sát Graduate Outcomes Survey 2025 (QILT), chỉ tính sinh viên thường trú tại Úc.</span></p>
+    <div class="facts"><div><b>72.2%</b><span><span class="l-en">of undergraduates in full-time work 4 to 6 months after graduating</span><span class="l-vi">sinh viên có việc toàn thời gian sau 4 đến 6 tháng</span></span></div><div><b>A$74,000</b><span><span class="l-en">median full-time starting salary</span><span class="l-vi">lương khởi điểm trung vị cho việc toàn thời gian</span></span></div><div><b>14.2%</b><span><span class="l-en">went straight on to further full-time study</span><span class="l-vi">học tiếp toàn thời gian ngay sau khi tốt nghiệp</span></span></div></div>
+    <p class="small muted"><span class="l-en">Figures are for all UTS undergraduate fields, not business alone. UTS&rsquo;s selling point is industry links: most business degrees build in work projects with real companies.</span><span class="l-vi">Số liệu tính chung mọi ngành của UTS, không riêng kinh doanh. Điểm mạnh của UTS là liên kết doanh nghiệp: phần lớn bằng kinh doanh có dự án thực tế với công ty.</span></p>
+  </div>
+  <p class="label" data-v="src"><span class="l-en">Sources</span><span class="l-vi">Nguồn</span></p>
+  <ol data-v="src" class="sources">
+    <li><a href="https://www.uts.edu.au/for-students/current-students/support/uts-housing-service/our-residence-yura-mudang/fees"><span class="l-en">UTS Housing fees 2027</span><span class="l-vi">Phí UTS Housing 2027</span></a> · <a href="https://www.uts.edu.au/current-students/support/uts-housing-service/uts-housing-services/campus-accommodation/fees"><span class="l-en">2026 fees and charges</span><span class="l-vi">Phí 2026</span></a></li>
+    <li><a href="https://www.uts.edu.au/about/why-uts/uts-graduate-employment"><span class="l-en">UTS graduate employment (GOS 2025)</span><span class="l-vi">Việc làm sau tốt nghiệp UTS (GOS 2025)</span></a></li>
     <li><a href="https://www.uts.edu.au/for-students/international/guides-for-international-students/contentassets/utsi-listing-grid-international-undergraduate-course-summary-table.pdf"><span class="l-en">2027 international entry scores and fees (PDF)</span><span class="l-vi">Điểm đầu vào và học phí quốc tế 2027 (PDF)</span></a> · <a href="https://www.uts.edu.au/courses/bachelor-of-business">Bachelor of Business</a> · <a href="https://www.uts.edu.au/courses/majors/business-economics"><span class="l-en">Economics major</span><span class="l-vi">Chuyên ngành Kinh tế học</span></a></li>
     <li><a href="https://www.uts.edu.au/for-students/admissions-entry/scholarships/international"><span class="l-en">International scholarships</span><span class="l-vi">Học bổng quốc tế</span></a> · <a href="https://www.uts.edu.au/for-students/admissions-entry/how-to-apply/international-applicants"><span class="l-en">How to apply</span><span class="l-vi">Cách nộp hồ sơ</span></a></li>
   </ol>
@@ -2818,7 +2947,7 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <div><span class="k"><span class="l-en">Deadline</span><span class="l-vi">Hạn nộp</span></span><span class="num"><span class="l-en">30 Nov 2027</span><span class="l-vi">30/11/2027</span></span></div>
     </div>
   </div>
-  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="glance" aria-pressed="true"><span class="l-en">At a glance</span><span class="l-vi">Tổng quan</span></button><button type="button" class="ec-chip" data-sv="money" aria-pressed="false"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></button><button type="button" class="ec-chip" data-sv="apply" aria-pressed="false"><span class="l-en">How to apply</span><span class="l-vi">Cách nộp hồ sơ</span></button></nav>
+  <nav class="subnav" aria-label="Sections"><button type="button" class="ec-chip" data-sv="glance" aria-pressed="true"><span class="l-en">At a glance</span><span class="l-vi">Tổng quan</span></button><button type="button" class="ec-chip" data-sv="deg" aria-pressed="false"><span class="l-en">Degrees &amp; majors</span><span class="l-vi">Ngành học</span></button><button type="button" class="ec-chip" data-sv="fit" aria-pressed="false"><span class="l-en">My chances</span><span class="l-vi">Cơ hội của mình</span></button><button type="button" class="ec-chip" data-sv="money" aria-pressed="false"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></button><button type="button" class="ec-chip" data-sv="home" aria-pressed="false"><span class="l-en">Housing</span><span class="l-vi">Chỗ ở</span></button><button type="button" class="ec-chip" data-sv="out" aria-pressed="false"><span class="l-en">Where it leads</span><span class="l-vi">Đầu ra</span></button><button type="button" class="ec-chip" data-sv="src" aria-pressed="false"><span class="l-en">Sources</span><span class="l-vi">Nguồn</span></button></nav>
   <div data-v="glance" class="two">
     <div>
       <p class="label"><span class="l-en">Why it fits</span><span class="l-vi">Vì sao phù hợp</span></p>
@@ -2844,14 +2973,14 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       <div><span class="name">Undergraduate Dean's Award</span><span class="val"><span class="l-en">US$3,000–25,000 a year</span><span class="l-vi">US$3.000–25.000/năm</span></span><span class="muted"><span class="l-en">US$12,000–100,000 over four years, paid evenly. International students are considered automatically through the UC Application, and 95% of new international students received one in 2023–24.</span><span class="l-vi">US$12.000–100.000 cho 4 năm, chia đều mỗi năm. Du học sinh quốc tế được xét tự động qua hồ sơ UC, và 95% tân sinh viên quốc tế nhận được năm 2023–24.</span></span></div>
     </div>
   </div>
-  <div data-v="apply" class="block">
+  <div data-v="glance" class="block">
     <p class="label"><span class="l-en">English test and visa</span><span class="l-vi">Tiếng Anh và thị thực</span></p>
     <div class="award">
       <div><span class="name">IELTS Academic</span><span class="val">6.5</span><span class="muted"><span class="l-en">Or TOEFL iBT 80 (older format) / 4.5 (new), or Duolingo 115. Usually only needed with under 3 years of English-medium secondary school, so ask ISHCMC for a letter.</span><span class="l-vi">Hoặc TOEFL iBT 80 (dạng cũ) / 4.5 (dạng mới), hoặc Duolingo 115. Thường chỉ cần nếu học dưới 3 năm trung học bằng tiếng Anh, nên xin ISHCMC thư xác nhận.</span></span></div>
       <div><span class="name"><span class="l-en">F-1 student visa</span><span class="l-vi">Thị thực du học F-1</span></span><span class="val"><span class="l-en">~US$785 in fees</span><span class="l-vi">~US$785 lệ phí</span></span><span class="muted"><span class="l-en">US$185 application + US$350 SEVIS + US$250 integrity fee. Interview at the US Consulate General in Ho Chi Minh City after the I-20 arrives.</span><span class="l-vi">US$185 hồ sơ + US$350 SEVIS + US$250 phí integrity. Phỏng vấn tại Tổng Lãnh sự quán Mỹ ở TP.HCM sau khi có I-20.</span></span></div>
     </div>
   </div>
-  <div data-v="apply" class="block">
+  <div data-v="fit" class="block">
     <p class="label"><span class="l-en">Requirements</span><span class="l-vi">Yêu cầu</span></p>
     <div class="tbl"><table>
       <thead><tr><th><span class="l-en">Area</span><span class="l-vi">Mục</span></th><th><span class="l-en">Needed</span><span class="l-vi">Cần</span></th><th><span class="l-en">Me now</span><span class="l-vi">Mình hiện tại</span></th><th><span class="l-en">Status</span><span class="l-vi">Tình trạng</span></th></tr></thead>
@@ -2863,11 +2992,42 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
       </tbody>
     </table></div>
   </div>
-  <div data-v="glance" class="verdict-box">
+  <div data-v="fit" class="verdict-box">
     <h3><span class="pill good"><span class="l-en">Likely</span><span class="l-vi">Chắc chắn</span></span> <span class="l-en">My safety in the United States</span><span class="l-vi">Lựa chọn an toàn ở Mỹ</span></h3>
     <p><span class="l-en">With a 3.4 GPA floor and 71.9% of international applicants admitted in Fall 2025, a 35–37 IB student is well placed. The Dean's Award brings the yearly cost down to roughly US$62,800–84,800. Submit between 1 October and 30 November 2027.</span><span class="l-vi">Với GPA sàn 3.4 và 71,9% hồ sơ quốc tế được nhận mùa thu 2025, học sinh IB 35–37 có vị trí tốt. Dean's Award giúp giảm chi phí còn khoảng US$62.800–84.800 mỗi năm. Nộp từ 1/10 đến 30/11/2027 (dự kiến).</span></p>
   </div>
-  <ol data-v="apply" class="sources">
+    <div class="block" data-v="deg">
+    <p class="label"><span class="l-en">Degrees &amp; majors</span><span class="l-vi">Ngành học</span></p>
+    <div class="mm-cards"><div class="mm-card">
+        <div class="mm-card-head"><h3>UC Santa Cruz</h3><span class="pill jade"><span class="l-en">Blended</span><span class="l-vi">Kết hợp</span></span></div>
+        <dl>
+          <dt><span class="l-en">Major</span><span class="l-vi">Chính</span></dt><dd><span class="l-en">Business Management Economics (business and economics in one major)</span><span class="l-vi">Business Management Economics (kinh doanh và kinh tế trong một ngành)</span></dd>
+          <dt><span class="l-en">Minor</span><span class="l-vi">Phụ</span></dt><dd><span class="l-en">Optional. An Economics minor adds little because the major already covers it.</span><span class="l-vi">Không bắt buộc. Chuyên ngành phụ Kinh tế không thêm nhiều vì ngành chính đã bao gồm.</span></dd>
+          <dt><span class="l-en">Declare</span><span class="l-vi">Đăng ký</span></dt><dd><span class="l-en">After ECON 1, ECON 2 and calculus, with a 2.8 GPA in those courses</span><span class="l-vi">Sau ECON 1, ECON 2 và giải tích, với GPA 2.8 ở các môn này</span></dd>
+        </dl>
+        <p class="official"><a href="https://catalog.ucsc.edu/current/general-catalog/academic-units/social-sciences-division/economics/business-management-economics-ba/"><span class="l-en">Official course page</span><span class="l-vi">Trang chương trình chính thức</span></a></p>
+      </div></div>
+    <p class="small muted"><span class="l-en">The Majors &amp; minors tab compares this plan with the other five universities.</span><span class="l-vi">Thẻ Chuyên ngành so sánh kế hoạch này với năm trường còn lại.</span> <button type="button" class="linkish" data-go="majmin"><span class="l-en">Open Majors &amp; minors →</span><span class="l-vi">Mở Chuyên ngành →</span></button></p>
+  </div>
+  <div class="block" data-v="home">
+    <p class="label"><span class="l-en">Housing</span><span class="l-vi">Chỗ ở</span></p>
+    <h3><span class="l-en">Guaranteed for two years</span><span class="l-vi">Bảo đảm chỗ ở hai năm</span></h3>
+    <p class="muted"><span class="l-en">Students starting in 2026–27 or later get two years of guaranteed university housing, as long as they ask for housing when they accept the offer and meet every housing deadline. Every student also belongs to one of the residential colleges.</span><span class="l-vi">Sinh viên nhập học từ 2026–27 được bảo đảm chỗ ở hai năm, miễn là đăng ký chỗ ở khi nhận lời nhập học và đúng mọi hạn. Mỗi sinh viên cũng thuộc một college nội trú.</span></p>
+    <div class="award"><div><span class="name"><span class="l-en">Double room</span><span class="l-vi">Phòng đôi</span></span><span class="val"><span class="l-en">US$13,140–16,893 a year</span><span class="l-vi">US$13.140–16.893/năm</span></span><span class="muted"><span class="l-en">Small double or standard double, housing only (2026–27).</span><span class="l-vi">Phòng đôi nhỏ hoặc tiêu chuẩn, chỉ tiền phòng (2026–27).</span></span></div><div><span class="name"><span class="l-en">Single room</span><span class="l-vi">Phòng đơn</span></span><span class="val"><span class="l-en">US$18,531–19,404 a year</span><span class="l-vi">US$18.531–19.404/năm</span></span><span class="muted"><span class="l-en">Housing only (2026–27).</span><span class="l-vi">Chỉ tiền phòng (2026–27).</span></span></div><div><span class="name"><span class="l-en">Meal plan</span><span class="l-vi">Gói bữa ăn</span></span><span class="val"><span class="l-en">US$4,356–7,722 a year</span><span class="l-vi">US$4.356–7.722/năm</span></span><span class="muted"><span class="l-en">Required in the residence halls.</span><span class="l-vi">Bắt buộc khi ở ký túc xá.</span></span></div></div>
+    <ol class="steps"><li><span class="l-en"><strong>Accept your offer by 1 May</strong> and tick that you want university housing.</span><span class="l-vi"><strong>Nhận lời trước 1/5</strong> và chọn muốn ở ký túc xá.</span></li><li><span class="l-en"><strong>Complete the housing application</strong> on the housing portal before its deadline.</span><span class="l-vi"><strong>Hoàn thành đơn chỗ ở</strong> trên cổng housing trước hạn.</span></li><li><span class="l-en"><strong>Get your college and room</strong> in the summer. The room type is not guaranteed.</span><span class="l-vi"><strong>Nhận college và phòng</strong> vào mùa hè. Loại phòng không được bảo đảm.</span></li></ol>
+    <p class="small muted"><span class="l-en">The university&rsquo;s own budget uses US$15,120 for housing plus US$6,837 for food.</span><span class="l-vi">Dự toán của trường dùng US$15.120 tiền nhà cộng US$6.837 tiền ăn.</span></p>
+  </div>
+  <div class="block" data-v="out">
+    <p class="label"><span class="l-en">Where it leads</span><span class="l-vi">Đầu ra</span></p>
+    <h3><span class="l-en">What UC Santa Cruz graduates go on to</span><span class="l-vi">Sinh viên UC Santa Cruz ra trường làm gì</span></h3>
+    <p class="muted"><span class="l-en">The Economics Department, home of Business Management Economics, says many of its roughly 500 graduates a year start careers in or near Silicon Valley, about 30 miles from campus.</span><span class="l-vi">Khoa Kinh tế, nơi có ngành Business Management Economics, cho biết nhiều trong khoảng 500 sinh viên tốt nghiệp mỗi năm bắt đầu sự nghiệp ở hoặc gần Thung lũng Silicon, cách trường khoảng 50 km.</span></p>
+    <div class="facts"><div><b>~500</b><span><span class="l-en">graduates a year from the Economics Department&rsquo;s programmes</span><span class="l-vi">sinh viên tốt nghiệp mỗi năm từ các chương trình của Khoa Kinh tế</span></span></div><div><b>30 mi</b><span><span class="l-en">to Silicon Valley, the biggest pool of tech and finance employers nearby</span><span class="l-vi">tới Thung lũng Silicon, nơi tập trung nhiều công ty công nghệ và tài chính</span></span></div><div><b><span class="l-en">Common paths</span><span class="l-vi">Hướng phổ biến</span></b><span><span class="l-en">consulting, financial analysis, data and business analysis</span><span class="l-vi">tư vấn, phân tích tài chính, phân tích dữ liệu và kinh doanh</span></span></div></div>
+    <p class="small muted"><span class="l-en">UC Santa Cruz does not publish a first-destination report for this major, so there are no official employment rates here. Ask admissions for one if you get an offer.</span><span class="l-vi">UC Santa Cruz không công bố báo cáo việc làm riêng cho ngành này, nên ở đây không có tỷ lệ việc làm chính thức. Nếu được nhận, hãy hỏi phòng tuyển sinh.</span></p>
+  </div>
+  <p class="label" data-v="src"><span class="l-en">Sources</span><span class="l-vi">Nguồn</span></p>
+  <ol data-v="src" class="sources">
+    <li><a href="https://housing.ucsc.edu/guarantee"><span class="l-en">Housing guarantee</span><span class="l-vi">Bảo đảm chỗ ở</span></a> · <a href="https://housing.ucsc.edu/rates/"><span class="l-en">Housing rates 2026–27</span><span class="l-vi">Giá chỗ ở 2026–27</span></a></li>
+    <li><a href="https://economics.ucsc.edu/about/index.html"><span class="l-en">UCSC Economics Department</span><span class="l-vi">Khoa Kinh tế UCSC</span></a></li>
     <li><a href="https://admissions.ucsc.edu/first-year-student"><span class="l-en">First-year students</span><span class="l-vi">Tuyển sinh năm nhất</span></a> · <a href="https://admissions.ucsc.edu/posts/english-proficiency-requirement"><span class="l-en">English proficiency</span><span class="l-vi">Yêu cầu tiếng Anh</span></a></li>
     <li><a href="https://catalog.ucsc.edu/current/general-catalog/academic-units/social-sciences-division/economics/business-management-economics-ba/">Business Management Economics B.A.</a> · <a href="https://financialaid.ucsc.edu/types-of-aid/scholarships/"><span class="l-en">Scholarships</span><span class="l-vi">Học bổng</span></a></li>
     <li><a href="https://financialaid.ucsc.edu/managing-aid/budget-cost-to-attend/"><span class="l-en">Cost to attend</span><span class="l-vi">Chi phí</span></a> · <a href="https://www.collegekickstart.com/blog/item/university-of-california-fall-2025-admission-trends"><span class="l-en">UC Fall 2025 admissions</span><span class="l-vi">Tuyển sinh UC mùa thu 2025</span></a></li>
@@ -3450,12 +3610,11 @@ svg .gr-val{fill:var(--ink);font-weight:700;font-size:13px}
     var on=S.nav.querySelector('[aria-pressed="true"]'); if(on&&S.nav.scrollWidth>S.nav.clientWidth) S.nav.scrollLeft=on.offsetLeft-S.nav.clientWidth/2+on.offsetWidth/2;
     if(id==='usyd'&&v==='fdn') [].forEach.call(S.panel.querySelectorAll('details.decided'),function(d){ d.open=true; });
     subNext(id);
-    if(scroll){ var y=S.anchor.getBoundingClientRect().top+window.scrollY; if(window.scrollY>y) window.scrollTo(0,y); }
+    if(scroll){ var prev=S.nav.previousElementSibling, y=(prev&&prev.getClientRects().length?prev.getBoundingClientRect().bottom:S.panel.getBoundingClientRect().top)+window.scrollY; if(window.scrollY>y) window.scrollTo(0,y); }
   }
   [].forEach.call(document.querySelectorAll('nav.subnav'),function(nav){
-    var panel=nav.closest('[role="tabpanel"]'), id=panel.id, anchor=document.createElement('span');
-    nav.parentNode.insertBefore(anchor,nav);
-    SUB[id]={nav:nav,panel:panel,anchor:anchor,body:panel.querySelector('.panel-body')||panel,views:[].map.call(nav.querySelectorAll('[data-sv]'),function(b){ return [b.getAttribute('data-sv'),b.querySelector('.l-en').textContent,b.querySelector('.l-vi').textContent]; })};
+    var panel=nav.closest('[role="tabpanel"]'), id=panel.id;
+    SUB[id]={nav:nav,panel:panel,body:panel.querySelector('.panel-body')||panel,views:[].map.call(nav.querySelectorAll('[data-sv]'),function(b){ return [b.getAttribute('data-sv'),b.querySelector('.l-en').textContent,b.querySelector('.l-vi').textContent]; })};
     SUB[id].cur=SUB[id].views[0][0];
     nav.addEventListener('click',function(e){ var b=e.target.closest('[data-sv]'); if(b) showSub(id,b.getAttribute('data-sv'),true); });
   });
