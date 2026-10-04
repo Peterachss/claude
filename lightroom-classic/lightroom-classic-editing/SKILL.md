@@ -45,7 +45,9 @@ Peter runs Lightroom Classic on Windows with the lightroom-cli MCP server instal
 - Ratings: `lr_catalog_set_rating` (0 to 5)
 - Flags: `lr_catalog_set_flag` (1 = pick, -1 = reject, 0 = none)
 - Keywords: `lr_catalog_add_keywords`
-- Collections (Classic's version of albums): `lr_catalog_create_collection`
+- Collections (Classic's version of albums): `lr_catalog_create_collection` only makes an EMPTY collection. There is no tool to add photos to a normal collection.
+  - To fill an album automatically: add a keyword to the right photos with `lr_catalog_add_keywords`, then make a smart collection on that keyword with `lr_catalog_create_smart_collection`.
+  - Otherwise tell Peter to drag the selected photos onto the collection in the left panel.
 
 ## 6. Safety
 
