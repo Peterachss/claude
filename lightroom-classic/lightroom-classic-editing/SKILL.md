@@ -15,6 +15,10 @@ Peter runs Lightroom Classic on Windows with the lightroom-cli MCP server instal
    - Go to **File > Plug-in Extras > Start CLI Bridge** (it does not start on its own).
    - Then say "ready".
 3. Do not retry more than once before asking.
+4. If there are no `lr_` tools in this chat at all, the server is not loaded. Tell Peter to:
+   - Use a normal Chat in the Claude Desktop app (not the website or the Code tab).
+   - Check **Settings > Developer** shows lightroom-cli as running.
+   - If it is missing: Peter's Claude Desktop is the Microsoft Store version, which reads its config from `%LOCALAPPDATA%\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\Claude\claude_desktop_config.json`, not the one `lr mcp install` writes. The lightroom-cli entry needs to be copied across again, then fully quit and reopen Claude Desktop.
 
 ## 2. Find the photo
 
